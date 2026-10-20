@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uav-research"
+version = "0.1.0"
+description = "Reproducible dual-gateway UAV deployment experiments"
+requires-python = ">=3.10,<3.13"
+dependencies = ["numpy>=2.0,<2.3", "numba>=0.61,<0.62", "torch>=2.6,<2.11", "PyYAML>=6,<7", "matplotlib>=3.9,<3.11", "tensorboard>=2.18,<2.21", "psutil>=5.9,<8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+uav-research = "uav_research.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

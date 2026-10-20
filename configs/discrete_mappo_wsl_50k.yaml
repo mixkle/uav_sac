@@ -1,0 +1,67 @@
+# WSL budget: 250k joint transitions; filename retained for command compatibility.
+# Paper-sized scenario; SINR and independent discovery retained.
+env:
+  width: 3500.0
+  height: 3500.0
+  num_uavs: 18
+  num_users: 150
+  capacity: 20
+  altitude: 100.0
+  bs_positions:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 3500.0
+    - 0.0
+  - - 3500.0
+    - 0.0
+    - 0.0
+  horizon: 400
+  dt: 1.0
+  max_speed: 30.0
+  uav_initialization: uniform
+  user_initialization: uniform
+  action_space: discrete9
+  uav_boundary: reflect
+  uu_range: 650.0
+  ug_range: 1500.0
+  frequency_hz: 2400000000.0
+  bandwidth_hz: 20000000.0
+  total_power_dbm: 30.0
+  noise_figure_db: 15.0
+  sinr_threshold_db: -3.0
+  beacon_power_dbm: 26.020599913279625
+  beacon_bandwidth_hz: 180000.0
+  beacon_noise_figure_db: 15.0
+  sensing_threshold_db: 20.0
+  throughput_weight: 0.0
+  robustness_weight: 0.0
+  disconnection_weight: 0.1  # 断联惩罚权重 μ；设为 0 可关闭，奖励扣除 μ × 断联比例
+  backend: numba
+algo:
+  name: mappo
+  ue_hidden: 32
+  discount: 0.995
+  actor_lr: 0.0005
+  critic_lr: 0.0005
+  rollout_steps: 128
+  ppo_epochs: 10
+  ppo_minibatches: 4
+  gae_lambda: 0.95
+  ppo_clip: 0.2
+  entropy_coef: 0.01
+  max_grad_norm: 0.5
+run:
+  evaluation_policy: sample
+  evaluation_action_seed: 880001
+  seed: 0
+  num_envs: 16
+  device: cpu
+  cpu_threads: 8
+  numba_threads: 4
+  total_steps: 100000
+  memory_limit_gib: 12.0
+  eval_interval: 10000
+  checkpoint_minutes: 10.0
+  tensorboard: true

@@ -1,0 +1,15 @@
+# Main physical scenario, seed 0. A cost-bounded implementation/performance probe.
+# Validation scenarios remain separate from the held-out test set.
+env:
+  disconnection_weight: 0.1  # 断联惩罚权重 μ；设为 0 可关闭，奖励扣除 μ × 断联比例
+run:
+  device: cuda
+  num_envs: 16
+  cpu_threads: 1
+  numba_threads: 4
+  total_steps: 14080
+  eval_interval: 50000
+  log_interval: 1024
+  validation_seeds: [10000, 10001, 10002, 10003]
+  max_wall_seconds: 600
+  tensorboard: true

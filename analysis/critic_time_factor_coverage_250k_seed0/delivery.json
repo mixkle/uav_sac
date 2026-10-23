@@ -1,0 +1,14 @@
+{
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "torch": "2.10.0+cu128",
+  "numpy": "2.2.6",
+  "delivery_sha256": {
+    "src/uav_research/critic_time_factor.py": "4af1bc91ee531bac92bae6e50b721a52153ec1a5c6f60ebbf2b19f958d562c9c",
+    "scripts/calibrate_time_factor_critic.py": "5f320effd84c3dd8a6b327d6429c14db535ae9e403cedb4bdbe148da980e8995",
+    "configs/critic_time_factor_coverage.yaml": "45d21a491af6e9cc1ddd4f07ea4949214ee652ea35809b142201770222b8cc91",
+    "tests/test_critic_time_factor.py": "546715c0714e28e79aeb76de97e2a4883a875b08e4eec3feb3b3cb02d8d41743"
+  },
+  "tests": "17 passed",
+  "online_mappo_changed": false,
+  "original_c_remains_baseline": true
+}

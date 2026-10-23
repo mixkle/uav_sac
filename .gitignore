@@ -9,11 +9,13 @@ __pycache__/
 build/
 dist/
 runs/
-analysis/
+analysis/*
+!analysis/critic_time_factor_coverage_250k_seed0/
 .ruff_cache/
 
 # Local reference papers and private configuration.
 *.pdf
+!analysis/critic_time_factor_coverage_250k_seed0/**/*.pdf
 .env
 .env.*
 !.env.example

@@ -139,6 +139,7 @@ class AlgoConfig:
     ppo_minibatches: int = 4
     gae_lambda: float = 0.95
     ppo_clip: float = 0.2
+    value_clipping: bool = True
     entropy_coef: float = 0.01
     max_grad_norm: float = 0.5
     td3_policy_delay: int = 2
@@ -316,12 +317,13 @@ class Config:
                 )
         if r.memory_limit_gib <= 0:
             raise ValueError("memory_limit_gib must be positive")
-        if e.user_initialization not in ("uniform", "gaussian_mixture"):
-            raise ValueError("Unknown UE initialization; use uniform or gaussian_mixture")
-        if e.user_initialization == "gaussian_mixture":
+        if e.user_initialization not in ("uniform", "uniform_interior", "gaussian_mixture"):
+            raise ValueError("Unknown UE initialization; use uniform, uniform_interior or gaussian_mixture")
+        if e.user_initialization in ("uniform_interior", "gaussian_mixture"):
             margin = e.user_initial_margin_fraction
             if not 0 <= margin < 0.5:
                 raise ValueError("UE initialization margin must be in [0,0.5)")
+        if e.user_initialization == "gaussian_mixture":
             if e.user_cluster_std_fraction <= 0:
                 raise ValueError("UE mixture dispersion must be positive")
             if not e.user_cluster_centers or any(
@@ -340,6 +342,8 @@ class Config:
             raise ValueError("The paper observation fixes exactly three neighbor slots")
         if a.name not in ("sac", "mappo", "matd3"):
             raise ValueError("Unknown learner")
+        if not isinstance(a.value_clipping, bool):
+            raise ValueError("value_clipping must be a boolean")
         if (
             not 0 < a.discount <= 1
             or not 0 < a.polyak <= 1

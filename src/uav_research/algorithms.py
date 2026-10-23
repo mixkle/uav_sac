@@ -32,6 +32,22 @@ def numeric_metrics(values):
     return {key: float(value.detach()) for key, value in values.items()}
 
 
+def mappo_value_loss(predicted, returns, old_value, clip, value_clipping=True):
+    """Huber loss in normalized value units; optional PPO value clipping."""
+    loss = nn.functional.huber_loss(
+        predicted, returns, reduction="none", delta=10.0
+    )
+    if value_clipping:
+        clipped = old_value + (predicted - old_value).clamp(-clip, clip)
+        loss = torch.maximum(
+            loss,
+            nn.functional.huber_loss(
+                clipped, returns, reduction="none", delta=10.0
+            ),
+        )
+    return loss.mean()
+
+
 @torch.no_grad()
 def soft_update(target, source, tau):
     for dest, value in zip(target.parameters(), source.parameters()):
@@ -405,23 +421,10 @@ class MAPPO:
                 )
                 self.actor_opt.step()
                 predicted = self.value(state[indices]).squeeze(-1)
-                clipped = normalized_old[indices] + (
-                    predicted - normalized_old[indices]
-                ).clamp(-a.ppo_clip, a.ppo_clip)
-                v_loss = torch.maximum(
-                    nn.functional.huber_loss(
-                        predicted,
-                        normalized_returns[indices],
-                        reduction="none",
-                        delta=10.0,
-                    ),
-                    nn.functional.huber_loss(
-                        clipped,
-                        normalized_returns[indices],
-                        reduction="none",
-                        delta=10.0,
-                    ),
-                ).mean()
+                v_loss = mappo_value_loss(
+                    predicted, normalized_returns[indices],
+                    normalized_old[indices], a.ppo_clip, a.value_clipping,
+                )
                 self.value_opt.zero_grad(set_to_none=True)
                 v_loss.backward()
                 value_grad = nn.utils.clip_grad_norm_(

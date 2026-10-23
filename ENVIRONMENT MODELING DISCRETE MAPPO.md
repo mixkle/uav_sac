@@ -749,6 +749,8 @@ L_V=\mathbb E_t\max\{\operatorname{Huber}_{10}(\tilde V_\phi-\tilde R_t),\operat
 $$
 actor与价值优化器独立。价值更新不改变UE编码器；actor通过log概率与熵梯度更新编码器，无需对离散动作求环境梯度。
 
+基准的 `algo.value_clipping` 缺省为 `true`。独立对照配置 `configs/discrete_mappo_critic_no_value_clip.yaml` 将其设为 `false`，仅把上述价值损失替换为未裁剪的 \(\mathbb E_t[\operatorname{Huber}_{10}(\tilde V_\phi-\tilde R_t)]\)，保留 actor 的 PPO clipping、PopArt 和全部其他设置。该对照不替换本文基准；说明与结果见 [Value Clipping 对照实验](docs/critic_value_clipping_ablation.md)。
+
 #### 6. 参数、预算与恢复
 
 actor/critic学习率均5e-4，Adam eps=1e-5；折扣0.995，GAE 0.95，clip 0.2，熵系数0.01，10 epochs、4 minibatches，梯度范数裁剪0.5。minibatch按联合转移切分，每条保留全部18架UAV。每次更新后丢弃已用rollout，不设随机warmup或离策略回放池。

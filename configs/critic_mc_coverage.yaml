@@ -1,0 +1,19 @@
+# Offline critic diagnosis; this is not an online MAPPO training configuration.
+checkpoint: runs/mappo_ablation_c_mobile_coverage_250k_seed0/last.pt
+output: analysis/critic_mc_coverage_250k_seed0
+epochs: 300
+batch_size: 512
+permutation_seed: 940001
+splits:
+  fit:
+    seed_start: 61000
+    count: 64
+    action_seed: 930001
+  selection:
+    seed_start: 62000
+    count: 16
+    action_seed: 930002
+  holdout:
+    seed_start: 63000
+    count: 32
+    action_seed: 930003

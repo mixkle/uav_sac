@@ -128,8 +128,10 @@ def test_discrete_baselines_and_projection():
 
 
 @pytest.mark.parametrize("cpu_threads", [1, 8])
-def test_discrete_complete_pipeline_and_exact_resume(tmp_path, cpu_threads):
+@pytest.mark.parametrize("value_clipping", [True, False])
+def test_discrete_complete_pipeline_and_exact_resume(tmp_path, cpu_threads, value_clipping):
     cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg.algo.value_clipping = value_clipping
     cfg.run.cpu_threads = cpu_threads
     cfg.run.total_steps = 64
     cfg.run.eval_interval = 32
@@ -157,6 +159,10 @@ def test_discrete_complete_pipeline_and_exact_resume(tmp_path, cpu_threads):
             assert x == y
 
     exact(a["learner"], b["learner"])
+    changed = copy.deepcopy(cfg)
+    changed.algo.value_clipping = not value_clipping
+    with pytest.raises(ValueError, match="Environment/algorithm changed"):
+        train(changed, tmp_path / "changed_clip", full["resume_checkpoint"])
     ecfg, policy = policy_from_checkpoint(
         tmp_path / "full" / "best.pt", torch.device("cpu")
     )

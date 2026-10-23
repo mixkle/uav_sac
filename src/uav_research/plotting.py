@@ -667,7 +667,7 @@ def initialization_plot(trace_path, cfg, output):
     ax.scatter(
         bs[:, 0], bs[:, 1], s=110, marker="*", c=COLORS[1], clip_on=False, label="BS"
     )
-    if e.user_initialization == "gaussian_mixture":
+    if e.user_initialization in ("gaussian_mixture", "uniform_interior"):
         lower = np.array([e.width, e.height]) * e.user_initial_margin_fraction
         ax.add_patch(
             Rectangle(
@@ -680,6 +680,7 @@ def initialization_plot(trace_path, cfg, output):
                 label="Initial UE bounds",
             )
         )
+    if e.user_initialization == "gaussian_mixture":
         centers = np.asarray(e.user_cluster_centers) * [e.width, e.height]
         ax.scatter(
             centers[:, 0],
@@ -709,7 +710,7 @@ def initialization_plot(trace_path, cfg, output):
         ylabel="y (m)",
         title=(
             "Uniform UE initialization"
-            if e.user_initialization == "uniform"
+            if e.user_initialization in ("uniform", "uniform_interior")
             else "Truncated Gaussian-mixture UE initialization"
         ),
     )

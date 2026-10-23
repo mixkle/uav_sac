@@ -25,7 +25,7 @@ def uniform_disk(rng, shape):
 
 
 def initialize_users(cfg: EnvConfig, rng):
-    """Uniform or equal-weight truncated Gaussian; no service screening.
+    """Full/interior uniform or truncated Gaussian; no service screening.
 
     Centers, sigma and margin use region fractions. The margin applies only at
     reset: subsequent UE motion reflects at the original physical boundaries.
@@ -33,6 +33,9 @@ def initialize_users(cfg: EnvConfig, rng):
     scale = np.array([cfg.width, cfg.height])
     if cfg.user_initialization == "uniform":
         return rng.uniform([0.0, 0.0], scale, (cfg.num_users, 2))
+    if cfg.user_initialization == "uniform_interior":
+        lower = cfg.user_initial_margin_fraction * scale
+        return rng.uniform(lower, scale - lower, (cfg.num_users, 2))
     if cfg.user_initialization != "gaussian_mixture":
         raise ValueError("Unknown UE initialization")
     centers = np.asarray(cfg.user_cluster_centers, np.float64) * scale

@@ -1,5 +1,13 @@
 # UE 运动与奖励目标：六组可回退对照
 
+继续以原 C 组为基准的 [解析时间因子／平均覆盖率 critic 校准](critic_time_factor_experiment.md)，冻结 actor、复用原 MC 数据，对比直接价值与两种时间因子损失；独立于在线 MAPPO 和此处 A–F 训练。
+
+另设 [中央 2500×2500 m UE 初始化实验](central_ue_initialization_experiment.md)，仅修改 C 组的 UE 初始分布，从头训练 250k；不并入此处 A–F 控制变量矩阵。
+
+C 组同时作为 [critic Value Clipping 单变量对照](critic_value_clipping_ablation.md)的基准。该实验只关闭价值裁剪，不改变此处六组配置，也不加入原 A–F 汇总脚本。
+
+后续 [冻结 actor、MC Return 拟合 critic](critic_mc_coverage_experiment.md)同样以原 C 组 last 为起点，检查现有 MLP 的拟合与泛化；属于独立离线诊断，不并入六组在线训练结果。
+
 ## 实验问题与配置
 
 本实验分别检查UE运动、断联惩罚和服务资格对学习的影响。保持现有MAPPO、九动作、观察、关联与无线模型，通过配置选择任务。`env.reward_primary`缺失时使用`coverage`。

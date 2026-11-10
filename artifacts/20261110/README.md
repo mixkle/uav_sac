@@ -27,9 +27,10 @@ done < artifacts/20261110/SHA256SUMS
 
 (cd "$result_asset_dir" && sha256sum -c ../../artifacts/20261110/SHA256SUMS)
 cat "$result_asset_dir"/training-results-20261110.tar.gz.part* | tar -xzf - -C .
+python3 scripts/verify_result_snapshot.py --detach-hardlinks
 ```
 
-解压会恢复`runs/`和`analysis/`，已有同名结果会被快照内容覆盖。只查看报告和图表无需下载完整快照。
+解压会恢复`runs/`和`analysis/`，已有同名结果会被快照内容覆盖。最后一条命令逐文件校验，并将压缩包内用于去重的硬链接转为独立文件，避免后续续训或改写日志时影响其他历史副本。只查看报告和图表无需下载完整快照。
 
 ## 研究入口
 

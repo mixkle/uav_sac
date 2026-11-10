@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-11-10T05:00:21.180550+00:00",
+  "repository": "https://github.com/mixkle/uav_sac",
+  "source_commit": "c511dd1916c4e4e18b79acc5232468e3907dee1a",
+  "release_url": "https://github.com/mixkle/uav_sac/releases/tag/results-2026-11-10",
+  "release_tag": "results-2026-11-10",
+  "local_result_files": 6461,
+  "uncompressed_bytes": 9442026286,
+  "archive_bytes": 6086130597,
+  "archive_sha256": "5a0da9e48fbff87f79c2e06a081027ecf9ba53b4614458d2ea2daaada9d8cff1",
+  "remote_assets_sha256_verified": true,
+  "archive_members_sha256_verified": true,
+  "token_tracked": false,
+  "related_regression_tests": "29 passed; snapshot restore control passed",
+  "scope": "All currently retained LOCAL runs/ and analysis/ files; no remote-only full checkpoints",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 642,
+      "digest": "sha256:522896095d973fecadb40df06897f26ca7762e2de6ac5f4268f7930a76e31c9f",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/results-2026-11-10/SHA256SUMS"
+    },
+    {
+      "name": "results_manifest.json",
+      "size": 1509093,
+      "digest": "sha256:3ec8b05bb3b0a7edfb5ca9fe1e39269636e1e1f2de903e592b5727e7a8d83abf",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/results-2026-11-10/results_manifest.json"
+    },
+    {
+      "name": "training-results-20261110.tar.gz.part001",
+      "size": 1073741824,
+      "digest": "sha256:8924c66a84f372ff8dce2ea040926bd5fee79eff6b704ee4d863c71c690f7472",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/results-2026-11-10/training-results-20261110.tar.gz.part001"
+    },
+    {
+      "name": "training-results-20261110.tar.gz.part002",
+      "size": 1073741824,
+      "digest": "sha256:26b0aa9d090fe89262746ae5d9caf56e33142e7147bae492fcf1939e52dbf5a3",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/results-2026-11-10/training-results-20261110.tar.gz.part002"
+    },
+    {
+      "name": "training-results-20261110.tar.gz.part003",
+      "size": 1073741824,
+      "digest": "sha256:c9ab3544741f84dc91fdd0e7133a7ca02d46567bfd3700b73018d76182dbd2a6",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/results-2026-11-10/training-results-20261110.tar.gz.part003"
+    },
+    {
+      "name": "training-results-20261110.tar.gz.part004",
+      "size": 1073741824,
+      "digest": "sha256:f0932c5f56b1d16d62c5b370c4f877ff457bf8fcb0c7e5eadc27afc9f14b9c48",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/results-2026-11-10/training-results-20261110.tar.gz.part004"
+    },
+    {
+      "name": "training-results-20261110.tar.gz.part005",
+      "size": 1073741824,
+      "digest": "sha256:3790810c5de5241c7773db8ad1f9f237eac0a348f2759ea5336ef8febc0580a2",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/results-2026-11-10/training-results-20261110.tar.gz.part005"
+    },
+    {
+      "name": "training-results-20261110.tar.gz.part006",
+      "size": 717421477,
+      "digest": "sha256:cdd5873e1a3af38cb3944d01d2b74e833eed1d84227fbea94b35e4d662dba6a0",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/results-2026-11-10/training-results-20261110.tar.gz.part006"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "mode": "new_finetune_from_best",
+  "source_checkpoint": "analysis/hop_scaling_joint_service_10m_seed0/snapshots/diffusion/best.pt",
+  "source_sha256": "11fdd37abb123b84bc0c57fea7f84322382bbc1bde78dc5578c96dabc80fffaf",
+  "source_original_env_steps": 7501824,
+  "actor_and_critic": "same best; both copied with value normalizers",
+  "optimizers": "both Adam reset; source Adam deliberately not inherited",
+  "environment_rng": "new same seed0 worker streams, not original best environment state",
+  "initialized_modules_sha256": "2a3b7b967d11a3a032ae5bd1c414e410075849e1ec63af9093b5349500931aee",
+  "extra_budget": 200000,
+  "group": "conservative",
+  "bootstrap_checkpoint": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/origin/checkpoints/full_000000000",
+  "initial_return": 270.9868907535582,
+  "initial_coverage": 0.6058723958333334,
+  "original_best_is_full_checkpoint": false,
+  "source_has_optimizer_state": true,
+  "source_has_environment_and_rng": false
+}

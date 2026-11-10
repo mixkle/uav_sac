@@ -1,0 +1,37 @@
+comparison,metric,mean,median,low,high,scenes
+control best - source best,return,0.0,0.0,0.0,0.0,32
+control best - source best,coverage,0.0,0.0,0.0,0.0,32
+control best - source best,last100_coverage,0.0,0.0,0.0,0.0,32
+control best - source best,final_coverage,0.0,0.0,0.0,0.0,32
+control best - source best,disconnection_ratio,0.0,0.0,0.0,0.0,32
+control best - source best,actual_speed_mean,0.0,0.0,0.0,0.0,32
+control last - source best,return,-0.6417089092687807,-2.7376796326290673,-7.070983956871484,5.6825862933757705,32
+control last - source best,coverage,-0.0009890624999999934,-0.005675000000000041,-0.014837278645833328,0.013195468750000019,32
+control last - source best,last100_coverage,-0.004487499999999967,0.00280000000000008,-0.03246932291666659,0.023383281250000013,32
+control last - source best,final_coverage,0.0027083333333333265,-0.006666666666666654,-0.04041666666666667,0.04729166666666666,32
+control last - source best,disconnection_ratio,8.680555555556045e-06,-0.0018055555555555498,-0.005518012152777775,0.006004448784722214,32
+control last - source best,actual_speed_mean,-0.08250331022537846,-0.13195864047635908,-0.2524940778414734,0.08943590109995322,32
+conservative best - source best,return,0.0,0.0,0.0,0.0,32
+conservative best - source best,coverage,0.0,0.0,0.0,0.0,32
+conservative best - source best,last100_coverage,0.0,0.0,0.0,0.0,32
+conservative best - source best,final_coverage,0.0,0.0,0.0,0.0,32
+conservative best - source best,disconnection_ratio,0.0,0.0,0.0,0.0,32
+conservative best - source best,actual_speed_mean,0.0,0.0,0.0,0.0,32
+conservative last - source best,return,-5.75206844106382,-6.812854813127927,-10.081995357188838,-1.3196121971165735,32
+conservative last - source best,coverage,-0.013605729166666658,-0.017008333333333348,-0.022905,-0.004172942708333336,32
+conservative last - source best,last100_coverage,-0.031077083333333297,-0.040166666666666656,-0.050245312499999924,-0.012123906250000038,32
+conservative last - source best,final_coverage,-0.028541666666666667,-0.043333333333333335,-0.07604166666666667,0.019796874999999974,32
+conservative last - source best,disconnection_ratio,0.006597222222222221,0.003194444444444444,0.001623263888888889,0.011901258680555553,32
+conservative last - source best,actual_speed_mean,0.27984240008396416,0.23326029819814798,0.14286506710517147,0.4337731783520764,32
+conservative - control best,return,0.0,0.0,0.0,0.0,32
+conservative - control best,coverage,0.0,0.0,0.0,0.0,32
+conservative - control best,last100_coverage,0.0,0.0,0.0,0.0,32
+conservative - control best,final_coverage,0.0,0.0,0.0,0.0,32
+conservative - control best,disconnection_ratio,0.0,0.0,0.0,0.0,32
+conservative - control best,actual_speed_mean,0.0,0.0,0.0,0.0,32
+conservative - control last,return,-5.110359531795039,-9.840063860821516,-12.211354423303355,1.8443815799591379,32
+conservative - control last,coverage,-0.012616666666666665,-0.01940000000000003,-0.028801458333333314,0.003166080729166637,32
+conservative - control last,last100_coverage,-0.02658958333333333,-0.024733333333333163,-0.059500312499999986,0.006938854166666661,32
+conservative - control last,final_coverage,-0.031249999999999993,-0.009999999999999953,-0.092921875,0.02229687499999998,32
+conservative - control last,disconnection_ratio,0.006588541666666664,0.010972222222222223,8.951822916666665e-05,0.0126044921875,32
+conservative - control last,actual_speed_mean,0.3623457103093426,0.2416731257487159,0.13042221233534207,0.601995837785113,32

@@ -1,0 +1,15 @@
+{
+  "env_steps": 200000,
+  "updates": 98,
+  "optimizer_steps": 3920,
+  "best_score": 270.9868907535582,
+  "best_step": 0,
+  "elapsed_seconds": 1727.1246662270278,
+  "full_checkpoint": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/checkpoints/full_000200000",
+  "status": "complete",
+  "evaluation_seconds": 223.825251551345,
+  "io_seconds": 9.512805037200451,
+  "peak_rss_mib": 1552.21484375,
+  "sum_process_peak_rss_mib": 1552.21484375,
+  "peak_gpu_mib": 1599.0732421875
+}

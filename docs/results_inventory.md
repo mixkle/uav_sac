@@ -4,6 +4,8 @@
 
 ## 当前主实验：跳数缩放联合控制
 
+新增[Diffusion / Gaussian 10M 定位实验](../analysis/diffusion_gaussian_diagnosis_20261110/report.md)：同状态运动/评分交换、50步分叉、条件动作采样、关键断链干预、分步PPO审计及各20万步配对微调。原10M模型和结果保留；诊断运行不混入下面的正式运行目录统计。[执行说明](diffusion_gaussian_diagnosis.md)。
+
 两组均完成在线10M，奖励为覆盖＋0.1归一化吞吐，容量10；actor同时输出运动和UE评分，采用Top-K。扩散另有64,000条示范和50轮预训练，Gaussian从零训练。
 
 - [完整验证报告](../analysis/hop_scaling_joint_service_10m_seed0/report.md)。

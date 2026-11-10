@@ -1,0 +1,33 @@
+{
+  "run_screening": true,
+  "recorded_at": "2026-11-10T06:04:52.557750+00:00",
+  "decision_basis": {
+    "late_step8_clip_fraction": 0.45047703498751723,
+    "late_step8_kl": 0.018353188985775266,
+    "late_step8_to_middle_kl_ratio": 49.693182738527874,
+    "update_before_recompute_clip_fraction": 0.0
+  },
+  "counter_evidence": [
+    "Diffusion scores improve same-state one-step coverage relative to Gaussian scores",
+    "Diffusion conditional motion variance is lower than Gaussian best on common states",
+    "Best one-step motion substitution has no clear benefit; long-term forks still required"
+  ],
+  "interpretation": "Localized PPO imbalance supports a diagnostic A/B screening; not a confirmed cause",
+  "budget_per_arm": 200000,
+  "arms": {
+    "control": {
+      "actor_lr": 0.0001,
+      "ppo_epochs": 10,
+      "ppo_clip": 0.1
+    },
+    "conservative": {
+      "actor_lr": 3e-05,
+      "ppo_epochs": 4,
+      "ppo_clip": 0.05
+    }
+  },
+  "initialization": "same best actor and critic, retain both value normalizers, reset both Adam and environment/RNG streams identically; NEW fine-tuning, not seamless resume",
+  "evaluation_interval": 50000,
+  "additional_seeds_or_budget_authorized_here": false,
+  "test_set": "not used in this single-seed diagnostic screening"
+}

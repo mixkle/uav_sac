@@ -1,0 +1,7 @@
+{
+  "noise_ratio": 0.8,
+  "checkpoint_sha256": "52003081ef41a26637b31351a3c53497dd3c3a7c23ecef5db458dc0205a409a4",
+  "semantics": "Movement and score std multiplied after original log-std clipping",
+  "action_seed": 880001,
+  "qualification": "Changes frozen policy distribution; no inference about unique training cause"
+}

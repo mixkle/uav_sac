@@ -1,0 +1,1155 @@
+{
+  "version": 1,
+  "tag": "diagnosis-2026-11-10",
+  "repository": "mixkle/uav_sac",
+  "scope": "Complete 223-file Diffusion/Gaussian diagnosis, including frozen states, conditional samples, A/B fine-tuning checkpoints and evaluations; original 10M source artifacts remain in prior release",
+  "file_count": 223,
+  "uncompressed_bytes": 1342355621,
+  "unique_content_bytes": 1220187511,
+  "archive": "diagnosis-results-20261110.tar.gz",
+  "archive_bytes": 922599054,
+  "archive_sha256": "e2149aff78e36ed848b590e1a26ae89699427423a916c359a294359a6f477d09",
+  "parts": [
+    {
+      "name": "diagnosis-results-20261110.tar.gz.part001",
+      "bytes": 922599054,
+      "sha256": "e2149aff78e36ed848b590e1a26ae89699427423a916c359a294359a6f477d09"
+    }
+  ],
+  "files": [
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/README.md",
+      "bytes": 2188,
+      "sha256": "9a97160b31a6f0fc5be89977bd8b3ecc8558bdee5e8ad3b9f63f72d73f8eea20"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/initial_collection_code.tar.gz",
+      "bytes": 22987,
+      "sha256": "319d8f916869e45f422aae495035580b22f217dd9ce79370f20b89d4e179321a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/scripts/diagnose_diffusion_gaussian.py",
+      "bytes": 22737,
+      "sha256": "7e6f60cfee9015f6814f1c45b7a91ca3f1e1c0aa7888affdb4cfa2e65ec004c4"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/scripts/evaluate_diagnosis_finetuning.py",
+      "bytes": 791,
+      "sha256": "db90cc9e346dbe03602c40ddace53fb3ab5c1cab01d9957e8e56b1389a3c5e08"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/scripts/extend_diffusion_gaussian_diagnosis.py",
+      "bytes": 7684,
+      "sha256": "046795d28a9a502a050e939a7120c0b988284f84aaaa9ee3ef5dd2a7a9fec892"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/scripts/finalize_diffusion_gaussian_diagnosis.py",
+      "bytes": 15305,
+      "sha256": "7cba02b1151b245a8fe64fd2cbf10f54a171ffef1365a55cadd377658b4a536a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/scripts/finetune_diffusion_diagnosis.py",
+      "bytes": 6815,
+      "sha256": "2c81a41611db96bab92bbff21910bf2b7d3ace1f84d13367153db7ee78b7e1c3"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/scripts/report_diffusion_gaussian_diagnosis.py",
+      "bytes": 20215,
+      "sha256": "0536c69fe496adec180367821847d1f17a05c93d6e2db98742203eac92822422"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/source_hashes.json",
+      "bytes": 938,
+      "sha256": "8701c1903c28bbaca9cdf37bde734668607108bfe2db2b338b389403a4c44f9a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/src/uav_research/diffusion_dppo/diagnosis.py",
+      "bytes": 11568,
+      "sha256": "aeaba01567945677c8138561822e78877288841b52bff292bea530e16aa30454"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/code_snapshot/tests/test_diffusion_gaussian_diagnosis.py",
+      "bytes": 3803,
+      "sha256": "048aea5c02821b02442a15f26d8b94c7357791d8e5a5c698c76482cbe55afc77"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/detailed_statistics.md",
+      "bytes": 3070,
+      "sha256": "deb1eb15373b4787dc964ac99fc97254443ec1a41adc5fa1526a711c4a9600db"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/diagnostic_summary.json",
+      "bytes": 279416,
+      "sha256": "0ff82f5caa1209c2f0ee64ef6e7b2d3daab15bcdfaf85a38ae08d8de891a737f"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/evaluate_conservative.log",
+      "bytes": 360,
+      "sha256": "a50d4c071ef6706592b539fc670ebb1d2a3009d259e9220f7cb245ec4529bd40"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/evaluate_control.log",
+      "bytes": 341,
+      "sha256": "a8179e2d842bcb6387cf9b7997017ec6e4b997e2a391e3d1d2de044abdde0172"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/causal_case_summary.csv",
+      "bytes": 711,
+      "sha256": "1af6f6053dbf084e6616b16ac87248df48fc38ce6e8df4dc613b7416c02adc36"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_attribution.pdf",
+      "bytes": 12802,
+      "sha256": "5a5b1b0f7d6a96107fc30b851691fa26c0dc81a536bb33bd9ca52b683552193e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_attribution.png",
+      "bytes": 87277,
+      "sha256": "a9f764463d6934ac0a1dc6bfc39b20dde68864b0daba6727890beb9c916e0575"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_attribution.svg",
+      "bytes": 22614,
+      "sha256": "8751836c1897afc21c896145baefed47782e6a9bc57f3a702e54b26ec7a575b3"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_attribution_best_diffusion.csv",
+      "bytes": 48455,
+      "sha256": "6fea8284544d213a12ee0356397807e6a36ed02a9a635f22660ddac7da4a908d"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_attribution_best_gaussian.csv",
+      "bytes": 19339,
+      "sha256": "b2d312865acb528af9b76df53d43b861ad181a9f99dac1468de4ddc51f487ab5"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_attribution_last_diffusion.csv",
+      "bytes": 47119,
+      "sha256": "f0f6cefe9602945d194c6f61773ba450a69f457a3668dce674466cc61d86a4b1"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_attribution_last_gaussian.csv",
+      "bytes": 29787,
+      "sha256": "8dd0bf96713d4fcb5f89689f1b8d21aa8e31bc88b94fba6c41db7b5443832048"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_attribution_summary.csv",
+      "bytes": 878,
+      "sha256": "5eb82695efde3c606e204afa522c07aa6bd6a073909a0202bc0fd0f31db04638"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_case_studies.pdf",
+      "bytes": 67498,
+      "sha256": "52a728949ab2a5d48a59f7f4b94b713f3fd758f36ddd6f3d2a89a7ebd7b9b7cb"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_case_studies.png",
+      "bytes": 2046310,
+      "sha256": "8e0a331c45c0063330e47dea80581461c9d1d248ea69da5f1f47d2fb7f8f5e33"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/drop_case_studies.svg",
+      "bytes": 648839,
+      "sha256": "7f9339dbf3883f815bc870b7b5d47bd2f0a8a4b5d2f996614e09b18e0c2fa483"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/fork_coverage_curve.pdf",
+      "bytes": 14855,
+      "sha256": "c4bc3ccae6a4e532943064969728094dcb157870d194fb69c6c69c2362d2d40b"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/fork_coverage_curve.png",
+      "bytes": 401430,
+      "sha256": "ad7c1974081d1d59b8653e9b7ea765653611e2387984eb5aad44a55c3ba54ff0"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/fork_coverage_curve.svg",
+      "bytes": 35787,
+      "sha256": "3a9d698e0ac619633492a53c66cbae17035d5f26120076f1e7d8b743c8ca863c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/fork_frames_best.pt",
+      "bytes": 12464675,
+      "sha256": "9417cc624d75496a6f8d7f8db015b2c37701071851d60de0c83c0f6945fe5017"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/fork_frames_last.pt",
+      "bytes": 12463971,
+      "sha256": "9bfa9aea5f8fdf0942e9039fa9b427276cc58e676545d3189c3dbb07859adf9d"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/fork_paired_contrasts.csv",
+      "bytes": 2555,
+      "sha256": "7114285833cce547975face5e6088237c6c270a898a4df565c27cf42d70ad174"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/fork_summary.csv",
+      "bytes": 7010,
+      "sha256": "d2696781d57f2103ba76a2fa97a2dd0656cbaf07fa74c9534ef30678a740961c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/forks_best.npz",
+      "bytes": 663190,
+      "sha256": "65d13581a717baeb34d01a0ccff5619271ca76e418656a014da843ad3f686e4f"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/forks_last.npz",
+      "bytes": 660020,
+      "sha256": "45edec53b1dc3ec4ccb218f9a65f45a9938d8d193b7f22588868d01ce4aee459"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/hold_one_uav_best_diffusion.csv",
+      "bytes": 82547,
+      "sha256": "63470dad7b939a26ece504285735f9c29bbda753ec625d2d14adaa0e8fdfa9e5"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/hold_one_uav_best_gaussian.csv",
+      "bytes": 62778,
+      "sha256": "e817bce00f97202ced7bd17a541931141e2e801006f83323cb34cac271bddc55"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/hold_one_uav_last_diffusion.csv",
+      "bytes": 79580,
+      "sha256": "76c70253bb2d9ba075b10a890e2a290cc2076bd2a325281cf0cfc11949ff2bf2"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/hold_one_uav_last_gaussian.csv",
+      "bytes": 69772,
+      "sha256": "495dc6e1d18a90a314e3453eb0e43e051258d97b8329d3d7f53d81fcc73dd131"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/motion_score_factorial.pdf",
+      "bytes": 13023,
+      "sha256": "f42ddbd1c564fe2ff436d03a4e22e024aa722c40a16575541a136beead0bf6a8"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/motion_score_factorial.png",
+      "bytes": 75761,
+      "sha256": "079e6923f71a227a80fe40ab404ecfa793e8c64de968afd54d60da19c67a3502"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/motion_score_factorial.svg",
+      "bytes": 22666,
+      "sha256": "3f8c9fc9dda52900fa83b92379142be45122820cadc9d372188a15daeced8af4"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/paired_contrasts.csv",
+      "bytes": 9890,
+      "sha256": "a23d8fd86cc10d97d37438ec20be4286dac5808de4fba7a7cc4c2897c54fac9a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/paired_contrasts.json",
+      "bytes": 22233,
+      "sha256": "b0843d74c23dfccc0e6f697ffd824675905d51f0820d3666cea1f84b8fb45428"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/paired_one_step_best.csv",
+      "bytes": 4366666,
+      "sha256": "bff7608e1b2cc7a768c266a26f852f6a3c8ab9bcdb0acea3d34eccdf88b32a5c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/paired_one_step_last.csv",
+      "bytes": 4372714,
+      "sha256": "822be9ea3310b4abe1f23b3b4b163405adfb2538d0e6ef8ff2ee5806e3ce2225"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/physical_funnel.csv",
+      "bytes": 449,
+      "sha256": "37fe05f26d28cd7a3775721524b75ad48fb935a60c71857c5b8073503207159c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/physical_funnel_gap.pdf",
+      "bytes": 13992,
+      "sha256": "8ed318912814b9882fca2a43177c568b5b9ff87499580e8fe0b5dd3edf757aef"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/physical_funnel_gap.png",
+      "bytes": 88479,
+      "sha256": "e3ecffe34e668ede6186d8b613b8a25048947dd171f2d4223d2edad331a71d20"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/physical_funnel_gap.svg",
+      "bytes": 20889,
+      "sha256": "f16f0d80e7f2d92949b003327c584395d56de11ddaf5c75a294ef0468bb01bdb"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp1_motion_vs_scoring/summary.md",
+      "bytes": 2653,
+      "sha256": "e791e27df08781b05aa7b3159cedc50f3801debb360b86fa827a33998eb8cc68"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/complete_best.json",
+      "bytes": 163,
+      "sha256": "aeacaf3b14bb19f0c81e64bfc0583211bbf9b88af0d9a6998ceb5204c88cad10"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/complete_last.json",
+      "bytes": 163,
+      "sha256": "aeacaf3b14bb19f0c81e64bfc0583211bbf9b88af0d9a6998ceb5204c88cad10",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/complete_best.json"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_best_D0.npz",
+      "bytes": 37929194,
+      "sha256": "d34a5286005a79eec1ea7d814f7daab378bd4607e9595f1a751cb0d10b2a31ff"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_best_Db.npz",
+      "bytes": 38057656,
+      "sha256": "695190c7bb357d25adc4a5d9c63f36feea038cd698848008956c95ab86629b06"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_best_Dl.npz",
+      "bytes": 38044818,
+      "sha256": "4b39b25d70bad61536a1561792dd156bd58a63cef495b3b429dd56c2164195a4"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_best_Gb.npz",
+      "bytes": 38544637,
+      "sha256": "efdfac52cd86262bf510e4eacb80c249707dfde4103d8e36a1e86d1de507011a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_best_Gl.npz",
+      "bytes": 38477400,
+      "sha256": "e39a5e6009bd13eacf168f9bc3e10f22f7b3f50d4c7c308302fb967c8b6b7b8e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_last_D0.npz",
+      "bytes": 36016563,
+      "sha256": "d3692b53589943907ae5acc1710e34ac121dfc2ab527380f2ef40a6335d1b648"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_last_Db.npz",
+      "bytes": 36144398,
+      "sha256": "913e08ad9baa34359c64c358d3c3d8f1bb6dc2c446e7881fc0786fc4fd58a4bb"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_last_Dl.npz",
+      "bytes": 36132180,
+      "sha256": "7a7cc2ce9b351bb6cfe4c525c207785b09d41895b076224a3eb0567ada1a43c4"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_last_Gb.npz",
+      "bytes": 36519854,
+      "sha256": "dc1f64a68a9fda49e4da038096f4cbc0bd34fe7c28cde22659befda59198df36"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_samples_last_Gl.npz",
+      "bytes": 36538376,
+      "sha256": "a4dbba8431b5431296b4952aa9139e239083cb0fd7876f5b1c3c4d2df19b81ea"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_summary.csv",
+      "bytes": 97007,
+      "sha256": "8214c4f86f35e98b459bc1dcc3585009c8e681ff26b365e0065009f07fb5c448"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_uav_best.csv",
+      "bytes": 19170578,
+      "sha256": "0bee4fa3d60ca0ad5e742a330d69853ae52de02a7d68c519e75a5e79477269e7"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/conditional_uav_last.csv",
+      "bytes": 19019867,
+      "sha256": "c5559647e531e9ed74ba9b1afeabf6fd8a2675f92c3d9df261409765b0a2de6f"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/geometric_backhaul_risk.csv",
+      "bytes": 275227,
+      "sha256": "08c71312a3e688ce0f40546b1d64b975a51b13aa6f45c304a6c5041a91d1b2ba"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/geometric_risk_summary.csv",
+      "bytes": 3015,
+      "sha256": "1a9c2883144d1a2943c094d2e8df1178fe710173cee0cbf0265e2835e324a8a3"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/motion_magnitude_by_hop.pdf",
+      "bytes": 14303,
+      "sha256": "b109c3f2b14e78838ca28681fa587e421598cb26ca6922403f5d989cee1b5b48"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/motion_magnitude_by_hop.png",
+      "bytes": 284955,
+      "sha256": "3b4b573de4ba80fad4292e51d03aa054af5e14589c530784c758d5b723cd381e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/motion_magnitude_by_hop.svg",
+      "bytes": 30099,
+      "sha256": "76fcbd64280a9595b1cc8271c76f110bc96ca92f0ffb28774479961133205834"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_diffusion/episodes.csv",
+      "bytes": 128084,
+      "sha256": "c8b64c94a12a377f8a1e4568501e2af69fbea6213596fe4428d776374f75cfb2"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_diffusion/intervention.json",
+      "bytes": 333,
+      "sha256": "b0ffc59e8f0b9703abd9b146e927d17fabe427d4fb4aa557eed3a04fde6a2fbf"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_diffusion/step_metrics.npz",
+      "bytes": 3503648,
+      "sha256": "67255d4eb67b9f8d5da3c565712fe1726a0130e9fa51153519a84b342e302807"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_diffusion/summary.json",
+      "bytes": 13886,
+      "sha256": "5e5f3aa32375b74f8f82ee8084bd5818888ce3a5215c0cea1a77187b7a2d3e5a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_diffusion/trace_10000.npz",
+      "bytes": 18280084,
+      "sha256": "ff35173dab9c6942232d81f3bc702a2688886827b95074cd018c78ae5043558f"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_diffusion/trace_10001.npz",
+      "bytes": 18271227,
+      "sha256": "0a57e8cdac0bbcae4ac12492d374e4c2d60ca701dd209adea2c75b259f965f78"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_gaussian/episodes.csv",
+      "bytes": 117958,
+      "sha256": "e465c1f4dcc991d22f6b48bef7a2520a0c28f8e7fc3e7de50b9b4ac657fe5ca0"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_gaussian/intervention.json",
+      "bytes": 323,
+      "sha256": "fa04ad92a1c3b8c2098ca85d05548ad1546ed499166d64548d7d22ba53906eb0"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_gaussian/step_metrics.npz",
+      "bytes": 3028230,
+      "sha256": "03201cdd09e689ec2a3db535d036f6185457e5aa35b246897a572d902509c5ef"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_gaussian/summary.json",
+      "bytes": 12899,
+      "sha256": "93e86fea5c7cd63a4047451904775997ce8c8821109ab46a9613b293c508cc6b"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_gaussian/trace_10000.npz",
+      "bytes": 18361314,
+      "sha256": "507a90080ab0d8c2aa48bf807ddcfb8d23234a412866fad4f296e56ea58d85e3"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_best_gaussian/trace_10001.npz",
+      "bytes": 18319086,
+      "sha256": "58047947e2c83fdf9e80b6c2eecc6dffc08092b5236dc2ca5d986fbb25c01edd"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_diffusion/episodes.csv",
+      "bytes": 129754,
+      "sha256": "658f91046b156c6e0889f6e2cac6364e18bc368bee6fd0638f5a11358b2efa50"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_diffusion/intervention.json",
+      "bytes": 333,
+      "sha256": "9623b7b123ca6ecadf01b85aea6fad7c7456f0e33c3b60719688c2504f00d622"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_diffusion/step_metrics.npz",
+      "bytes": 3536389,
+      "sha256": "7f8e45e17cc3532809646138e8e263e6b19b8bf8dae2baa94b0dcc09b1c664e0"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_diffusion/summary.json",
+      "bytes": 13873,
+      "sha256": "cdc4353968ebedeaae644ba488665dd9707d4af47bad063123edda826729b692"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_diffusion/trace_10000.npz",
+      "bytes": 18316480,
+      "sha256": "8de054c8618008c002728a932218ff9e6ae696f2ab662eb38611c98e2a5169f4"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_diffusion/trace_10001.npz",
+      "bytes": 18284425,
+      "sha256": "62cba305d795af52b5c8665a125b7ce9b4bba3a4eadf4ef0ab23076035af9841"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_gaussian/episodes.csv",
+      "bytes": 116569,
+      "sha256": "79435f52c566a20e8a27f0d99bc1718b2a1e3bb645ed300c66eac644254fdb6c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_gaussian/intervention.json",
+      "bytes": 323,
+      "sha256": "febd8932ca2bc673a65e1351d2736744bf5f048d09e6c61ef46111c99d34b104"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_gaussian/step_metrics.npz",
+      "bytes": 2888938,
+      "sha256": "fb67a98f825a819ecca9403e25e02ee4087b43dd00a9a29d3c0a61471ccb1bf9"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_gaussian/summary.json",
+      "bytes": 12886,
+      "sha256": "36315da095fc0aa0c58e9eb907945c941d3a231f6ec738d232122d599c99cf54"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_gaussian/trace_10000.npz",
+      "bytes": 18293457,
+      "sha256": "4ef5f9d4954cbf3a11c9ad322fcc309e9decba3f796f69f4bd8bb34e99910555"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_last_gaussian/trace_10001.npz",
+      "bytes": 18218113,
+      "sha256": "afcebfc0238bdccbdb524e8a01f989fa4dac2c3f721da4cf9552122e6acdec07"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/noise_paired_comparison.csv",
+      "bytes": 3120,
+      "sha256": "1f110bb09f186bc8e619acae0bea10aee13fa06ecb75098dc55f10231cea27aa"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/summary.md",
+      "bytes": 1579,
+      "sha256": "8237ca32beabc812c562e79d36ef44513c1dd5b844668434bb7a42912f773a1e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/topk_consistency.pdf",
+      "bytes": 16886,
+      "sha256": "c21d86902104c2ed5332e9248dbb5f06628fb14aad9188006e6d45b99141ceeb"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/topk_consistency.png",
+      "bytes": 154861,
+      "sha256": "29b4368a08a35a2743a616ff1750eecd8e0768b7499d7edd2e90b8c0059fbc29"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp2_action_distribution/topk_consistency.svg",
+      "bytes": 25067,
+      "sha256": "d1e694926e49ac1569dbe5f8a8504dcd2df7f3b465eac12921b3ac83e401481b"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/audit_summary.json",
+      "bytes": 378,
+      "sha256": "5eb493abe9c808663a6a6244c3f825e416d1a7de79b7bd8b88ca945b90b10c8e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/available_fields.csv",
+      "bytes": 8550,
+      "sha256": "eb35e017be2371579d6a00ffb37859452eb33a7d2f7aa778ae917b099b3c2c57"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/likelihood_audit.csv",
+      "bytes": 1104957,
+      "sha256": "ef9c0d6cf37e4da1677a6caa3ea85b5d1960ae0d8d36f77d3daca86dd56d85a5"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/likelihood_audit_best.csv",
+      "bytes": 556865,
+      "sha256": "4e8beb45e455d94861acc8b62e9b86a1b79676b8277b0ccf11780846dc90dafa"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/likelihood_audit_last.csv",
+      "bytes": 548396,
+      "sha256": "d1e7b49a4d9f2a28ae2404c0dee5a35c1992b81f6b2e573c7cca04d204d96762"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/logprob_by_candidate_count.pdf",
+      "bytes": 116374,
+      "sha256": "5fcd8d3f30c62fd11b1161e933182e16445b3d06126b162204829781ee4c8d82"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/logprob_by_candidate_count.png",
+      "bytes": 371928,
+      "sha256": "c189de19d2d24fa41fb3caa11c7ace86f6594c7c665f8aa76d4561b1f5775fff"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/logprob_by_candidate_count.svg",
+      "bytes": 1415010,
+      "sha256": "956eff6180952ff586dde97d12749b58f847cb735e7d340257734671c42e7b0a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/metrics_field_audit.md",
+      "bytes": 2606,
+      "sha256": "95a698ec66830074063e9e2a9ac5776ce8ba8b863be492963c151b6eb6342045"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/motion_vs_score_gradient.pdf",
+      "bytes": 148019,
+      "sha256": "45058f18306cc4305f734125dd8a4578257f1be12e34b74fdf3bff3a6821e599"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/motion_vs_score_gradient.png",
+      "bytes": 391092,
+      "sha256": "fc8178d63d10479cfa9ccf2d97a831fd62994cfc86cab85a31ce833f7c4aad24"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/motion_vs_score_gradient.svg",
+      "bytes": 372160,
+      "sha256": "a0ec8428b309dfbf39cb94efbd880540bbe607cd4ca2aa172e885b1847d09830"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/ppo_stepwise_kl_clip.pdf",
+      "bytes": 370430,
+      "sha256": "4390ef2bb12367d883637cdd7d89fa00c311b94a5d82055c2b13f27a4e9ca97c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/ppo_stepwise_kl_clip.png",
+      "bytes": 566835,
+      "sha256": "a3992b6a4c2ffa0bef51b277710d39ec3ab5de79ce7e5a6a294d4446d9ef823c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/ppo_stepwise_kl_clip.svg",
+      "bytes": 546729,
+      "sha256": "1a1fa0dbf8e348ca1c56a79158deab0e610c18f6617d1fbdecaac79e87d55f41"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/schedule_sensitivity.csv",
+      "bytes": 585,
+      "sha256": "6dd8fdd9633b0c01bb1abd4c2b734fb633839f4ac889f5ea3b58a1eec3bbe63b"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/summary.md",
+      "bytes": 416,
+      "sha256": "27a755a2626732e46e7de70e48eee9cb7bc73b819dc184960ee74373c528f816"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp3_dppo_update/training_stage_metrics.csv",
+      "bytes": 32561,
+      "sha256": "937751928f4246edd8e7cf750b5bb0d175bcb8cce4c27746065ae187c918d90c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/configs/conservative.yaml",
+      "bytes": 6563,
+      "sha256": "b3e06a1de48b0fdbf22554c2071441dfff8595bc2670683a5f7dfebf8f610b11"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/configs/control.yaml",
+      "bytes": 6562,
+      "sha256": "5d5b6a94252f15f1f63cd10b34dced8bb21d0ab2c5a48ff177b3d20a48ee45f0"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/best.pt",
+      "bytes": 8038434,
+      "sha256": "fe61056d0b209a2fbb332b43d7e531d5ed9207a766c8945205027801b17dd3fd"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/checkpoints/full_000180224/index.json",
+      "bytes": 91,
+      "sha256": "331390b3920fb1c1bcf512e8d070f41c529e6f02507c505bf4bfe888f8e7b67c"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/checkpoints/full_000180224/metadata.pt",
+      "bytes": 33907091,
+      "sha256": "c05d7a43d0c7c548bc372e8994ab58d553751d7c3964cf25b657e965c2fb6e87"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/checkpoints/full_000200000/index.json",
+      "bytes": 91,
+      "sha256": "647af9d2672bab0218f424ec84d7047816c23a947f3a1e766bd47c1cc69a74dd"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/checkpoints/full_000200000/metadata.pt",
+      "bytes": 33923667,
+      "sha256": "3b116c0d888cd7c6e869faef8ab18195c744ea0d5c2b163a321ae8ccca81e249"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/config.yaml",
+      "bytes": 6563,
+      "sha256": "b3e06a1de48b0fdbf22554c2071441dfff8595bc2670683a5f7dfebf8f610b11",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/configs/conservative.yaml"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/critic_predictions.npz",
+      "bytes": 522059,
+      "sha256": "1178e4f7b4ec9e788632dde359e2bcca35ae60fac9deae85173cb475c5e250c5"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/episodes.csv",
+      "bytes": 128680,
+      "sha256": "9aa8c7cf1dd3b1f838d1400be75809766fa494c76f5758529074777d76cb5fb7"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/step_metrics.npz",
+      "bytes": 3520533,
+      "sha256": "35da9318e271b6e5d1f8ce883a5357611fb3abdb6ba71130969293dac248f48e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/summary.json",
+      "bytes": 13949,
+      "sha256": "1fb3f07d5723230169e85d208a3d194a668d7cff837870b4e7d32585b08db6d2"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/trace_10000.npz",
+      "bytes": 18281394,
+      "sha256": "943f266f43b4082ce44626051cb5daa304ef4f819dfa3488ee32f1cbcd377977"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/trace_10001.npz",
+      "bytes": 18265608,
+      "sha256": "679ae3e74d3d985bab9d4b974eac0f6a0ffc60e4ecebf162b391e84eb796cd16"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initialization.json",
+      "bytes": 1013,
+      "sha256": "f5dd9bfb936ebb9bda31846144c07fa7ceb05f96c96f1288a6657950413b1284"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/last.pt",
+      "bytes": 24078773,
+      "sha256": "047ed05850a11162e6e85b6cceca7eba81182843de21bd32a946f6c350275250"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/manifest.json",
+      "bytes": 519,
+      "sha256": "8d98c7ad2f9fdda5f64b27d934b8cc02eccf5604de5ef88dbdb9afaeeb6f2615"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/metadata.json",
+      "bytes": 4967,
+      "sha256": "f29a3b28f0a71276b0a64666bfac414bf0a50f27b62e834025d75ec89a4c2173"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/metrics.csv",
+      "bytes": 252817,
+      "sha256": "d4a4e8e1b14a901d59949afea2ff55d3fbf7886182dea88ade7b23daece476d7"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/origin/checkpoints/full_000000000/index.json",
+      "bytes": 91,
+      "sha256": "4f0c4ada6ccb9b803862a6f6d0c948d221a63c1dceb6d807df7a2aeb4af327eb"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/origin/checkpoints/full_000000000/metadata.pt",
+      "bytes": 9508367,
+      "sha256": "e5aa5b16b99b211d4a374a0676ea603c782731b32a02d0756383b839bd470de5"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/step0.pt",
+      "bytes": 8038739,
+      "sha256": "528440d395e6d7f16f6e6d643349591cb4b8279af994401b4ec5acfdbcddfb94"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/validation.csv",
+      "bytes": 870,
+      "sha256": "3c6b7284c316592241b86bf2f313c164bf5b54fa956ea45ac058db6c345ddf81"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/best.pt",
+      "bytes": 8038434,
+      "sha256": "c7cd86426feb62e701e547375a835f30264adb5830d72450925c3bd760d77007"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/checkpoints/full_000145408/index.json",
+      "bytes": 91,
+      "sha256": "77a5b993ce0912b0cbf7548c8e554fc39105c9a8a0e09fdb5d4d4839da4b065a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/checkpoints/full_000145408/metadata.pt",
+      "bytes": 33941267,
+      "sha256": "f1be139c25f1096a0099190c1a5dc84e76ddad8939a00e1302999bfdb2875e9b"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/checkpoints/full_000200000/index.json",
+      "bytes": 91,
+      "sha256": "e8de86e81f1389de45bef211049ea2656b13efb13281077e729655fb4373b007"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/checkpoints/full_000200000/metadata.pt",
+      "bytes": 33928467,
+      "sha256": "32af1ba44584192b4285d78106de4af3389a02185380847ab61470af3f2a82ad"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/config.yaml",
+      "bytes": 6562,
+      "sha256": "5d5b6a94252f15f1f63cd10b34dced8bb21d0ab2c5a48ff177b3d20a48ee45f0",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/configs/control.yaml"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/initial_evaluation/critic_predictions.npz",
+      "bytes": 522059,
+      "sha256": "1178e4f7b4ec9e788632dde359e2bcca35ae60fac9deae85173cb475c5e250c5",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/critic_predictions.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/initial_evaluation/episodes.csv",
+      "bytes": 128680,
+      "sha256": "9aa8c7cf1dd3b1f838d1400be75809766fa494c76f5758529074777d76cb5fb7",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/episodes.csv"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/initial_evaluation/step_metrics.npz",
+      "bytes": 3520533,
+      "sha256": "35da9318e271b6e5d1f8ce883a5357611fb3abdb6ba71130969293dac248f48e",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/step_metrics.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/initial_evaluation/summary.json",
+      "bytes": 13951,
+      "sha256": "9def649fd5a30329a3e9362c4766f36ab5a90faf2902d0ebebadfa490bccf4e2"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/initial_evaluation/trace_10000.npz",
+      "bytes": 18281394,
+      "sha256": "943f266f43b4082ce44626051cb5daa304ef4f819dfa3488ee32f1cbcd377977",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/trace_10000.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/initial_evaluation/trace_10001.npz",
+      "bytes": 18265608,
+      "sha256": "679ae3e74d3d985bab9d4b974eac0f6a0ffc60e4ecebf162b391e84eb796cd16",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/trace_10001.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/initialization.json",
+      "bytes": 1003,
+      "sha256": "a25ba83933b1831da38d01a10b69d8c048f3a09800ea7ae5fb00e47f743574dd"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/last.pt",
+      "bytes": 24078773,
+      "sha256": "4c28275ba600a5d8e2da1fd775ada6a8d233e3d963094de97e114120f6f240b4"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/manifest.json",
+      "bytes": 512,
+      "sha256": "e653489472c216fc1bc1b290ae721327b078301519185f3e5dfd5e836c7b4a4e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/metadata.json",
+      "bytes": 4951,
+      "sha256": "1157910eb1f0ec72133452954550249ac39a939d9006eb32f07cbcc2d7e2c918"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/metrics.csv",
+      "bytes": 251379,
+      "sha256": "646488b722d6fa7bfcbbfa2643a3ac2f9c5dc550cfeddcf20e86680bed6b4ed1"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/origin/checkpoints/full_000000000/index.json",
+      "bytes": 91,
+      "sha256": "b520e2feb10d5e76afd6c8ce2bfb560bd51f8a6db8e8c12cd30c440d946196ae"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/origin/checkpoints/full_000000000/metadata.pt",
+      "bytes": 9508367,
+      "sha256": "60a374013b17ad5a33511e4ed1c1e5a56082094a1028b3246a57ffe8e99a8ece"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/step0.pt",
+      "bytes": 8038739,
+      "sha256": "60932a300835c33ba7a77ddae8378dfb9cf7935e88b122ec7e27e92601e11356"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/validation.csv",
+      "bytes": 866,
+      "sha256": "1b63405eac7f141815e5ada35533b9360900cf13dac86aaba0ae3d50848d10fd"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/best/critic_predictions.npz",
+      "bytes": 522059,
+      "sha256": "1178e4f7b4ec9e788632dde359e2bcca35ae60fac9deae85173cb475c5e250c5",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/critic_predictions.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/best/episodes.csv",
+      "bytes": 128680,
+      "sha256": "9aa8c7cf1dd3b1f838d1400be75809766fa494c76f5758529074777d76cb5fb7",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/episodes.csv"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/best/provenance.json",
+      "bytes": 722,
+      "sha256": "d76e3c308346eb0747af44b38622dce5d423b0d9e2d8641c83a67bf5a0441fe5"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/best/step_metrics.npz",
+      "bytes": 3520533,
+      "sha256": "35da9318e271b6e5d1f8ce883a5357611fb3abdb6ba71130969293dac248f48e",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/step_metrics.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/best/summary.json",
+      "bytes": 13951,
+      "sha256": "03d0a3679b28dc92531a9e1c8f58e3dd8e1234c153c1c5921e71c4efb11e7ff7"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/best/trace_10000.npz",
+      "bytes": 18281394,
+      "sha256": "943f266f43b4082ce44626051cb5daa304ef4f819dfa3488ee32f1cbcd377977",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/trace_10000.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/best/trace_10001.npz",
+      "bytes": 18265608,
+      "sha256": "679ae3e74d3d985bab9d4b974eac0f6a0ffc60e4ecebf162b391e84eb796cd16",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/trace_10001.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/last/critic_predictions.npz",
+      "bytes": 522993,
+      "sha256": "1be26ed864dfab0b9d84296644a0c94908d5d01147049ffe05d13bda84bf279e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/last/episodes.csv",
+      "bytes": 129218,
+      "sha256": "085dcd19404f6b8f004e48e92261d7ecb50aa269624b44d0634e945ba049a34a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/last/provenance.json",
+      "bytes": 727,
+      "sha256": "a14c8869512e5c334a39021114edb6d4d5b28fd12559346a0aaee0dd0b574dc7"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/last/step_metrics.npz",
+      "bytes": 3529966,
+      "sha256": "f9210b6cf871c7ab76c79dffdb4c883886c5bde2332d5983b0c9724a3ca11036"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/last/summary.json",
+      "bytes": 13966,
+      "sha256": "84b011ca5886e4a306d8dca304d10910da8b55b2d4278856f85657ac2500eb3e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/last/trace_10000.npz",
+      "bytes": 18299544,
+      "sha256": "bfb8f901ea07a7b463e13b645d63787c055a122df22d61829bee0a5be6d9d2cb"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/conservative/last/trace_10001.npz",
+      "bytes": 18273164,
+      "sha256": "0544ef34c8fa76d07610029b85277d65b46260f3f9ca8551a2424f5e7d73d473"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/best/critic_predictions.npz",
+      "bytes": 522059,
+      "sha256": "1178e4f7b4ec9e788632dde359e2bcca35ae60fac9deae85173cb475c5e250c5",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/critic_predictions.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/best/episodes.csv",
+      "bytes": 128680,
+      "sha256": "9aa8c7cf1dd3b1f838d1400be75809766fa494c76f5758529074777d76cb5fb7",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/episodes.csv"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/best/provenance.json",
+      "bytes": 717,
+      "sha256": "07317dfdbfa57ca7aad0d6c3ff6f8c928189888d770ecb264af3f5beda3ba348"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/best/step_metrics.npz",
+      "bytes": 3520533,
+      "sha256": "35da9318e271b6e5d1f8ce883a5357611fb3abdb6ba71130969293dac248f48e",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/step_metrics.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/best/summary.json",
+      "bytes": 13951,
+      "sha256": "5c386ed1f660371503929baf63c056ac50a9710c98d7382e4aca7a9918fe3365"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/best/trace_10000.npz",
+      "bytes": 18281394,
+      "sha256": "943f266f43b4082ce44626051cb5daa304ef4f819dfa3488ee32f1cbcd377977",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/trace_10000.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/best/trace_10001.npz",
+      "bytes": 18265608,
+      "sha256": "679ae3e74d3d985bab9d4b974eac0f6a0ffc60e4ecebf162b391e84eb796cd16",
+      "archive_hardlink_to": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/conservative/initial_evaluation/trace_10001.npz"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/last/critic_predictions.npz",
+      "bytes": 522581,
+      "sha256": "52d1d9a6d9dee7c0095cf85828118a06fb54ad594d113ad5270806463cf6cb52"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/last/episodes.csv",
+      "bytes": 129131,
+      "sha256": "9bc60b5f7df7c1c7de0e19377c4956417dc4538fcfe160727e719ca14f1ada49"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/last/provenance.json",
+      "bytes": 722,
+      "sha256": "4104e9458487ee6d4eb41c214f1185d1a7fe93d1d34bc0ac13bea44a0076e750"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/last/step_metrics.npz",
+      "bytes": 3498450,
+      "sha256": "b3b0f61b1d7695905c420ee039066aaaaca260b1bc997103e21baecb252b7c24"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/last/summary.json",
+      "bytes": 13919,
+      "sha256": "2adb2102a14f5e1eb2434c21aab8a338d6a62b3b398828f0d2b9a35d1ad7cea9"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/last/trace_10000.npz",
+      "bytes": 18264610,
+      "sha256": "23abdf6f7f864194a4bc88ffe3d147e0c0ebd100de9b7caa7a7f6af360961b04"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/evaluation/control/last/trace_10001.npz",
+      "bytes": 18254937,
+      "sha256": "abd823fcc9a6b9448e0b7de03ca5db957f75df500e72ba2a2c8c331d51450130"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/gate_decision.json",
+      "bytes": 1287,
+      "sha256": "6e9299df9a7a50d02bd14ab8cde410018616f5d1fcbd33244a739b06e0dfe05e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/learning_curve.pdf",
+      "bytes": 14955,
+      "sha256": "2b1b7a3166543818081ce97d622f56f58862c6c4b6bea59cece568a03410c4e8"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/learning_curve.png",
+      "bytes": 332050,
+      "sha256": "f80f732fa50b52799af183df46f771ab972c42cfb428b1ccd70466145c8621ab"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/learning_curve.svg",
+      "bytes": 35516,
+      "sha256": "6c02e496020fede9b756b0f114e0d39a2e9f49baf6182a7236b0d37263c12f4b"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/paired_contrasts.csv",
+      "bytes": 3516,
+      "sha256": "5e2d0da2097d0740128f424dbab58fbb2f19a811ed0042c10c27107e9d609339"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/paired_summary.csv",
+      "bytes": 821,
+      "sha256": "7c34dab29255b497ccc655b4f10fcb9e43604db3b53b06f3ddd13585a3fef2ac"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/summary.md",
+      "bytes": 1870,
+      "sha256": "8202fd5fe77316e37bb38ea793ba904d53ad90bb05f83ecbd1ca330ac0768a84"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/update_summary.csv",
+      "bytes": 331,
+      "sha256": "7b63972ce6325fa48edf4423fd06a0e9d1cc57404a229e1082933062b13ce695"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/finetune_conservative.log",
+      "bytes": 15448,
+      "sha256": "a6deef352449a66ca6f5d46836d63d83b0fcdc8c8ce13dc324919d3ac2fe53df"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/finetune_control.log",
+      "bytes": 15435,
+      "sha256": "6f7aea9d49f37ff5f0ef0af820fab138337992599b8e5512dbea6795004f419a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/manifest.json",
+      "bytes": 10608,
+      "sha256": "447c1b6a3107e39f37651023b169a7b32c375a93499e77020571df86e9a00048"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/output_hashes.json",
+      "bytes": 28028,
+      "sha256": "e158c368f6165ec20bf247157506cf2c0bc18e06fa8e6884846a30fe20b9e58a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/regression_notes.md",
+      "bytes": 1159,
+      "sha256": "3fe8e362ccce46a22e3f040a029f56334338ca99063efa100f07d37fb22ba600"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/report.md",
+      "bytes": 9492,
+      "sha256": "d596f530b8e42b8b7db577110729d2cb3ea7bb65fb43117d564dbabdd7431ef7"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/server_input_integrity.json",
+      "bytes": 42,
+      "sha256": "c77b7d5c3abbbb525fa9ca23911d615b76c859652761a40b2edf3099dcfd471f"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/best_diffusion.json",
+      "bytes": 258,
+      "sha256": "f49419337f5bbcce165d04306e36e917ee5b535738285f76d577bfc4901b1152"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/best_diffusion.pt",
+      "bytes": 11778199,
+      "sha256": "f10055e54e4cefe158f9022c43055956a5fa128c4739a400966922b537787b5f"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/best_gaussian.json",
+      "bytes": 257,
+      "sha256": "a3cc8910bdeb3f8e405bc25a1708b342b27d8aba0a25f4e2571572d46151eb4e"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/best_gaussian.pt",
+      "bytes": 11531921,
+      "sha256": "9dc3a664e14cfea2c50e1eb45ece0558db40690bc00bda7762488d23b8a1e27a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/factual_best_diffusion.pt",
+      "bytes": 49989161,
+      "sha256": "fac51c2f6946c62f4ce43560bbc9a5d1352283ec5ba7d2978e406140939e301f"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/factual_best_gaussian.pt",
+      "bytes": 48994861,
+      "sha256": "1b8f5123c640b7bc4acb4240aa8f7570464ef167334dbb418b4e7b70a2200084"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/factual_last_diffusion.pt",
+      "bytes": 49454405,
+      "sha256": "10e7fb117682f9c55f09124169d28925c1cbaeaed87c151ea06859b3f0307525"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/factual_last_gaussian.pt",
+      "bytes": 49458084,
+      "sha256": "50a7c07a3a2a2a75717ce7071413a701ffcecf566a3905167b1e7bda97f5c063"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/last_diffusion.json",
+      "bytes": 259,
+      "sha256": "258c2cd8621d5321984409ea22349949a679e368fc4a6b45d8b88aec06ba926a"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/last_diffusion.pt",
+      "bytes": 11651095,
+      "sha256": "a2c2ec2c49d11ca7152ab3af1f21a28f453871af5bc6a093d34cd81f6a6abff8"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/last_gaussian.json",
+      "bytes": 259,
+      "sha256": "d734fcb3a2cea26a565112789f4c0aad1b9b4c51d0601328e5f068c92161bbb2"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/last_gaussian.pt",
+      "bytes": 11667537,
+      "sha256": "2b316c01157611dc4b59b1e5adef7d648e113478ffd941397fea4bd9380db61d"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/replay_best_diffusion.npz",
+      "bytes": 11880,
+      "sha256": "61bd6d582f355e08c672f402caf74f108940e83f5cb5f8b4feb5f126d7c3ec18"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/replay_best_gaussian.npz",
+      "bytes": 11070,
+      "sha256": "a9cb2dc55f2fb24bc11aa3c4cea06669f833d0d33e9242318a7e703e058e1085"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/replay_last_diffusion.npz",
+      "bytes": 12053,
+      "sha256": "029abe102aa14eaf45a0e2c68158488b5d102830c3df4f68ddf11a34713b5a06"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/states/replay_last_gaussian.npz",
+      "bytes": 9810,
+      "sha256": "eb71eb7503188f72adf3f7804b6ca6a639992da11e1ae9faea665a4aa49b75ea"
+    },
+    {
+      "path": "analysis/diffusion_gaussian_diagnosis_20261110/test_output.txt",
+      "bytes": 2977,
+      "sha256": "cd23773854a84c0a7ee7ab5eeb21afc2fa83fdc56684745bd1a1adb8f88d1f31"
+    }
+  ],
+  "elapsed_seconds": 24.75303513900144
+}

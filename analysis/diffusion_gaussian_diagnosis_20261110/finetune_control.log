@@ -1,0 +1,214 @@
+14:06:59 evaluate scenes=10000..10015 t=1/400
+14:07:31 evaluate scenes=10016..10031 t=1/400
+START_SCREENING control budget 200000 source 7501824
+14:08:02 DPPO initialize device=cuda:0 environments=16 algorithm=diffusion_dppo policy_steps=8
+14:08:02 actor PPO devices=['cuda:0']; microbatch_agents=4096; critic and sampling=cuda:0
+14:08:02 rollout begin env_steps=0 vector_steps=128
+14:08:17 update complete env_steps=2048 reward=0.606338 coverage=54.5055% PPO=5.93s
+14:08:18 rollout begin env_steps=2048 vector_steps=128
+14:08:33 update complete env_steps=4096 reward=0.761362 coverage=67.8324% PPO=6.04s
+14:08:33 rollout begin env_steps=4096 vector_steps=128
+14:08:49 update complete env_steps=6144 reward=0.739365 coverage=66.0273% PPO=5.79s
+14:08:49 rollout begin env_steps=6144 vector_steps=128
+14:09:03 update complete env_steps=8192 reward=0.599232 coverage=53.7936% PPO=5.37s
+14:09:03 rollout begin env_steps=8192 vector_steps=128
+14:09:18 update complete env_steps=10240 reward=0.720587 coverage=64.4424% PPO=5.74s
+14:09:18 rollout begin env_steps=10240 vector_steps=128
+14:09:34 update complete env_steps=12288 reward=0.718131 coverage=64.0680% PPO=6.30s
+14:09:34 rollout begin env_steps=12288 vector_steps=128
+14:09:50 update complete env_steps=14336 reward=0.609980 coverage=54.6533% PPO=5.99s
+14:09:50 rollout begin env_steps=14336 vector_steps=128
+14:10:06 update complete env_steps=16384 reward=0.715174 coverage=64.0446% PPO=6.11s
+14:10:06 rollout begin env_steps=16384 vector_steps=128
+14:10:22 update complete env_steps=18432 reward=0.718013 coverage=64.1615% PPO=6.11s
+14:10:22 rollout begin env_steps=18432 vector_steps=128
+14:10:38 update complete env_steps=20480 reward=0.599938 coverage=53.8167% PPO=5.94s
+14:10:38 rollout begin env_steps=20480 vector_steps=128
+14:10:54 update complete env_steps=22528 reward=0.703720 coverage=62.8089% PPO=6.27s
+14:10:54 rollout begin env_steps=22528 vector_steps=128
+14:11:10 update complete env_steps=24576 reward=0.742097 coverage=66.2786% PPO=6.20s
+14:11:10 rollout begin env_steps=24576 vector_steps=128
+14:11:26 update complete env_steps=26624 reward=0.625031 coverage=56.1032% PPO=6.23s
+14:11:26 rollout begin env_steps=26624 vector_steps=128
+14:11:41 update complete env_steps=28672 reward=0.672601 coverage=60.1823% PPO=5.90s
+14:11:41 rollout begin env_steps=28672 vector_steps=128
+14:11:57 update complete env_steps=30720 reward=0.699291 coverage=62.5719% PPO=5.99s
+14:11:57 rollout begin env_steps=30720 vector_steps=128
+14:12:11 update complete env_steps=32768 reward=0.588451 coverage=52.6276% PPO=5.70s
+14:12:12 rollout begin env_steps=32768 vector_steps=128
+14:12:26 update complete env_steps=34816 reward=0.674502 coverage=60.1673% PPO=5.88s
+14:12:27 rollout begin env_steps=34816 vector_steps=128
+14:12:42 update complete env_steps=36864 reward=0.726611 coverage=64.9453% PPO=6.03s
+14:12:42 rollout begin env_steps=36864 vector_steps=128
+14:12:57 update complete env_steps=38912 reward=0.644119 coverage=57.8571% PPO=5.86s
+14:12:57 rollout begin env_steps=38912 vector_steps=128
+14:13:12 update complete env_steps=40960 reward=0.605226 coverage=54.3151% PPO=6.04s
+14:13:13 rollout begin env_steps=40960 vector_steps=128
+14:13:28 update complete env_steps=43008 reward=0.700240 coverage=62.5866% PPO=6.18s
+14:13:29 rollout begin env_steps=43008 vector_steps=128
+14:13:44 update complete env_steps=45056 reward=0.672031 coverage=60.0755% PPO=6.09s
+14:13:44 rollout begin env_steps=45056 vector_steps=128
+14:14:00 update complete env_steps=47104 reward=0.607101 coverage=54.4632% PPO=6.09s
+14:14:00 rollout begin env_steps=47104 vector_steps=128
+14:14:17 update complete env_steps=49152 reward=0.703765 coverage=63.0404% PPO=6.27s
+14:14:17 rollout begin env_steps=49152 vector_steps=128
+14:14:33 update complete env_steps=51200 reward=0.700448 coverage=62.6608% PPO=6.23s
+14:14:33 validation begin env_steps=51200
+14:15:03 evaluate scenes=10016..10031 t=9/400
+14:15:30 validation env_steps=51200 return=270.141303 coverage=60.3736% best_step=0
+14:15:30 rollout begin env_steps=51200 vector_steps=128
+14:15:45 update complete env_steps=53248 reward=0.602014 coverage=54.1169% PPO=5.74s
+14:15:45 rollout begin env_steps=53248 vector_steps=128
+14:16:01 update complete env_steps=55296 reward=0.731400 coverage=65.2835% PPO=6.11s
+14:16:01 rollout begin env_steps=55296 vector_steps=128
+14:16:16 update complete env_steps=57344 reward=0.720572 coverage=64.3424% PPO=6.22s
+14:16:16 rollout begin env_steps=57344 vector_steps=128
+14:16:31 update complete env_steps=59392 reward=0.573054 coverage=51.2314% PPO=5.64s
+14:16:31 rollout begin env_steps=59392 vector_steps=128
+14:16:47 update complete env_steps=61440 reward=0.682248 coverage=60.8203% PPO=6.06s
+14:16:47 rollout begin env_steps=61440 vector_steps=128
+14:17:02 update complete env_steps=63488 reward=0.707961 coverage=63.3454% PPO=6.00s
+14:17:02 rollout begin env_steps=63488 vector_steps=128
+14:17:17 update complete env_steps=65536 reward=0.614844 coverage=55.0485% PPO=6.05s
+14:17:18 rollout begin env_steps=65536 vector_steps=128
+14:17:33 update complete env_steps=67584 reward=0.733859 coverage=65.5778% PPO=5.92s
+14:17:33 rollout begin env_steps=67584 vector_steps=128
+14:17:48 update complete env_steps=69632 reward=0.736488 coverage=65.7240% PPO=6.29s
+14:17:49 rollout begin env_steps=69632 vector_steps=128
+14:18:03 update complete env_steps=71680 reward=0.617984 coverage=55.3926% PPO=5.73s
+14:18:04 rollout begin env_steps=71680 vector_steps=128
+14:18:19 update complete env_steps=73728 reward=0.699079 coverage=62.5065% PPO=6.08s
+14:18:19 rollout begin env_steps=73728 vector_steps=128
+14:18:34 update complete env_steps=75776 reward=0.720123 coverage=64.1146% PPO=5.88s
+14:18:34 rollout begin env_steps=75776 vector_steps=128
+14:18:49 update complete env_steps=77824 reward=0.632868 coverage=56.6891% PPO=5.72s
+14:18:49 rollout begin env_steps=77824 vector_steps=128
+14:19:04 update complete env_steps=79872 reward=0.711323 coverage=63.5895% PPO=5.91s
+14:19:05 rollout begin env_steps=79872 vector_steps=128
+14:19:20 update complete env_steps=81920 reward=0.751007 coverage=66.9993% PPO=5.96s
+14:19:20 rollout begin env_steps=81920 vector_steps=128
+14:19:35 update complete env_steps=83968 reward=0.645144 coverage=57.6852% PPO=5.73s
+14:19:35 rollout begin env_steps=83968 vector_steps=128
+14:19:50 update complete env_steps=86016 reward=0.655421 coverage=58.3828% PPO=5.75s
+14:19:50 rollout begin env_steps=86016 vector_steps=128
+14:20:05 update complete env_steps=88064 reward=0.712729 coverage=63.8076% PPO=6.20s
+14:20:06 rollout begin env_steps=88064 vector_steps=128
+14:20:21 update complete env_steps=90112 reward=0.623668 coverage=55.8271% PPO=5.66s
+14:20:21 rollout begin env_steps=90112 vector_steps=128
+14:20:36 update complete env_steps=92160 reward=0.648010 coverage=57.7422% PPO=5.75s
+14:20:36 rollout begin env_steps=92160 vector_steps=128
+14:20:51 update complete env_steps=94208 reward=0.727848 coverage=64.8831% PPO=5.94s
+14:20:51 rollout begin env_steps=94208 vector_steps=128
+14:21:06 update complete env_steps=96256 reward=0.677567 coverage=60.7454% PPO=5.81s
+14:21:06 rollout begin env_steps=96256 vector_steps=128
+14:21:21 update complete env_steps=98304 reward=0.612270 coverage=54.8792% PPO=5.66s
+14:21:21 rollout begin env_steps=98304 vector_steps=128
+14:21:37 update complete env_steps=100352 reward=0.729281 coverage=64.9945% PPO=5.97s
+14:21:37 validation begin env_steps=100352
+14:22:07 evaluate scenes=10016..10031 t=32/400
+14:22:32 validation env_steps=100352 return=264.556479 coverage=59.1257% best_step=0
+14:22:32 rollout begin env_steps=100352 vector_steps=128
+14:22:48 update complete env_steps=102400 reward=0.750146 coverage=66.8656% PPO=6.05s
+14:22:48 rollout begin env_steps=102400 vector_steps=128
+14:23:03 update complete env_steps=104448 reward=0.591307 coverage=53.0804% PPO=5.67s
+14:23:03 rollout begin env_steps=104448 vector_steps=128
+14:23:18 update complete env_steps=106496 reward=0.736867 coverage=65.7568% PPO=6.09s
+14:23:18 rollout begin env_steps=106496 vector_steps=128
+14:23:34 update complete env_steps=108544 reward=0.717628 coverage=64.0710% PPO=6.16s
+14:23:34 rollout begin env_steps=108544 vector_steps=128
+14:23:49 update complete env_steps=110592 reward=0.617475 coverage=55.2757% PPO=5.63s
+14:23:49 rollout begin env_steps=110592 vector_steps=128
+14:24:04 update complete env_steps=112640 reward=0.737995 coverage=65.9554% PPO=5.98s
+14:24:04 rollout begin env_steps=112640 vector_steps=128
+14:24:20 update complete env_steps=114688 reward=0.738316 coverage=66.2949% PPO=6.32s
+14:24:20 rollout begin env_steps=114688 vector_steps=128
+14:24:35 update complete env_steps=116736 reward=0.604156 coverage=54.2510% PPO=5.66s
+14:24:35 rollout begin env_steps=116736 vector_steps=128
+14:24:50 update complete env_steps=118784 reward=0.719080 coverage=64.2373% PPO=5.92s
+14:24:50 rollout begin env_steps=118784 vector_steps=128
+14:25:05 update complete env_steps=120832 reward=0.744131 coverage=66.4665% PPO=5.97s
+14:25:05 rollout begin env_steps=120832 vector_steps=128
+14:25:20 update complete env_steps=122880 reward=0.629489 coverage=56.3802% PPO=5.82s
+14:25:21 rollout begin env_steps=122880 vector_steps=128
+14:25:36 update complete env_steps=124928 reward=0.719871 coverage=64.3965% PPO=6.08s
+14:25:36 rollout begin env_steps=124928 vector_steps=128
+14:25:51 update complete env_steps=126976 reward=0.744828 coverage=66.4701% PPO=6.14s
+14:25:52 rollout begin env_steps=126976 vector_steps=128
+14:26:07 update complete env_steps=129024 reward=0.618133 coverage=55.2998% PPO=5.75s
+14:26:07 rollout begin env_steps=129024 vector_steps=128
+14:26:22 update complete env_steps=131072 reward=0.703868 coverage=62.5837% PPO=6.01s
+14:26:22 rollout begin env_steps=131072 vector_steps=128
+14:26:37 update complete env_steps=133120 reward=0.729503 coverage=65.0771% PPO=6.08s
+14:26:37 rollout begin env_steps=133120 vector_steps=128
+14:26:53 update complete env_steps=135168 reward=0.625030 coverage=56.0039% PPO=6.06s
+14:26:53 rollout begin env_steps=135168 vector_steps=128
+14:27:08 update complete env_steps=137216 reward=0.666397 coverage=59.5983% PPO=5.91s
+14:27:08 rollout begin env_steps=137216 vector_steps=128
+14:27:24 update complete env_steps=139264 reward=0.713933 coverage=63.8522% PPO=6.04s
+14:27:24 rollout begin env_steps=139264 vector_steps=128
+14:27:39 update complete env_steps=141312 reward=0.630471 coverage=56.3854% PPO=5.78s
+14:27:39 rollout begin env_steps=141312 vector_steps=128
+14:27:54 update complete env_steps=143360 reward=0.657902 coverage=59.0973% PPO=5.87s
+14:27:54 rollout begin env_steps=143360 vector_steps=128
+14:28:10 update complete env_steps=145408 reward=0.728831 coverage=65.1947% PPO=6.17s
+14:28:10 rollout begin env_steps=145408 vector_steps=128
+14:28:25 update complete env_steps=147456 reward=0.689589 coverage=61.6930% PPO=6.06s
+14:28:26 rollout begin env_steps=147456 vector_steps=128
+14:28:40 update complete env_steps=149504 reward=0.597075 coverage=53.5081% PPO=5.78s
+14:28:41 rollout begin env_steps=149504 vector_steps=128
+14:28:56 update complete env_steps=151552 reward=0.691891 coverage=61.6969% PPO=6.08s
+14:28:56 validation begin env_steps=151552
+14:29:26 evaluate scenes=10016..10031 t=27/400
+14:29:51 validation env_steps=151552 return=265.850793 coverage=59.4794% best_step=0
+14:29:51 rollout begin env_steps=151552 vector_steps=128
+14:30:06 update complete env_steps=153600 reward=0.708559 coverage=63.2855% PPO=6.00s
+14:30:07 rollout begin env_steps=153600 vector_steps=128
+14:30:21 update complete env_steps=155648 reward=0.619693 coverage=55.5589% PPO=5.74s
+14:30:21 rollout begin env_steps=155648 vector_steps=128
+14:30:36 update complete env_steps=157696 reward=0.754862 coverage=67.4590% PPO=5.98s
+14:30:37 rollout begin env_steps=157696 vector_steps=128
+14:30:52 update complete env_steps=159744 reward=0.758682 coverage=67.8232% PPO=5.97s
+14:30:52 rollout begin env_steps=159744 vector_steps=128
+14:31:06 update complete env_steps=161792 reward=0.584863 coverage=52.5361% PPO=5.53s
+14:31:06 rollout begin env_steps=161792 vector_steps=128
+14:31:22 update complete env_steps=163840 reward=0.714412 coverage=63.7751% PPO=6.34s
+14:31:22 rollout begin env_steps=163840 vector_steps=128
+14:31:37 update complete env_steps=165888 reward=0.739613 coverage=65.9385% PPO=6.09s
+14:31:37 rollout begin env_steps=165888 vector_steps=128
+14:31:52 update complete env_steps=167936 reward=0.588842 coverage=52.7881% PPO=5.72s
+14:31:53 rollout begin env_steps=167936 vector_steps=128
+14:32:08 update complete env_steps=169984 reward=0.706606 coverage=62.9069% PPO=6.28s
+14:32:08 rollout begin env_steps=169984 vector_steps=128
+14:32:24 update complete env_steps=172032 reward=0.739615 coverage=65.9997% PPO=6.11s
+14:32:24 rollout begin env_steps=172032 vector_steps=128
+14:32:39 update complete env_steps=174080 reward=0.597702 coverage=53.6191% PPO=5.90s
+14:32:39 rollout begin env_steps=174080 vector_steps=128
+14:32:54 update complete env_steps=176128 reward=0.674444 coverage=60.3717% PPO=5.97s
+14:32:54 rollout begin env_steps=176128 vector_steps=128
+14:33:09 update complete env_steps=178176 reward=0.697006 coverage=62.2712% PPO=5.96s
+14:33:10 rollout begin env_steps=178176 vector_steps=128
+14:33:25 update complete env_steps=180224 reward=0.593381 coverage=53.2438% PPO=5.75s
+14:33:25 rollout begin env_steps=180224 vector_steps=128
+14:33:40 update complete env_steps=182272 reward=0.693309 coverage=61.9710% PPO=6.00s
+14:33:40 rollout begin env_steps=182272 vector_steps=128
+14:33:55 update complete env_steps=184320 reward=0.726834 coverage=64.8760% PPO=6.08s
+14:33:55 rollout begin env_steps=184320 vector_steps=128
+14:34:10 update complete env_steps=186368 reward=0.620592 coverage=55.5309% PPO=5.80s
+14:34:10 rollout begin env_steps=186368 vector_steps=128
+14:34:26 update complete env_steps=188416 reward=0.687689 coverage=61.5339% PPO=6.03s
+14:34:26 rollout begin env_steps=188416 vector_steps=128
+14:34:41 update complete env_steps=190464 reward=0.737783 coverage=65.9391% PPO=6.17s
+14:34:41 rollout begin env_steps=190464 vector_steps=128
+14:34:57 update complete env_steps=192512 reward=0.646084 coverage=57.9492% PPO=5.88s
+14:34:57 rollout begin env_steps=192512 vector_steps=128
+14:35:12 update complete env_steps=194560 reward=0.696407 coverage=62.2790% PPO=6.06s
+14:35:12 rollout begin env_steps=194560 vector_steps=128
+14:35:27 update complete env_steps=196608 reward=0.758759 coverage=67.7116% PPO=6.13s
+14:35:27 rollout begin env_steps=196608 vector_steps=128
+14:35:43 update complete env_steps=198656 reward=0.702887 coverage=62.7861% PPO=6.12s
+14:35:43 rollout begin env_steps=198656 vector_steps=84
+14:35:53 update complete env_steps=200000 reward=0.596517 coverage=53.5124% PPO=3.92s
+14:35:53 validation begin env_steps=200000
+14:36:23 evaluate scenes=10016..10031 t=29/400
+14:36:49 validation env_steps=200000 return=270.345182 coverage=60.4883% best_step=0
+SCREENING_COMPLETE {"env_steps": 200000, "updates": 98, "optimizer_steps": 3920, "best_score": 270.9868907535582, "best_step": 0, "elapsed_seconds": 1727.1246662270278, "full_checkpoint": "analysis/diffusion_gaussian_diagnosis_20261110/exp4_conservative_finetuning/control/checkpoints/full_000200000", "status": "complete", "evaluation_seconds": 223.825251551345, "io_seconds": 9.512805037200451, "peak_rss_mib": 1552.21484375, "sum_process_peak_rss_mib": 1552.21484375, "peak_gpu_mib": 1599.0732421875}

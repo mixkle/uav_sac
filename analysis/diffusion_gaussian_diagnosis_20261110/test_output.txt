@@ -1,0 +1,54 @@
+........................F........                                        [100%]
+=================================== FAILURES ===================================
+____________________ test_numpy_numba_and_terminal_history _____________________
+
+cfg = DppoConfig(env=EnvConfig(width=3500.0, height=3500.0, num_uavs=4, num_users=24, capacity=10, altitude=100.0, bs_positi...city10_coverage_throughput_1m_seed0/pretrain/best.pt', minimum_free_gib=0, gpu_limit_gib=20.0, heartbeat_seconds=30.0))
+
+    def test_numpy_numba_and_terminal_history(cfg):
+        other = copy.deepcopy(cfg.env)
+        other.backend = "numpy"
+        a, b = ServiceEnvironment(cfg.env), ServiceEnvironment(other)
+        o, _, _ = a.reset(41)
+        b.reset(41)
+        actor = DiffusionActor(cfg)
+        for _ in range(cfg.env.horizon):
+            action, _ = actor.sample(o)
+            x, y = a.step(action), b.step(action)
+            np.testing.assert_allclose(x[0].users, y[0].users, atol=1e-6)
+            np.testing.assert_allclose(x[1], y[1], atol=1e-6)
+            assert x[2] == pytest.approx(y[2], abs=1e-10)
+            o = x[0]
+        assert x[3] and y[3] and a.t == cfg.env.horizon
+        with pytest.raises(RuntimeError, match="ended"):
+>           a.step(action)
+
+tests/test_diffusion_dppo.py:262: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/uav_research/diffusion_dppo/environment.py:167: in step
+    prepared = self.prepare(action)
+               ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <uav_research.diffusion_dppo.environment.ServiceEnvironment object at 0x7eeadca11fd0>
+action = ServiceAction(movement=array([[ 0.90088075,  0.4340274 ],
+       [-0.47387108,  0.8805919 ],
+       [ 0.52206427, -0.8... dtype=float32), scores=array([1., 0., 1.], dtype=float32), ue_ids=array([ 2, 12, 19]), offsets=array([0, 3, 3, 3, 3]))
+
+    def prepare(self, action):
+        if not isinstance(action, ServiceAction):
+            raise ValueError("topk_score requires ServiceAction, not a movement-only array")
+        o = self.obs
+        expected_ids = o.candidate_ids
+        expected_offsets = np.r_[0, np.cumsum(o.candidate_lengths)]
+        if (not np.array_equal(action.offsets, expected_offsets) or
+                not np.array_equal(action.ue_ids, expected_ids) or
+                action.scores.shape != expected_ids.shape or
+                not np.isfinite(action.scores).all() or
+                np.any((action.scores < 0) | (action.scores > 1))):
+>           raise ValueError("Action scores/IDs/masks do not match current candidates")
+E           ValueError: Action scores/IDs/masks do not match current candidates
+
+src/uav_research/diffusion_dppo/environment.py:118: ValueError
+=========================== short test summary info ============================
+FAILED tests/test_diffusion_dppo.py::test_numpy_numba_and_terminal_history - ...
+1 failed, 32 passed in 29.57s

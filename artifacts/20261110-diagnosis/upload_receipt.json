@@ -1,0 +1,36 @@
+{
+  "verified_at": "2026-11-10T07:08:01.006385+00:00",
+  "repository": "https://github.com/mixkle/uav_sac",
+  "source_commit": "d1516ce0a6765ec5a49c1b9094e734dd51a9b76e",
+  "release_url": "https://github.com/mixkle/uav_sac/releases/tag/diagnosis-2026-11-10",
+  "release_tag": "diagnosis-2026-11-10",
+  "local_result_files": 223,
+  "uncompressed_bytes": 1342355621,
+  "archive_bytes": 922599054,
+  "archive_sha256": "e2149aff78e36ed848b590e1a26ae89699427423a916c359a294359a6f477d09",
+  "remote_assets_sha256_verified": true,
+  "archive_members_sha256_verified": true,
+  "token_tracked": false,
+  "related_regression_tests": "New diagnosis tests: 4 passed; extended regression: 32 passed, 1 pre-existing terminal error-priority failure documented",
+  "scope": "Complete 223-file Diffusion/Gaussian diagnosis, including frozen states, conditional samples, A/B fine-tuning checkpoints and evaluations; original 10M source artifacts remain in prior release",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 108,
+      "digest": "sha256:7e39dc6502ca8e3a2b88617fad20220f77df027e8ce36ea5a373cd1dc0322e1d",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/diagnosis-2026-11-10/SHA256SUMS"
+    },
+    {
+      "name": "diagnosis-results-20261110.tar.gz.part001",
+      "size": 922599054,
+      "digest": "sha256:e2149aff78e36ed848b590e1a26ae89699427423a916c359a294359a6f477d09",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/diagnosis-2026-11-10/diagnosis-results-20261110.tar.gz.part001"
+    },
+    {
+      "name": "results_manifest.json",
+      "size": 56089,
+      "digest": "sha256:a8db9f3ec2240952ca30e03cb8ca35cfb33b8113ed5849f6ed47953c37db9eee",
+      "browser_download_url": "https://github.com/mixkle/uav_sac/releases/download/diagnosis-2026-11-10/results_manifest.json"
+    }
+  ]
+}

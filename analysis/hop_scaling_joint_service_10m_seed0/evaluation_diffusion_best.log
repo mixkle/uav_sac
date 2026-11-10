@@ -1,0 +1,6 @@
+BEGIN diffusion best env_steps 7501824
+12:11:04 evaluate scenes=10000..10015 t=1/400
+12:11:34 evaluate scenes=10000..10015 t=203/400
+12:12:06 evaluate scenes=10016..10031 t=1/400
+12:12:36 evaluate scenes=10016..10031 t=201/400
+DONE diffusion best {"coverage": 0.6058723958333334, "last100_coverage": 0.6524333333333333, "throughput_bps": 536961232.8792164, "return": 270.9868907535582, "critic_rmse": 7.750342015291976}

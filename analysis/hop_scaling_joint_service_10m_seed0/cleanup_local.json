@@ -1,0 +1,49 @@
+{
+  "location": "local",
+  "checked_at": "2026-11-10T04:20:39.686892+00:00",
+  "final_raw_hashes": "raw_data_hashes.json",
+  "retained": [
+    "training runs and checkpoints",
+    "/home/mixkle/uav_sac/analysis/hop_scaling_joint_service_10m_seed0"
+  ],
+  "entries": [
+    {
+      "path": "/home/mixkle/uav_sac/analysis/hop_scaling_interim_20261109",
+      "status": "deleted",
+      "files": 228,
+      "bytes": 408593505
+    },
+    {
+      "path": "/home/mixkle/uav_sac/analysis/hop_scaling_interim_20261109_2121",
+      "status": "deleted",
+      "files": 229,
+      "bytes": 419854481
+    },
+    {
+      "path": "/home/mixkle/uav_sac/.cache/evaluate_hop_interim_20261109.py",
+      "status": "deleted",
+      "files": 1,
+      "bytes": 2020
+    },
+    {
+      "path": "/home/mixkle/uav_sac/.cache/build_hop_interim_20261109.py",
+      "status": "deleted",
+      "files": 1,
+      "bytes": 7654
+    },
+    {
+      "path": "/home/mixkle/uav_sac/.cache/evaluate_hop_interim_20261109_2121.py",
+      "status": "deleted",
+      "files": 1,
+      "bytes": 2295
+    },
+    {
+      "path": "/home/mixkle/uav_sac/.cache/build_hop_interim_20261109_2121.py",
+      "status": "deleted",
+      "files": 1,
+      "bytes": 10006
+    }
+  ],
+  "retained_server_training_sources_unchanged": 0,
+  "completed_at": "2026-11-10T04:20:39.699762+00:00"
+}

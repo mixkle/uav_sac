@@ -5,6 +5,7 @@ from pathlib import Path
 import time
 import numpy as np
 import torch
+from .boundary import BOUNDARY_METRICS, reward_contributions
 from .config import Config
 from .actions import nearest_actions, validate_action_specification
 from .environment import uniform_disk
@@ -39,11 +40,13 @@ class Baseline:
         for i, row in enumerate(flat):
             own = row[:2] * scale
             start = e.self_dim + 2 * e.num_bs
-            neighbors = row[start : start + 3 * e.neighbor_dim].reshape(
-                3, e.neighbor_dim
+            neighbors = row[start : start + e.neighbor_slots * e.neighbor_dim].reshape(
+                e.neighbor_slots, e.neighbor_dim
             )
             users = obs.users[obs.offsets[i] : obs.offsets[i + 1]]
             neighbor_positions = neighbors[neighbors[:, 0] > 0, 1:3] * scale
+            if e.observation_coordinates == "relative":
+                neighbor_positions = neighbor_positions + own
             user_positions = users[:, :2] * scale + own
             vector = np.zeros(2)
             if len(user_positions):
@@ -68,7 +71,11 @@ class Baseline:
         return nearest_actions(output) if e.action_space == "discrete9" else output
 
 
-EPISODE_FIELDS = [
+EPISODE_FIELDS = BOUNDARY_METRICS + [
+    "task_return", "boundary_penalty_return", "final_task_reward", "last100_task_reward",
+    "edge_coverage", "interior_coverage",
+    "final_boundary_within_150_fraction", "last100_boundary_within_150_fraction",
+    "final_boundary_reflection_fraction", "last100_boundary_reflection_fraction",
     "reward_primary",
     "final_reward_primary",
     "last100_reward_primary",
@@ -174,7 +181,7 @@ def _evaluation_episodes(cfg, policy, seeds, trace_count):
                 for i, env in enumerate(vector.envs)
             ]
             inference_seconds = 0.0
-            for _ in range(cfg.env.horizon):
+            for episode_step in range(cfg.env.horizon):
                 stamp = time.perf_counter()
                 actions = (
                     np.stack(
@@ -206,7 +213,7 @@ def evaluate(cfg: Config, policy, seeds, output=None, method=None, trace_count=0
     curve_rows = []
     diagnostic_names = ['coverage', 'discovery_fraction', 'disconnection_ratio',
                         'user_displacement_mean', 'uav_nearest_neighbor_mean',
-                        'uav_close_neighbor_fraction']
+                        'uav_close_neighbor_fraction'] + BOUNDARY_METRICS + ['boundary_reflection_fraction']
     output = resolve_output(output) if output is not None else None
     if output:
         output.mkdir(parents=True, exist_ok=True)
@@ -243,6 +250,16 @@ def evaluate(cfg: Config, policy, seeds, output=None, method=None, trace_count=0
                 / (len(infos) * cfg.env.num_uavs),
             )
             row["return"] = row.pop("return_")
+            row['task_return'] = sum(info['task_reward'] for info in infos)
+            row['boundary_penalty_return'] = sum(info['boundary_penalty'] for info in infos)
+            for region in ['edge', 'interior']:
+                count = sum(info[f'{region}_users'] for info in infos)
+                row[f'{region}_coverage'] = sum(info[f'{region}_served_users'] for info in infos) / count if count else None
+            row['final_task_reward'] = infos[-1]['task_reward']
+            row['last100_task_reward'] = float(np.mean([i['task_reward'] for i in infos[-100:]]))
+            for key in ['boundary_within_150_fraction', 'boundary_reflection_fraction']:
+                row['final_' + key] = infos[-1][key]
+                row['last100_' + key] = float(np.mean([i[key] for i in infos[-100:]]))
             for key in ("coverage", "throughput_bps", "robustness", "retention_ratio", "disconnection_ratio", "disconnection_penalty", "reward_primary", "user_displacement_mean", "uav_nearest_neighbor_mean", "uav_close_neighbor_fraction"):
                 row[f"final_{key}"] = infos[-1][key]
             row["first_service_step"] = infos[-1]["first_service_step"]
@@ -271,9 +288,10 @@ def evaluate(cfg: Config, policy, seeds, output=None, method=None, trace_count=0
                               for info in infos],dtype=np.float64)
                 actual=np.array([info['reward'] for info in infos],dtype=np.float64)
                 weights=np.array([1,cfg.env.throughput_weight,cfg.env.robustness_weight,-cfg.env.disconnection_weight])
-                np.testing.assert_allclose((raw*weights).sum(-1),actual,atol=1e-12,rtol=1e-12)
+                contributions = np.stack([reward_contributions(info, cfg.env) for info in infos])
+                np.testing.assert_allclose(contributions.sum(-1),actual,atol=1e-12,rtol=1e-12)
                 diagnostics = np.array([[info[k] for k in diagnostic_names] for info in infos])
-                curve_rows.append((int(seed),raw,actual,diagnostics))
+                curve_rows.append((int(seed),raw,actual,diagnostics,contributions))
             if output and frames:
                 arrays = {
                     key: np.stack([frame[key] for frame in frames]) for key in frames[0]
@@ -298,7 +316,8 @@ def evaluate(cfg: Config, policy, seeds, output=None, method=None, trace_count=0
             raw=np.stack([item[1] for item in curve_rows])
             np.savez_compressed(output/'reward_curves.npz',
                 scene_seeds=np.array([item[0] for item in curve_rows]),
-                steps=np.arange(1,raw.shape[1]+1), raw=raw, contributions=raw*weights,
+                steps=np.arange(1,raw.shape[1]+1), raw=raw, contributions=np.stack([item[4] for item in curve_rows]),
+                task_reward=np.stack([item[3][:, diagnostic_names.index("task_reward")] for item in curve_rows]),
                 reward=np.stack([item[2] for item in curve_rows]),reward_weights=weights,
                 names=np.array(cfg.env.reward_component_names),
                 raw_names=np.array([cfg.env.primary_reward_metric,'tau','robustness','disconnection_ratio']),
@@ -320,19 +339,26 @@ def evaluate(cfg: Config, policy, seeds, output=None, method=None, trace_count=0
 
 
 def summarize(rows):
-    keys = [
-        k
-        for k, v in rows[0].items()
-        if isinstance(v, (int, float)) and k not in ("scene_seed", "train_seed")
-    ]
+    # Region service rates are undefined when a scene contains no such UE.
+    # Exclude those scenes for that metric, rather than turning N/A into zero.
+    values = {}
+    for row in rows:
+        for key, value in row.items():
+            if key not in ("scene_seed", "train_seed") and isinstance(value, (int, float)):
+                values.setdefault(key, []).append(value)
+    counts = {key: len(v) for key, v in values.items()}
+    for key in ("edge_coverage", "interior_coverage"):
+        if any(key in row for row in rows):
+            counts.setdefault(key, 0)
     return {
         "episodes": len(rows),
         "method": rows[0]["method"],
         "train_seed": rows[0]["train_seed"],
-        "mean": {key: float(np.mean([row[key] for row in rows])) for key in keys},
+        "mean": {key: float(np.mean(v)) for key, v in values.items()},
         "std_across_scenes": {
-            key: float(np.std([row[key] for row in rows])) for key in keys
+            key: float(np.std(v)) for key, v in values.items()
         },
+        "valid_episode_counts": counts,
     }
 
 

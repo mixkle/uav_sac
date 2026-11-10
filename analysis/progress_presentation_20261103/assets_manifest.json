@@ -1,0 +1,37 @@
+{
+  "artifacts": [
+    "analysis/progress_presentation_20261103/fig1_baseline_framework.svg",
+    "analysis/progress_presentation_20261103/fig1_baseline_framework.pdf",
+    "analysis/progress_presentation_20261103/fig1_baseline_framework.png",
+    "analysis/progress_presentation_20261103/fig4_diffusion_training_pipeline.svg",
+    "analysis/progress_presentation_20261103/fig4_diffusion_training_pipeline.pdf",
+    "analysis/progress_presentation_20261103/fig4_diffusion_training_pipeline.png",
+    "analysis/progress_presentation_20261103/fig2_baseline_validation_progress.svg",
+    "analysis/progress_presentation_20261103/fig2_baseline_validation_progress.pdf",
+    "analysis/progress_presentation_20261103/fig2_baseline_validation_progress.png",
+    "analysis/progress_presentation_20261103/fig2_episode_maintenance.svg",
+    "analysis/progress_presentation_20261103/fig2_episode_maintenance.pdf",
+    "analysis/progress_presentation_20261103/fig2_episode_maintenance.png",
+    "analysis/progress_presentation_20261103/fig1_baseline_topology_scene10000_t400.svg",
+    "analysis/progress_presentation_20261103/fig1_baseline_topology_scene10000_t400.pdf",
+    "analysis/progress_presentation_20261103/fig1_baseline_topology_scene10000_t400.png",
+    "analysis/progress_presentation_20261103/fig5_topk_summary.svg",
+    "analysis/progress_presentation_20261103/fig5_topk_summary.pdf",
+    "analysis/progress_presentation_20261103/fig5_topk_summary.png"
+  ],
+  "source_sha256": {
+    "runs/mappo_coverage_throughput_capacity10_1m_seed0/validation.csv": "60e7ecb97e9de9855c12a549c38aece36f7f7c77622e041cb95510e2e9155a11",
+    "analysis/mappo_coverage_throughput_capacity10_1m_seed0/report.json": "46dffedf69f47df83b808e340287350d89356b439d54906dddcb6e4b83858e9e",
+    "analysis/topk_capacity10_coverage_throughput_best_diagnostic/summary.json": "650646a806c49e71aadedd8e95ab82ff4bb0096baebaaaf999fb778444b3e8f5",
+    "analysis/mappo_coverage_throughput_capacity10_1m_seed0/validation_best/trace_10000.npz": "c6874d18be7958d0ab7d148bb49298d4ba4354dc78e7a08e189047f57837b13f",
+    "analysis/mappo_coverage_throughput_capacity10_1m_seed0/validation_best/reward_curves.npz": "e604e9b43b57c4176173e2cfe279b38001607da9086aaf1cb26b5fcbc4f74775",
+    "analysis/mappo_coverage_throughput_capacity10_1m_seed0/validation_last/reward_curves.npz": "1d26b5b02cf7cc22b0c29642eba68a37e4476bb5c1979c770d59fee0ba818221"
+  },
+  "algorithm_status": "Baseline trained; diffusion DPPO training diagram is a proposed design",
+  "style_reference": "Diffusing to Coordinate Efficient Online Multi-Agent Diffusion Policies.pdf, Figure 1, PDF page 5; visual organization only",
+  "diagram_implementation": "Matplotlib vector drawing; text retained in SVG, embedded fonts in PDF",
+  "data_resampled": false,
+  "model_loaded": false,
+  "training_started": false,
+  "script_sha256": "eb4c30429b9c177f0b9e20eb3c70f5ac68eb76cca302179d5bdd1c6d195f51d3"
+}

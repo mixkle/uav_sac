@@ -174,7 +174,7 @@ def test_distance_thresholds_and_reflection():
 
 @pytest.mark.parametrize("backend", ["numpy", "numba"])
 def test_reset_conditions_and_reward_bound(backend):
-    cfg = load_config("configs/smoke.yaml").env
+    cfg = load_config("tests/fixtures/configs/smoke.yaml").env
     cfg.backend = backend
     env = UAVEnvironment(cfg)
     obs, state, info = env.reset(0)
@@ -213,7 +213,7 @@ def test_observation_masks_sort_and_information_isolation():
 
 
 def test_environment_restore_and_vector_equivalence():
-    e = load_config("configs/smoke.yaml").env
+    e = load_config("tests/fixtures/configs/smoke.yaml").env
     rng = np.random.default_rng(33)
     with VectorEnvironment(e, 2) as vector:
         obs, state, _ = vector.reset([0, 1])
@@ -256,7 +256,7 @@ def test_invalid_config_rejected():
 
 
 def test_movement_rng_is_independent_of_initialization_draws():
-    cfg = load_config("configs/smoke.yaml").env
+    cfg = load_config("tests/fixtures/configs/smoke.yaml").env
     one, two = UAVEnvironment(cfg), UAVEnvironment(cfg)
     one.reset(0)
     two.reset(0)

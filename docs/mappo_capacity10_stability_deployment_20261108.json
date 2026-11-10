@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "date": "2026-11-08",
+  "verified_files": 54,
+  "formal_training_started": false,
+  "local_regression": {
+    "passed": 32,
+    "tests": [
+      "tests/test_coverage_stability_rewards.py",
+      "tests/test_disconnection_reward.py"
+    ]
+  },
+  "weights": {
+    "disconnection": {
+      "disconnection_weight": 0.1,
+      "robustness_weight": 0.0
+    },
+    "robustness": {
+      "disconnection_weight": 0.0,
+      "robustness_weight": 0.5
+    },
+    "combined": {
+      "disconnection_weight": 0.1,
+      "robustness_weight": 0.5
+    }
+  },
+  "gpu_mapping": {
+    "disconnection": 0,
+    "robustness": 1,
+    "combined": 2
+  },
+  "cpu_mapping": {
+    "disconnection": "0-7",
+    "robustness": "8-15",
+    "combined": "16-23"
+  },
+  "cuda_checks": [
+    {
+      "passed": true,
+      "group": "disconnection",
+      "gpu": "NVIDIA GeForce RTX 3090",
+      "action_sha256": "4d4921726bd449f501ebfc641c9c7e084b18897430042acdb89f1f3093d781ba",
+      "next_state_sha256": "f08b99f7a3c4f3f05a7094b7db10912dadbac9a3f09af530f5143b0d7a6f4f00",
+      "reward_mean": 0.25517818331718445,
+      "gpu_peak_mib": 40.68798828125,
+      "optimizer_updates": 0,
+      "optimizers_empty": true
+    },
+    {
+      "passed": true,
+      "group": "robustness",
+      "gpu": "NVIDIA GeForce RTX 3090",
+      "action_sha256": "4d4921726bd449f501ebfc641c9c7e084b18897430042acdb89f1f3093d781ba",
+      "next_state_sha256": "f08b99f7a3c4f3f05a7094b7db10912dadbac9a3f09af530f5143b0d7a6f4f00",
+      "reward_mean": 0.4177476465702057,
+      "gpu_peak_mib": 40.68798828125,
+      "optimizer_updates": 0,
+      "optimizers_empty": true
+    },
+    {
+      "passed": true,
+      "group": "combined",
+      "gpu": "NVIDIA GeForce RTX 3090",
+      "action_sha256": "4d4921726bd449f501ebfc641c9c7e084b18897430042acdb89f1f3093d781ba",
+      "next_state_sha256": "f08b99f7a3c4f3f05a7094b7db10912dadbac9a3f09af530f5143b0d7a6f4f00",
+      "reward_mean": 0.3778170943260193,
+      "gpu_peak_mib": 40.68798828125,
+      "optimizer_updates": 0,
+      "optimizers_empty": true
+    }
+  ],
+  "launch": "bash scripts/launch_mappo_stability_rewards_server.sh",
+  "all_results_under": "/home/dym/uav_sac/runs/",
+  "source_hashes": {
+    "configs/mappo_capacity10_stability_combined_1m_server.yaml": "5f61b69a1e7e511be672f419026a567ea48592bf24c8e9eacda891ba60507338",
+    "configs/mappo_capacity10_stability_disconnection_1m_server.yaml": "0eb4ab947fa68aa195dc9c891cde0e721db9156ce7376a61a73dbf84ab0ea1e5",
+    "configs/mappo_capacity10_stability_robustness_1m_server.yaml": "0840fe191405f838a84c85dca21b557ef6ef627680cf6daa3cc137f744098b02",
+    "configs/mappo_coverage_throughput_capacity10_1m.yaml": "7abfca704c084ac1f440c9d2649e53a43d4a54cd039720b244c031056e3b886e",
+    "docs/mappo_capacity10_stability_rewards_1m.md": "b32d0ab80afd6a97f2a3a91b7b64c6e0f8a94c5ba9bf57fd9cf42292b9e2ae0f",
+    "scripts/launch_mappo_stability_rewards_server.sh": "fb54e0bd5ae0b273e661fdaf8ecdfd3a7e433c8d7b4e85871e271048d31257d3",
+    "scripts/report_mappo_stability_rewards.py": "77d6a2f25c13da6ae98dfc0439fb96146a23c9439f1220e004bda60be4aa0e61",
+    "scripts/train_mappo_stability_rewards_server.sh": "174f90fbd6292e0bc1f1a82eb02b6418cfcc73083ef2a2b6723b4f9cc5250910",
+    "src/uav_research/__init__.py": "b5145f91db504e6b7d52fab027b7a823936606a31dddb1bd2202a0ad29ba7d81",
+    "src/uav_research/__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a",
+    "src/uav_research/actions.py": "e6d141a0b03eb84dab122735d4ffa09e1bb61020fb40c04557dc5b18896d9dda",
+    "src/uav_research/algorithms.py": "0c530b109d3d3c567ab10b9b927937094a49033375c4022e91e1f3d2c21ee538",
+    "src/uav_research/boundary.py": "4f3c16c40a2a3f1989f3dc830f96a806ebdd584ee2be530522d3bf5cce88f201",
+    "src/uav_research/bridge_diagnostics.py": "2a95f2feea122e5916fa99d53ee0361c09eb3e1285738fff30d7d4e78d23b4b1",
+    "src/uav_research/calibration.py": "e4ead02b73b14d8aa3591248c4ac4505b7a8a9847ff42df9aa387d22685ce519",
+    "src/uav_research/checkpoints.py": "e6924f7707b837251dfdd120c05ba8c053cabae823d57ab796b0098b3b5ba17e",
+    "src/uav_research/cli.py": "fca805ea6cd5e509e6829b1be572eead61f612a43ed1f1b4be012a53648d60c6",
+    "src/uav_research/config.py": "026d0be4915674fa3618a24b7a97809d584843942471d2dc2836cccc2f3cee1c",
+    "src/uav_research/coverage_stability.py": "dcd45fc1622380595196ccae4b48daa0750f304378b8cc3b1bb43f6d7842a17e",
+    "src/uav_research/critic_calibration.py": "f0f17f9dcda91ccf25eb11590e599b786f7388da871617eee879f4af9dad26b4",
+    "src/uav_research/critic_time_factor.py": "4af1bc91ee531bac92bae6e50b721a52153ec1a5c6f60ebbf2b19f958d562c9c",
+    "src/uav_research/deployment.py": "a9f93d86da16b6925f8a1de13b7076cd0ecbf20f6882599df805f8eec03e4d43",
+    "src/uav_research/diffusion_dppo/__init__.py": "69d3cdc00263b415ae5e0bb5aec379796511e26f9635e63e9f78f52ae46090c8",
+    "src/uav_research/diffusion_dppo/cli.py": "fe9996b8ea37d1604c0e30dc83a8e21d3493f39b38a5e0e865f1b71102964151",
+    "src/uav_research/diffusion_dppo/config.py": "620db76f8e12a5fa3ed99509cffa9586e655e14b7a8a00e6f4b9406586d87767",
+    "src/uav_research/diffusion_dppo/continuation.py": "27d69bf16adbe354e9c5734b21bf9c9a1979517c5af0f7db010ba32c757a129e",
+    "src/uav_research/diffusion_dppo/data.py": "c02fedbf5455d91cd34992cbf6ef9adace79bd3d3505b2d41491da56c50950e3",
+    "src/uav_research/diffusion_dppo/environment.py": "cd7cdbb63f1078bd8ab35fd49caa88c31c86239bb491e35710c6cd9ffd127652",
+    "src/uav_research/diffusion_dppo/evaluation.py": "3a5f42132e1013b922cff0de166bb03872651c1ba5b0793375663806bce01257",
+    "src/uav_research/diffusion_dppo/learner.py": "b344cabf15ea5cfe68908040ec4026d415ec5ea36e33fb294f18411b878ff200",
+    "src/uav_research/diffusion_dppo/observations.py": "fb7e4c26b8aae6b05e8032c1c2bcf57ae5479640982e839fc4f4844fe604fb3d",
+    "src/uav_research/diffusion_dppo/parallel.py": "6729af20a274b673bce04b38165fcc69edb8951f1587c85ec7e60cd56c0ac44a",
+    "src/uav_research/diffusion_dppo/policy.py": "42ff1850b9852d35973b0c69288ae74344d060d5c14bf72c7ad8ba023c74b4ce",
+    "src/uav_research/diffusion_dppo/report.py": "ad4aa383b9c1dfe7de58ac8a103993fcb01c7393f0fe6645f49e6769dc58b1f2",
+    "src/uav_research/diffusion_dppo/runner.py": "7950226a92d327ed916c094660e4346dffd1492540e79a8c523b1a2ac169c164",
+    "src/uav_research/diffusion_dppo/storage.py": "f1508fb81d6c11ad444d37973fa0b2cf17814e923b500604e25677b288697ff1",
+    "src/uav_research/environment.py": "e04c063f4dc5130ebddf30bcadb992b622c61f182cc3d03a919515cf634d8178",
+    "src/uav_research/evaluate.py": "555e37648f8deae9b367401cbcd96184c5a4d9924b125cbb47b46b029096a774",
+    "src/uav_research/experiments.py": "4cf23d3ec11a14b0dfcca33647856461a2b3b2524fbb0001dd5e175d1dcd755a",
+    "src/uav_research/kernels.py": "d58e615bacae9251c72863142ff03e879135c3f717f67531976f4b921293c1c5",
+    "src/uav_research/models.py": "15295930337e591b83960a298fca629cad5d85f72f1aef6aae48943f820d09f1",
+    "src/uav_research/observations.py": "e1d58df057ca5a932d1a876c969a976e7c02ea0f648495655dfe840f6500bee5",
+    "src/uav_research/plotting.py": "b8ceca1b845c07117cd6175cd4abb3c3912de7e18ca71e668c4c72190a76b85b",
+    "src/uav_research/profiling.py": "3a84656487e08552ce08133c2101594b6413da7739695b61b6f385b026ef6702",
+    "src/uav_research/replay.py": "7c31a343e848c75a57d0d4f7dcd0bcf0d039f2ee3e0fd6c6526cdea5479d3872",
+    "src/uav_research/runtime.py": "d0ce4038a82596c2642e12ed6c87dae3e9fbea955f57354d839fb30f8ea6de1f",
+    "src/uav_research/sac_diagnostics.py": "e94d9d779e3ddcb258ef6469919ce45728bb8c096daf195802f5522572594306",
+    "src/uav_research/suite.py": "160957b45077bf7fc8485f12f5da3dc8c21d23b103166f14d8379caf7d006521",
+    "src/uav_research/topk_diagnostic.py": "37ff655434c07079a1ad9bd916e7cd39b008d41f63b5d7404d1e0cf297338555",
+    "src/uav_research/topk_report.py": "6ddfbbaf78a36719419c8bb0bb77cc1b28c4aad30619447ecf8ddc7bc1c0514e",
+    "src/uav_research/train.py": "450b915d08973d5e1ffe1a109a719ed358e86b962557c0e609fe293af6054810",
+    "src/uav_research/vector.py": "7cc17cc55204f6b0ee2290acce652cd559cbbcd6cf85eb067823f9c3d7650752",
+    "tests/test_coverage_stability_rewards.py": "2d9947c3d618264d8d392fb1ffc85f552976199db9ca5ee3df65191cc1da422b",
+    "docs/training_workflows_and_parameters.md": "b2cf65631c64e93030115874336bbb099216d6ec39970bf597da2d56ed8d97bd"
+  }
+}

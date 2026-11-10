@@ -1,0 +1,44 @@
+{
+  "device": "cuda:0",
+  "vector_steps": 32,
+  "environments": 16,
+  "joint_transitions": 512,
+  "inference_seconds": 0.20704682730138302,
+  "environment_seconds": 1.3590999692678452,
+  "results": [
+    {
+      "microbatch_agents": 512,
+      "update_seconds": 5.643287472426891,
+      "estimated_online_training_seconds_excluding_validation": 140813.49553193478,
+      "peak_rss_mib": 1222.28515625,
+      "sum_process_peak_rss_mib": 1222.28515625,
+      "peak_gpu_mib": 132.8642578125
+    },
+    {
+      "microbatch_agents": 1024,
+      "update_seconds": 3.580501738935709,
+      "estimated_online_training_seconds_excluding_validation": 100523.164585385,
+      "peak_rss_mib": 1222.53515625,
+      "sum_process_peak_rss_mib": 1222.53515625,
+      "peak_gpu_mib": 148.55419921875
+    },
+    {
+      "microbatch_agents": 2048,
+      "update_seconds": 2.750141518190503,
+      "estimated_online_training_seconds_excluding_validation": 84304.56875378964,
+      "peak_rss_mib": 1222.6328125,
+      "sum_process_peak_rss_mib": 1222.6328125,
+      "peak_gpu_mib": 180.54345703125
+    },
+    {
+      "microbatch_agents": 4096,
+      "update_seconds": 1.7258568461984396,
+      "estimated_online_training_seconds_excluding_validation": 64298.24054044066,
+      "peak_rss_mib": 1222.76953125,
+      "sum_process_peak_rss_mib": 1222.76953125,
+      "peak_gpu_mib": 189.3583984375
+    }
+  ],
+  "note": "Rough linear estimate; short minibatches and excluded validation/IO limit accuracy",
+  "actor_parameters": 291270
+}

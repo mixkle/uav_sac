@@ -1,0 +1,3059 @@
+{
+  "results": {
+    "last": {
+      "summary": {
+        "mu0": {
+          "coverage": 0.5670843750000001,
+          "final_coverage": 0.5816666666666668,
+          "last100_coverage": 0.5993333333333333,
+          "max_drop_1": 0.48875,
+          "max_drop_5": 0.49812500000000004,
+          "max_drawdown": 0.5760416666666667,
+          "peak_coverage": 0.75125,
+          "peak_step": 224.71875,
+          "min20_coverage": 0.29475,
+          "drop_events_5pp": 63.96875,
+          "any_drop_5pp": 1.0,
+          "drop_events_10pp": 32.96875,
+          "any_drop_10pp": 1.0,
+          "drop_events_20pp": 14.875,
+          "any_drop_20pp": 1.0,
+          "early51_150_coverage": 0.56498125,
+          "maintain_coverage": 0.03435208333333335,
+          "throughput_mbps": 471.2184111324633,
+          "last100_throughput_mbps": 501.7463792274795,
+          "training_return": 251.96539859373138,
+          "common_return": 251.96539859373138,
+          "disconnection_ratio": 0.1366189236111111,
+          "last100_disconnection_ratio": 0.10362847222222223,
+          "final_disconnection_ratio": 0.13541666666666669,
+          "robustness": 0.506567505787037,
+          "sensing": 0.869628125,
+          "boundary150_fraction": 0.05861979166666667,
+          "reflection_fraction": 0.004609375,
+          "close_neighbor_fraction": 0.04997829861111111,
+          "nearest_neighbor_m": 437.3673525938662,
+          "large_drop_with_disconnect_rise": 32.96875,
+          "checkpoint_step": 1000000,
+          "scenes_with_10pp_drop": 32,
+          "curve_peak_time": 229,
+          "curve_peak_coverage": 0.6395833333333335,
+          "final_below30_scenes": 2,
+          "max_drop_scene_p95": 0.701
+        },
+        "mu01": {
+          "coverage": 0.5955406249999999,
+          "final_coverage": 0.639375,
+          "last100_coverage": 0.6276333333333333,
+          "max_drop_1": 0.3566666666666667,
+          "max_drop_5": 0.3516666666666666,
+          "max_drawdown": 0.42833333333333334,
+          "peak_coverage": 0.7552083333333333,
+          "peak_step": 189.25,
+          "min20_coverage": 0.27768750000000003,
+          "drop_events_5pp": 29.21875,
+          "any_drop_5pp": 1.0,
+          "drop_events_10pp": 12.21875,
+          "any_drop_10pp": 0.96875,
+          "drop_events_20pp": 5.25,
+          "any_drop_20pp": 0.84375,
+          "early51_150_coverage": 0.5944854166666667,
+          "maintain_coverage": 0.033147916666666666,
+          "throughput_mbps": 500.7813494000261,
+          "last100_throughput_mbps": 517.143390731396,
+          "training_return": 261.22597752355694,
+          "common_return": 264.92458863466805,
+          "disconnection_ratio": 0.09246527777777777,
+          "last100_disconnection_ratio": 0.04029513888888889,
+          "final_disconnection_ratio": 0.024305555555555552,
+          "robustness": 0.5463405960648149,
+          "sensing": 0.8430109375,
+          "boundary150_fraction": 0.0574045138888889,
+          "reflection_fraction": 0.0032508680555555555,
+          "close_neighbor_fraction": 0.03412760416666667,
+          "nearest_neighbor_m": 436.46601170678065,
+          "large_drop_with_disconnect_rise": 12.21875,
+          "checkpoint_step": 1000000,
+          "scenes_with_10pp_drop": 31,
+          "curve_peak_time": 163,
+          "curve_peak_coverage": 0.6775,
+          "final_below30_scenes": 0,
+          "max_drop_scene_p95": 0.6246666666666667
+        },
+        "mu05": {
+          "coverage": 0.5496005208333333,
+          "final_coverage": 0.5650000000000001,
+          "last100_coverage": 0.5726625000000001,
+          "max_drop_1": 0.2804166666666667,
+          "max_drop_5": 0.290625,
+          "max_drawdown": 0.3670833333333333,
+          "peak_coverage": 0.6975,
+          "peak_step": 192.625,
+          "min20_coverage": 0.2975,
+          "drop_events_5pp": 34.46875,
+          "any_drop_5pp": 1.0,
+          "drop_events_10pp": 12.59375,
+          "any_drop_10pp": 1.0,
+          "drop_events_20pp": 3.15625,
+          "any_drop_20pp": 0.6875,
+          "early51_150_coverage": 0.5471458333333333,
+          "maintain_coverage": 0.025516666666666674,
+          "throughput_mbps": 451.2466619148245,
+          "last100_throughput_mbps": 467.10329052963493,
+          "training_return": 225.2938497465684,
+          "common_return": 243.90669696879064,
+          "disconnection_ratio": 0.09306423611111111,
+          "last100_disconnection_ratio": 0.033611111111111105,
+          "final_disconnection_ratio": 0.026041666666666664,
+          "robustness": 0.5021321180555556,
+          "sensing": 0.8024677083333334,
+          "boundary150_fraction": 0.07679687500000001,
+          "reflection_fraction": 0.004787326388888889,
+          "close_neighbor_fraction": 0.044835069444444445,
+          "nearest_neighbor_m": 430.7395340784204,
+          "large_drop_with_disconnect_rise": 12.5,
+          "checkpoint_step": 1000000,
+          "scenes_with_10pp_drop": 32,
+          "curve_peak_time": 212,
+          "curve_peak_coverage": 0.6166666666666666,
+          "final_below30_scenes": 0,
+          "max_drop_scene_p95": 0.495
+        },
+        "mu2": {
+          "coverage": 0.43306875,
+          "final_coverage": 0.375,
+          "last100_coverage": 0.3729604166666667,
+          "max_drop_1": 0.24,
+          "max_drop_5": 0.23729166666666665,
+          "max_drawdown": 0.380625,
+          "peak_coverage": 0.6204166666666667,
+          "peak_step": 77.15625,
+          "min20_coverage": 0.2727604166666666,
+          "drop_events_5pp": 20.5625,
+          "any_drop_5pp": 1.0,
+          "drop_events_10pp": 6.40625,
+          "any_drop_10pp": 0.875,
+          "drop_events_20pp": 2.78125,
+          "any_drop_20pp": 0.5625,
+          "early51_150_coverage": 0.5142854166666667,
+          "maintain_coverage": -0.14132499999999998,
+          "throughput_mbps": 334.28756626466634,
+          "last100_throughput_mbps": 269.0844598206447,
+          "training_return": 151.55269797856,
+          "common_return": 191.05617020078222,
+          "disconnection_ratio": 0.049379340277777774,
+          "last100_disconnection_ratio": 0.014635416666666666,
+          "final_disconnection_ratio": 0.0,
+          "robustness": 0.3998061631944444,
+          "sensing": 0.6174463541666666,
+          "boundary150_fraction": 0.11454861111111111,
+          "reflection_fraction": 0.010850694444444444,
+          "close_neighbor_fraction": 0.10438802083333334,
+          "nearest_neighbor_m": 335.1237573487681,
+          "large_drop_with_disconnect_rise": 6.40625,
+          "checkpoint_step": 1000000,
+          "scenes_with_10pp_drop": 28,
+          "curve_peak_time": 76,
+          "curve_peak_coverage": 0.5531249999999999,
+          "final_below30_scenes": 2,
+          "max_drop_scene_p95": 0.45199999999999996
+        },
+        "mu5": {
+          "coverage": 0.4629526041666667,
+          "final_coverage": 0.3829166666666667,
+          "last100_coverage": 0.4144479166666667,
+          "max_drop_1": 0.18875,
+          "max_drop_5": 0.19083333333333335,
+          "max_drawdown": 0.3120833333333333,
+          "peak_coverage": 0.6170833333333334,
+          "peak_step": 107.3125,
+          "min20_coverage": 0.26947916666666666,
+          "drop_events_5pp": 16.1875,
+          "any_drop_5pp": 0.96875,
+          "drop_events_10pp": 7.4375,
+          "any_drop_10pp": 0.8125,
+          "drop_events_20pp": 1.84375,
+          "any_drop_20pp": 0.46875,
+          "early51_150_coverage": 0.5317437500000001,
+          "maintain_coverage": -0.11729583333333332,
+          "throughput_mbps": 349.1980227480742,
+          "last100_throughput_mbps": 297.7355009854534,
+          "training_return": 88.68340843545286,
+          "common_return": 203.80493621323063,
+          "disconnection_ratio": 0.05756076388888888,
+          "last100_disconnection_ratio": 0.013055555555555556,
+          "final_disconnection_ratio": 0.013888888888888888,
+          "robustness": 0.42693761574074074,
+          "sensing": 0.6635536458333333,
+          "boundary150_fraction": 0.08841145833333335,
+          "reflection_fraction": 0.007625868055555555,
+          "close_neighbor_fraction": 0.10741753472222224,
+          "nearest_neighbor_m": 342.6666898158628,
+          "large_drop_with_disconnect_rise": 7.4375,
+          "checkpoint_step": 1000000,
+          "scenes_with_10pp_drop": 26,
+          "curve_peak_time": 102,
+          "curve_peak_coverage": 0.5554166666666664,
+          "final_below30_scenes": 2,
+          "max_drop_scene_p95": 0.3653333333333333
+        }
+      },
+      "sources": {
+        "mu0": {
+          "checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/last.pt",
+          "sha256": "a0e9768b8c2350e0bf348d09e4ce7f3a68036eb41ffc0c633e9a8db3be6b6ea5",
+          "env_steps": 1000000,
+          "device": "cuda:0",
+          "training_device": "cpu",
+          "mu": 0.0,
+          "validation_difference": {
+            "coverage": 0.004592708333333473,
+            "return": 2.318245280126405,
+            "throughput_bps": 9021786.502370477
+          },
+          "evaluation": "analysis/mappo_neighbors_1m_vs_10m_seed0/last/neighbors3"
+        },
+        "mu01": {
+          "checkpoint": "runs/mappo_capacity10_stability_disconnection_1m_seed0/last.pt",
+          "sha256": "140e3809d3e1f73ad5d3d051e161547e5a3c13ca1d11ad2bf75b8cf0e78de681",
+          "env_steps": 1000000,
+          "device": "cuda:0",
+          "training_device": "cuda:0",
+          "mu": 0.1,
+          "validation_difference": {
+            "coverage": 0.0,
+            "return": 0.0,
+            "throughput_bps": -5.960464477539063e-08
+          },
+          "evaluation": "analysis/mappo_stability_six_group_1m_vs_10m_seed0/last/disconnection"
+        },
+        "mu05": {
+          "checkpoint": "runs/mappo_capacity10_stability_disconnection_mu05_1m_seed0/last.pt",
+          "sha256": "6d2349da95a09a6d292132c800e3f3c96d57b892fb265d1ddee400c73dcda6dc",
+          "env_steps": 1000000,
+          "device": "cuda:0",
+          "training_device": "cuda:0",
+          "mu": 0.5,
+          "validation_difference": {
+            "coverage": 0.0,
+            "return": 0.0,
+            "throughput_bps": 5.960464477539063e-08
+          },
+          "evaluation": "analysis/mappo_disconnection_weight_sweep_1m_seed0/last/disconnection_mu05"
+        },
+        "mu2": {
+          "checkpoint": "runs/mappo_capacity10_stability_disconnection_mu2_1m_seed0/last.pt",
+          "sha256": "d2bede1b9a848c8ae750603f306ff7dc69ef9f281a6bb84cab00386d1384fc69",
+          "env_steps": 1000000,
+          "device": "cuda:0",
+          "training_device": "cuda:0",
+          "mu": 2.0,
+          "validation_difference": {
+            "coverage": 0.0,
+            "return": 0.0,
+            "throughput_bps": 0.0
+          },
+          "evaluation": "analysis/mappo_disconnection_weight_sweep_1m_seed0/last/disconnection_mu2"
+        },
+        "mu5": {
+          "checkpoint": "runs/mappo_capacity10_stability_disconnection_mu5_1m_seed0/last.pt",
+          "sha256": "186b302b521c01f55699dce9c4d71394d19b0de4061e7566d1f98c54699d4a31",
+          "env_steps": 1000000,
+          "device": "cuda:0",
+          "training_device": "cuda:0",
+          "mu": 5.0,
+          "validation_difference": {
+            "coverage": 0.0,
+            "return": 2.842170943040401e-14,
+            "throughput_bps": 5.960464477539063e-08
+          },
+          "evaluation": "analysis/mappo_disconnection_weight_sweep_1m_seed0/last/disconnection_mu5"
+        }
+      }
+    },
+    "best": {
+      "summary": {
+        "mu0": {
+          "coverage": 0.5643843749999999,
+          "final_coverage": 0.585625,
+          "last100_coverage": 0.58106875,
+          "max_drop_1": 0.4518749999999999,
+          "max_drop_5": 0.46041666666666664,
+          "max_drawdown": 0.56125,
+          "peak_coverage": 0.7604166666666666,
+          "peak_step": 187.21875,
+          "min20_coverage": 0.29248958333333336,
+          "drop_events_5pp": 62.53125,
+          "any_drop_5pp": 1.0,
+          "drop_events_10pp": 33.375,
+          "any_drop_10pp": 1.0,
+          "drop_events_20pp": 15.25,
+          "any_drop_20pp": 0.96875,
+          "early51_150_coverage": 0.5691229166666667,
+          "maintain_coverage": 0.01194583333333332,
+          "throughput_mbps": 466.24936204719927,
+          "last100_throughput_mbps": 472.6394187449214,
+          "training_return": 250.62038264251728,
+          "common_return": 250.62038264251728,
+          "disconnection_ratio": 0.1290060763888889,
+          "last100_disconnection_ratio": 0.08965277777777778,
+          "final_disconnection_ratio": 0.0642361111111111,
+          "robustness": 0.5056238715277778,
+          "sensing": 0.8591854166666666,
+          "boundary150_fraction": 0.06979166666666667,
+          "reflection_fraction": 0.007326388888888888,
+          "close_neighbor_fraction": 0.058185763888888895,
+          "nearest_neighbor_m": 422.71156490618813,
+          "large_drop_with_disconnect_rise": 33.25,
+          "checkpoint_step": 671744,
+          "scenes_with_10pp_drop": 32,
+          "curve_peak_time": 245,
+          "curve_peak_coverage": 0.6554166666666665,
+          "final_below30_scenes": 1,
+          "max_drop_scene_p95": 0.6639999999999999
+        },
+        "mu01": {
+          "coverage": 0.6228354166666668,
+          "final_coverage": 0.6483333333333333,
+          "last100_coverage": 0.653375,
+          "max_drop_1": 0.3566666666666667,
+          "max_drop_5": 0.3639583333333333,
+          "max_drawdown": 0.4275,
+          "peak_coverage": 0.7785416666666667,
+          "peak_step": 230.78125,
+          "min20_coverage": 0.30533333333333335,
+          "drop_events_5pp": 36.8125,
+          "any_drop_5pp": 1.0,
+          "drop_events_10pp": 14.90625,
+          "any_drop_10pp": 1.0,
+          "drop_events_20pp": 7.375,
+          "any_drop_20pp": 0.78125,
+          "early51_150_coverage": 0.6377124999999999,
+          "maintain_coverage": 0.01566250000000008,
+          "throughput_mbps": 524.1053404327961,
+          "last100_throughput_mbps": 551.6238557466481,
+          "training_return": 273.87290982308247,
+          "common_return": 277.08645148974915,
+          "disconnection_ratio": 0.08033854166666667,
+          "last100_disconnection_ratio": 0.049027777777777774,
+          "final_disconnection_ratio": 0.05208333333333333,
+          "robustness": 0.5696417534722222,
+          "sensing": 0.8588083333333334,
+          "boundary150_fraction": 0.05552517361111112,
+          "reflection_fraction": 0.0038888888888888888,
+          "close_neighbor_fraction": 0.04159722222222223,
+          "nearest_neighbor_m": 443.3335013770706,
+          "large_drop_with_disconnect_rise": 14.90625,
+          "checkpoint_step": 620544,
+          "scenes_with_10pp_drop": 32,
+          "curve_peak_time": 146,
+          "curve_peak_coverage": 0.6920833333333332,
+          "final_below30_scenes": 0,
+          "max_drop_scene_p95": 0.6779999999999999
+        },
+        "mu05": {
+          "coverage": 0.5746401041666667,
+          "final_coverage": 0.6010416666666667,
+          "last100_coverage": 0.6044708333333333,
+          "max_drop_1": 0.35020833333333334,
+          "max_drop_5": 0.3566666666666667,
+          "max_drawdown": 0.4397916666666667,
+          "peak_coverage": 0.7220833333333334,
+          "peak_step": 192.09375,
+          "min20_coverage": 0.30041666666666667,
+          "drop_events_5pp": 33.03125,
+          "any_drop_5pp": 1.0,
+          "drop_events_10pp": 15.15625,
+          "any_drop_10pp": 0.96875,
+          "drop_events_20pp": 6.5,
+          "any_drop_20pp": 0.90625,
+          "early51_150_coverage": 0.568275,
+          "maintain_coverage": 0.03619583333333326,
+          "throughput_mbps": 475.4031901388305,
+          "last100_throughput_mbps": 498.92680441977086,
+          "training_return": 238.21261458518205,
+          "common_return": 255.21087847407097,
+          "disconnection_ratio": 0.08499131944444445,
+          "last100_disconnection_ratio": 0.031684027777777776,
+          "final_disconnection_ratio": 0.020833333333333336,
+          "robustness": 0.5202454571759259,
+          "sensing": 0.8300796874999999,
+          "boundary150_fraction": 0.08098524305555557,
+          "reflection_fraction": 0.004427083333333333,
+          "close_neighbor_fraction": 0.03564236111111112,
+          "nearest_neighbor_m": 444.9254937000359,
+          "large_drop_with_disconnect_rise": 15.15625,
+          "checkpoint_step": 911360,
+          "scenes_with_10pp_drop": 31,
+          "curve_peak_time": 194,
+          "curve_peak_coverage": 0.6445833333333334,
+          "final_below30_scenes": 0,
+          "max_drop_scene_p95": 0.5766666666666667
+        },
+        "mu2": {
+          "coverage": 0.4577765625,
+          "final_coverage": 0.38,
+          "last100_coverage": 0.4035770833333333,
+          "max_drop_1": 0.22166666666666668,
+          "max_drop_5": 0.22979166666666667,
+          "max_drawdown": 0.38125000000000003,
+          "peak_coverage": 0.62875,
+          "peak_step": 87.5625,
+          "min20_coverage": 0.2813541666666667,
+          "drop_events_5pp": 32.96875,
+          "any_drop_5pp": 1.0,
+          "drop_events_10pp": 9.3125,
+          "any_drop_10pp": 0.96875,
+          "drop_events_20pp": 2.4375,
+          "any_drop_20pp": 0.46875,
+          "early51_150_coverage": 0.5311895833333333,
+          "maintain_coverage": -0.1276125,
+          "throughput_mbps": 357.023344601061,
+          "last100_throughput_mbps": 308.451589109369,
+          "training_return": 158.59631448983436,
+          "common_return": 202.1518700453899,
+          "disconnection_ratio": 0.05444444444444445,
+          "last100_disconnection_ratio": 0.01638888888888889,
+          "final_disconnection_ratio": 0.034722222222222224,
+          "robustness": 0.4208183738425926,
+          "sensing": 0.663746875,
+          "boundary150_fraction": 0.1110329861111111,
+          "reflection_fraction": 0.011848958333333333,
+          "close_neighbor_fraction": 0.11887586805555556,
+          "nearest_neighbor_m": 346.64776399229095,
+          "large_drop_with_disconnect_rise": 9.3125,
+          "checkpoint_step": 821248,
+          "scenes_with_10pp_drop": 31,
+          "curve_peak_time": 110,
+          "curve_peak_coverage": 0.5572916666666667,
+          "final_below30_scenes": 5,
+          "max_drop_scene_p95": 0.3926666666666667
+        },
+        "mu5": {
+          "coverage": 0.4629526041666667,
+          "final_coverage": 0.3829166666666667,
+          "last100_coverage": 0.4144479166666667,
+          "max_drop_1": 0.18875,
+          "max_drop_5": 0.19083333333333335,
+          "max_drawdown": 0.3120833333333333,
+          "peak_coverage": 0.6170833333333334,
+          "peak_step": 107.3125,
+          "min20_coverage": 0.26947916666666666,
+          "drop_events_5pp": 16.1875,
+          "any_drop_5pp": 0.96875,
+          "drop_events_10pp": 7.4375,
+          "any_drop_10pp": 0.8125,
+          "drop_events_20pp": 1.84375,
+          "any_drop_20pp": 0.46875,
+          "early51_150_coverage": 0.5317437500000001,
+          "maintain_coverage": -0.11729583333333332,
+          "throughput_mbps": 349.1980227480742,
+          "last100_throughput_mbps": 297.7355009854534,
+          "training_return": 88.68340843545286,
+          "common_return": 203.80493621323063,
+          "disconnection_ratio": 0.05756076388888888,
+          "last100_disconnection_ratio": 0.013055555555555556,
+          "final_disconnection_ratio": 0.013888888888888888,
+          "robustness": 0.42693761574074074,
+          "sensing": 0.6635536458333333,
+          "boundary150_fraction": 0.08841145833333335,
+          "reflection_fraction": 0.007625868055555555,
+          "close_neighbor_fraction": 0.10741753472222224,
+          "nearest_neighbor_m": 342.6666898158628,
+          "large_drop_with_disconnect_rise": 7.4375,
+          "checkpoint_step": 1000000,
+          "scenes_with_10pp_drop": 26,
+          "curve_peak_time": 102,
+          "curve_peak_coverage": 0.5554166666666664,
+          "final_below30_scenes": 2,
+          "max_drop_scene_p95": 0.3653333333333333
+        }
+      },
+      "sources": {
+        "mu0": {
+          "checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+          "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+          "env_steps": 671744,
+          "device": "cuda:0",
+          "training_device": "cpu",
+          "mu": 0.0,
+          "validation_difference": {
+            "coverage": -0.021928125000000076,
+            "return": -9.582980947224343,
+            "throughput_bps": -15219955.260455906
+          },
+          "evaluation": "analysis/mappo_neighbors_1m_vs_10m_seed0/best/neighbors3"
+        },
+        "mu01": {
+          "checkpoint": "runs/mappo_capacity10_stability_disconnection_1m_seed0/best.pt",
+          "sha256": "b05c9adbb09322676dca945efbe597b6e18c0c0a22e5ddb813fddbb2fe4382ad",
+          "env_steps": 620544,
+          "device": "cuda:0",
+          "training_device": "cuda:0",
+          "mu": 0.1,
+          "validation_difference": {
+            "coverage": 0.0,
+            "return": 0.0,
+            "throughput_bps": 0.0
+          },
+          "evaluation": "analysis/mappo_stability_six_group_1m_vs_10m_seed0/best/disconnection"
+        },
+        "mu05": {
+          "checkpoint": "runs/mappo_capacity10_stability_disconnection_mu05_1m_seed0/best.pt",
+          "sha256": "0b781c2ce1c7f81ee10cd8a8539235c726f42fdf0746fab6a02cf1476089a347",
+          "env_steps": 911360,
+          "device": "cuda:0",
+          "training_device": "cuda:0",
+          "mu": 0.5,
+          "validation_difference": {
+            "coverage": 0.0,
+            "return": 0.0,
+            "throughput_bps": 5.960464477539063e-08
+          },
+          "evaluation": "analysis/mappo_disconnection_weight_sweep_1m_seed0/best/disconnection_mu05"
+        },
+        "mu2": {
+          "checkpoint": "runs/mappo_capacity10_stability_disconnection_mu2_1m_seed0/best.pt",
+          "sha256": "b6b516a891cea994cf77f737ba5e54c1b7322fede403e20174cfa0ae78ab3eab",
+          "env_steps": 821248,
+          "device": "cuda:0",
+          "training_device": "cuda:0",
+          "mu": 2.0,
+          "validation_difference": {
+            "coverage": 0.0,
+            "return": 0.0,
+            "throughput_bps": 0.0
+          },
+          "evaluation": "analysis/mappo_disconnection_weight_sweep_1m_seed0/best/disconnection_mu2"
+        },
+        "mu5": {
+          "checkpoint": "runs/mappo_capacity10_stability_disconnection_mu5_1m_seed0/best.pt",
+          "sha256": "d915c698b5302fa8a2ac9219b988a1e22a9e08f8544b5870c844efea02ef8b37",
+          "env_steps": 1000000,
+          "device": "cuda:0",
+          "training_device": "cuda:0",
+          "mu": 5.0,
+          "validation_difference": {
+            "coverage": 0.0,
+            "return": 2.842170943040401e-14,
+            "throughput_bps": 5.960464477539063e-08
+          },
+          "evaluation": "analysis/mappo_disconnection_weight_sweep_1m_seed0/best/disconnection_mu5"
+        }
+      }
+    }
+  },
+  "paired": [
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "coverage",
+      "difference": 0.028456249999999985,
+      "low": 0.004006731770833329,
+      "high": 0.05453082031249994
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "last100_coverage",
+      "difference": 0.028299999999999995,
+      "low": -0.016431822916666693,
+      "high": 0.07367526041666662
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "final_coverage",
+      "difference": 0.057708333333333334,
+      "low": 0.004583333333333332,
+      "high": 0.11146354166666664
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "throughput_mbps",
+      "difference": 29.56293826756285,
+      "low": 3.936683754655857,
+      "high": 56.78197534119835
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "common_return",
+      "difference": 12.95919004093669,
+      "low": 1.8592000186448825,
+      "high": 24.82000040675059
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "max_drop_1",
+      "difference": -0.13208333333333333,
+      "low": -0.20687500000000003,
+      "high": -0.05645833333333334
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "max_drop_5",
+      "difference": -0.14645833333333333,
+      "low": -0.2175260416666667,
+      "high": -0.07520833333333335
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "drop_events_10pp",
+      "difference": -20.75,
+      "low": -27.28203125,
+      "high": -14.4375
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "min20_coverage",
+      "difference": -0.017062500000000005,
+      "low": -0.03675208333333335,
+      "high": 0.003472395833333316
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "disconnection_ratio",
+      "difference": -0.04415364583333334,
+      "low": -0.06357573784722222,
+      "high": -0.025129882812500007
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "boundary150_fraction",
+      "difference": -0.0012152777777777735,
+      "low": -0.02208430989583333,
+      "high": 0.01747439236111111
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "close_neighbor_fraction",
+      "difference": -0.015850694444444445,
+      "low": -0.028312174479166667,
+      "high": -0.0029578993055555643
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "maintain_coverage",
+      "difference": -0.0012041666666666867,
+      "low": -0.058371875000000066,
+      "high": 0.05628437499999992
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "coverage",
+      "difference": -0.017483854166666687,
+      "low": -0.04326127604166669,
+      "high": 0.007927669270833283
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "last100_coverage",
+      "difference": -0.02667083333333333,
+      "low": -0.06911583333333335,
+      "high": 0.01419536458333334
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "final_coverage",
+      "difference": -0.016666666666666663,
+      "low": -0.08021874999999999,
+      "high": 0.04979687499999998
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "throughput_mbps",
+      "difference": -19.971749217638834,
+      "low": -46.969496895262054,
+      "high": 5.0246812616192145
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "common_return",
+      "difference": -8.058701624940745,
+      "low": -19.7297593849071,
+      "high": 3.510421079210816
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "max_drop_1",
+      "difference": -0.20833333333333331,
+      "low": -0.2779166666666667,
+      "high": -0.13686458333333337
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "max_drop_5",
+      "difference": -0.20750000000000002,
+      "low": -0.2820885416666667,
+      "high": -0.12810937500000008
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "drop_events_10pp",
+      "difference": -20.375,
+      "low": -27.09375,
+      "high": -13.6875
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "min20_coverage",
+      "difference": 0.002749999999999999,
+      "low": -0.017422395833333337,
+      "high": 0.026522395833333334
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "disconnection_ratio",
+      "difference": -0.04355468750000001,
+      "low": -0.05972254774305555,
+      "high": -0.028473307291666684
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "boundary150_fraction",
+      "difference": 0.018177083333333337,
+      "low": -0.0049264322916666645,
+      "high": 0.04114344618055555
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "close_neighbor_fraction",
+      "difference": -0.005143229166666665,
+      "low": -0.018000976562500003,
+      "high": 0.007544921874999998
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "maintain_coverage",
+      "difference": -0.008835416666666679,
+      "low": -0.05805406250000007,
+      "high": 0.043364218749999954
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "coverage",
+      "difference": -0.13401562500000003,
+      "low": -0.15851634114583332,
+      "high": -0.10943716145833335
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "last100_coverage",
+      "difference": -0.22637291666666667,
+      "low": -0.25930145833333335,
+      "high": -0.19289979166666674
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "final_coverage",
+      "difference": -0.20666666666666667,
+      "low": -0.25771354166666666,
+      "high": -0.14791145833333333
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "throughput_mbps",
+      "difference": -136.9308448677969,
+      "low": -160.90282869869773,
+      "high": -111.56493086128711
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "common_return",
+      "difference": -60.90922839294917,
+      "low": -71.83967352238476,
+      "high": -49.93303206434163
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "max_drop_1",
+      "difference": -0.24875000000000003,
+      "low": -0.3285416666666667,
+      "high": -0.16666145833333335
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "max_drop_5",
+      "difference": -0.26083333333333336,
+      "low": -0.34375,
+      "high": -0.18082812500000003
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "drop_events_10pp",
+      "difference": -26.5625,
+      "low": -32.28125,
+      "high": -21.030468750000004
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "min20_coverage",
+      "difference": -0.021989583333333357,
+      "low": -0.05475208333333336,
+      "high": 0.009999999999999964
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "disconnection_ratio",
+      "difference": -0.08723958333333334,
+      "low": -0.10508539496527777,
+      "high": -0.07039778645833336
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "boundary150_fraction",
+      "difference": 0.055928819444444444,
+      "low": 0.030302842881944445,
+      "high": 0.07948578559027777
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.054409722222222234,
+      "low": 0.037798285590277786,
+      "high": 0.07154188368055556
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "maintain_coverage",
+      "difference": -0.17567708333333334,
+      "low": -0.21977479166666666,
+      "high": -0.13058526041666665
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "coverage",
+      "difference": -0.10413177083333333,
+      "low": -0.12641592447916666,
+      "high": -0.08354356770833334
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "last100_coverage",
+      "difference": -0.1848854166666667,
+      "low": -0.21844479166666667,
+      "high": -0.15010140624999999
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "final_coverage",
+      "difference": -0.19875,
+      "low": -0.25458333333333333,
+      "high": -0.13976562500000012
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "throughput_mbps",
+      "difference": -122.02038838438905,
+      "low": -145.15221091588216,
+      "high": -100.26214462118527
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "common_return",
+      "difference": -48.16046238050076,
+      "low": -58.30290525009757,
+      "high": -38.87947800044641
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "max_drop_1",
+      "difference": -0.3,
+      "low": -0.3670885416666667,
+      "high": -0.23416145833333338
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "max_drop_5",
+      "difference": -0.30729166666666663,
+      "low": -0.371484375,
+      "high": -0.24229166666666668
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "drop_events_10pp",
+      "difference": -25.53125,
+      "low": -31.37578125,
+      "high": -19.90468750000001
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "min20_coverage",
+      "difference": -0.025270833333333347,
+      "low": -0.05143463541666668,
+      "high": -0.0027231770833333626
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "disconnection_ratio",
+      "difference": -0.07905815972222222,
+      "low": -0.09477441406249999,
+      "high": -0.06416655815972223
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "boundary150_fraction",
+      "difference": 0.029791666666666675,
+      "low": 0.009922960069444452,
+      "high": 0.049475260416666667
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.05743923611111111,
+      "low": 0.038479926215277786,
+      "high": 0.07691124131944443
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "maintain_coverage",
+      "difference": -0.1516479166666667,
+      "low": -0.1976597916666667,
+      "high": -0.10707645833333336
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "coverage",
+      "difference": -0.045940104166666676,
+      "low": -0.07575877604166668,
+      "high": -0.015937109375000008
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "last100_coverage",
+      "difference": -0.05497083333333332,
+      "low": -0.10120088541666662,
+      "high": -0.011786875000000006
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "final_coverage",
+      "difference": -0.074375,
+      "low": -0.11729687500000001,
+      "high": -0.03166145833333336
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "throughput_mbps",
+      "difference": -49.53468748520169,
+      "low": -77.86271304694766,
+      "high": -20.68415495893357
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "common_return",
+      "difference": -21.017891665877436,
+      "low": -34.411452193340295,
+      "high": -7.355758985300394
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "max_drop_1",
+      "difference": -0.07624999999999998,
+      "low": -0.148546875,
+      "high": -0.00060416666666675
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "max_drop_5",
+      "difference": -0.06104166666666667,
+      "low": -0.131671875,
+      "high": 0.016057291666666595
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "drop_events_10pp",
+      "difference": 0.375,
+      "low": -2.46953125,
+      "high": 3.25
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "min20_coverage",
+      "difference": 0.019812500000000004,
+      "low": -0.005335677083333343,
+      "high": 0.04629791666666664
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "disconnection_ratio",
+      "difference": 0.0005989583333333326,
+      "low": -0.012289279513888892,
+      "high": 0.013134331597222222
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "boundary150_fraction",
+      "difference": 0.019392361111111114,
+      "low": 0.0028780381944444474,
+      "high": 0.03629828559027778
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.010707465277777778,
+      "low": 0.0002030164930555554,
+      "high": 0.021428276909722224
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "maintain_coverage",
+      "difference": -0.007631249999999989,
+      "low": -0.053328489583333305,
+      "high": 0.03659026041666668
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "coverage",
+      "difference": -0.16247187500000002,
+      "low": -0.18633792968750001,
+      "high": -0.13734536458333338
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "last100_coverage",
+      "difference": -0.2546729166666667,
+      "low": -0.28466437499999997,
+      "high": -0.22625046875000002
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "final_coverage",
+      "difference": -0.26437499999999997,
+      "low": -0.29854687500000004,
+      "high": -0.22979166666666667
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "throughput_mbps",
+      "difference": -166.49378313535976,
+      "low": -191.02520441297426,
+      "high": -141.32464700599587
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "common_return",
+      "difference": -73.86841843388586,
+      "low": -84.88586931782068,
+      "high": -62.56757518935897
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "max_drop_1",
+      "difference": -0.11666666666666667,
+      "low": -0.1916875,
+      "high": -0.04187500000000003
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "max_drop_5",
+      "difference": -0.114375,
+      "low": -0.19229166666666667,
+      "high": -0.036015625000000114
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "drop_events_10pp",
+      "difference": -5.8125,
+      "low": -8.625,
+      "high": -2.5617187500000043
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "min20_coverage",
+      "difference": -0.004927083333333353,
+      "low": -0.03270859375000002,
+      "high": 0.02286770833333329
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "disconnection_ratio",
+      "difference": -0.043085937500000004,
+      "low": -0.051879665798611106,
+      "high": -0.03429665798611111
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "boundary150_fraction",
+      "difference": 0.057144097222222225,
+      "low": 0.040449652777777775,
+      "high": 0.07384147135416663
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.07026041666666667,
+      "low": 0.05366937934027779,
+      "high": 0.08750390624999997
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "maintain_coverage",
+      "difference": -0.17447291666666664,
+      "low": -0.21335312499999998,
+      "high": -0.13504880208333334
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "coverage",
+      "difference": -0.13258802083333332,
+      "low": -0.1570992317708333,
+      "high": -0.10839761718750003
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "last100_coverage",
+      "difference": -0.21318541666666668,
+      "low": -0.25041838541666667,
+      "high": -0.17523947916666668
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "final_coverage",
+      "difference": -0.25645833333333334,
+      "low": -0.29626562500000003,
+      "high": -0.21894791666666671
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "throughput_mbps",
+      "difference": -151.58332665195192,
+      "low": -177.9955776393017,
+      "high": -124.97544436517505
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "common_return",
+      "difference": -61.11965242143744,
+      "low": -72.18743043285261,
+      "high": -50.00755991757903
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "max_drop_1",
+      "difference": -0.16791666666666666,
+      "low": -0.2245833333333333,
+      "high": -0.10811458333333339
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "max_drop_5",
+      "difference": -0.16083333333333333,
+      "low": -0.22271354166666665,
+      "high": -0.09333333333333332
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "drop_events_10pp",
+      "difference": -4.78125,
+      "low": -8.56328125,
+      "high": -0.71875
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "min20_coverage",
+      "difference": -0.008208333333333338,
+      "low": -0.036619010416666695,
+      "high": 0.01500104166666666
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "disconnection_ratio",
+      "difference": -0.03490451388888889,
+      "low": -0.04714453125,
+      "high": -0.022356011284722224
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "boundary150_fraction",
+      "difference": 0.031006944444444448,
+      "low": 0.014254231770833336,
+      "high": 0.04757812499999997
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.07328993055555558,
+      "low": 0.05480381944444446,
+      "high": 0.09134592013888888
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "maintain_coverage",
+      "difference": -0.15044375,
+      "low": -0.19365265625,
+      "high": -0.10684255208333333
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "coverage",
+      "difference": -0.11653177083333334,
+      "low": -0.13611174479166668,
+      "high": -0.09752591145833332
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "last100_coverage",
+      "difference": -0.19970208333333334,
+      "low": -0.23625234374999998,
+      "high": -0.16124151041666668
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "final_coverage",
+      "difference": -0.19,
+      "low": -0.23021875,
+      "high": -0.14791666666666667
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "throughput_mbps",
+      "difference": -116.95909565015808,
+      "low": -136.89115245348293,
+      "high": -97.31039347500848
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "common_return",
+      "difference": -52.85052676800842,
+      "low": -61.64215961269898,
+      "high": -44.22019266110625
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "max_drop_1",
+      "difference": -0.040416666666666684,
+      "low": -0.08917187500000003,
+      "high": 0.0027083333333333126
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "max_drop_5",
+      "difference": -0.053333333333333316,
+      "low": -0.10166666666666666,
+      "high": -0.008749999999999989
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "drop_events_10pp",
+      "difference": -6.1875,
+      "low": -9.09375,
+      "high": -3.1875
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "min20_coverage",
+      "difference": -0.024739583333333356,
+      "low": -0.05806406250000003,
+      "high": 0.005908593749999958
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "disconnection_ratio",
+      "difference": -0.043684895833333334,
+      "low": -0.05425434027777778,
+      "high": -0.033033745659722245
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "boundary150_fraction",
+      "difference": 0.03775173611111111,
+      "low": 0.018111545138888893,
+      "high": 0.05711132812499999
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.05955295138888889,
+      "low": 0.045888671875,
+      "high": 0.07460058593749998
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "maintain_coverage",
+      "difference": -0.16684166666666667,
+      "low": -0.21347890625,
+      "high": -0.12006614583333332
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "coverage",
+      "difference": -0.08664791666666666,
+      "low": -0.10712960937499998,
+      "high": -0.0663212109375
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "last100_coverage",
+      "difference": -0.15821458333333335,
+      "low": -0.18917739583333337,
+      "high": -0.12954692708333337
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "final_coverage",
+      "difference": -0.18208333333333335,
+      "low": -0.21979166666666666,
+      "high": -0.14666145833333336
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "throughput_mbps",
+      "difference": -102.04863916675022,
+      "low": -123.78868346835587,
+      "high": -81.47248756643343
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "common_return",
+      "difference": -40.10176075556001,
+      "low": -49.2366420701084,
+      "high": -30.892709652193638
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "max_drop_1",
+      "difference": -0.09166666666666667,
+      "low": -0.13854166666666667,
+      "high": -0.04457812500000005
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "max_drop_5",
+      "difference": -0.09979166666666664,
+      "low": -0.1489583333333333,
+      "high": -0.05332812500000002
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "drop_events_10pp",
+      "difference": -5.15625,
+      "low": -9.71953125,
+      "high": -0.34375
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "min20_coverage",
+      "difference": -0.028020833333333342,
+      "low": -0.04906510416666669,
+      "high": -0.00821848958333334
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "disconnection_ratio",
+      "difference": -0.03550347222222222,
+      "low": -0.04801041666666666,
+      "high": -0.023181315104166676
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "boundary150_fraction",
+      "difference": 0.011614583333333334,
+      "low": -0.008725477430555559,
+      "high": 0.03295041232638887
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.06258246527777778,
+      "low": 0.0468508029513889,
+      "high": 0.07849967447916666
+    },
+    {
+      "checkpoint": "last",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "maintain_coverage",
+      "difference": -0.1428125,
+      "low": -0.18262208333333332,
+      "high": -0.10667421875000001
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "coverage",
+      "difference": 0.05845104166666666,
+      "low": 0.02755285156249999,
+      "high": 0.09009578124999998
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "last100_coverage",
+      "difference": 0.07230625000000004,
+      "low": 0.030966510416666693,
+      "high": 0.11863484375000002
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "final_coverage",
+      "difference": 0.06270833333333334,
+      "low": 0.003328124999999996,
+      "high": 0.12479687499999997
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "throughput_mbps",
+      "difference": 57.85597838559683,
+      "low": 26.30876404926773,
+      "high": 90.77004255729588
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "common_return",
+      "difference": 26.46606884723184,
+      "low": 12.352820581040174,
+      "high": 40.947077150204095
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "max_drop_1",
+      "difference": -0.0952083333333333,
+      "low": -0.17792187499999995,
+      "high": -0.013937500000000096
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "max_drop_5",
+      "difference": -0.09645833333333331,
+      "low": -0.18065104166666668,
+      "high": -0.010000000000000009
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "drop_events_10pp",
+      "difference": -18.46875,
+      "low": -25.6875,
+      "high": -12.21875
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "min20_coverage",
+      "difference": 0.012843749999999984,
+      "low": -0.013407812500000015,
+      "high": 0.04063645833333331
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "disconnection_ratio",
+      "difference": -0.048667534722222225,
+      "low": -0.06665570746527777,
+      "high": -0.03119303385416667
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "boundary150_fraction",
+      "difference": -0.014266493055555558,
+      "low": -0.04366395399305557,
+      "high": 0.01189930555555554
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "close_neighbor_fraction",
+      "difference": -0.016588541666666668,
+      "low": -0.03240798611111111,
+      "high": 0.00013237847222221245
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu01",
+      "reference": "mu0",
+      "metric": "maintain_coverage",
+      "difference": 0.003716666666666757,
+      "low": -0.047467291666666626,
+      "high": 0.05503088541666674
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "coverage",
+      "difference": 0.010255729166666672,
+      "low": -0.020649114583333322,
+      "high": 0.040815911458333354
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "last100_coverage",
+      "difference": 0.02340208333333328,
+      "low": -0.018138750000000058,
+      "high": 0.06521718749999997
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "final_coverage",
+      "difference": 0.015416666666666672,
+      "low": -0.03313541666666667,
+      "high": 0.06584895833333325
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "throughput_mbps",
+      "difference": 9.153828091631208,
+      "low": -19.805760044616367,
+      "high": 39.44772772551989
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "common_return",
+      "difference": 4.590495831553665,
+      "low": -9.19898218100539,
+      "high": 18.3794153047332
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "max_drop_1",
+      "difference": -0.10166666666666666,
+      "low": -0.16333854166666667,
+      "high": -0.03707812500000001
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "max_drop_5",
+      "difference": -0.10375,
+      "low": -0.1658333333333333,
+      "high": -0.040828125000000035
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "drop_events_10pp",
+      "difference": -18.21875,
+      "low": -25.50078125,
+      "high": -11.435156250000013
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "min20_coverage",
+      "difference": 0.007927083333333314,
+      "low": -0.022518489583333367,
+      "high": 0.039979947916666654
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "disconnection_ratio",
+      "difference": -0.04401475694444444,
+      "low": -0.05974913194444444,
+      "high": -0.028713650173611122
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "boundary150_fraction",
+      "difference": 0.011193576388888892,
+      "low": -0.019255859374999997,
+      "high": 0.03998795572916667
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "close_neighbor_fraction",
+      "difference": -0.02254340277777778,
+      "low": -0.03336848958333333,
+      "high": -0.011180881076388913
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu0",
+      "metric": "maintain_coverage",
+      "difference": 0.024249999999999942,
+      "low": -0.026759635416666722,
+      "high": 0.07787114583333328
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "coverage",
+      "difference": -0.10660781250000001,
+      "low": -0.14183885416666667,
+      "high": -0.07069537760416666
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "last100_coverage",
+      "difference": -0.17749166666666666,
+      "low": -0.22255046875,
+      "high": -0.13143739583333336
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "final_coverage",
+      "difference": -0.20562499999999997,
+      "low": -0.25354166666666667,
+      "high": -0.15603645833333332
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "throughput_mbps",
+      "difference": -109.22601744613829,
+      "low": -141.70916892603995,
+      "high": -74.96472942402237
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "common_return",
+      "difference": -48.46851259712738,
+      "low": -64.21674770174643,
+      "high": -32.4107802444645
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "max_drop_1",
+      "difference": -0.2302083333333333,
+      "low": -0.28980208333333335,
+      "high": -0.16791145833333335
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "max_drop_5",
+      "difference": -0.23062500000000002,
+      "low": -0.29166666666666663,
+      "high": -0.16666145833333335
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "drop_events_10pp",
+      "difference": -24.0625,
+      "low": -30.96875,
+      "high": -17.622656250000013
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "min20_coverage",
+      "difference": -0.011135416666666696,
+      "low": -0.040808072916666695,
+      "high": 0.01768984374999996
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "disconnection_ratio",
+      "difference": -0.07456163194444444,
+      "low": -0.09104817708333333,
+      "high": -0.05977094184027781
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "boundary150_fraction",
+      "difference": 0.041241319444444445,
+      "low": 0.007725477430555556,
+      "high": 0.0725412326388889
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.060690104166666675,
+      "low": 0.04306293402777778,
+      "high": 0.0783013237847222
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu0",
+      "metric": "maintain_coverage",
+      "difference": -0.1395583333333333,
+      "low": -0.1941045833333333,
+      "high": -0.08624942708333336
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "coverage",
+      "difference": -0.10143177083333332,
+      "low": -0.13129438802083332,
+      "high": -0.07519255208333334
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "last100_coverage",
+      "difference": -0.16662083333333333,
+      "low": -0.20602208333333338,
+      "high": -0.1284585416666667
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "final_coverage",
+      "difference": -0.20270833333333332,
+      "low": -0.23979166666666668,
+      "high": -0.16416666666666668
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "throughput_mbps",
+      "difference": -117.05133929912506,
+      "low": -145.2349717051814,
+      "high": -91.39540697799522
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "common_return",
+      "difference": -46.815446429286666,
+      "low": -60.21112526848637,
+      "high": -34.98362785387675
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "max_drop_1",
+      "difference": -0.263125,
+      "low": -0.32459375,
+      "high": -0.19874479166666667
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "max_drop_5",
+      "difference": -0.26958333333333334,
+      "low": -0.33229166666666665,
+      "high": -0.205
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "drop_events_10pp",
+      "difference": -25.9375,
+      "low": -33.15703125,
+      "high": -19.467968750000004
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "min20_coverage",
+      "difference": -0.023010416666666693,
+      "low": -0.05544661458333336,
+      "high": 0.009376822916666633
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "disconnection_ratio",
+      "difference": -0.07144531250000001,
+      "low": -0.08870996093750001,
+      "high": -0.05524207899305556
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "boundary150_fraction",
+      "difference": 0.01861979166666667,
+      "low": -0.007490125868055551,
+      "high": 0.044706054687499996
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.049231770833333334,
+      "low": 0.030162326388888893,
+      "high": 0.06936447482638888
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu0",
+      "metric": "maintain_coverage",
+      "difference": -0.12924166666666664,
+      "low": -0.17901270833333333,
+      "high": -0.08279973958333334
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "coverage",
+      "difference": -0.04819531249999999,
+      "low": -0.077688984375,
+      "high": -0.017101523437499985
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "last100_coverage",
+      "difference": -0.048904166666666755,
+      "low": -0.08784750000000009,
+      "high": -0.01155713541666679
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "final_coverage",
+      "difference": -0.04729166666666666,
+      "low": -0.09312499999999999,
+      "high": -0.0024999999999999988
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "throughput_mbps",
+      "difference": -48.702150293965616,
+      "low": -79.46393213526837,
+      "high": -16.184934175093833
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "common_return",
+      "difference": -21.87557301567817,
+      "low": -35.28745233502992,
+      "high": -7.845610522196919
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "max_drop_1",
+      "difference": -0.006458333333333351,
+      "low": -0.07063020833333335,
+      "high": 0.05666666666666665
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "max_drop_5",
+      "difference": -0.007291666666666662,
+      "low": -0.076671875,
+      "high": 0.060208333333333336
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "drop_events_10pp",
+      "difference": 0.25,
+      "low": -4.3765625,
+      "high": 4.250781249999996
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "min20_coverage",
+      "difference": -0.00491666666666667,
+      "low": -0.026104427083333333,
+      "high": 0.017140885416666637
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "disconnection_ratio",
+      "difference": 0.004652777777777781,
+      "low": -0.009596679687499996,
+      "high": 0.017808919270833338
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "boundary150_fraction",
+      "difference": 0.02546006944444445,
+      "low": 0.006705837673611116,
+      "high": 0.0437590060763889
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "close_neighbor_fraction",
+      "difference": -0.005954861111111112,
+      "low": -0.023102430555555557,
+      "high": 0.009182942708333313
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu05",
+      "reference": "mu01",
+      "metric": "maintain_coverage",
+      "difference": 0.02053333333333318,
+      "low": -0.022940052083333464,
+      "high": 0.06680104166666657
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "coverage",
+      "difference": -0.16505885416666666,
+      "low": -0.1962176041666667,
+      "high": -0.132296796875
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "last100_coverage",
+      "difference": -0.24979791666666668,
+      "low": -0.28857177083333335,
+      "high": -0.2118842187500001
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "final_coverage",
+      "difference": -0.2683333333333333,
+      "low": -0.3198020833333334,
+      "high": -0.22104166666666666
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "throughput_mbps",
+      "difference": -167.08199583173513,
+      "low": -198.56578337489603,
+      "high": -134.67137852131773
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "common_return",
+      "difference": -74.93458144435921,
+      "low": -89.07278548905545,
+      "high": -60.14996183939212
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "max_drop_1",
+      "difference": -0.135,
+      "low": -0.19187500000000002,
+      "high": -0.0797916666666667
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "max_drop_5",
+      "difference": -0.13416666666666666,
+      "low": -0.19604166666666667,
+      "high": -0.07270833333333335
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "drop_events_10pp",
+      "difference": -5.59375,
+      "low": -9.5625,
+      "high": -1.65625
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "min20_coverage",
+      "difference": -0.02397916666666668,
+      "low": -0.05186145833333336,
+      "high": 0.001980468749999977
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "disconnection_ratio",
+      "difference": -0.025894097222222218,
+      "low": -0.03644552951388889,
+      "high": -0.015398111979166667
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "boundary150_fraction",
+      "difference": 0.0555078125,
+      "low": 0.027724934895833338,
+      "high": 0.08319108072916664
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.07727864583333333,
+      "low": 0.05509754774305555,
+      "high": 0.09840549045138888
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu01",
+      "metric": "maintain_coverage",
+      "difference": -0.14327500000000007,
+      "low": -0.18147286458333337,
+      "high": -0.10436479166666678
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "coverage",
+      "difference": -0.15988281249999997,
+      "low": -0.19281423177083332,
+      "high": -0.1278546744791667
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "last100_coverage",
+      "difference": -0.23892708333333337,
+      "low": -0.2833550520833334,
+      "high": -0.19552875000000008
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "final_coverage",
+      "difference": -0.26541666666666663,
+      "low": -0.3125,
+      "high": -0.2168645833333334
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "throughput_mbps",
+      "difference": -174.9073176847219,
+      "low": -207.27911943316437,
+      "high": -142.343760040586
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "common_return",
+      "difference": -73.2815152765185,
+      "low": -88.10531043909866,
+      "high": -58.7128509093176
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "max_drop_1",
+      "difference": -0.16791666666666666,
+      "low": -0.21958333333333335,
+      "high": -0.11874479166666671
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "max_drop_5",
+      "difference": -0.173125,
+      "low": -0.22229166666666664,
+      "high": -0.12665625000000003
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "drop_events_10pp",
+      "difference": -7.46875,
+      "low": -11.78203125,
+      "high": -3.0929687500000043
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "min20_coverage",
+      "difference": -0.03585416666666668,
+      "low": -0.05994010416666667,
+      "high": -0.013873958333333344
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "disconnection_ratio",
+      "difference": -0.02277777777777778,
+      "low": -0.03394184027777778,
+      "high": -0.012649739583333345
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "boundary150_fraction",
+      "difference": 0.03288628472222223,
+      "low": 0.015231770833333338,
+      "high": 0.04976595052083334
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.0658203125,
+      "low": 0.047640625000000006,
+      "high": 0.08417458767361109
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu01",
+      "metric": "maintain_coverage",
+      "difference": -0.1329583333333334,
+      "low": -0.1743011979166667,
+      "high": -0.09202958333333341
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "coverage",
+      "difference": -0.11686354166666668,
+      "low": -0.13686274739583332,
+      "high": -0.09739937500000004
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "last100_coverage",
+      "difference": -0.20089374999999993,
+      "low": -0.2259791666666666,
+      "high": -0.17570578124999994
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "final_coverage",
+      "difference": -0.22104166666666666,
+      "low": -0.2589583333333333,
+      "high": -0.18625
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "throughput_mbps",
+      "difference": -118.37984553776951,
+      "low": -134.98924423913851,
+      "high": -102.44299811635176
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "common_return",
+      "difference": -53.05900842868104,
+      "low": -61.71339643914137,
+      "high": -44.648911576244146
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "max_drop_1",
+      "difference": -0.12854166666666667,
+      "low": -0.1787552083333333,
+      "high": -0.078125
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "max_drop_5",
+      "difference": -0.126875,
+      "low": -0.18334375000000003,
+      "high": -0.07102083333333345
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "drop_events_10pp",
+      "difference": -5.84375,
+      "low": -9.65703125,
+      "high": -1.9992187500000043
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "min20_coverage",
+      "difference": -0.01906250000000001,
+      "low": -0.04400390625000001,
+      "high": 0.002438802083333316
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "disconnection_ratio",
+      "difference": -0.030546874999999998,
+      "low": -0.04075249565972222,
+      "high": -0.019760959201388886
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "boundary150_fraction",
+      "difference": 0.030047743055555555,
+      "low": 0.00683582899305555,
+      "high": 0.0542749565972222
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.08323350694444445,
+      "low": 0.06724815538194445,
+      "high": 0.09844835069444445
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu2",
+      "reference": "mu05",
+      "metric": "maintain_coverage",
+      "difference": -0.16380833333333328,
+      "low": -0.1981131770833333,
+      "high": -0.13076796874999988
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "coverage",
+      "difference": -0.1116875,
+      "low": -0.12980626302083334,
+      "high": -0.09383087239583335
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "last100_coverage",
+      "difference": -0.19002291666666662,
+      "low": -0.2135427083333333,
+      "high": -0.16651932291666666
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "final_coverage",
+      "difference": -0.21812499999999999,
+      "low": -0.2502083333333333,
+      "high": -0.18937500000000002
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "throughput_mbps",
+      "difference": -126.20516739075629,
+      "low": -143.2505512706595,
+      "high": -108.86787659435747
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "common_return",
+      "difference": -51.405942260840334,
+      "low": -59.63460743840063,
+      "high": -43.46548669365185
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "max_drop_1",
+      "difference": -0.16145833333333331,
+      "low": -0.22042187500000004,
+      "high": -0.10312499999999998
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "max_drop_5",
+      "difference": -0.16583333333333333,
+      "low": -0.222921875,
+      "high": -0.10791145833333335
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "drop_events_10pp",
+      "difference": -7.71875,
+      "low": -12.00078125,
+      "high": -3.2171875000000085
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "min20_coverage",
+      "difference": -0.030937500000000007,
+      "low": -0.05188307291666666,
+      "high": -0.011051562499999995
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "disconnection_ratio",
+      "difference": -0.02743055555555556,
+      "low": -0.0389931640625,
+      "high": -0.014995659722222228
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "boundary150_fraction",
+      "difference": 0.007426215277777777,
+      "low": -0.009437065972222223,
+      "high": 0.02553439670138889
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "close_neighbor_fraction",
+      "difference": 0.07177517361111112,
+      "low": 0.052564236111111114,
+      "high": 0.09138682725694444
+    },
+    {
+      "checkpoint": "best",
+      "group": "mu5",
+      "reference": "mu05",
+      "metric": "maintain_coverage",
+      "difference": -0.15349166666666658,
+      "low": -0.18918572916666654,
+      "high": -0.11968296875000001
+    }
+  ],
+  "fixed_scene_events": {
+    "last/mu0/10000": {
+      "time": 180,
+      "coverage_before": 0.66,
+      "coverage_after": 0.013333333333333334,
+      "connected_before": 18,
+      "connected_after": 1,
+      "newly_disconnected_uavs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "lost_users": 97,
+      "lost_users_previous_server_disconnected": 97,
+      "final_coverage": 0.7066666666666667,
+      "final_connected": 18
+    },
+    "last/mu01/10000": {
+      "time": 119,
+      "coverage_before": 0.6333333333333333,
+      "coverage_after": 0.3,
+      "connected_before": 18,
+      "connected_after": 11,
+      "newly_disconnected_uavs": [
+        1,
+        7,
+        8,
+        12,
+        15,
+        16,
+        17
+      ],
+      "lost_users": 52,
+      "lost_users_previous_server_disconnected": 50,
+      "final_coverage": 0.5933333333333334,
+      "final_connected": 18
+    },
+    "last/mu05/10000": {
+      "time": 142,
+      "coverage_before": 0.6066666666666667,
+      "coverage_after": 0.3333333333333333,
+      "connected_before": 18,
+      "connected_after": 12,
+      "newly_disconnected_uavs": [
+        7,
+        8,
+        14,
+        15,
+        16,
+        17
+      ],
+      "lost_users": 42,
+      "lost_users_previous_server_disconnected": 41,
+      "final_coverage": 0.4533333333333333,
+      "final_connected": 18
+    },
+    "last/mu2/10000": {
+      "time": 5,
+      "coverage_before": 0.38666666666666666,
+      "coverage_after": 0.29333333333333333,
+      "connected_before": 12,
+      "connected_after": 10,
+      "newly_disconnected_uavs": [
+        1,
+        12
+      ],
+      "lost_users": 15,
+      "lost_users_previous_server_disconnected": 15,
+      "final_coverage": 0.36,
+      "final_connected": 18
+    },
+    "last/mu5/10000": {
+      "time": 30,
+      "coverage_before": 0.5,
+      "coverage_after": 0.34,
+      "connected_before": 16,
+      "connected_after": 13,
+      "newly_disconnected_uavs": [
+        8,
+        15,
+        17
+      ],
+      "lost_users": 27,
+      "lost_users_previous_server_disconnected": 23,
+      "final_coverage": 0.37333333333333335,
+      "final_connected": 18
+    },
+    "last/mu0/10001": {
+      "time": 373,
+      "coverage_before": 0.74,
+      "coverage_after": 0.06,
+      "connected_before": 18,
+      "connected_after": 3,
+      "newly_disconnected_uavs": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "lost_users": 102,
+      "lost_users_previous_server_disconnected": 102,
+      "final_coverage": 0.68,
+      "final_connected": 17
+    },
+    "last/mu01/10001": {
+      "time": 233,
+      "coverage_before": 0.6866666666666666,
+      "coverage_after": 0.6,
+      "connected_before": 17,
+      "connected_after": 16,
+      "newly_disconnected_uavs": [
+        7
+      ],
+      "lost_users": 14,
+      "lost_users_previous_server_disconnected": 10,
+      "final_coverage": 0.6666666666666666,
+      "final_connected": 16
+    },
+    "last/mu05/10001": {
+      "time": 121,
+      "coverage_before": 0.56,
+      "coverage_after": 0.4066666666666667,
+      "connected_before": 15,
+      "connected_after": 12,
+      "newly_disconnected_uavs": [
+        4,
+        16,
+        18
+      ],
+      "lost_users": 24,
+      "lost_users_previous_server_disconnected": 23,
+      "final_coverage": 0.66,
+      "final_connected": 18
+    },
+    "last/mu2/10001": {
+      "time": 75,
+      "coverage_before": 0.6933333333333334,
+      "coverage_after": 0.49333333333333335,
+      "connected_before": 18,
+      "connected_after": 15,
+      "newly_disconnected_uavs": [
+        4,
+        16,
+        18
+      ],
+      "lost_users": 30,
+      "lost_users_previous_server_disconnected": 29,
+      "final_coverage": 0.34,
+      "final_connected": 18
+    },
+    "last/mu5/10001": {
+      "time": 77,
+      "coverage_before": 0.6333333333333333,
+      "coverage_after": 0.5066666666666667,
+      "connected_before": 18,
+      "connected_after": 15,
+      "newly_disconnected_uavs": [
+        7,
+        10,
+        15
+      ],
+      "lost_users": 22,
+      "lost_users_previous_server_disconnected": 18,
+      "final_coverage": 0.44666666666666666,
+      "final_connected": 18
+    },
+    "best/mu0/10000": {
+      "time": 256,
+      "coverage_before": 0.8133333333333334,
+      "coverage_after": 0.6,
+      "connected_before": 18,
+      "connected_after": 12,
+      "newly_disconnected_uavs": [
+        1,
+        7,
+        8,
+        15,
+        16,
+        17
+      ],
+      "lost_users": 33,
+      "lost_users_previous_server_disconnected": 31,
+      "final_coverage": 0.5533333333333333,
+      "final_connected": 13
+    },
+    "best/mu01/10000": {
+      "time": 218,
+      "coverage_before": 0.6533333333333333,
+      "coverage_after": 0.18666666666666668,
+      "connected_before": 18,
+      "connected_after": 8,
+      "newly_disconnected_uavs": [
+        1,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "lost_users": 71,
+      "lost_users_previous_server_disconnected": 69,
+      "final_coverage": 0.8133333333333334,
+      "final_connected": 18
+    },
+    "best/mu05/10000": {
+      "time": 279,
+      "coverage_before": 0.66,
+      "coverage_after": 0.23333333333333334,
+      "connected_before": 18,
+      "connected_after": 11,
+      "newly_disconnected_uavs": [
+        5,
+        6,
+        7,
+        8,
+        14,
+        15,
+        17
+      ],
+      "lost_users": 64,
+      "lost_users_previous_server_disconnected": 64,
+      "final_coverage": 0.62,
+      "final_connected": 18
+    },
+    "best/mu2/10000": {
+      "time": 269,
+      "coverage_before": 0.35333333333333333,
+      "coverage_after": 0.22,
+      "connected_before": 18,
+      "connected_after": 16,
+      "newly_disconnected_uavs": [
+        6,
+        15
+      ],
+      "lost_users": 20,
+      "lost_users_previous_server_disconnected": 20,
+      "final_coverage": 0.26666666666666666,
+      "final_connected": 18
+    },
+    "best/mu5/10000": {
+      "time": 30,
+      "coverage_before": 0.5,
+      "coverage_after": 0.34,
+      "connected_before": 16,
+      "connected_after": 13,
+      "newly_disconnected_uavs": [
+        8,
+        15,
+        17
+      ],
+      "lost_users": 27,
+      "lost_users_previous_server_disconnected": 23,
+      "final_coverage": 0.37333333333333335,
+      "final_connected": 18
+    },
+    "best/mu0/10001": {
+      "time": 298,
+      "coverage_before": 0.7,
+      "coverage_after": 0.06,
+      "connected_before": 18,
+      "connected_after": 1,
+      "newly_disconnected_uavs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18
+      ],
+      "lost_users": 96,
+      "lost_users_previous_server_disconnected": 96,
+      "final_coverage": 0.72,
+      "final_connected": 18
+    },
+    "best/mu01/10001": {
+      "time": 71,
+      "coverage_before": 0.7866666666666666,
+      "coverage_after": 0.54,
+      "connected_before": 17,
+      "connected_after": 12,
+      "newly_disconnected_uavs": [
+        4,
+        10,
+        15,
+        16,
+        18
+      ],
+      "lost_users": 40,
+      "lost_users_previous_server_disconnected": 39,
+      "final_coverage": 0.4866666666666667,
+      "final_connected": 15
+    },
+    "best/mu05/10001": {
+      "time": 297,
+      "coverage_before": 0.6466666666666666,
+      "coverage_after": 0.14,
+      "connected_before": 18,
+      "connected_after": 8,
+      "newly_disconnected_uavs": [
+        1,
+        4,
+        6,
+        7,
+        10,
+        12,
+        14,
+        15,
+        16,
+        18
+      ],
+      "lost_users": 82,
+      "lost_users_previous_server_disconnected": 80,
+      "final_coverage": 0.4866666666666667,
+      "final_connected": 17
+    },
+    "best/mu2/10001": {
+      "time": 54,
+      "coverage_before": 0.6733333333333333,
+      "coverage_after": 0.5,
+      "connected_before": 18,
+      "connected_after": 14,
+      "newly_disconnected_uavs": [
+        7,
+        10,
+        13,
+        15
+      ],
+      "lost_users": 27,
+      "lost_users_previous_server_disconnected": 25,
+      "final_coverage": 0.4066666666666667,
+      "final_connected": 18
+    },
+    "best/mu5/10001": {
+      "time": 77,
+      "coverage_before": 0.6333333333333333,
+      "coverage_after": 0.5066666666666667,
+      "connected_before": 18,
+      "connected_after": 15,
+      "newly_disconnected_uavs": [
+        7,
+        10,
+        15
+      ],
+      "lost_users": 22,
+      "lost_users_previous_server_disconnected": 18,
+      "final_coverage": 0.44666666666666666,
+      "final_connected": 18
+    }
+  },
+  "primary": "last",
+  "groups": [
+    "mu0",
+    "mu01",
+    "mu05",
+    "mu2",
+    "mu5"
+  ],
+  "weights": {
+    "mu0": 0.0,
+    "mu01": 0.1,
+    "mu05": 0.5,
+    "mu2": 2.0,
+    "mu5": 5.0
+  },
+  "uncertainty": "2000 paired scenario bootstrap, seed 950001; not training-seed CI"
+}

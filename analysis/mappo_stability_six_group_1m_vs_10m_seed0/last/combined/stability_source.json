@@ -1,0 +1,51 @@
+{
+  "evaluation": {
+    "sha256": "6f9696b4d40537315bcf4f9f33f757eb9891593404db57a68e54250e4ec16aef",
+    "scenes": [
+      10000,
+      10001,
+      10002,
+      10003,
+      10004,
+      10005,
+      10006,
+      10007,
+      10008,
+      10009,
+      10010,
+      10011,
+      10012,
+      10013,
+      10014,
+      10015,
+      10016,
+      10017,
+      10018,
+      10019,
+      10020,
+      10021,
+      10022,
+      10023,
+      10024,
+      10025,
+      10026,
+      10027,
+      10028,
+      10029,
+      10030,
+      10031
+    ],
+    "action_seed": 880001,
+    "batch_size": 16,
+    "device": "cuda:0",
+    "checkpoint": "/home/dym/uav_sac/runs/mappo_capacity10_stability_combined_1m_seed0/last.pt",
+    "kind": "last"
+  },
+  "checkpoint_step": 1000000,
+  "weights": {
+    "disconnection_weight": 0.1,
+    "robustness_weight": 0.5
+  },
+  "selection": "fixed 1M budget",
+  "reward_curves_sha256": "d9e33f850fe7d0aa99ef56520161229543694a0cdce749f351baa48c1fea75e3"
+}

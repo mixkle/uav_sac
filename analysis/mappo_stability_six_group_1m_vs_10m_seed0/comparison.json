@@ -1,0 +1,2148 @@
+{
+  "groups": [
+    "baseline_best",
+    "dppo_best",
+    "teacher_topk",
+    "disconnection",
+    "robustness",
+    "combined"
+  ],
+  "summary": {
+    "baseline_best": {
+      "coverage": 0.614759375,
+      "final_coverage": 0.6714583333333334,
+      "last100_coverage": 0.6884145833333334,
+      "max_drop_1": 0.3258333333333333,
+      "max_drop_5": 0.3304166666666667,
+      "max_drawdown": 0.3860416666666666,
+      "peak_coverage": 0.7777083333333333,
+      "peak_step": 263.125,
+      "min20_coverage": 0.27488541666666666,
+      "drop_events_5pp": 30.75,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 12.6875,
+      "any_drop_10pp": 0.96875,
+      "drop_events_20pp": 4.0625,
+      "any_drop_20pp": 0.8125,
+      "early51_150_coverage": 0.5774958333333333,
+      "maintain_coverage": 0.11091874999999998,
+      "throughput_bps": 516189264.26680136,
+      "last100_throughput_bps": 581507650.1862442,
+      "common_return": 273.43384409422947,
+      "training_return": 273.43384409422947,
+      "robustness": 0.5644340856481481,
+      "retention_ratio": 0.9178936789783421,
+      "disconnection_ratio": 0.09315972222222223,
+      "final_disconnection_ratio": 0.05555555555555555,
+      "discovery_fraction": 0.8656807291666666,
+      "reflection_fraction": 0.0012890624999999998,
+      "boundary150_fraction": 0.032482638888888894,
+      "large_drop_with_net_disconnect_rise": 12.6875,
+      "largest_drop_time": 171.625,
+      "largest_drop_net_disconnect_change": 0.40625,
+      "max_drop_1_scene_p95": 0.581,
+      "curve_peak_time": 228,
+      "curve_peak_coverage": 0.7072916666666668,
+      "final_below30_scenes": 1,
+      "training_budget": 10000000,
+      "checkpoint_step": 3821568,
+      "pooled_served_rate_bps": 5597737.751910943,
+      "drop_with_net_disconnect_rise_fraction": 1.0
+    },
+    "dppo_best": {
+      "coverage": 0.6389395833333333,
+      "final_coverage": 0.6677083333333333,
+      "last100_coverage": 0.66338125,
+      "max_drop_1": 0.40041666666666664,
+      "max_drop_5": 0.40875000000000006,
+      "max_drawdown": 0.47854166666666664,
+      "peak_coverage": 0.7816666666666667,
+      "peak_step": 203.75,
+      "min20_coverage": 0.3341041666666667,
+      "drop_events_5pp": 29.0625,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 11.40625,
+      "any_drop_10pp": 0.96875,
+      "drop_events_20pp": 4.40625,
+      "any_drop_20pp": 0.78125,
+      "early51_150_coverage": 0.6599458333333333,
+      "maintain_coverage": 0.003435416666666632,
+      "throughput_bps": 584212593.0021287,
+      "last100_throughput_bps": 616788169.1533043,
+      "common_return": 286.73383829344687,
+      "training_return": 286.73383829344687,
+      "robustness": 0.5819513599537036,
+      "retention_ratio": 0.9104719774866327,
+      "disconnection_ratio": 0.08168402777777778,
+      "final_disconnection_ratio": 0.04861111111111112,
+      "discovery_fraction": 0.8704880208333333,
+      "reflection_fraction": 0.03285590277777778,
+      "boundary150_fraction": 0.08543836805555557,
+      "large_drop_with_net_disconnect_rise": 11.0625,
+      "largest_drop_time": 206.84375,
+      "largest_drop_net_disconnect_change": 0.4930555555555555,
+      "max_drop_1_scene_p95": 0.6950000000000001,
+      "curve_peak_time": 258,
+      "curve_peak_coverage": 0.7004166666666668,
+      "final_below30_scenes": 0,
+      "training_budget": 10000000,
+      "checkpoint_step": 9550656,
+      "pooled_served_rate_bps": 6095647.728843729,
+      "drop_with_net_disconnect_rise_fraction": 0.9698630136986301
+    },
+    "teacher_topk": {
+      "coverage": 0.5797015625,
+      "final_coverage": 0.6502083333333333,
+      "last100_coverage": 0.6583895833333333,
+      "max_drop_1": 0.33708333333333335,
+      "max_drop_5": 0.36791666666666667,
+      "max_drawdown": 0.41208333333333336,
+      "peak_coverage": 0.7627083333333333,
+      "peak_step": 227.96875,
+      "min20_coverage": 0.24979166666666666,
+      "drop_events_5pp": 21.8125,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 7.9375,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 3.46875,
+      "any_drop_20pp": 0.78125,
+      "early51_150_coverage": 0.5412479166666667,
+      "maintain_coverage": 0.11714166666666667,
+      "throughput_bps": 509933889.0095959,
+      "last100_throughput_bps": 581807975.9932405,
+      "common_return": 259.07709908051174,
+      "training_return": 259.07709908051174,
+      "robustness": 0.5330231192129629,
+      "retention_ratio": 0.9189963694650374,
+      "disconnection_ratio": 0.10002604166666668,
+      "final_disconnection_ratio": 0.03125,
+      "discovery_fraction": 0.8613708333333334,
+      "reflection_fraction": 0.0011675347222222224,
+      "boundary150_fraction": 0.03203559027777778,
+      "large_drop_with_net_disconnect_rise": 7.84375,
+      "largest_drop_time": 155.28125,
+      "largest_drop_net_disconnect_change": 0.4131944444444444,
+      "max_drop_1_scene_p95": 0.5646666666666667,
+      "curve_peak_time": 320,
+      "curve_peak_coverage": 0.68,
+      "final_below30_scenes": 0,
+      "training_budget": 10000000,
+      "checkpoint_step": 3821568,
+      "pooled_served_rate_bps": 5864326.543132221,
+      "drop_with_net_disconnect_rise_fraction": 0.9881889763779528
+    },
+    "disconnection": {
+      "coverage": 0.6228354166666668,
+      "final_coverage": 0.6483333333333333,
+      "last100_coverage": 0.653375,
+      "max_drop_1": 0.3566666666666667,
+      "max_drop_5": 0.3639583333333333,
+      "max_drawdown": 0.4275,
+      "peak_coverage": 0.7785416666666667,
+      "peak_step": 230.78125,
+      "min20_coverage": 0.30533333333333335,
+      "drop_events_5pp": 36.8125,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 14.90625,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 7.375,
+      "any_drop_20pp": 0.78125,
+      "early51_150_coverage": 0.6377124999999999,
+      "maintain_coverage": 0.01566250000000008,
+      "throughput_bps": 524105340.43279606,
+      "last100_throughput_bps": 551623855.7466483,
+      "common_return": 277.08645148974915,
+      "training_return": 273.87290982308247,
+      "robustness": 0.5696417534722222,
+      "retention_ratio": 0.9140878670686242,
+      "disconnection_ratio": 0.08033854166666667,
+      "final_disconnection_ratio": 0.05208333333333333,
+      "discovery_fraction": 0.8588083333333334,
+      "reflection_fraction": 0.0038888888888888888,
+      "boundary150_fraction": 0.05552517361111112,
+      "large_drop_with_net_disconnect_rise": 14.90625,
+      "largest_drop_time": 171.625,
+      "largest_drop_net_disconnect_change": 0.4079861111111111,
+      "max_drop_1_scene_p95": 0.6779999999999999,
+      "curve_peak_time": 146,
+      "curve_peak_coverage": 0.6920833333333332,
+      "final_below30_scenes": 0,
+      "training_budget": 1000000,
+      "checkpoint_step": 620544,
+      "pooled_served_rate_bps": 5609885.869343985,
+      "drop_with_net_disconnect_rise_fraction": 1.0
+    },
+    "robustness": {
+      "coverage": 0.6409567708333334,
+      "final_coverage": 0.6779166666666667,
+      "last100_coverage": 0.6856229166666666,
+      "max_drop_1": 0.4391666666666667,
+      "max_drop_5": 0.44625,
+      "max_drawdown": 0.53125,
+      "peak_coverage": 0.795625,
+      "peak_step": 208.34375,
+      "min20_coverage": 0.31857291666666665,
+      "drop_events_5pp": 36.65625,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 17.125,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 7.84375,
+      "any_drop_20pp": 0.875,
+      "early51_150_coverage": 0.6565583333333334,
+      "maintain_coverage": 0.029064583333333376,
+      "throughput_bps": 542630293.0225245,
+      "last100_throughput_bps": 579318470.5291605,
+      "common_return": 285.32299062786797,
+      "training_return": 401.7155369241643,
+      "robustness": 0.5819627314814815,
+      "retention_ratio": 0.906759377342008,
+      "disconnection_ratio": 0.07934027777777777,
+      "final_disconnection_ratio": 0.04861111111111111,
+      "discovery_fraction": 0.8814395833333333,
+      "reflection_fraction": 0.0017838541666666667,
+      "boundary150_fraction": 0.03326822916666667,
+      "large_drop_with_net_disconnect_rise": 17.125,
+      "largest_drop_time": 206.21875,
+      "largest_drop_net_disconnect_change": 0.5503472222222222,
+      "max_drop_1_scene_p95": 0.723,
+      "curve_peak_time": 327,
+      "curve_peak_coverage": 0.70875,
+      "final_below30_scenes": 0,
+      "training_budget": 1000000,
+      "checkpoint_step": 610304,
+      "pooled_served_rate_bps": 5643961.4205393735,
+      "drop_with_net_disconnect_rise_fraction": 1.0
+    },
+    "combined": {
+      "coverage": 0.6203010416666667,
+      "final_coverage": 0.6745833333333333,
+      "last100_coverage": 0.6671416666666666,
+      "max_drop_1": 0.49687499999999996,
+      "max_drop_5": 0.4991666666666666,
+      "max_drawdown": 0.5845833333333332,
+      "peak_coverage": 0.7827083333333333,
+      "peak_step": 243.96875,
+      "min20_coverage": 0.29553125,
+      "drop_events_5pp": 43.40625,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 17.28125,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 7.25,
+      "any_drop_20pp": 0.9375,
+      "early51_150_coverage": 0.6173395833333333,
+      "maintain_coverage": 0.0498020833333333,
+      "throughput_bps": 523136979.7026823,
+      "last100_throughput_bps": 565936179.1848215,
+      "common_return": 276.021055584143,
+      "training_return": 384.9325660008097,
+      "robustness": 0.5621052951388888,
+      "retention_ratio": 0.9058951329750913,
+      "disconnection_ratio": 0.08773871527777777,
+      "final_disconnection_ratio": 0.03819444444444445,
+      "discovery_fraction": 0.8649828124999999,
+      "reflection_fraction": 0.0023828125,
+      "boundary150_fraction": 0.04174045138888889,
+      "large_drop_with_net_disconnect_rise": 17.28125,
+      "largest_drop_time": 224.25,
+      "largest_drop_net_disconnect_change": 0.6527777777777778,
+      "max_drop_1_scene_p95": 0.7066666666666667,
+      "curve_peak_time": 221,
+      "curve_peak_coverage": 0.6987499999999999,
+      "final_below30_scenes": 0,
+      "training_budget": 1000000,
+      "checkpoint_step": 831488,
+      "pooled_served_rate_bps": 5622398.852199061,
+      "drop_with_net_disconnect_rise_fraction": 1.0
+    }
+  },
+  "paired": [
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "coverage",
+      "difference": 0.008076041666666646,
+      "low": -0.01562000000000002,
+      "high": 0.03166540364583329
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "last100_coverage",
+      "difference": -0.03503958333333329,
+      "low": -0.07294416666666662,
+      "high": 0.006014218750000049
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "throughput_bps",
+      "difference": 7916076.165994778,
+      "low": -18173648.513110932,
+      "high": 34157908.981977835
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "common_return",
+      "difference": 3.652607395519717,
+      "low": -7.1784417257639115,
+      "high": 14.327489866027518
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "max_drop_1",
+      "difference": 0.030833333333333338,
+      "low": -0.053749999999999985,
+      "high": 0.11271354166666664
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "max_drop_5",
+      "difference": 0.033541666666666664,
+      "low": -0.058130208333333336,
+      "high": 0.11773437499999985
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "drop_events_10pp",
+      "difference": 2.21875,
+      "low": -2.25,
+      "high": 6.438281249999996
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "min20_coverage",
+      "difference": 0.030447916666666675,
+      "low": 0.005415885416666669,
+      "high": 0.057399739583333324
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "disconnection_ratio",
+      "difference": -0.012821180555555561,
+      "low": -0.02544563802083334,
+      "high": 0.00018272569444444114
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "robustness",
+      "difference": 0.005207667824074088,
+      "low": -0.01784687210648146,
+      "high": 0.027366287615740743
+    },
+    {
+      "group": "disconnection",
+      "reference": "baseline_best",
+      "metric": "maintain_coverage",
+      "difference": -0.0952562499999999,
+      "low": -0.14491890624999987,
+      "high": -0.04161072916666661
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "coverage",
+      "difference": -0.016104166666666662,
+      "low": -0.04595170572916667,
+      "high": 0.01080307291666666
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "last100_coverage",
+      "difference": -0.01000624999999996,
+      "low": -0.041542031249999965,
+      "high": 0.01984984375000001
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "throughput_bps",
+      "difference": -60107252.569332585,
+      "low": -92126822.76123807,
+      "high": -29086211.516177148
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "common_return",
+      "difference": -9.647386803697739,
+      "low": -23.26498264205668,
+      "high": 2.7367597702673927
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "max_drop_1",
+      "difference": -0.043750000000000004,
+      "low": -0.153765625,
+      "high": 0.058343749999999944
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "max_drop_5",
+      "difference": -0.04479166666666668,
+      "low": -0.15229687500000005,
+      "high": 0.05668749999999989
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "drop_events_10pp",
+      "difference": 3.5,
+      "low": -0.3125,
+      "high": 7.5625
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "min20_coverage",
+      "difference": -0.02877083333333333,
+      "low": -0.05972942708333333,
+      "high": 0.0018367187499999892
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "disconnection_ratio",
+      "difference": -0.0013454861111111163,
+      "low": -0.016545138888888894,
+      "high": 0.015286892361111101
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "robustness",
+      "difference": -0.012309606481481475,
+      "low": -0.04037818576388887,
+      "high": 0.01336253399884259
+    },
+    {
+      "group": "disconnection",
+      "reference": "dppo_best",
+      "metric": "maintain_coverage",
+      "difference": 0.012227083333333446,
+      "low": -0.016903281249999895,
+      "high": 0.04023677083333339
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "coverage",
+      "difference": 0.04313385416666666,
+      "low": 0.019105846354166657,
+      "high": 0.0663783723958333
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "last100_coverage",
+      "difference": -0.0050145833333333,
+      "low": -0.03105161458333332,
+      "high": 0.020456927083333354
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "throughput_bps",
+      "difference": 14171451.423200237,
+      "low": -10116979.834483448,
+      "high": 39866460.87972671
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "common_return",
+      "difference": 18.00935240923735,
+      "low": 7.087314138413631,
+      "high": 28.56079140731704
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "max_drop_1",
+      "difference": 0.019583333333333355,
+      "low": -0.054395833333333324,
+      "high": 0.0904166666666667
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "max_drop_5",
+      "difference": -0.003958333333333333,
+      "low": -0.080421875,
+      "high": 0.0675052083333333
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "drop_events_10pp",
+      "difference": 6.96875,
+      "low": 2.65546875,
+      "high": 11.532031249999996
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "min20_coverage",
+      "difference": 0.05554166666666668,
+      "low": 0.02989557291666667,
+      "high": 0.08449479166666665
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "disconnection_ratio",
+      "difference": -0.019687500000000004,
+      "low": -0.0336748046875,
+      "high": -0.004542426215277794
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "robustness",
+      "difference": 0.036618634259259264,
+      "low": 0.012455959201388903,
+      "high": 0.05899310402199072
+    },
+    {
+      "group": "disconnection",
+      "reference": "teacher_topk",
+      "metric": "maintain_coverage",
+      "difference": -0.1014791666666666,
+      "low": -0.14448552083333333,
+      "high": -0.05738265624999994
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "coverage",
+      "difference": 0.02619739583333331,
+      "low": -0.00010162760416668038,
+      "high": 0.0532857552083333
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "last100_coverage",
+      "difference": -0.0027916666666666454,
+      "low": -0.039052760416666624,
+      "high": 0.03601479166666663
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "throughput_bps",
+      "difference": 26441028.755723156,
+      "low": -2261811.2646665326,
+      "high": 54073822.42691747
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "common_return",
+      "difference": 11.889146533638565,
+      "low": 0.031083311918099814,
+      "high": 24.13147158034279
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "max_drop_1",
+      "difference": 0.11333333333333333,
+      "low": 0.021661458333333355,
+      "high": 0.2062552083333333
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "max_drop_5",
+      "difference": 0.11583333333333333,
+      "low": 0.020406250000000008,
+      "high": 0.20916666666666667
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "drop_events_10pp",
+      "difference": 4.4375,
+      "low": 0.49921875000000004,
+      "high": 8.375
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "min20_coverage",
+      "difference": 0.04368750000000002,
+      "low": 0.013333333333333332,
+      "high": 0.07566770833333335
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "disconnection_ratio",
+      "difference": -0.01381944444444445,
+      "low": -0.030522460937500006,
+      "high": 0.0048062065972222096
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "robustness",
+      "difference": 0.017528645833333342,
+      "low": -0.00883544487847221,
+      "high": 0.045444140624999976
+    },
+    {
+      "group": "robustness",
+      "reference": "baseline_best",
+      "metric": "maintain_coverage",
+      "difference": -0.0818541666666666,
+      "low": -0.12913614583333327,
+      "high": -0.03131291666666657
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "coverage",
+      "difference": 0.002017187500000007,
+      "low": -0.02423040364583336,
+      "high": 0.026846796875
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "last100_coverage",
+      "difference": 0.022241666666666684,
+      "low": -0.012902291666666654,
+      "high": 0.05783447916666667
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "throughput_bps",
+      "difference": -41582299.97960421,
+      "low": -73816979.2603562,
+      "high": -11308517.654590437
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "common_return",
+      "difference": -1.4108476655788902,
+      "low": -13.526172280693734,
+      "high": 10.166186167829578
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "max_drop_1",
+      "difference": 0.03874999999999999,
+      "low": -0.053999999999999986,
+      "high": 0.13147916666666656
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "max_drop_5",
+      "difference": 0.037499999999999985,
+      "low": -0.05646354166666667,
+      "high": 0.1256354166666666
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "drop_events_10pp",
+      "difference": 5.71875,
+      "low": 1.3101562500000001,
+      "high": 10.063281249999996
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "min20_coverage",
+      "difference": -0.015531249999999991,
+      "low": -0.04453177083333334,
+      "high": 0.014229947916666647
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "disconnection_ratio",
+      "difference": -0.002343750000000007,
+      "low": -0.01822927517361111,
+      "high": 0.01276638454861109
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "robustness",
+      "difference": 1.1371527777779417e-05,
+      "low": -0.025118805700231478,
+      "high": 0.024044018373842575
+    },
+    {
+      "group": "robustness",
+      "reference": "dppo_best",
+      "metric": "maintain_coverage",
+      "difference": 0.025629166666666744,
+      "low": -0.012016927083333222,
+      "high": 0.061604739583333464
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "coverage",
+      "difference": 0.061255208333333325,
+      "low": 0.03722709635416666,
+      "high": 0.08729023437499998
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "last100_coverage",
+      "difference": 0.027233333333333345,
+      "low": -0.003983385416666653,
+      "high": 0.06279015624999998
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "throughput_bps",
+      "difference": 32696404.01292862,
+      "low": 5294811.099304312,
+      "high": 62254291.077007286
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "common_return",
+      "difference": 26.245891547356198,
+      "low": 15.338726540221916,
+      "high": 38.08195557095407
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "max_drop_1",
+      "difference": 0.10208333333333336,
+      "low": 0.03373958333333336,
+      "high": 0.167296875
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "max_drop_5",
+      "difference": 0.07833333333333334,
+      "low": 0.0066666666666666645,
+      "high": 0.14708854166666666
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "drop_events_10pp",
+      "difference": 9.1875,
+      "low": 5.96796875,
+      "high": 12.375
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "min20_coverage",
+      "difference": 0.06878125000000002,
+      "low": 0.037706510416666665,
+      "high": 0.10468932291666667
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "disconnection_ratio",
+      "difference": -0.020685763888888892,
+      "low": -0.03794596354166667,
+      "high": -0.002800672743055599
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "robustness",
+      "difference": 0.04893961226851852,
+      "low": 0.02449835069444444,
+      "high": 0.07555239728009258
+    },
+    {
+      "group": "robustness",
+      "reference": "teacher_topk",
+      "metric": "maintain_coverage",
+      "difference": -0.0880770833333333,
+      "low": -0.13506302083333327,
+      "high": -0.03939864583333341
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "coverage",
+      "difference": 0.005541666666666658,
+      "low": -0.013433059895833358,
+      "high": 0.024771640624999987
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "last100_coverage",
+      "difference": -0.02127291666666667,
+      "low": -0.05242192708333337,
+      "high": 0.010001302083333321
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "throughput_bps",
+      "difference": 6947715.43588095,
+      "low": -16069166.26213741,
+      "high": 29713936.164657738
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "common_return",
+      "difference": 2.587211489913643,
+      "low": -6.10313147946189,
+      "high": 11.49938722817648
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "max_drop_1",
+      "difference": 0.17104166666666665,
+      "low": 0.09270312499999997,
+      "high": 0.23689583333333322
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "max_drop_5",
+      "difference": 0.16874999999999998,
+      "low": 0.08708333333333332,
+      "high": 0.23646354166666664
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "drop_events_10pp",
+      "difference": 4.59375,
+      "low": 1.09375,
+      "high": 8.03125
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "min20_coverage",
+      "difference": 0.02064583333333335,
+      "low": -0.0034721354166666447,
+      "high": 0.04474374999999999
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "disconnection_ratio",
+      "difference": -0.005421006944444449,
+      "low": -0.0160947265625,
+      "high": 0.005676323784722197
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "robustness",
+      "difference": -0.002328790509259238,
+      "low": -0.02171336950231478,
+      "high": 0.01786936993634261
+    },
+    {
+      "group": "combined",
+      "reference": "baseline_best",
+      "metric": "maintain_coverage",
+      "difference": -0.06111666666666667,
+      "low": -0.09874161458333336,
+      "high": -0.022404427083333404
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "coverage",
+      "difference": -0.018638541666666647,
+      "low": -0.03659575520833332,
+      "high": -0.0014026041666666985
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "last100_coverage",
+      "difference": 0.0037604166666666584,
+      "low": -0.02488296875,
+      "high": 0.03088598958333333
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "throughput_bps",
+      "difference": -61075613.29944642,
+      "low": -82730482.23778202,
+      "high": -38472868.559141174
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "common_return",
+      "difference": -10.712782709303811,
+      "low": -18.889059456377748,
+      "high": -2.7511725667218183
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "max_drop_1",
+      "difference": 0.09645833333333331,
+      "low": -0.00959895833333335,
+      "high": 0.19105208333333326
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "max_drop_5",
+      "difference": 0.09041666666666665,
+      "low": -0.010843750000000018,
+      "high": 0.1868802083333333
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "drop_events_10pp",
+      "difference": 5.875,
+      "low": 2.78125,
+      "high": 9.34375
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "min20_coverage",
+      "difference": -0.03857291666666665,
+      "low": -0.06382317708333332,
+      "high": -0.01339401041666667
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "disconnection_ratio",
+      "difference": 0.006054687499999996,
+      "low": -0.008100151909722223,
+      "high": 0.01961848958333333
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "robustness",
+      "difference": -0.019846064814814803,
+      "low": -0.03667711226851849,
+      "high": -0.0027865444155092765
+    },
+    {
+      "group": "combined",
+      "reference": "dppo_best",
+      "metric": "maintain_coverage",
+      "difference": 0.04636666666666667,
+      "low": 0.010457135416666595,
+      "high": 0.08230463541666665
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "coverage",
+      "difference": 0.040599479166666674,
+      "low": 0.0200446875,
+      "high": 0.06012899739583332
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "last100_coverage",
+      "difference": 0.00875208333333332,
+      "low": -0.021603020833333382,
+      "high": 0.03823260416666655
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "throughput_bps",
+      "difference": 13203090.69308641,
+      "low": -11260552.88597931,
+      "high": 36102734.74856445
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "common_return",
+      "difference": 16.943956503631277,
+      "low": 7.439075159713302,
+      "high": 25.83296544575929
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "max_drop_1",
+      "difference": 0.15979166666666667,
+      "low": 0.09935416666666667,
+      "high": 0.223125
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "max_drop_5",
+      "difference": 0.13124999999999998,
+      "low": 0.07083333333333332,
+      "high": 0.19208333333333333
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "drop_events_10pp",
+      "difference": 9.34375,
+      "low": 5.9671875,
+      "high": 12.875781249999996
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "min20_coverage",
+      "difference": 0.04573958333333335,
+      "low": 0.02096744791666668,
+      "high": 0.06997005208333333
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "disconnection_ratio",
+      "difference": -0.012287326388888888,
+      "low": -0.02615950520833334,
+      "high": 0.0007825520833333238
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "robustness",
+      "difference": 0.029082175925925942,
+      "low": 0.008329586950231492,
+      "high": 0.04903662181712963
+    },
+    {
+      "group": "combined",
+      "reference": "teacher_topk",
+      "metric": "maintain_coverage",
+      "difference": -0.06733958333333337,
+      "low": -0.10992317708333339,
+      "high": -0.025236979166666795
+    }
+  ],
+  "supplemental_last": {
+    "disconnection": {
+      "coverage": 0.5955406249999999,
+      "final_coverage": 0.639375,
+      "last100_coverage": 0.6276333333333333,
+      "max_drop_1": 0.3566666666666667,
+      "max_drop_5": 0.3516666666666666,
+      "max_drawdown": 0.42833333333333334,
+      "peak_coverage": 0.7552083333333333,
+      "peak_step": 189.25,
+      "min20_coverage": 0.27768750000000003,
+      "drop_events_5pp": 29.21875,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 12.21875,
+      "any_drop_10pp": 0.96875,
+      "drop_events_20pp": 5.25,
+      "any_drop_20pp": 0.84375,
+      "early51_150_coverage": 0.5944854166666667,
+      "maintain_coverage": 0.033147916666666666,
+      "throughput_bps": 500781349.40002614,
+      "last100_throughput_bps": 517143390.7313961,
+      "common_return": 264.92458863466805,
+      "training_return": 261.22597752355694,
+      "robustness": 0.5463405960648149,
+      "retention_ratio": 0.9172913093028356,
+      "disconnection_ratio": 0.09246527777777777,
+      "final_disconnection_ratio": 0.024305555555555552,
+      "discovery_fraction": 0.8430109375,
+      "reflection_fraction": 0.0032508680555555555,
+      "boundary150_fraction": 0.0574045138888889,
+      "large_drop_with_net_disconnect_rise": 12.21875,
+      "largest_drop_time": 185.40625,
+      "largest_drop_net_disconnect_change": 0.421875,
+      "max_drop_1_scene_p95": 0.6246666666666667,
+      "curve_peak_time": 163,
+      "curve_peak_coverage": 0.6775,
+      "final_below30_scenes": 0,
+      "training_budget": 1000000,
+      "checkpoint_step": 1000000,
+      "pooled_served_rate_bps": 5605901.913632689,
+      "drop_with_net_disconnect_rise_fraction": 1.0
+    },
+    "robustness": {
+      "coverage": 0.5818770833333333,
+      "final_coverage": 0.5970833333333334,
+      "last100_coverage": 0.6006541666666666,
+      "max_drop_1": 0.48,
+      "max_drop_5": 0.4839583333333333,
+      "max_drawdown": 0.5804166666666667,
+      "peak_coverage": 0.763125,
+      "peak_step": 213.28125,
+      "min20_coverage": 0.28960416666666666,
+      "drop_events_5pp": 53.21875,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 28.125,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 12.6875,
+      "any_drop_20pp": 0.9375,
+      "early51_150_coverage": 0.60249375,
+      "maintain_coverage": -0.0018395833333333077,
+      "throughput_bps": 482278522.9864933,
+      "last100_throughput_bps": 483918526.42643046,
+      "common_return": 258.47235455927967,
+      "training_return": 363.6721809481685,
+      "robustness": 0.5259991319444445,
+      "retention_ratio": 0.9029860428106233,
+      "disconnection_ratio": 0.11762152777777778,
+      "final_disconnection_ratio": 0.06770833333333333,
+      "discovery_fraction": 0.8618708333333334,
+      "reflection_fraction": 0.0018185763888888887,
+      "boundary150_fraction": 0.0425390625,
+      "large_drop_with_net_disconnect_rise": 27.96875,
+      "largest_drop_time": 196.53125,
+      "largest_drop_net_disconnect_change": 0.6371527777777778,
+      "max_drop_1_scene_p95": 0.6993333333333334,
+      "curve_peak_time": 113,
+      "curve_peak_coverage": 0.655625,
+      "final_below30_scenes": 1,
+      "training_budget": 1000000,
+      "checkpoint_step": 1000000,
+      "pooled_served_rate_bps": 5525548.68602969,
+      "drop_with_net_disconnect_rise_fraction": 0.9944444444444445
+    },
+    "combined": {
+      "coverage": 0.6092380208333334,
+      "final_coverage": 0.6422916666666667,
+      "last100_coverage": 0.6625458333333333,
+      "max_drop_1": 0.4314583333333334,
+      "max_drop_5": 0.4275,
+      "max_drawdown": 0.4979166666666667,
+      "peak_coverage": 0.7718750000000001,
+      "peak_step": 255.125,
+      "min20_coverage": 0.30974999999999997,
+      "drop_events_5pp": 46.6875,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 20.875,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 8.84375,
+      "any_drop_20pp": 0.9375,
+      "early51_150_coverage": 0.5963604166666667,
+      "maintain_coverage": 0.06618541666666668,
+      "throughput_bps": 512382016.98515415,
+      "last100_throughput_bps": 557960418.3783579,
+      "common_return": 271.02224923920824,
+      "training_return": 377.7604205355045,
+      "robustness": 0.5518097800925925,
+      "retention_ratio": 0.9052031546888495,
+      "disconnection_ratio": 0.09059461805555555,
+      "final_disconnection_ratio": 0.052083333333333336,
+      "discovery_fraction": 0.8677723958333333,
+      "reflection_fraction": 0.0033072916666666667,
+      "boundary150_fraction": 0.052426215277777785,
+      "large_drop_with_net_disconnect_rise": 20.84375,
+      "largest_drop_time": 167.03125,
+      "largest_drop_net_disconnect_change": 0.5416666666666667,
+      "max_drop_1_scene_p95": 0.6859999999999999,
+      "curve_peak_time": 340,
+      "curve_peak_coverage": 0.6885416666666668,
+      "final_below30_scenes": 1,
+      "training_budget": 1000000,
+      "checkpoint_step": 1000000,
+      "pooled_served_rate_bps": 5606807.186068297,
+      "drop_with_net_disconnect_rise_fraction": 0.9985029940119761
+    }
+  },
+  "fixed_scenes": {
+    "baseline_best": {
+      "10000": [
+        {
+          "time": 0,
+          "coverage": 0.29333333333333333,
+          "connected": 10,
+          "seen": 116,
+          "eligible": 44
+        },
+        {
+          "time": 150,
+          "coverage": 0.6533333333333333,
+          "connected": 18,
+          "seen": 119,
+          "eligible": 100
+        },
+        {
+          "time": 200,
+          "coverage": 0.66,
+          "connected": 18,
+          "seen": 120,
+          "eligible": 102
+        },
+        {
+          "time": 399,
+          "coverage": 0.64,
+          "connected": 18,
+          "seen": 131,
+          "eligible": 106
+        },
+        {
+          "time": 400,
+          "coverage": 0.64,
+          "connected": 18,
+          "seen": 131,
+          "eligible": 106
+        }
+      ],
+      "10001": [
+        {
+          "time": 0,
+          "coverage": 0.4266666666666667,
+          "connected": 14,
+          "seen": 92,
+          "eligible": 70
+        },
+        {
+          "time": 150,
+          "coverage": 0.6266666666666667,
+          "connected": 17,
+          "seen": 133,
+          "eligible": 97
+        },
+        {
+          "time": 200,
+          "coverage": 0.74,
+          "connected": 18,
+          "seen": 128,
+          "eligible": 112
+        },
+        {
+          "time": 399,
+          "coverage": 0.66,
+          "connected": 18,
+          "seen": 117,
+          "eligible": 105
+        },
+        {
+          "time": 400,
+          "coverage": 0.68,
+          "connected": 18,
+          "seen": 117,
+          "eligible": 105
+        }
+      ]
+    },
+    "dppo_best": {
+      "10000": [
+        {
+          "time": 0,
+          "coverage": 0.29333333333333333,
+          "connected": 10,
+          "seen": 116,
+          "eligible": 44
+        },
+        {
+          "time": 150,
+          "coverage": 0.64,
+          "connected": 16,
+          "seen": 139,
+          "eligible": 104
+        },
+        {
+          "time": 200,
+          "coverage": 0.7066666666666667,
+          "connected": 15,
+          "seen": 135,
+          "eligible": 115
+        },
+        {
+          "time": 399,
+          "coverage": 0.6333333333333333,
+          "connected": 18,
+          "seen": 119,
+          "eligible": 108
+        },
+        {
+          "time": 400,
+          "coverage": 0.6333333333333333,
+          "connected": 18,
+          "seen": 117,
+          "eligible": 108
+        }
+      ],
+      "10001": [
+        {
+          "time": 0,
+          "coverage": 0.4266666666666667,
+          "connected": 14,
+          "seen": 92,
+          "eligible": 70
+        },
+        {
+          "time": 150,
+          "coverage": 0.7466666666666667,
+          "connected": 17,
+          "seen": 135,
+          "eligible": 113
+        },
+        {
+          "time": 200,
+          "coverage": 0.7666666666666667,
+          "connected": 17,
+          "seen": 135,
+          "eligible": 120
+        },
+        {
+          "time": 399,
+          "coverage": 0.7533333333333333,
+          "connected": 17,
+          "seen": 132,
+          "eligible": 126
+        },
+        {
+          "time": 400,
+          "coverage": 0.7466666666666667,
+          "connected": 17,
+          "seen": 133,
+          "eligible": 124
+        }
+      ]
+    },
+    "teacher_topk": {
+      "10000": [
+        {
+          "time": 0,
+          "coverage": 0.29333333333333333,
+          "connected": 10,
+          "seen": 116,
+          "eligible": 44
+        },
+        {
+          "time": 150,
+          "coverage": 0.6866666666666666,
+          "connected": 18,
+          "seen": 131,
+          "eligible": 111
+        },
+        {
+          "time": 200,
+          "coverage": 0.7266666666666667,
+          "connected": 18,
+          "seen": 140,
+          "eligible": 120
+        },
+        {
+          "time": 399,
+          "coverage": 0.6466666666666666,
+          "connected": 18,
+          "seen": 136,
+          "eligible": 107
+        },
+        {
+          "time": 400,
+          "coverage": 0.52,
+          "connected": 16,
+          "seen": 135,
+          "eligible": 80
+        }
+      ],
+      "10001": [
+        {
+          "time": 0,
+          "coverage": 0.4266666666666667,
+          "connected": 14,
+          "seen": 92,
+          "eligible": 70
+        },
+        {
+          "time": 150,
+          "coverage": 0.68,
+          "connected": 17,
+          "seen": 132,
+          "eligible": 106
+        },
+        {
+          "time": 200,
+          "coverage": 0.5933333333333334,
+          "connected": 16,
+          "seen": 126,
+          "eligible": 102
+        },
+        {
+          "time": 399,
+          "coverage": 0.68,
+          "connected": 18,
+          "seen": 134,
+          "eligible": 112
+        },
+        {
+          "time": 400,
+          "coverage": 0.6733333333333333,
+          "connected": 18,
+          "seen": 138,
+          "eligible": 111
+        }
+      ]
+    },
+    "disconnection": {
+      "10000": [
+        {
+          "time": 0,
+          "coverage": 0.29333333333333333,
+          "connected": 10,
+          "seen": 116,
+          "eligible": 44
+        },
+        {
+          "time": 150,
+          "coverage": 0.5866666666666667,
+          "connected": 17,
+          "seen": 135,
+          "eligible": 102
+        },
+        {
+          "time": 200,
+          "coverage": 0.6933333333333334,
+          "connected": 18,
+          "seen": 129,
+          "eligible": 111
+        },
+        {
+          "time": 399,
+          "coverage": 0.8066666666666666,
+          "connected": 18,
+          "seen": 141,
+          "eligible": 127
+        },
+        {
+          "time": 400,
+          "coverage": 0.8133333333333334,
+          "connected": 18,
+          "seen": 141,
+          "eligible": 128
+        }
+      ],
+      "10001": [
+        {
+          "time": 0,
+          "coverage": 0.4266666666666667,
+          "connected": 14,
+          "seen": 92,
+          "eligible": 70
+        },
+        {
+          "time": 150,
+          "coverage": 0.74,
+          "connected": 18,
+          "seen": 134,
+          "eligible": 116
+        },
+        {
+          "time": 200,
+          "coverage": 0.7333333333333333,
+          "connected": 18,
+          "seen": 125,
+          "eligible": 112
+        },
+        {
+          "time": 399,
+          "coverage": 0.5,
+          "connected": 15,
+          "seen": 122,
+          "eligible": 75
+        },
+        {
+          "time": 400,
+          "coverage": 0.4866666666666667,
+          "connected": 15,
+          "seen": 122,
+          "eligible": 73
+        }
+      ]
+    },
+    "robustness": {
+      "10000": [
+        {
+          "time": 0,
+          "coverage": 0.29333333333333333,
+          "connected": 10,
+          "seen": 116,
+          "eligible": 44
+        },
+        {
+          "time": 150,
+          "coverage": 0.66,
+          "connected": 17,
+          "seen": 138,
+          "eligible": 102
+        },
+        {
+          "time": 200,
+          "coverage": 0.6066666666666667,
+          "connected": 15,
+          "seen": 140,
+          "eligible": 95
+        },
+        {
+          "time": 399,
+          "coverage": 0.72,
+          "connected": 18,
+          "seen": 135,
+          "eligible": 115
+        },
+        {
+          "time": 400,
+          "coverage": 0.7133333333333334,
+          "connected": 18,
+          "seen": 136,
+          "eligible": 113
+        }
+      ],
+      "10001": [
+        {
+          "time": 0,
+          "coverage": 0.4266666666666667,
+          "connected": 14,
+          "seen": 92,
+          "eligible": 70
+        },
+        {
+          "time": 150,
+          "coverage": 0.6533333333333333,
+          "connected": 15,
+          "seen": 146,
+          "eligible": 100
+        },
+        {
+          "time": 200,
+          "coverage": 0.62,
+          "connected": 17,
+          "seen": 134,
+          "eligible": 99
+        },
+        {
+          "time": 399,
+          "coverage": 0.78,
+          "connected": 18,
+          "seen": 139,
+          "eligible": 120
+        },
+        {
+          "time": 400,
+          "coverage": 0.7666666666666667,
+          "connected": 18,
+          "seen": 140,
+          "eligible": 118
+        }
+      ]
+    },
+    "combined": {
+      "10000": [
+        {
+          "time": 0,
+          "coverage": 0.29333333333333333,
+          "connected": 10,
+          "seen": 116,
+          "eligible": 44
+        },
+        {
+          "time": 150,
+          "coverage": 0.6466666666666666,
+          "connected": 18,
+          "seen": 129,
+          "eligible": 110
+        },
+        {
+          "time": 200,
+          "coverage": 0.66,
+          "connected": 18,
+          "seen": 128,
+          "eligible": 117
+        },
+        {
+          "time": 399,
+          "coverage": 0.6466666666666666,
+          "connected": 17,
+          "seen": 136,
+          "eligible": 99
+        },
+        {
+          "time": 400,
+          "coverage": 0.6466666666666666,
+          "connected": 17,
+          "seen": 137,
+          "eligible": 99
+        }
+      ],
+      "10001": [
+        {
+          "time": 0,
+          "coverage": 0.4266666666666667,
+          "connected": 14,
+          "seen": 92,
+          "eligible": 70
+        },
+        {
+          "time": 150,
+          "coverage": 0.7266666666666667,
+          "connected": 17,
+          "seen": 127,
+          "eligible": 114
+        },
+        {
+          "time": 200,
+          "coverage": 0.6733333333333333,
+          "connected": 18,
+          "seen": 115,
+          "eligible": 103
+        },
+        {
+          "time": 399,
+          "coverage": 0.66,
+          "connected": 18,
+          "seen": 120,
+          "eligible": 104
+        },
+        {
+          "time": 400,
+          "coverage": 0.6666666666666666,
+          "connected": 18,
+          "seen": 118,
+          "eligible": 104
+        }
+      ]
+    }
+  },
+  "abrupt_fixed_cases": {
+    "baseline_best": {
+      "10000": {
+        "time": 61,
+        "coverage_before": 0.6866666666666666,
+        "coverage_after": 0.5466666666666666,
+        "connected_before": 18,
+        "connected_after": 15,
+        "newly_disconnected_ids": [
+          6,
+          14,
+          15
+        ],
+        "lost_users": 22,
+        "gained_users": 1,
+        "lost_users_whose_previous_server_disconnected": 22,
+        "removed_uu_edges": [
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            6,
+            16
+          ],
+          [
+            7,
+            14
+          ],
+          [
+            14,
+            16
+          ]
+        ],
+        "added_uu_edges": [],
+        "removed_ug_edges": [],
+        "pre_failure_mean": 0.6311111111111112,
+        "pre_failure_worst": 0.4466666666666667
+      },
+      "10001": {
+        "time": 95,
+        "coverage_before": 0.6866666666666666,
+        "coverage_after": 0.54,
+        "connected_before": 16,
+        "connected_after": 14,
+        "newly_disconnected_ids": [
+          3,
+          17
+        ],
+        "lost_users": 23,
+        "gained_users": 1,
+        "lost_users_whose_previous_server_disconnected": 20,
+        "removed_uu_edges": [
+          [
+            4,
+            11
+          ],
+          [
+            8,
+            17
+          ]
+        ],
+        "added_uu_edges": [],
+        "removed_ug_edges": [],
+        "pre_failure_mean": 0.6203703703703703,
+        "pre_failure_worst": 0.46
+      }
+    },
+    "dppo_best": {
+      "10000": {
+        "time": 58,
+        "coverage_before": 0.62,
+        "coverage_after": 0.4,
+        "connected_before": 17,
+        "connected_after": 13,
+        "newly_disconnected_ids": [
+          6,
+          7,
+          14,
+          16
+        ],
+        "lost_users": 34,
+        "gained_users": 1,
+        "lost_users_whose_previous_server_disconnected": 33,
+        "removed_uu_edges": [
+          [
+            0,
+            13
+          ],
+          [
+            3,
+            17
+          ],
+          [
+            9,
+            12
+          ]
+        ],
+        "added_uu_edges": [],
+        "removed_ug_edges": [
+          [
+            16,
+            1
+          ]
+        ],
+        "pre_failure_mean": 0.5662962962962963,
+        "pre_failure_worst": 0.39999999999999997
+      },
+      "10001": {
+        "time": 320,
+        "coverage_before": 0.7533333333333333,
+        "coverage_after": 0.0,
+        "connected_before": 17,
+        "connected_after": 0,
+        "newly_disconnected_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17
+        ],
+        "lost_users": 113,
+        "gained_users": 0,
+        "lost_users_whose_previous_server_disconnected": 113,
+        "removed_uu_edges": [],
+        "added_uu_edges": [
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "removed_ug_edges": [
+          [
+            13,
+            0
+          ]
+        ],
+        "pre_failure_mean": 0.6337037037037037,
+        "pre_failure_worst": 0.0
+      }
+    },
+    "teacher_topk": {
+      "10000": {
+        "time": 209,
+        "coverage_before": 0.74,
+        "coverage_after": 0.15333333333333332,
+        "connected_before": 18,
+        "connected_after": 5,
+        "newly_disconnected_ids": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "lost_users": 88,
+        "gained_users": 0,
+        "lost_users_whose_previous_server_disconnected": 87,
+        "removed_uu_edges": [
+          [
+            1,
+            4
+          ]
+        ],
+        "added_uu_edges": [
+          [
+            11,
+            12
+          ]
+        ],
+        "removed_ug_edges": [],
+        "pre_failure_mean": 0.6137037037037036,
+        "pre_failure_worst": 0.11333333333333334
+      },
+      "10001": {
+        "time": 78,
+        "coverage_before": 0.6666666666666666,
+        "coverage_after": 0.49333333333333335,
+        "connected_before": 15,
+        "connected_after": 12,
+        "newly_disconnected_ids": [
+          5,
+          6,
+          12
+        ],
+        "lost_users": 27,
+        "gained_users": 1,
+        "lost_users_whose_previous_server_disconnected": 25,
+        "removed_uu_edges": [
+          [
+            1,
+            11
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            9,
+            14
+          ]
+        ],
+        "added_uu_edges": [],
+        "removed_ug_edges": [],
+        "pre_failure_mean": 0.5955555555555557,
+        "pre_failure_worst": 0.43333333333333335
+      }
+    },
+    "disconnection": {
+      "10000": {
+        "time": 218,
+        "coverage_before": 0.6533333333333333,
+        "coverage_after": 0.18666666666666668,
+        "connected_before": 18,
+        "connected_after": 8,
+        "newly_disconnected_ids": [
+          0,
+          6,
+          7,
+          8,
+          9,
+          11,
+          13,
+          14,
+          15,
+          16
+        ],
+        "lost_users": 71,
+        "gained_users": 1,
+        "lost_users_whose_previous_server_disconnected": 69,
+        "removed_uu_edges": [
+          [
+            9,
+            14
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "added_uu_edges": [],
+        "removed_ug_edges": [],
+        "pre_failure_mean": 0.558148148148148,
+        "pre_failure_worst": 0.16
+      },
+      "10001": {
+        "time": 71,
+        "coverage_before": 0.7866666666666666,
+        "coverage_after": 0.54,
+        "connected_before": 17,
+        "connected_after": 12,
+        "newly_disconnected_ids": [
+          3,
+          9,
+          14,
+          15,
+          17
+        ],
+        "lost_users": 40,
+        "gained_users": 3,
+        "lost_users_whose_previous_server_disconnected": 39,
+        "removed_uu_edges": [],
+        "added_uu_edges": [
+          [
+            0,
+            12
+          ]
+        ],
+        "removed_ug_edges": [
+          [
+            15,
+            1
+          ]
+        ],
+        "pre_failure_mean": 0.6903703703703703,
+        "pre_failure_worst": 0.5133333333333333
+      }
+    },
+    "robustness": {
+      "10000": {
+        "time": 370,
+        "coverage_before": 0.72,
+        "coverage_after": 0.18666666666666668,
+        "connected_before": 18,
+        "connected_after": 4,
+        "newly_disconnected_ids": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "lost_users": 80,
+        "gained_users": 0,
+        "lost_users_whose_previous_server_disconnected": 79,
+        "removed_uu_edges": [
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            17
+          ],
+          [
+            11,
+            13
+          ]
+        ],
+        "added_uu_edges": [],
+        "removed_ug_edges": [
+          [
+            16,
+            1
+          ]
+        ],
+        "pre_failure_mean": 0.6692592592592591,
+        "pre_failure_worst": 0.5866666666666666
+      },
+      "10001": {
+        "time": 126,
+        "coverage_before": 0.7666666666666667,
+        "coverage_after": 0.5733333333333334,
+        "connected_before": 17,
+        "connected_after": 14,
+        "newly_disconnected_ids": [
+          6,
+          9,
+          12
+        ],
+        "lost_users": 30,
+        "gained_users": 1,
+        "lost_users_whose_previous_server_disconnected": 29,
+        "removed_uu_edges": [
+          [
+            3,
+            9
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            15,
+            17
+          ]
+        ],
+        "added_uu_edges": [
+          [
+            1,
+            16
+          ]
+        ],
+        "removed_ug_edges": [],
+        "pre_failure_mean": 0.6914814814814814,
+        "pre_failure_worst": 0.4466666666666666
+      }
+    },
+    "combined": {
+      "10000": {
+        "time": 214,
+        "coverage_before": 0.6533333333333333,
+        "coverage_after": 0.12666666666666668,
+        "connected_before": 18,
+        "connected_after": 9,
+        "newly_disconnected_ids": [
+          0,
+          2,
+          6,
+          7,
+          11,
+          13,
+          14,
+          15,
+          16
+        ],
+        "lost_users": 80,
+        "gained_users": 1,
+        "lost_users_whose_previous_server_disconnected": 79,
+        "removed_uu_edges": [
+          [
+            0,
+            8
+          ],
+          [
+            8,
+            17
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            13,
+            17
+          ]
+        ],
+        "added_uu_edges": [],
+        "removed_ug_edges": [],
+        "pre_failure_mean": 0.5548148148148148,
+        "pre_failure_worst": 0.21333333333333335
+      },
+      "10001": {
+        "time": 126,
+        "coverage_before": 0.7,
+        "coverage_after": 0.2733333333333333,
+        "connected_before": 17,
+        "connected_after": 9,
+        "newly_disconnected_ids": [
+          3,
+          6,
+          8,
+          9,
+          11,
+          12,
+          15,
+          17
+        ],
+        "lost_users": 65,
+        "gained_users": 1,
+        "lost_users_whose_previous_server_disconnected": 65,
+        "removed_uu_edges": [
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            16
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            17
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "added_uu_edges": [
+          [
+            5,
+            13
+          ],
+          [
+            5,
+            16
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "removed_ug_edges": [],
+        "pre_failure_mean": 0.5825925925925924,
+        "pre_failure_worst": 0.3333333333333333
+      }
+    }
+  },
+  "palette": {
+    "baseline_best": "#D62728",
+    "dppo_best": "#0072B2",
+    "teacher_topk": "#E69F00",
+    "disconnection": "#222222",
+    "robustness": "#56B4E9",
+    "combined": "#777777"
+  },
+  "uncertainty": "2000 paired validation-scene bootstrap draws; seed 950001; not training-seed confidence"
+}

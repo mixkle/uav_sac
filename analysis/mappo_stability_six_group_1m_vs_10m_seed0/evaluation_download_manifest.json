@@ -1,0 +1,245 @@
+{
+  "files": [
+    {
+      "path": "best/combined/episodes.csv",
+      "bytes": 40066,
+      "sha256": "3023f3a829d3d8759b9240eb223f45137599cdeea4494b55447212386fd16a20"
+    },
+    {
+      "path": "best/combined/evaluation_config.json",
+      "bytes": 4964,
+      "sha256": "94150425c62c77e685e284dcccbab8225074a405103651f70ede3a0e4226d79b"
+    },
+    {
+      "path": "best/combined/evaluation_source.json",
+      "bytes": 45,
+      "sha256": "af3f7a4f97251c1667f7722f0b695aa35699e0603a36ee5700b4a75ed46faeae"
+    },
+    {
+      "path": "best/combined/reward_curves.npz",
+      "bytes": 1079130,
+      "sha256": "d8f245e738d8f82b819277bc3299d2fe3a20e9b825df61818aca8e010ef35d40"
+    },
+    {
+      "path": "best/combined/stability_source.json",
+      "bytes": 977,
+      "sha256": "3563b2a0acda95c4f442659df20f3867dc317bc49ca5ddd2d285ec1da6a75e5c"
+    },
+    {
+      "path": "best/combined/summary.json",
+      "bytes": 11648,
+      "sha256": "ca3a898ea94acea11536e3b50a384174df7f48dadd9978393f9ba74440c6c713"
+    },
+    {
+      "path": "best/combined/trace_10000.npz",
+      "bytes": 17664312,
+      "sha256": "1862fc6a591f9989033bd94a4a8161d7e53911a3ff450ee281a3fcfb330bf7ba"
+    },
+    {
+      "path": "best/combined/trace_10001.npz",
+      "bytes": 17650124,
+      "sha256": "99f2ad1786b502099aff13feae4388002db048d8167a0e667809fb4ec866fe99"
+    },
+    {
+      "path": "best/disconnection/episodes.csv",
+      "bytes": 40607,
+      "sha256": "0c7586f5ca0954b00b577c24453c838dc34b1c316065e9a60d15644bbd12c149"
+    },
+    {
+      "path": "best/disconnection/evaluation_config.json",
+      "bytes": 4964,
+      "sha256": "40d3cbb037d619735285fc5d0b99338c8c1096e6e28546c8447fbec27d910833"
+    },
+    {
+      "path": "best/disconnection/evaluation_source.json",
+      "bytes": 45,
+      "sha256": "af3f7a4f97251c1667f7722f0b695aa35699e0603a36ee5700b4a75ed46faeae"
+    },
+    {
+      "path": "best/disconnection/reward_curves.npz",
+      "bytes": 1034942,
+      "sha256": "89e655dd0a51cc453c40daa8815b0a8ef4575e08baa2fbdbbf37d65d7d1e1348"
+    },
+    {
+      "path": "best/disconnection/stability_source.json",
+      "bytes": 982,
+      "sha256": "1822e2e9d4b4adb5a72a3c86d02c730de22790c7617a69031022e4a4fc03373d"
+    },
+    {
+      "path": "best/disconnection/summary.json",
+      "bytes": 11617,
+      "sha256": "c09e424721970792f652c852444c9f00c16d8b8dcb791e2d6237067f3193d8d1"
+    },
+    {
+      "path": "best/disconnection/trace_10000.npz",
+      "bytes": 17654228,
+      "sha256": "1d7cd1487e51081b9b612e23b59a8a94a4686ee642655e8dc18d54d0d227bebc"
+    },
+    {
+      "path": "best/disconnection/trace_10001.npz",
+      "bytes": 17662779,
+      "sha256": "b33dfed794cd0842390198edc69e427b68df4ec8f3986145febbf33d2cb9f017"
+    },
+    {
+      "path": "best/robustness/episodes.csv",
+      "bytes": 38925,
+      "sha256": "65d46dae9dd44191cee2fb281173b6244456e06a059895a97d5cc01f62a85edc"
+    },
+    {
+      "path": "best/robustness/evaluation_config.json",
+      "bytes": 4964,
+      "sha256": "70b99a9beab3c9fcd98a49ddf765b755b1d2d579a674aab6493bf9d80e00cc18"
+    },
+    {
+      "path": "best/robustness/evaluation_source.json",
+      "bytes": 45,
+      "sha256": "af3f7a4f97251c1667f7722f0b695aa35699e0603a36ee5700b4a75ed46faeae"
+    },
+    {
+      "path": "best/robustness/reward_curves.npz",
+      "bytes": 1057099,
+      "sha256": "ab803c2cadaa26c55a7d359b233301c83073d10913f2756bbf1fc676ba4b7ca0"
+    },
+    {
+      "path": "best/robustness/stability_source.json",
+      "bytes": 979,
+      "sha256": "0f5cf0d83785112dc170b889845417b0a526ba9d1dd09d95c62d8301162e5101"
+    },
+    {
+      "path": "best/robustness/summary.json",
+      "bytes": 11563,
+      "sha256": "ebeb5e71348ab4c73208fc7c7caeeaf85a93bdda5b581d55b51bc48db60825cd"
+    },
+    {
+      "path": "best/robustness/trace_10000.npz",
+      "bytes": 17659560,
+      "sha256": "a111dcd2b746d06e24e65633a83e62861e545cdcef9cca801a4430566376c5c2"
+    },
+    {
+      "path": "best/robustness/trace_10001.npz",
+      "bytes": 17675178,
+      "sha256": "99841aebfac85821517e8ebd30130bb0229e4208d77123bd80c1ce2e8a7bb524"
+    },
+    {
+      "path": "last/combined/episodes.csv",
+      "bytes": 40282,
+      "sha256": "97b7cbcbf7a57f78681686645a7fcb5877e83e116c94974612b471b542cedf4b"
+    },
+    {
+      "path": "last/combined/evaluation_config.json",
+      "bytes": 4964,
+      "sha256": "94150425c62c77e685e284dcccbab8225074a405103651f70ede3a0e4226d79b"
+    },
+    {
+      "path": "last/combined/evaluation_source.json",
+      "bytes": 45,
+      "sha256": "af3f7a4f97251c1667f7722f0b695aa35699e0603a36ee5700b4a75ed46faeae"
+    },
+    {
+      "path": "last/combined/reward_curves.npz",
+      "bytes": 1097392,
+      "sha256": "d9e33f850fe7d0aa99ef56520161229543694a0cdce749f351baa48c1fea75e3"
+    },
+    {
+      "path": "last/combined/stability_source.json",
+      "bytes": 974,
+      "sha256": "f1d6599a154c88d9902fdbe78caf191510888f0caef9e03615cff942f09eff75"
+    },
+    {
+      "path": "last/combined/summary.json",
+      "bytes": 11712,
+      "sha256": "36610ce49ff76a1db546a7d7d816ca05442e3960f5d363b60644c58a324f4f5b"
+    },
+    {
+      "path": "last/combined/trace_10000.npz",
+      "bytes": 17671950,
+      "sha256": "3db39b233e569d6f06dba0511226e89f89eb2573ee3fd628cffdc0deb12c1720"
+    },
+    {
+      "path": "last/combined/trace_10001.npz",
+      "bytes": 17649645,
+      "sha256": "44d29510080b4f54421f05e3acc085f7f1057c07c730e77fbf28759099702ace"
+    },
+    {
+      "path": "last/disconnection/episodes.csv",
+      "bytes": 40426,
+      "sha256": "7f270ef358d2dcd316854a44fed1a72e851b2172cb94ff74c85fc19ad2bf8871"
+    },
+    {
+      "path": "last/disconnection/evaluation_config.json",
+      "bytes": 4964,
+      "sha256": "40d3cbb037d619735285fc5d0b99338c8c1096e6e28546c8447fbec27d910833"
+    },
+    {
+      "path": "last/disconnection/evaluation_source.json",
+      "bytes": 45,
+      "sha256": "af3f7a4f97251c1667f7722f0b695aa35699e0603a36ee5700b4a75ed46faeae"
+    },
+    {
+      "path": "last/disconnection/reward_curves.npz",
+      "bytes": 1043516,
+      "sha256": "8b51c8854f821b6096bee7ff29c156e7f4d2e3c562cd3e09011024227fbc723f"
+    },
+    {
+      "path": "last/disconnection/stability_source.json",
+      "bytes": 979,
+      "sha256": "2d2ac6785edcb84f170d43523fb38b4133cfc2569eb040d236669bc40a860d93"
+    },
+    {
+      "path": "last/disconnection/summary.json",
+      "bytes": 11625,
+      "sha256": "f19e6fa88e9b4ccc4db3a080aec530c135f59bbd2ab1a2959c5f3e9c80d928a1"
+    },
+    {
+      "path": "last/disconnection/trace_10000.npz",
+      "bytes": 17665480,
+      "sha256": "222184161e0bb72fa508399626721febda7455bdbbbe5b4160aa8eeaca81fd2e"
+    },
+    {
+      "path": "last/disconnection/trace_10001.npz",
+      "bytes": 17654633,
+      "sha256": "2c7caedb60c420065f6191c060918b92144fdd0f46ee832a5c5946cd533690b3"
+    },
+    {
+      "path": "last/robustness/episodes.csv",
+      "bytes": 39525,
+      "sha256": "762d0de669faa4a77132a30dac3073aa3c67f15ecc72f8bd7f3de0b49f13c087"
+    },
+    {
+      "path": "last/robustness/evaluation_config.json",
+      "bytes": 4964,
+      "sha256": "70b99a9beab3c9fcd98a49ddf765b755b1d2d579a674aab6493bf9d80e00cc18"
+    },
+    {
+      "path": "last/robustness/evaluation_source.json",
+      "bytes": 45,
+      "sha256": "af3f7a4f97251c1667f7722f0b695aa35699e0603a36ee5700b4a75ed46faeae"
+    },
+    {
+      "path": "last/robustness/reward_curves.npz",
+      "bytes": 1086200,
+      "sha256": "1dffa0c06bb3845393088b1e4fe2e7c07b530a2a873838d7b1bd18c553d4dcd2"
+    },
+    {
+      "path": "last/robustness/stability_source.json",
+      "bytes": 976,
+      "sha256": "fe05d671f6ba12d19f0e8de4f49acf29538dba93a9ce3859cc6856e0ca0fd6a8"
+    },
+    {
+      "path": "last/robustness/summary.json",
+      "bytes": 11535,
+      "sha256": "804db30871a9c934d8d48cb8ba20f471f24da643e72528874788fcd827b87504"
+    },
+    {
+      "path": "last/robustness/trace_10000.npz",
+      "bytes": 17660659,
+      "sha256": "593260030aa0263c6ff8c1313020d0c799183888495a7dc1efaaa119dd83acf8"
+    },
+    {
+      "path": "last/robustness/trace_10001.npz",
+      "bytes": 17646487,
+      "sha256": "4bf0a8eb43531c15a4ddd485c5021ced31e5cc8785fca2ce3ba4a47af96c7a40"
+    }
+  ],
+  "bytes": 218658766
+}

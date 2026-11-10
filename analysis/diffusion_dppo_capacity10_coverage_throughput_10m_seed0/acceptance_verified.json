@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-07",
+  "comparison_groups": [
+    "baseline",
+    "10M DPPO"
+  ],
+  "validation_scenes": 32,
+  "episode_steps": 400,
+  "action_seed": 880001,
+  "checks": {
+    "baseline_best": {
+      "finite_step_metrics": true,
+      "service_stage_partition": true,
+      "terminal_mc_recurrence": true,
+      "time_factor_reconstruction": true,
+      "paired_user_trajectory_10000": true
+    },
+    "baseline_last": {
+      "finite_step_metrics": true,
+      "service_stage_partition": true,
+      "terminal_mc_recurrence": true,
+      "time_factor_reconstruction": true,
+      "paired_user_trajectory_10000": true
+    },
+    "best": {
+      "finite_step_metrics": true,
+      "service_stage_partition": true,
+      "terminal_mc_recurrence": true,
+      "time_factor_reconstruction": true,
+      "paired_user_trajectory_10000": true
+    },
+    "last": {
+      "finite_step_metrics": true,
+      "service_stage_partition": true,
+      "terminal_mc_recurrence": true,
+      "time_factor_reconstruction": true,
+      "paired_user_trajectory_10000": true
+    }
+  },
+  "training": {
+    "monotonic_joint_transition_budget": true,
+    "ppo_updates": 4885,
+    "env_steps": 10000000
+  },
+  "figure_types": 17,
+  "model_log_reproduction": {
+    "best": {
+      "return": 0.0,
+      "coverage": 0.0,
+      "throughput_bps": 0.0,
+      "last100_coverage": 0.0,
+      "final_coverage": 0.0
+    },
+    "last": {
+      "return": 0.0,
+      "coverage": 0.0,
+      "throughput_bps": 0.0,
+      "last100_coverage": 0.0,
+      "final_coverage": 0.0
+    }
+  },
+  "rebuild_comparison_sha256": "e058cfeffdbc81513377abb9d779005ad7e0bfd550bfd341275eef05389866ed"
+}

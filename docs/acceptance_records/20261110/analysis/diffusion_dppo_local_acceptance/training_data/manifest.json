@@ -1,0 +1,12 @@
+{
+  "env_steps": 2048,
+  "updates": 1,
+  "optimizer_steps": 40,
+  "best_score": 145.9296017168449,
+  "best_step": 2048,
+  "elapsed_seconds": 114.57791321400009,
+  "full_checkpoint": "runs/diffusion_dppo_local_acceptance/online/checkpoints/full_000002048",
+  "status": "complete",
+  "peak_rss_mib": 1014.94921875,
+  "sum_process_peak_rss_mib": 1014.94921875
+}

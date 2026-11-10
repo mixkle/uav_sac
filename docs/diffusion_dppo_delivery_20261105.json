@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-05",
+  "source_hash": "4c30e90c28fe28884fe862e23de3f16f3500184ccc4e716dd0605f16d3a91afa",
+  "environment_differences": {},
+  "formal_training_started": false,
+  "remote_files_modified": false,
+  "remote_upload_performed": false,
+  "cuda_execution_tested": false,
+  "local_short_run": {
+    "env_steps": 2048,
+    "updates": 1,
+    "optimizer_steps": 40,
+    "best_score": 145.9296017168449,
+    "best_step": 2048,
+    "elapsed_seconds": 114.57791321400009,
+    "full_checkpoint": "runs/diffusion_dppo_local_acceptance/online/checkpoints/full_000002048",
+    "status": "complete",
+    "peak_rss_mib": 1014.94921875,
+    "sum_process_peak_rss_mib": 1014.94921875
+  },
+  "baseline_reproduction": {
+    "expected": 0.5863125,
+    "actual": 0.5863125,
+    "absolute_error": 0.0,
+    "teacher": {
+      "path": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "step": 671744,
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6"
+    }
+  },
+  "checks": {
+    "existing_suite": "302 passed, 1 skipped (Python3.10/PyTorch2.10 CPU)",
+    "compatibility_subset": "63 passed (Python3.11/PyTorch2.7.1 CPU)",
+    "latest_dppo_tests": "17 passed",
+    "report_rebuild": "comparison.json identical, including when original run path is absent"
+  },
+  "files": {
+    "src/uav_research/diffusion_dppo/runner.py": "7e72b7d9cf51e371b82ad4828e2f896de947d86e9602f711af71847e6c3f855e",
+    "src/uav_research/diffusion_dppo/config.py": "008d1bf0a5903015aa9ec6aa850542beda80df321e557a7c344ce1fee2560d91",
+    "src/uav_research/diffusion_dppo/environment.py": "cd7cdbb63f1078bd8ab35fd49caa88c31c86239bb491e35710c6cd9ffd127652",
+    "src/uav_research/diffusion_dppo/data.py": "c02fedbf5455d91cd34992cbf6ef9adace79bd3d3505b2d41491da56c50950e3",
+    "src/uav_research/diffusion_dppo/evaluation.py": "3a5f42132e1013b922cff0de166bb03872651c1ba5b0793375663806bce01257",
+    "src/uav_research/diffusion_dppo/__init__.py": "69d3cdc00263b415ae5e0bb5aec379796511e26f9635e63e9f78f52ae46090c8",
+    "src/uav_research/diffusion_dppo/learner.py": "cf04738e714f998e95d00fac1f786774e37d8c8b20085239c84cc61ba85c48b2",
+    "src/uav_research/diffusion_dppo/cli.py": "fe9996b8ea37d1604c0e30dc83a8e21d3493f39b38a5e0e865f1b71102964151",
+    "src/uav_research/diffusion_dppo/report.py": "8d6666ebc385f94ca8129caa4bad2ed26b3ad59dc6caeca8c9643e24371cb4b9",
+    "src/uav_research/diffusion_dppo/policy.py": "5a51c311c5437c60c58f3abf5ab6ea3e49717ff487494c645ec5ea457455c610",
+    "src/uav_research/diffusion_dppo/storage.py": "c5ede8c52d01441633c9d78b7a1ee70d2623d89bae011168825ab55390580d2d",
+    "src/uav_research/diffusion_dppo/observations.py": "1dd11ef7428b54d22ebd7499f0bfa05ccb1fd6cbe215d4845605fadfa5f7bc27",
+    "configs/diffusion_dppo_local_probe.yaml": "8531accf0ac79ba5c91a96a04e60a75cd5051e076b4eb1f2c900bfa81a54ef99",
+    "configs/diffusion_dppo_local_smoke.yaml": "b287f7635b54166accca0985e4aee4f7ce4d6f5a1b8aa4ce1b65deb4bb20884b",
+    "configs/diffusion_dppo_capacity10_coverage_throughput_1m_server.yaml": "5a45fcaa3395bdd8fd41588e2bb1ff7553511472f1e08b6d2309b44dd37bb7fa",
+    "configs/diffusion_dppo_capacity10_coverage_throughput_1m.yaml": "d90ecc4cfe1d76096b80c3e9d66d5613fbd4095803340d2fe4e83d5dfab4431b",
+    "tests/test_diffusion_dppo.py": "b64c67a42a958ac920e80acfb56bb2a5912a76217c9e80f47c4debb4e68a8733",
+    "scripts/build_diffusion_dppo_configs.py": "4effd81fcc12a6765f51a64113fd914684f8c79bda40093585525790caaba2bb",
+    "docs/diffusion_dppo_experiment.md": "4c1d05408e41134e478094c8660c73557e446e8c7e399d04013154461fb22b98",
+    "docs/diffusion_dppo_local_validation_20261105.md": "2e2e6909725abcc45a4df360b3eed1d362d86edad6bd06062b845e4235f80e42",
+    "docs/model_contract.md": "f6052feaa0981cc83f95a118794e8804bce6feb6f9a01050207e3d5a0ec1dc8f",
+    "docs/training_workflows_and_parameters.md": "3253b51ecac6747df81e919311cd2f11958bfe3fae0eeb2449d8c52aae28c2da",
+    "ENVIRONMENT MODELING Diffusion_DPPO.md": "2a8e48b5efe08c899ef4c461110ee2071e8070827dbfc6d0383b510eee9e141a",
+    "README.md": "f8b577108509e7791b18727d071534172ec3bae94d890461913cf3ff572e4051",
+    "requirements/dppo-cpu.lock.txt": "2a3f6ba53c9e0905c1ad047619a776b21f1ff4902152ab2919b9ab53f1a1b54a",
+    "requirements/dppo-server-cu118.lock.txt": "d44d698ec87fa3b3e2e7356da565635f0d82acafa1711a23d9292ec3dd3e2f6a",
+    "src/uav_research/algorithms.py": "0c530b109d3d3c567ab10b9b927937094a49033375c4022e91e1f3d2c21ee538",
+    "src/uav_research/runtime.py": "d0ce4038a82596c2642e12ed6c87dae3e9fbea955f57354d839fb30f8ea6de1f",
+    "src/uav_research/cli.py": "fca805ea6cd5e509e6829b1be572eead61f612a43ed1f1b4be012a53648d60c6",
+    "src/uav_research/train.py": "450b915d08973d5e1ffe1a109a719ed358e86b962557c0e609fe293af6054810",
+    "src/uav_research/config.py": "026d0be4915674fa3618a24b7a97809d584843942471d2dc2836cccc2f3cee1c"
+  }
+}

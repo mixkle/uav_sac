@@ -1,0 +1,135 @@
+{
+  "value": {
+    "stages": {
+      "all": {
+        "rmse": 8.951159066802854,
+        "mae": 6.71361004685919,
+        "bias": -1.4234990465111124,
+        "prediction_mean": 69.84373306455556,
+        "label_mean": 71.26723211106668,
+        "label_std": 29.69153420021705,
+        "normalized_rmse": 0.30147175981015556
+      },
+      "first100": {
+        "rmse": 11.326853772709041,
+        "mae": 8.779685474455333,
+        "bias": 1.2303331770858608,
+        "prediction_mean": 98.39951509475708,
+        "label_mean": 97.16918191767122,
+        "label_std": 12.063986310178606,
+        "normalized_rmse": 0.9388980956611637
+      },
+      "middle100": {
+        "rmse": 9.635868514426976,
+        "mae": 7.829296895309328,
+        "bias": -3.10536461009127,
+        "prediction_mean": 78.13951943516732,
+        "label_mean": 81.24488404525859,
+        "label_std": 11.887957784841381,
+        "normalized_rmse": 0.8105570938949583
+      },
+      "last100": {
+        "rmse": 4.250938769366746,
+        "mae": 3.0871639411438583,
+        "bias": -1.320902332288656,
+        "prediction_mean": 27.409582690093668,
+        "label_mean": 28.730485022382318,
+        "label_std": 15.872597699533186,
+        "normalized_rmse": 0.2678161980689378
+      },
+      "last20": {
+        "rmse": 1.1627809516696568,
+        "mae": 0.8384967521940879,
+        "bias": -0.31968638178947606,
+        "prediction_mean": 6.440112066734582,
+        "label_mean": 6.759798448524057,
+        "label_std": 3.7953631384622035,
+        "normalized_rmse": 0.30636882671016025
+      },
+      "last1": {
+        "rmse": 0.09374919311995904,
+        "mae": 0.08186046135922273,
+        "bias": -0.0665699765831232,
+        "prediction_mean": 0.6346800234168768,
+        "label_mean": 0.70125,
+        "label_std": 0.07827014295232748,
+        "normalized_rmse": 1.1977644294972027
+      }
+    },
+    "time_centered_correlation": 0.5068015557518175
+  },
+  "average": {
+    "stages": {
+      "all": {
+        "rmse": 0.07790120036189277,
+        "mae": 0.06234777969876609,
+        "bias": -0.018332673701036018,
+        "prediction_mean": 0.6188114936577513,
+        "label_mean": 0.6371441673587873,
+        "label_std": 0.09066810857188654,
+        "normalized_rmse": 0.8591907517308418
+      },
+      "first100": {
+        "rmse": 0.06838643806776143,
+        "mae": 0.05313993569573377,
+        "bias": 0.0071054113904029615,
+        "prediction_mean": 0.596301315625643,
+        "label_mean": 0.58919590423524,
+        "label_std": 0.07652712204036538,
+        "normalized_rmse": 0.8936235447569814
+      },
+      "middle100": {
+        "rmse": 0.07636649007379187,
+        "mae": 0.062444268574292555,
+        "bias": -0.025329461606287115,
+        "prediction_mean": 0.6202682825741228,
+        "label_mean": 0.6455977441804098,
+        "label_std": 0.08354483199578602,
+        "normalized_rmse": 0.9140779656800767
+      },
+      "last100": {
+        "rmse": 0.09153284512981384,
+        "mae": 0.07400542033697588,
+        "bias": -0.03138577753174314,
+        "prediction_mean": 0.6352997451529089,
+        "label_mean": 0.6666855226846521,
+        "label_std": 0.09849586651797164,
+        "normalized_rmse": 0.9293064609276033
+      },
+      "last20": {
+        "rmse": 0.09992326330415592,
+        "mae": 0.08242507424366628,
+        "bias": -0.03667043463830533,
+        "prediction_mean": 0.6333127129060745,
+        "label_mean": 0.6699831475443798,
+        "label_std": 0.10310338314113632,
+        "normalized_rmse": 0.9691560088515506
+      },
+      "last1": {
+        "rmse": 0.09374919311995904,
+        "mae": 0.08186046135922273,
+        "bias": -0.0665699765831232,
+        "prediction_mean": 0.6346800234168768,
+        "label_mean": 0.70125,
+        "label_std": 0.07827014295232748,
+        "normalized_rmse": 1.1977644294972027
+      }
+    },
+    "time_centered_correlation": 0.5529907285260908
+  },
+  "value_semantics": "environment V without entropy",
+  "moment_semantics": "64-sample Gaussian",
+  "alpha": 0.0,
+  "moment_mean": {
+    "command_variance_m2": 634.28271484375,
+    "near_hover_probability": 0.0002210828970419243,
+    "mean_command_displacement_m": 26.97910499572754,
+    "entropy_nats_per_agent": -1.2934199571609497
+  },
+  "movement_mean": {
+    "command_displacement_m": 26.898379733115434,
+    "actual_displacement_m": 26.84841393119747,
+    "near_zero_command_fraction": 0.00024739583333333303,
+    "near_zero_actual_fraction": 0.0002560763888888886
+  }
+}

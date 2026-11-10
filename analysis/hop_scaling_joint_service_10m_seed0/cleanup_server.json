@@ -1,0 +1,25 @@
+{
+  "location": "server",
+  "checked_at": "2026-11-10T04:20:32.413537+00:00",
+  "final_raw_hashes": "raw_data_hashes.json",
+  "retained": [
+    "training runs and checkpoints",
+    "/home/dym/uav_sac/analysis/hop_scaling_joint_service_10m_seed0"
+  ],
+  "entries": [
+    {
+      "path": "/home/dym/uav_sac/analysis/hop_scaling_interim_20261109",
+      "status": "deleted",
+      "files": 76,
+      "bytes": 370384616
+    },
+    {
+      "path": "/home/dym/uav_sac/analysis/hop_scaling_interim_20261109_2121",
+      "status": "deleted",
+      "files": 77,
+      "bytes": 375767361
+    }
+  ],
+  "retained_server_training_sources_unchanged": 19,
+  "completed_at": "2026-11-10T04:20:32.799654+00:00"
+}

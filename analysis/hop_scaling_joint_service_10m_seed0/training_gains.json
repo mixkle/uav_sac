@@ -1,0 +1,290 @@
+[
+  {
+    "group": "diffusion",
+    "comparison": "last-step0",
+    "metric": "coverage",
+    "difference": 0.037928125000000014,
+    "low": 0.013209570312500007,
+    "high": 0.06305742187499999
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-step0",
+    "metric": "throughput_bps",
+    "difference": 34294797.64161242,
+    "low": 6575684.942279146,
+    "high": 63022485.989064924
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-step0",
+    "metric": "return",
+    "difference": 17.000305874219336,
+    "low": 5.849367789967023,
+    "high": 28.51107528428678
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-step0",
+    "metric": "last100_coverage",
+    "difference": -0.0014333333333333663,
+    "low": -0.03661312500000001,
+    "high": 0.03876109374999993
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-step0",
+    "metric": "final_coverage",
+    "difference": 0.002499999999999992,
+    "low": -0.05959375000000002,
+    "high": 0.060630208333333296
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-step0",
+    "metric": "maintain_coverage",
+    "difference": -0.08235625000000002,
+    "low": -0.12062557291666672,
+    "high": -0.04183203125000004
+  },
+  {
+    "group": "diffusion",
+    "comparison": "best-step0",
+    "metric": "coverage",
+    "difference": 0.06717708333333333,
+    "low": 0.04553684895833331,
+    "high": 0.08812764322916662
+  },
+  {
+    "group": "diffusion",
+    "comparison": "best-step0",
+    "metric": "throughput_bps",
+    "difference": 65693022.40768377,
+    "low": 42154399.06345156,
+    "high": 88678768.09678197
+  },
+  {
+    "group": "diffusion",
+    "comparison": "best-step0",
+    "metric": "return",
+    "difference": 30.374461195076478,
+    "low": 20.689305495717335,
+    "high": 39.87050949252721
+  },
+  {
+    "group": "diffusion",
+    "comparison": "best-step0",
+    "metric": "last100_coverage",
+    "difference": 0.054877083333333285,
+    "low": 0.021436510416666617,
+    "high": 0.09172479166666661
+  },
+  {
+    "group": "diffusion",
+    "comparison": "best-step0",
+    "metric": "final_coverage",
+    "difference": 0.058124999999999996,
+    "low": 0.0031093749999999885,
+    "high": 0.10833333333333331
+  },
+  {
+    "group": "diffusion",
+    "comparison": "best-step0",
+    "metric": "maintain_coverage",
+    "difference": -0.03865000000000007,
+    "low": -0.0702497395833333,
+    "high": -0.005349583333333426
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-best",
+    "metric": "coverage",
+    "difference": -0.029248958333333314,
+    "low": -0.05052394531249996,
+    "high": -0.007972630208333314
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-best",
+    "metric": "throughput_bps",
+    "difference": -31398224.766071346,
+    "low": -53148993.635990866,
+    "high": -9385315.76988733
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-best",
+    "metric": "return",
+    "difference": -13.37415532085714,
+    "low": -22.953101092379818,
+    "high": -3.7896180576166403
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-best",
+    "metric": "last100_coverage",
+    "difference": -0.05631041666666665,
+    "low": -0.08738187499999996,
+    "high": -0.02437598958333338
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-best",
+    "metric": "final_coverage",
+    "difference": -0.05562500000000001,
+    "low": -0.11625520833333335,
+    "high": -0.0035364583333333606
+  },
+  {
+    "group": "diffusion",
+    "comparison": "last-best",
+    "metric": "maintain_coverage",
+    "difference": -0.04370624999999995,
+    "low": -0.07131536458333329,
+    "high": -0.0140941145833333
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-step0",
+    "metric": "coverage",
+    "difference": 0.28862187499999997,
+    "low": 0.2577112760416666,
+    "high": 0.3206970442708333
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-step0",
+    "metric": "throughput_bps",
+    "difference": 328911870.6428209,
+    "low": 302589491.5685815,
+    "high": 355684172.8468867
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-step0",
+    "metric": "return",
+    "difference": 132.9907164342838,
+    "low": 119.49286557927405,
+    "high": 147.0818847260328
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-step0",
+    "metric": "last100_coverage",
+    "difference": 0.3432375000000001,
+    "low": 0.3059095833333333,
+    "high": 0.38203468749999997
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-step0",
+    "metric": "final_coverage",
+    "difference": 0.33729166666666666,
+    "low": 0.29249479166666664,
+    "high": 0.3856302083333333
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-step0",
+    "metric": "maintain_coverage",
+    "difference": 0.06553958333333337,
+    "low": 0.02362682291666672,
+    "high": 0.10498177083333335
+  },
+  {
+    "group": "gaussian",
+    "comparison": "best-step0",
+    "metric": "coverage",
+    "difference": 0.3875182291666667,
+    "low": 0.35520420572916667,
+    "high": 0.42081640625
+  },
+  {
+    "group": "gaussian",
+    "comparison": "best-step0",
+    "metric": "throughput_bps",
+    "difference": 464910054.7556994,
+    "low": 435058213.1697291,
+    "high": 495751332.85714334
+  },
+  {
+    "group": "gaussian",
+    "comparison": "best-step0",
+    "metric": "return",
+    "difference": 179.80249458697062,
+    "low": 165.35408729532648,
+    "high": 194.59433857598134
+  },
+  {
+    "group": "gaussian",
+    "comparison": "best-step0",
+    "metric": "last100_coverage",
+    "difference": 0.4287479166666667,
+    "low": 0.39041937499999996,
+    "high": 0.46683656250000005
+  },
+  {
+    "group": "gaussian",
+    "comparison": "best-step0",
+    "metric": "final_coverage",
+    "difference": 0.39,
+    "low": 0.3412447916666667,
+    "high": 0.43854687499999995
+  },
+  {
+    "group": "gaussian",
+    "comparison": "best-step0",
+    "metric": "maintain_coverage",
+    "difference": 0.03416249999999998,
+    "low": -0.0018117708333333588,
+    "high": 0.06830026041666662
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-best",
+    "metric": "coverage",
+    "difference": -0.09889635416666667,
+    "low": -0.11385738281250003,
+    "high": -0.08448291666666667
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-best",
+    "metric": "throughput_bps",
+    "difference": -135998184.11287844,
+    "low": -159628982.32620567,
+    "high": -112619213.81587714
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-best",
+    "metric": "return",
+    "difference": -46.81177815268685,
+    "low": -53.83515045607243,
+    "high": -39.86716209158923
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-best",
+    "metric": "last100_coverage",
+    "difference": -0.08551041666666662,
+    "low": -0.10776666666666664,
+    "high": -0.06215817708333328
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-best",
+    "metric": "final_coverage",
+    "difference": -0.05270833333333333,
+    "low": -0.09458854166666668,
+    "high": -0.0050000000000000044
+  },
+  {
+    "group": "gaussian",
+    "comparison": "last-best",
+    "metric": "maintain_coverage",
+    "difference": 0.0313770833333334,
+    "low": 0.0071366145833333845,
+    "high": 0.058786041666666636
+  }
+]

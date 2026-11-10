@@ -176,6 +176,7 @@ def build_observation(
     capacity,
     neighbor_slots,
     sinr_scale,
+    relative_coordinates=False,
 ):
     u, m = association.shape
     self_dim, neighbor_dim = 5 + u, 6 + u
@@ -193,8 +194,10 @@ def build_observation(
         for j in range(u):
             fixed[i, 5 + j] = adjacency[i, j]
         for g in range(len(bs_xy)):
-            fixed[i, self_dim + 2 * g] = bs_xy[g, 0] / width
-            fixed[i, self_dim + 2 * g + 1] = bs_xy[g, 1] / height
+            origin_x = uav_xy[i, 0] if relative_coordinates else 0.0
+            origin_y = uav_xy[i, 1] if relative_coordinates else 0.0
+            fixed[i, self_dim + 2 * g] = (bs_xy[g, 0] - origin_x) / width
+            fixed[i, self_dim + 2 * g + 1] = (bs_xy[g, 1] - origin_y) / height
     users = np.empty((offsets[-1], 4), np.float32)
     for i in range(u):
         used = np.zeros(u, np.bool_)
@@ -213,6 +216,9 @@ def build_observation(
             fixed[i, start] = (best + 1) / u
             for k in range(self_dim):
                 fixed[i, start + 1 + k] = fixed[best, k]
+            if relative_coordinates:
+                fixed[i, start + 1] = (uav_xy[best, 0] - uav_xy[i, 0]) / width
+                fixed[i, start + 2] = (uav_xy[best, 1] - uav_xy[i, 1]) / height
         row = offsets[i]
         for j in range(m):
             if sensed[i, j]:

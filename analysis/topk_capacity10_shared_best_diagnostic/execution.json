@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "trajectory_resampled": false,
+  "actor_executed": false,
+  "source_validation": {
+    "coverage": 0.6816338541666667,
+    "expected": 0.6816338541666667,
+    "tolerance": 1e-06,
+    "full_protocol": true,
+    "passed": true
+  },
+  "collection_seconds": 0.0,
+  "trajectory_capacity": 20,
+  "audit_capacity": 10,
+  "audited_scenes": 32,
+  "peak_rss_gib": 0.9752883911132812,
+  "audit_seconds": 44.8432369919999,
+  "report_seconds": 12.54936700799999,
+  "source_trajectories_unchanged": true,
+  "source_audits_unchanged": true,
+  "checkpoint_unchanged": true,
+  "session_seconds": 57.684140640999885
+}

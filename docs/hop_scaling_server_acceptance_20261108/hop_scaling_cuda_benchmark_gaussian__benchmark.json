@@ -1,0 +1,36 @@
+{
+  "device": "cuda:0",
+  "vector_steps": 8,
+  "environments": 16,
+  "joint_transitions": 128,
+  "inference_seconds": 0.06426062248647213,
+  "environment_seconds": 0.3313901927322149,
+  "results": [
+    {
+      "microbatch_agents": 128,
+      "update_seconds": 5.145548526197672,
+      "estimated_online_training_seconds_excluding_validation": 432921.63519373164,
+      "peak_rss_mib": 1189.94140625,
+      "sum_process_peak_rss_mib": 1189.94140625,
+      "peak_gpu_mib": 111.068359375
+    },
+    {
+      "microbatch_agents": 256,
+      "update_seconds": 3.1622401122003794,
+      "estimated_online_training_seconds_excluding_validation": 277969.71542495117,
+      "peak_rss_mib": 1190.0625,
+      "sum_process_peak_rss_mib": 1190.0625,
+      "peak_gpu_mib": 115.1533203125
+    },
+    {
+      "microbatch_agents": 512,
+      "update_seconds": 2.2442469764500856,
+      "estimated_online_training_seconds_excluding_validation": 206248.74771505222,
+      "peak_rss_mib": 1190.1796875,
+      "sum_process_peak_rss_mib": 1190.1796875,
+      "peak_gpu_mib": 121.17626953125
+    }
+  ],
+  "note": "Rough linear estimate; short minibatches and excluded validation/IO limit accuracy",
+  "actor_parameters": 291270
+}

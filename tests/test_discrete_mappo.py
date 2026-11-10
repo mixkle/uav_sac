@@ -18,7 +18,7 @@ from uav_research.plotting import curves, trace_plot
 
 
 def test_discrete_mapping_equal_speed_and_boundary_dynamics():
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     e = replace(cfg.env, num_uavs=9)
     env = UAVEnvironment(e)
     env.reset(41)
@@ -47,7 +47,7 @@ def test_discrete_mapping_equal_speed_and_boundary_dynamics():
     [np.zeros(4, float), np.ones(4, bool), [-1] * 4, [9] * 4, np.zeros((4, 2), int)],
 )
 def test_discrete_invalid_actions(actions):
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     env = UAVEnvironment(cfg.env)
     env.reset(0)
     with pytest.raises(ValueError):
@@ -56,7 +56,7 @@ def test_discrete_invalid_actions(actions):
 
 @pytest.mark.parametrize("backend", ["batch", "process"])
 def test_vector_discrete_matches_scalar(backend):
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     e = replace(cfg.env, horizon=8)
     scalar = [UAVEnvironment(e) for _ in range(2)]
     for env, seed in zip(scalar, [41, 42]):
@@ -74,7 +74,7 @@ def test_vector_discrete_matches_scalar(backend):
 
 
 def test_categorical_probabilities_empty_sets_and_gradient():
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     env = UAVEnvironment(cfg.env)
     raw, _, _ = env.reset(43)
     actor = CategoricalActor(cfg.env.obs_dim, 32)
@@ -112,7 +112,7 @@ def test_categorical_probabilities_empty_sets_and_gradient():
 
 
 def test_discrete_baselines_and_projection():
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     obs, _, _ = UAVEnvironment(cfg.env).reset(44)
     for name in ("static", "random", "heuristic"):
         actions = Baseline(cfg, name).act(obs)
@@ -130,7 +130,7 @@ def test_discrete_baselines_and_projection():
 @pytest.mark.parametrize("cpu_threads", [1, 8])
 @pytest.mark.parametrize("value_clipping", [True, False])
 def test_discrete_complete_pipeline_and_exact_resume(tmp_path, cpu_threads, value_clipping):
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     cfg.algo.value_clipping = value_clipping
     cfg.run.cpu_threads = cpu_threads
     cfg.run.total_steps = 64
@@ -207,7 +207,7 @@ def test_discrete_partial_budget_and_failed_update_preserves_safe_checkpoint(
 ):
     from uav_research.algorithms import MAPPO
 
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     cfg.run.total_steps = 66
     cfg.run.eval_interval = 32
     cfg.run.validation_seeds = [10000]
@@ -230,7 +230,7 @@ def test_discrete_partial_budget_and_failed_update_preserves_safe_checkpoint(
 def test_discrete_mapping_version_is_checked_on_deployment(tmp_path):
     from uav_research.runtime import atomic_save
 
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     cfg.run.total_steps = 16
     cfg.run.validation_seeds = [10000]
     train(cfg, tmp_path / "run")
@@ -243,7 +243,7 @@ def test_discrete_mapping_version_is_checked_on_deployment(tmp_path):
 
 
 def test_reflection_overshoot_and_legacy_clip():
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     for mode, expected in [("reflect", [395, 200]), ("clip", [400, 200])]:
         env = UAVEnvironment(replace(cfg.env, uav_boundary=mode))
         env.reset(4)
@@ -260,7 +260,7 @@ def test_reflection_overshoot_and_legacy_clip():
 
 def test_sampling_evaluation_repeatable_and_rng_isolated():
     from uav_research.algorithms import make_learner
-    cfg = load_config("configs/discrete_mappo_smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_smoke.yaml")
     cfg.env.horizon = 3
     learner = make_learner(cfg, "cpu")
     flags = []

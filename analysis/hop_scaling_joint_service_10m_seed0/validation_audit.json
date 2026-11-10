@@ -1,0 +1,50 @@
+{
+  "diffusion/step0": {
+    "env_steps": 0,
+    "model_sha256": "1da5c46779d8f1d7ac45b234eee6f1a1073effb5ee4de2ab11dbeab031ad3de5",
+    "scenes": 32,
+    "horizon": 400,
+    "moment_repeats": 64,
+    "status": "passed"
+  },
+  "gaussian/step0": {
+    "env_steps": 0,
+    "model_sha256": "47debba2bd50968b5b5a1439bf7883a259edb145afb392c64a267c6921a8701f",
+    "scenes": 32,
+    "horizon": 400,
+    "moment_repeats": 64,
+    "status": "passed"
+  },
+  "diffusion/best": {
+    "env_steps": 7501824,
+    "model_sha256": "11fdd37abb123b84bc0c57fea7f84322382bbc1bde78dc5578c96dabc80fffaf",
+    "scenes": 32,
+    "horizon": 400,
+    "moment_repeats": 64,
+    "status": "passed"
+  },
+  "gaussian/best": {
+    "env_steps": 970752,
+    "model_sha256": "542d2ccbe5f91015b6524c4dfe1b55a7c18da8ed81fa78fb62d25c536d4ba965",
+    "scenes": 32,
+    "horizon": 400,
+    "moment_repeats": 64,
+    "status": "passed"
+  },
+  "diffusion/last": {
+    "env_steps": 10000000,
+    "model_sha256": "c2fb7a34e4053c4d34c1ac78b63db2c9f6c2f4a14efa9142a9bb8a7f1a5705cc",
+    "scenes": 32,
+    "horizon": 400,
+    "moment_repeats": 64,
+    "status": "passed"
+  },
+  "gaussian/last": {
+    "env_steps": 10000000,
+    "model_sha256": "52003081ef41a26637b31351a3c53497dd3c3a7c23ecef5db458dc0205a409a4",
+    "scenes": 32,
+    "horizon": 400,
+    "moment_repeats": 64,
+    "status": "passed"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-28",
+  "requested_model": "gpt-image-2",
+  "generation_tool": "built-in image_gen",
+  "backend_model_independently_verifiable": false,
+  "scope": "current continuous-action shared-actor pure-coverage time-factor MAPPO and SAC",
+  "png_dimensions": [
+    1774,
+    887
+  ],
+  "pdf_type": "raster image container; not editable vector",
+  "image_sha256": "42d98a712dc3d8186641374d44fae315696ecdf25d430b727dbab5a71109f5c6",
+  "source_sha256": {
+    "src/uav_research/algorithms.py": "5e3b4e054471e5a9c476f63ca1882af8912e46f124b93646a2c7f0ce291cfe31",
+    "src/uav_research/models.py": "15295930337e591b83960a298fca629cad5d85f72f1aef6aae48943f820d09f1",
+    "src/uav_research/train.py": "7735390dd81889615bf6ff8a97bef8f167ef12401635f83a555b04043762c231",
+    "src/uav_research/observations.py": "e1d58df057ca5a932d1a876c969a976e7c02ea0f648495655dfe840f6500bee5",
+    "src/uav_research/environment.py": "e04c063f4dc5130ebddf30bcadb992b622c61f182cc3d03a919515cf634d8178",
+    "configs/continuous_mappo_coverage_shared_central_history_100k.yaml": "49f0341f8f5db45d6ab18deda37ec50ff92299db55303ece937f0ad6c5a49a26",
+    "configs/sac_coverage_time_factor_relative_central_history_server_1m.yaml": "3f277b1a23d644603abcdf9ed292242db283ace34199059fdcb8bafefc1c784f"
+  },
+  "prompts": [
+    "prompt.txt",
+    "revision_prompt.txt",
+    "final_prompt.txt",
+    "typography_correction_prompt.txt"
+  ]
+}

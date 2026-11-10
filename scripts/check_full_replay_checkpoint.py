@@ -16,7 +16,7 @@ import torch
 from uav_research.config import load_config
 from uav_research.replay import JointReplay
 from uav_research.checkpoints import save_full, restore_replay
-from uav_research.runtime import load_checkpoint, memory_stats
+from uav_research.runtime import load_checkpoint, memory_stats, configure_runtime
 from uav_research.observations import OBSERVATION_VERSION, TensorObservation
 
 
@@ -41,9 +41,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--capacity", type=int, default=50000)
+    parser.add_argument("--config", default="configs/main.yaml")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
-    cfg = load_config("configs/main.yaml")
+    cfg = load_config(args.config)
+    configure_runtime(cfg)
     e = cfg.env
     proc = psutil.Process()
     monitoring = threading.Event()
@@ -81,7 +83,8 @@ def main():
     phase[0] = "save"
     before = time.perf_counter()
     save_full(
-        path, {"kind": "full", "observation_version": OBSERVATION_VERSION}, replay
+        path, {"kind": "full", "observation_version": OBSERVATION_VERSION}, replay,
+        max_rss_bytes=cfg.run.memory_limit_gib * 2**30,
     )
     save_seconds = time.perf_counter() - before
     expected_sample = replay.sample(256, torch.device("cpu"))
@@ -130,8 +133,9 @@ def main():
         next_sample_exact=True,
         phase_peak_rss_gib=peaks,
         peak_rss_gib=peak,
-        rss_limit_gib=12,
-        passed=peak <= 12,
+        rss_limit_gib=cfg.run.memory_limit_gib,
+        config=args.config,
+        passed=peak <= cfg.run.memory_limit_gib,
     )
     (args.output / "result.json").write_text(json.dumps(result, indent=2))
     (args.output / "rss_samples.json").write_text(json.dumps(samples))

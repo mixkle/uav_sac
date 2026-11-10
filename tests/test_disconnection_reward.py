@@ -78,7 +78,7 @@ def test_legacy_config_preserves_reward_and_invalid_weights_fail():
 
 
 def test_evaluation_records_negative_rewards_and_actual_trace_reward(tmp_path):
-    cfg=load_config('configs/discrete_mappo_smoke.yaml')
+    cfg=load_config('tests/fixtures/configs/discrete_mappo_smoke.yaml')
     cfg.env.ug_range=1  # Below altitude: all UAVs are disconnected.
     cfg.env.disconnection_weight=.7;cfg.env.horizon=3
     configure_runtime(cfg)
@@ -101,7 +101,7 @@ def test_evaluation_records_negative_rewards_and_actual_trace_reward(tmp_path):
 
 @pytest.mark.parametrize('name',['sac','mappo'])
 def test_learner_receives_negative_environment_rewards(name):
-    cfg=load_config('configs/smoke.yaml' if name=='sac' else 'configs/discrete_mappo_smoke.yaml')
+    cfg=load_config('tests/fixtures/configs/smoke.yaml' if name=='sac' else 'tests/fixtures/configs/discrete_mappo_smoke.yaml')
     cfg.env.disconnection_weight=.7;cfg.env.ug_range=1;cfg.env.horizon=3
     cfg.algo.batch_size=4;device=configure_runtime(cfg);seed_all(1)
     learner=make_learner(cfg,device)

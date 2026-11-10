@@ -88,7 +88,7 @@ def test_cli_and_suite_preserve_explicit_learning_rates(
 def test_resume_best_is_self_contained_and_rollback_requires_new_directory(
     tmp_path, monkeypatch
 ):
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     cfg.run.total_steps = cfg.run.eval_interval = cfg.run.log_interval = 32
     cfg.run.tensorboard = False
     means = dict(
@@ -105,6 +105,7 @@ def test_resume_best_is_self_contained_and_rollback_requires_new_directory(
         worst_fault_coverage=0.5,
     )
     means["return"] = 1.0
+    means.update(task_return=1.0, boundary_penalty_return=0.0, boundary_cost=0.0)
     monkeypatch.setattr(
         "uav_research.train.evaluate", lambda *args: ([], {"mean": means})
     )
@@ -148,7 +149,7 @@ def test_data_disk_output_resolution(tmp_path, monkeypatch):
     # Direct Python APIs use the same root as the command-line entry points.
     from uav_research.evaluate import Baseline, evaluate
 
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     evaluate(
         cfg, Baseline(cfg, "static"), [10000], "evaluations/probe", method="static"
     )

@@ -1,0 +1,14 @@
+{
+  "env_steps": 2048,
+  "updates": 1,
+  "optimizer_steps": 40,
+  "best_score": 201.6736235332326,
+  "best_step": 0,
+  "elapsed_seconds": 90.47399294700153,
+  "full_checkpoint": "output/hop_scaling_acceptance/diffusion/checkpoints/full_000002048",
+  "status": "complete",
+  "evaluation_seconds": 5.536261695997382,
+  "io_seconds": 0.1362805879980442,
+  "peak_rss_mib": 711.48046875,
+  "sum_process_peak_rss_mib": 711.48046875
+}

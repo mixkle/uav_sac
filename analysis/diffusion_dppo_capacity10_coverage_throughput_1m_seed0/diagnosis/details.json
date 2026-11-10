@@ -1,0 +1,314 @@
+{
+  "training": {
+    "env_steps": 1000000,
+    "updates": 489,
+    "optimizer_steps": 19560,
+    "best_score": 245.29735482267665,
+    "best_step": 40960,
+    "elapsed_seconds": 12460.883622393012,
+    "full_checkpoint": "/home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/checkpoints/full_001000000",
+    "status": "complete",
+    "evaluation_seconds": 5492.317735813558,
+    "io_seconds": 61.618488201871514,
+    "peak_rss_mib": 1577.5546875,
+    "sum_process_peak_rss_mib": 1577.5546875,
+    "peak_gpu_mib": 2927.35791015625
+  },
+  "validation_reproduction": {
+    "step0": {
+      "return": 0.0,
+      "coverage": 0.0,
+      "last100_coverage": 0.0,
+      "final_coverage": 0.0
+    },
+    "best": {
+      "return": 0.0,
+      "coverage": 0.0,
+      "last100_coverage": 0.0,
+      "final_coverage": 0.0
+    },
+    "last": {
+      "return": 0.0,
+      "coverage": 0.0,
+      "last100_coverage": 0.0,
+      "final_coverage": 0.0
+    }
+  },
+  "moments": {
+    "step0": {
+      "mean_command_norm": 8.519417011514573,
+      "covariance_trace": 246.76185102529357
+    },
+    "best": {
+      "mean_command_norm": 9.85672908387978,
+      "covariance_trace": 194.78870396340022
+    },
+    "last": {
+      "mean_command_norm": 13.630940441394555,
+      "covariance_trace": 123.05552824638006
+    }
+  },
+  "training_metrics": {
+    "ppo_approx_kl": {
+      "first": 1.7389727487977225,
+      "median": 0.006429030348267082,
+      "last50": 0.006438679578040823
+    },
+    "ppo_clip_fraction": {
+      "first": 0.3089182563126087,
+      "median": 0.11098802480846644,
+      "last50": 0.10908831994049249
+    },
+    "actor_grad_norm": {
+      "first": 7.648433853685856,
+      "median": 9.404632988572121,
+      "last50": 8.796773901432752
+    },
+    "movement_head_grad_norm": {
+      "first": 0.10900901933200657,
+      "median": 0.22908083274960517,
+      "last50": 0.21619224016834054
+    },
+    "score_head_grad_norm": {
+      "first": 0.30002028271555903,
+      "median": 0.37493856679648163,
+      "last50": 0.3753879292979836
+    },
+    "value_loss": {
+      "first": 5.624920773506164,
+      "median": 0.0012966842245077715,
+      "last50": 0.0013551481627218892
+    },
+    "denoise_1_kl": {
+      "first": 0.12916282198453297,
+      "median": 0.009298402590825894,
+      "last50": 0.010478388299784308
+    },
+    "denoise_1_clip": {
+      "first": 0.5802354611456394,
+      "median": 0.2786946645006537,
+      "last50": 0.2779402340017259
+    },
+    "denoise_2_kl": {
+      "first": 0.007226333188656203,
+      "median": 0.0006943099366455707,
+      "last50": 0.0007139519657101131
+    },
+    "denoise_2_clip": {
+      "first": 0.2222683391533792,
+      "median": 0.02454427108168602,
+      "last50": 0.025875585036206763
+    },
+    "denoise_3_kl": {
+      "first": 0.002032639238960754,
+      "median": 0.00023027066904938304,
+      "last50": 0.0002311506210992964
+    },
+    "denoise_3_clip": {
+      "first": 0.08990343063487671,
+      "median": 0.002560763903238694,
+      "last50": 0.002940248883256573
+    },
+    "denoise_4_kl": {
+      "first": 0.0014650491843187605,
+      "median": 0.00013578403459177935,
+      "last50": 0.00015410123177839543
+    },
+    "denoise_4_clip": {
+      "first": 0.07096625500998925,
+      "median": 0.0009060330061402055,
+      "last50": 0.001417480493280891
+    },
+    "denoise_5_kl": {
+      "first": 0.0019225749250229753,
+      "median": 0.00011577450045984206,
+      "last50": 0.00014531136538787427
+    },
+    "denoise_5_clip": {
+      "first": 0.09905327847227455,
+      "median": 0.000816514770667709,
+      "last50": 0.0014609134134407216
+    },
+    "denoise_6_kl": {
+      "first": 0.0030224032738866897,
+      "median": 0.0001390112634605145,
+      "last50": 0.00017906996581439863
+    },
+    "denoise_6_clip": {
+      "first": 0.14194878665730357,
+      "median": 0.0011854383934405631,
+      "last50": 0.0021662266465791616
+    },
+    "denoise_7_kl": {
+      "first": 0.012785351455871324,
+      "median": 0.000372833374219933,
+      "last50": 0.00048158027765683335
+    },
+    "denoise_7_clip": {
+      "first": 0.3461208790540695,
+      "median": 0.007823350743274204,
+      "last50": 0.012689561790481094
+    },
+    "denoise_8_kl": {
+      "first": 13.754164713774097,
+      "median": 0.039282295130477804,
+      "last50": 0.03912588296934925
+    },
+    "denoise_8_clip": {
+      "first": 0.920849621295929,
+      "median": 0.5692654095590115,
+      "last50": 0.5482163093686103
+    }
+  },
+  "epsilon_mean_sensitivity_in_std_units": [
+    4.1978230476379395,
+    1.7606686353683472,
+    1.247037649154663,
+    1.104921817779541,
+    1.1088805198669434,
+    1.2631473541259766,
+    1.8250083923339844,
+    32.21632766723633
+  ],
+  "shadow_score_audit": {
+    "best": {
+      "checkpoint": "runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/best.pt",
+      "checkpoint_sha256": "55e2962a29cbfc44276d04fecde6764baad20c2564a16b7abbfa3ad69bb6519a",
+      "env_steps": 40960,
+      "source_hash": "2087f5c5f9135a78cc59b1e3ea417edb0ada47b63dea9e4f2c3afe4522495d4a",
+      "scenes": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "device": "cuda:0",
+      "metrics": {
+        "coverage": 0.5488661458333367,
+        "sinr_score_coverage": 0.5490552083333369,
+        "throughput_bps": 482829309.17518556,
+        "sinr_score_throughput_bps": 482973000.41424966,
+        "reward": 0.6132433870566916,
+        "sinr_score_reward": 0.6134516083885659,
+        "changed_owner_fraction": 0.009936458333333504
+      },
+      "paired": {
+        "coverage": {
+          "difference": 0.0001890625000000208,
+          "low": 0.00015050781250001912,
+          "high": 0.00022864583333333604
+        },
+        "throughput_bps": {
+          "difference": 143691.2390617393,
+          "low": 131499.9450840811,
+          "high": 156421.76424949407
+        },
+        "reward": {
+          "difference": 0.0002082213318748416,
+          "low": 0.00016876274082359643,
+          "high": 0.0002479814104626552
+        }
+      },
+      "interpretation": "Same physical transitions; SINR scores from pre-action information. Shadow association does not change future observations, movement or history. This is not closed-loop performance."
+    },
+    "last": {
+      "checkpoint": "runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/last.pt",
+      "checkpoint_sha256": "c4943b4c4eebf2a06626f3c0e2774515dcc3319913f35c2490dbafe5d051bb48",
+      "env_steps": 1000000,
+      "source_hash": "2087f5c5f9135a78cc59b1e3ea417edb0ada47b63dea9e4f2c3afe4522495d4a",
+      "scenes": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "device": "cuda:0",
+      "metrics": {
+        "coverage": 0.49973437499999357,
+        "sinr_score_coverage": 0.4999078124999932,
+        "throughput_bps": 440230658.4447875,
+        "sinr_score_throughput_bps": 440386435.78162193,
+        "reward": 0.5584317961259709,
+        "sinr_score_reward": 0.5586260039375504,
+        "changed_owner_fraction": 0.009952604166666929
+      },
+      "paired": {
+        "coverage": {
+          "difference": 0.00017343749999996529,
+          "low": 0.00013124999999992098,
+          "high": 0.0002156380208333145
+        },
+        "throughput_bps": {
+          "difference": 155777.3368328968,
+          "low": 143814.2743856557,
+          "high": 168626.57728676623
+        },
+        "reward": {
+          "difference": 0.00019420781157773737,
+          "low": 0.0001513529496132308,
+          "high": 0.00023795570001151849
+        }
+      },
+      "interpretation": "Same physical transitions; SINR scores from pre-action information. Shadow association does not change future observations, movement or history. This is not closed-loop performance."
+    }
+  },
+  "note": "Single training seed; paired validation-scene intervals, not seed confidence."
+}

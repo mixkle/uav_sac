@@ -1,0 +1,67 @@
+{
+  "source": "runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0",
+  "files": {
+    "best.pt": {
+      "bytes": 24078453,
+      "sha256": "7fc54c258b66115633bd60cae8f5b89ebfa11995c43848740018e81daa9651e2"
+    },
+    "checkpoints/full_002994752/index.json": {
+      "bytes": 91,
+      "sha256": "a1d226296fba1fabd2dfa859261d8603b03079302a4fca079f00fa0fea18ba52"
+    },
+    "checkpoints/full_002994752/metadata.pt": {
+      "bytes": 49923001,
+      "sha256": "9d7448a0ec7a388aa7a2c292a732642b7c35de46d63d779244fff29f66e733bd"
+    },
+    "checkpoints/full_003000000/index.json": {
+      "bytes": 91,
+      "sha256": "22c7bcf13a99a5b39f6a69112d36c9c8eff32171c7c9cbb294ef0efb395fb102"
+    },
+    "checkpoints/full_003000000/metadata.pt": {
+      "bytes": 49943289,
+      "sha256": "f3d77b82d073646db0c49405e6c6234cceb0e84a4b9813988adf440af38edf31"
+    },
+    "config.yaml": {
+      "bytes": 6442,
+      "sha256": "bcf289ca90fbbfc75ce071c384dd05c56e4ff6c66de92d47c6bb7b152e3003e8"
+    },
+    "continuation.json": {
+      "bytes": 537,
+      "sha256": "c7387b43c99cb5bfbe70d157f15f6a7d5dfc99c3328a7650e3de3e5de8090174"
+    },
+    "last.pt": {
+      "bytes": 24078453,
+      "sha256": "14bbfb409524f9f5ee23ed4bc65c3183e84d8608f30a4ec849c8c70fcd7efeee"
+    },
+    "manifest.json": {
+      "bytes": 512,
+      "sha256": "451a82e5f436aa9c785dc82699ff1bfa726b1c33066e391ee7a065ffc01068e3"
+    },
+    "metadata.json": {
+      "bytes": 5211,
+      "sha256": "d523760bd4684ce86eea430176f88ef79c080cd3aa0b6d26ddb182c2fa7ff2f5"
+    },
+    "metrics.csv": {
+      "bytes": 3611413,
+      "sha256": "dd2251717fd8f945ecb43f0fec2b7463ad4275c5cf4df7f26c2a380b15d10a56"
+    },
+    "source_manifest.json": {
+      "bytes": 515,
+      "sha256": "3f0bfb89d5dbd335b3107a1d25e1a067e8390e2f21b39274ee8fb4b23c2a93a9"
+    },
+    "step0.pt": {
+      "bytes": 8038291,
+      "sha256": "0a764cf4e143d98782dfa7308cb597709c31d3fc1402711a3c8d550fc7de1540"
+    },
+    "tensorboard/events.out.tfevents.1793890792.xyc-SYS-7048GR-TR.277556.0": {
+      "bytes": 8429159,
+      "sha256": "bd60ef5eadeabdea96833f1bad8cb3e8689113bfd0892c6420c48a690a25a858"
+    },
+    "validation.csv": {
+      "bytes": 48243,
+      "sha256": "26c406cfd3922a82757484b35673a1b453bfb9c36679a5d5ecab6266a702d3a4"
+    }
+  },
+  "total_bytes": 168163701,
+  "source_hash": "2d8bcbdb4f3990fe2bdb3c47a96b328bc25ff9d5df3ec3820b66d16e8f90736f"
+}

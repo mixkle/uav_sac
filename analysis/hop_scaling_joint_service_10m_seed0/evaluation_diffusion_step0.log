@@ -1,0 +1,6 @@
+BEGIN diffusion step0 env_steps 0
+12:11:04 evaluate scenes=10000..10015 t=1/400
+12:11:34 evaluate scenes=10000..10015 t=210/400
+12:12:04 evaluate scenes=10016..10031 t=1/400
+12:12:34 evaluate scenes=10016..10031 t=217/400
+DONE diffusion step0 {"coverage": 0.5386953125, "last100_coverage": 0.59755625, "throughput_bps": 471268210.4715326, "return": 240.61242955848175, "critic_rmse": 80.24780795655816}

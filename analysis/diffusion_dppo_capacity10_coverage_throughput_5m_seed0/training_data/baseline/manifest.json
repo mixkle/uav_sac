@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "algorithm": "mappo",
+  "action_specification": {
+    "action_space": "continuous",
+    "action_mapping_version": "unit-disk-v1",
+    "policy_distribution": "gaussian"
+  },
+  "seed": 0,
+  "env_steps": 1000000,
+  "config_hash": "e3a1812a3813c1963b87fa7fed9dc9242a414b85318a36b5c9e6a7fab800ad3f",
+  "best_metric": "task_return",
+  "actor_sharing": "shared",
+  "actor_parameters": 103620,
+  "critic_parameters": 1677057,
+  "replay_allocated_bytes": 0,
+  "replay_worst_case_bytes": 0,
+  "updates": 489,
+  "elapsed_seconds": 3460.251509069,
+  "checkpoint_stage": "saved",
+  "resume_checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/resume_000001000000",
+  "stop_reason": "completed",
+  "phase_seconds": {
+    "io": 4.0021132780025255,
+    "evaluation": 1121.6267538070015,
+    "inference": 87.82732986411565,
+    "environment": 764.4327114810326,
+    "update": 1392.916119624998,
+    "sample": 0.0,
+    "transfer": 0.0
+  },
+  "best_validation_score": 260.2033635897416,
+  "best_validation_return": 260.2033635897416,
+  "peak_rss_mib": 1320.43359375,
+  "sum_process_peak_rss_mib": 1320.43359375
+}

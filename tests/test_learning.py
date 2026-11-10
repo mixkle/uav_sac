@@ -117,7 +117,7 @@ def test_popart_preserves_unnormalized_values():
 
 @pytest.mark.parametrize("name", ["sac", "mappo", "matd3"])
 def test_learner_update_and_exact_restore(name):
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     cfg.algo.name = name
     device = configure_runtime(cfg)
     seed_all(0)
@@ -176,7 +176,7 @@ def test_learner_update_and_exact_restore(name):
 
 
 def test_actor_update_receives_all_uav_branches():
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     cfg.algo.hidden = 8
     learner = SAC(cfg, torch.device("cpu"))
     obs = synthetic_obs((4, cfg.env.num_uavs, cfg.env.obs_dim)).to_torch("cpu")

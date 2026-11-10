@@ -1,0 +1,531 @@
+{
+  "summary": {
+    "original": {
+      "coverage": 0.5863125,
+      "final_coverage": 0.615,
+      "last100_coverage": 0.6102104166666666,
+      "max_drop_1": 0.46874999999999994,
+      "max_drop_5": 0.47958333333333336,
+      "max_drawdown": 0.5610416666666667,
+      "peak_coverage": 0.7691666666666667,
+      "peak_step": 219.125,
+      "min20_coverage": 0.29576041666666664,
+      "drop_events_5pp": 56.75,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 28.9375,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 12.78125,
+      "any_drop_20pp": 0.9375,
+      "early51_150_coverage": 0.5978395833333334,
+      "maintain_coverage": 0.01237083333333333,
+      "throughput_mbps": 481.46931730765516,
+      "last100_throughput_mbps": 511.73370228339854,
+      "disconnection_ratio": 0.11741319444444444,
+      "robustness": 0.5259937210648148,
+      "sensing": 0.8628796875,
+      "boundary150_fraction": 0.05051649305555556,
+      "reflection_fraction": 0.0041796875,
+      "close_neighbor_fraction": 0.05572916666666666,
+      "nearest_neighbor_m": 425.23653939498024,
+      "speed_mps": 15.856424086449161,
+      "worst_fault_coverage": 0.3432593749999999,
+      "return": 260.2033635897416,
+      "mean_curve_peak_step": 359,
+      "mean_curve_peak_coverage": 0.6610416666666667,
+      "final_below30_scenes": 1,
+      "scenes_with_10pp_drop": 32,
+      "first100_coverage": 0.5005729166666667,
+      "post150_coverage": 0.616435
+    },
+    "hop_scaled": {
+      "coverage": 0.5773015625,
+      "final_coverage": 0.6458333333333333,
+      "last100_coverage": 0.6400708333333334,
+      "max_drop_1": 0.350625,
+      "max_drop_5": 0.35062499999999996,
+      "max_drawdown": 0.39229166666666665,
+      "peak_coverage": 0.7429166666666667,
+      "peak_step": 288.6875,
+      "min20_coverage": 0.30221875,
+      "drop_events_5pp": 57.0625,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 24.65625,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 7.59375,
+      "any_drop_20pp": 0.84375,
+      "early51_150_coverage": 0.5468083333333333,
+      "maintain_coverage": 0.09326250000000003,
+      "throughput_mbps": 472.1981010731372,
+      "last100_throughput_mbps": 528.0996063672899,
+      "disconnection_ratio": 0.09560763888888889,
+      "robustness": 0.5212637731481481,
+      "sensing": 0.8617765625,
+      "boundary150_fraction": 0.08384114583333335,
+      "reflection_fraction": 0.0031293402777777778,
+      "close_neighbor_fraction": 0.04787760416666667,
+      "nearest_neighbor_m": 450.36043895034084,
+      "speed_mps": 8.419799821789788,
+      "worst_fault_coverage": 0.3547421875,
+      "return": 256.1045237239007,
+      "mean_curve_peak_step": 389,
+      "mean_curve_peak_coverage": 0.6649999999999999,
+      "final_below30_scenes": 0,
+      "scenes_with_10pp_drop": 32,
+      "first100_coverage": 0.44068124999999997,
+      "post150_coverage": 0.6306608333333333
+    },
+    "link_safe": {
+      "coverage": 0.5935817708333333,
+      "final_coverage": 0.6277083333333333,
+      "last100_coverage": 0.6469104166666667,
+      "max_drop_1": 0.27770833333333333,
+      "max_drop_5": 0.286875,
+      "max_drawdown": 0.3458333333333333,
+      "peak_coverage": 0.73,
+      "peak_step": 261.5,
+      "min20_coverage": 0.30911458333333336,
+      "drop_events_5pp": 29.21875,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 12.9375,
+      "any_drop_10pp": 0.96875,
+      "drop_events_20pp": 4.34375,
+      "any_drop_20pp": 0.5625,
+      "early51_150_coverage": 0.56773125,
+      "maintain_coverage": 0.07917916666666672,
+      "throughput_mbps": 485.807275040066,
+      "last100_throughput_mbps": 529.1106723756055,
+      "disconnection_ratio": 0.07413628472222222,
+      "robustness": 0.5364067708333333,
+      "sensing": 0.8593609375,
+      "boundary150_fraction": 0.0841623263888889,
+      "reflection_fraction": 0.003220486111111111,
+      "close_neighbor_fraction": 0.05173177083333334,
+      "nearest_neighbor_m": 449.60333393287965,
+      "speed_mps": 7.458976623387425,
+      "worst_fault_coverage": 0.37261927083333335,
+      "return": 263.34242966880356,
+      "mean_curve_peak_step": 274,
+      "mean_curve_peak_coverage": 0.6668750000000002,
+      "final_below30_scenes": 1,
+      "scenes_with_10pp_drop": 31,
+      "first100_coverage": 0.45555000000000007,
+      "post150_coverage": 0.6461358333333332
+    }
+  },
+  "diagnostics": {
+    "link_constraint_actual_broken_count": 1915.0,
+    "link_constraint_count": 112727.0,
+    "link_constraint_feasible_but_actual_broken_count": 739.0,
+    "link_constraint_infeasible_count": 7839.0,
+    "link_constraint_limited_count": 18863.0,
+    "link_constraint_moving_margin_violation_count": 10404.0,
+    "link_constraint_no_upstream_count": 7825.0,
+    "link_constraint_reflected_static_violation_count": 0.0,
+    "link_constraint_static_violation_count": 0.0,
+    "eligible_parent_events": 112727.0,
+    "infeasible_fraction": 0.06953968437020412,
+    "constrained_fraction": 0.48926649305555553,
+    "eligible_no_upstream_events": 7825.0,
+    "mean_scale": 0.46829474052795644
+  },
+  "paired": [
+    {
+      "reference": "original",
+      "metric": "coverage",
+      "difference": 0.007269270833333336,
+      "low": -0.013728098958333323,
+      "high": 0.02831519531249999
+    },
+    {
+      "reference": "original",
+      "metric": "last100_coverage",
+      "difference": 0.03670000000000004,
+      "low": -0.003693229166666622,
+      "high": 0.07640177083333333
+    },
+    {
+      "reference": "original",
+      "metric": "final_coverage",
+      "difference": 0.012708333333333334,
+      "low": -0.03916666666666667,
+      "high": 0.06962499999999976
+    },
+    {
+      "reference": "original",
+      "metric": "throughput_mbps",
+      "difference": 4.3379577324108265,
+      "low": -20.124112236718947,
+      "high": 28.440408227642827
+    },
+    {
+      "reference": "original",
+      "metric": "return",
+      "difference": 3.139066079061908,
+      "low": -6.553869928093028,
+      "high": 12.81703011125636
+    },
+    {
+      "reference": "original",
+      "metric": "disconnection_ratio",
+      "difference": -0.043276909722222215,
+      "low": -0.05954481336805555,
+      "high": -0.027893554687500027
+    },
+    {
+      "reference": "original",
+      "metric": "max_drop_1",
+      "difference": -0.19104166666666667,
+      "low": -0.2583333333333333,
+      "high": -0.121875
+    },
+    {
+      "reference": "original",
+      "metric": "max_drop_5",
+      "difference": -0.19270833333333331,
+      "low": -0.2637552083333333,
+      "high": -0.12416145833333336
+    },
+    {
+      "reference": "original",
+      "metric": "drop_events_10pp",
+      "difference": -16.0,
+      "low": -22.0328125,
+      "high": -10.060156250000013
+    },
+    {
+      "reference": "original",
+      "metric": "maintain_coverage",
+      "difference": 0.06680833333333339,
+      "low": 0.02218093750000004,
+      "high": 0.11437473958333333
+    },
+    {
+      "reference": "original",
+      "metric": "speed_mps",
+      "difference": -8.397447463061736,
+      "low": -8.920102958191725,
+      "high": -7.832053255394586
+    },
+    {
+      "reference": "original",
+      "metric": "boundary150_fraction",
+      "difference": 0.03364583333333333,
+      "low": 0.02024728732638889,
+      "high": 0.04697927517361112
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "coverage",
+      "difference": 0.016280208333333334,
+      "low": 0.006527460937500006,
+      "high": 0.026855442708333323
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "last100_coverage",
+      "difference": 0.006839583333333376,
+      "low": -0.01542588541666663,
+      "high": 0.028797656250000032
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "final_coverage",
+      "difference": -0.01812499999999999,
+      "low": -0.05333854166666665,
+      "high": 0.017296874999999996
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "throughput_mbps",
+      "difference": 13.609173966928784,
+      "low": 1.4790732982892354,
+      "high": 26.121193083017474
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "return",
+      "difference": 7.237905944902865,
+      "low": 2.7423532312800663,
+      "high": 11.962990371779213
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "disconnection_ratio",
+      "difference": -0.021471354166666665,
+      "low": -0.028216471354166668,
+      "high": -0.015063693576388898
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "max_drop_1",
+      "difference": -0.07291666666666666,
+      "low": -0.12395833333333331,
+      "high": -0.027708333333333328
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "max_drop_5",
+      "difference": -0.06375000000000001,
+      "low": -0.11750000000000002,
+      "high": -0.01520312500000007
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "drop_events_10pp",
+      "difference": -11.71875,
+      "low": -17.15625,
+      "high": -6.686718750000004
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "maintain_coverage",
+      "difference": -0.014083333333333305,
+      "low": -0.03858395833333333,
+      "high": 0.011197031250000041
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "speed_mps",
+      "difference": -0.9608231984023631,
+      "low": -1.1314634533611365,
+      "high": -0.7982665954035894
+    },
+    {
+      "reference": "hop_scaled",
+      "metric": "boundary150_fraction",
+      "difference": 0.00032118055555555676,
+      "low": -0.003863281250000001,
+      "high": 0.004492513020833334
+    }
+  ],
+  "sources": {
+    "original": {
+      "checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "checkpoint_step": 671744,
+      "group": "original",
+      "device": "cpu",
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "batch_size": 16,
+      "alpha_min": 0.25,
+      "k": 0.4,
+      "pre_action_hops": true,
+      "history_action": "original unscaled policy command",
+      "raw_unreachable_sentinel": 19,
+      "critic_queries": 0,
+      "actor_updates": 0,
+      "audit": {
+        "initial_hashes": [
+          "7c759de21e89734e83feda0537823d45893dc0232d919c530c618100caa9c0a5",
+          "c8bed729c2390c3c539aee340922deaf70091a4bef1aed01032f8703e361c2c5"
+        ],
+        "ue_path_hashes": [
+          "f060301e02ccee578e17f7e8ed24dfc1d7ea9cda0dfd38d5731bc0efd0cebc1d",
+          "9253ceafddc81433a7a78977773676fe2a7912b945a5b8e1790e1b9533e5199e"
+        ],
+        "action_rng_sequence_sha256": "76d85499ef268f3e918008b369137b646c9d5ff239777a110e611bbe61b1848f",
+        "first_action_hashes": [
+          "72ad3e312255f18e0db4187a2aa1673ff9519336c408ef3777f830cf26eaee9b",
+          "7887d4e3f5261a40518fbfba670063000f225ceadbc269410cf6cb83703a892b"
+        ]
+      }
+    },
+    "hop_scaled": {
+      "checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "checkpoint_step": 671744,
+      "group": "hop_scaled",
+      "device": "cpu",
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "batch_size": 16,
+      "alpha_min": 0.25,
+      "k": 0.4,
+      "pre_action_hops": true,
+      "history_action": "original unscaled policy command",
+      "raw_unreachable_sentinel": 19,
+      "critic_queries": 0,
+      "actor_updates": 0,
+      "audit": {
+        "initial_hashes": [
+          "7c759de21e89734e83feda0537823d45893dc0232d919c530c618100caa9c0a5",
+          "c8bed729c2390c3c539aee340922deaf70091a4bef1aed01032f8703e361c2c5"
+        ],
+        "ue_path_hashes": [
+          "f060301e02ccee578e17f7e8ed24dfc1d7ea9cda0dfd38d5731bc0efd0cebc1d",
+          "9253ceafddc81433a7a78977773676fe2a7912b945a5b8e1790e1b9533e5199e"
+        ],
+        "action_rng_sequence_sha256": "76d85499ef268f3e918008b369137b646c9d5ff239777a110e611bbe61b1848f",
+        "first_action_hashes": [
+          "72ad3e312255f18e0db4187a2aa1673ff9519336c408ef3777f830cf26eaee9b",
+          "7887d4e3f5261a40518fbfba670063000f225ceadbc269410cf6cb83703a892b"
+        ]
+      }
+    },
+    "link_safe": {
+      "checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "checkpoint_step": 671744,
+      "device": "cpu",
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "batch_size": 16,
+      "alpha_min": 0.25,
+      "k": 0.4,
+      "margin_m": 5,
+      "parent": "visible strictly lower-hop neighbor; tie: distance then ID",
+      "constraint": "pre-action upstream position",
+      "infeasible": "s=0; flag infeasible",
+      "no_visible_parent": "apply hop scaling only",
+      "history_action": "unscaled raw actor command",
+      "actor_updates": 0,
+      "critic_queries": 0,
+      "audit": {
+        "initial_hashes": [
+          "7c759de21e89734e83feda0537823d45893dc0232d919c530c618100caa9c0a5",
+          "c8bed729c2390c3c539aee340922deaf70091a4bef1aed01032f8703e361c2c5"
+        ],
+        "ue_path_hashes": [
+          "f060301e02ccee578e17f7e8ed24dfc1d7ea9cda0dfd38d5731bc0efd0cebc1d",
+          "9253ceafddc81433a7a78977773676fe2a7912b945a5b8e1790e1b9533e5199e"
+        ],
+        "action_rng_sequence_sha256": "76d85499ef268f3e918008b369137b646c9d5ff239777a110e611bbe61b1848f",
+        "first_action_hashes": [
+          "72ad3e312255f18e0db4187a2aa1673ff9519336c408ef3777f830cf26eaee9b",
+          "7887d4e3f5261a40518fbfba670063000f225ceadbc269410cf6cb83703a892b"
+        ]
+      },
+      "source_sha256": {
+        "/home/mixkle/uav_sac/scripts/diagnose_link_safety.py": "61e47f796474ebd41a8cbb985246ff4a59a39b5ca929b8b9114324faebccac5e",
+        "src/uav_research/link_safety_diagnostic.py": "d403f9042cc213b7352d94ad79f104c5cf44404d3843a43312feaec7af3d6e89",
+        "src/uav_research/hop_speed_diagnostic.py": "ff2fa8b64eef836cdabefa3a2d50160ccfc5a07d3201e6330974a0bec7ec865c"
+      }
+    }
+  },
+  "input_sha256": {
+    "analysis/baseline3_best_hop_speed_025_k04/original/provenance.json": "e026fa503e2e155854e6390fc366903eca77ee859413c5e954023dfbd51b6f86",
+    "analysis/baseline3_best_hop_speed_025_k04/original/step_metrics.npz": "b037f34312b4e484739e2412348fa1d8d6c8fb8bc74628d7bface5ef1f25d4b9",
+    "analysis/baseline3_best_hop_speed_025_k04/original/trace_10000.npz": "e6061ae79156bd0fab9a9e71af231add956d18921667c98125d4658500968b84",
+    "analysis/baseline3_best_hop_speed_025_k04/original/trace_10001.npz": "9d1d5b192cc11a04ac4220cf2eea892fbcd65bd36badba1220bc9550b47265e1",
+    "analysis/baseline3_best_hop_speed_025_k04/hop_scaled/provenance.json": "67347006b5ddccddef33862d15039095f01c93967052696152fff81fbb34eae4",
+    "analysis/baseline3_best_hop_speed_025_k04/hop_scaled/step_metrics.npz": "7f8acfb448a54a65e221e594f74074e369b84eb90d870360c2374f0e0b013f09",
+    "analysis/baseline3_best_hop_speed_025_k04/hop_scaled/trace_10000.npz": "9c7d25739a6879f23c8ddf1ef0346cb8b0d4c0394c82e6fed52e7bfa678b6e6b",
+    "analysis/baseline3_best_hop_speed_025_k04/hop_scaled/trace_10001.npz": "f61774cd724901493ebc47fa9a3ba4d9383bb0ee0d0dda4449a1fb1cce75a4a0",
+    "analysis/baseline3_best_hop_speed_link_safety_delta5/link_safe/provenance.json": "6f30b799368c858723167ba7bda5cb66328cc5caa870fb5547228741fbbf6154",
+    "analysis/baseline3_best_hop_speed_link_safety_delta5/link_safe/step_metrics.npz": "fac793f2d27a749ac8308b84663f4f8a14d18e98c440b71081ddea8e1a24632a",
+    "analysis/baseline3_best_hop_speed_link_safety_delta5/link_safe/trace_10000.npz": "779721f83d327f9eff15abc3c5e896b7f63ce35cf9b95f63a718a148d02edb98",
+    "analysis/baseline3_best_hop_speed_link_safety_delta5/link_safe/trace_10001.npz": "cd70b15c61e50f273bd994713782d36959530bf80ce677ea79039dc284d92eb3"
+  },
+  "old_event": {
+    "source": "analysis/baseline3_best_hop_speed_025_k04/hop_scaled/trace_10000.npz",
+    "source_sha256": "9c7d25739a6879f23c8ddf1ef0346cb8b0d4c0394c82e6fed52e7bfa678b6e6b",
+    "t": 151,
+    "u12_parent": 9,
+    "u12_feasible": false,
+    "u12_scale": 0.0,
+    "distance_9_12": 646.3714684685211,
+    "coverage": 0.68,
+    "connected": 18,
+    "scope": "All-UAV filter on old t150 positions/saved t151 raw commands; old t151 UE fixed; one-step diagnostic only"
+  }
+}

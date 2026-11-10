@@ -1,0 +1,107 @@
+{
+  "captured_at": "2026-11-10T12:10:25.722665+08:00",
+  "kind": "completed_10m_comparison",
+  "files": {
+    "diffusion/step0.pt": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/step0.pt",
+      "sha256": "1da5c46779d8f1d7ac45b234eee6f1a1073effb5ee4de2ab11dbeab031ad3de5",
+      "bytes": 8038611,
+      "env_steps": 0
+    },
+    "diffusion/best.pt": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/best.pt",
+      "sha256": "11fdd37abb123b84bc0c57fea7f84322382bbc1bde78dc5578c96dabc80fffaf",
+      "bytes": 24078645,
+      "env_steps": 7501824
+    },
+    "diffusion/last.pt": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/last.pt",
+      "sha256": "c2fb7a34e4053c4d34c1ac78b63db2c9f6c2f4a14efa9142a9bb8a7f1a5705cc",
+      "bytes": 24078645,
+      "env_steps": 10000000
+    },
+    "diffusion/config.yaml": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/config.yaml",
+      "sha256": "fa3462a06db6eada7ff552b481ceb61d7986c394222fb0276c9c05383b1514da",
+      "bytes": 6565
+    },
+    "diffusion/manifest.json": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/manifest.json",
+      "sha256": "1164692658f8b8ef4be2ea68b8c6001e01e8f60103d3b76664959a8a84ea0b59",
+      "bytes": 508
+    },
+    "diffusion/metadata.json": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/metadata.json",
+      "sha256": "fd900dd985736ba7b7f979c35ead5b2f71bc37c4049ae873d8c85c1a35fc60c4",
+      "bytes": 5055
+    },
+    "diffusion/metrics.csv": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/metrics.csv",
+      "sha256": "97f1610428d47c00bda4a238eac281888696ad7b4b1f308b6be12182bfdadf34",
+      "bytes": 12388266
+    },
+    "diffusion/validation.csv": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/validation.csv",
+      "sha256": "471250c6dd116e7c29bbb3ebc1b05ce17745f2006213943f160229d3cf8f125e",
+      "bytes": 160057
+    },
+    "diffusion/pretrain/summary.json": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/pretrain/summary.json",
+      "sha256": "137e1eee9325ec5af843ea0a07802d488ec58a14e0e84f9c9a00f90f9d74afca",
+      "bytes": 15109
+    },
+    "diffusion/pretrain/history.csv": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/pretrain/history.csv",
+      "sha256": "5077e0009f20ab15b896d3ec940210ccf9860a96531e4d4e592f2cc27b1e08c4",
+      "bytes": 6677
+    },
+    "diffusion/demonstrations/dataset.json": {
+      "source": "/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/demonstrations/dataset.json",
+      "sha256": "aca5fb571e105366d8ad5089447c006d8cd0f99c0403f294632994e7bdac88bb",
+      "bytes": 11047
+    },
+    "gaussian/step0.pt": {
+      "source": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/step0.pt",
+      "sha256": "47debba2bd50968b5b5a1439bf7883a259edb145afb392c64a267c6921a8701f",
+      "bytes": 7899431,
+      "env_steps": 0
+    },
+    "gaussian/best.pt": {
+      "source": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/best.pt",
+      "sha256": "542d2ccbe5f91015b6524c4dfe1b55a7c18da8ed81fa78fb62d25c536d4ba965",
+      "bytes": 23667041,
+      "env_steps": 970752
+    },
+    "gaussian/last.pt": {
+      "source": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/last.pt",
+      "sha256": "52003081ef41a26637b31351a3c53497dd3c3a7c23ecef5db458dc0205a409a4",
+      "bytes": 23667041,
+      "env_steps": 10000000
+    },
+    "gaussian/config.yaml": {
+      "source": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/config.yaml",
+      "sha256": "d6106815195cbc26226783089f51f486bd52b34be0d84d7884f2d71145cddb3e",
+      "bytes": 6573
+    },
+    "gaussian/manifest.json": {
+      "source": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/manifest.json",
+      "sha256": "028b5fc2ff9827ce875e3d9759acb32709a47adc84e79cb114b6830f2b066518",
+      "bytes": 512
+    },
+    "gaussian/metadata.json": {
+      "source": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/metadata.json",
+      "sha256": "c0691431dfc7260f862dda67e029c340eb7cc58bdcf42cc2a7ae1da6551ff1fd",
+      "bytes": 4500
+    },
+    "gaussian/metrics.csv": {
+      "source": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/metrics.csv",
+      "sha256": "42708feacb0221ff6ef3910043c3bf11ce0ccf81a18792d5a2626c6df4586fc0",
+      "bytes": 10267821
+    },
+    "gaussian/validation.csv": {
+      "source": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/validation.csv",
+      "sha256": "e58c63623cb5504d01d106babf7ae8b6f5b51f5c7302145394906e50edc0c6fa",
+      "bytes": 158604
+    }
+  }
+}

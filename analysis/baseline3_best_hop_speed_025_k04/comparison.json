@@ -1,0 +1,425 @@
+{
+  "summary": {
+    "original": {
+      "coverage": 0.5863125,
+      "final_coverage": 0.615,
+      "last100_coverage": 0.6102104166666666,
+      "max_drop_1": 0.46874999999999994,
+      "max_drop_5": 0.47958333333333336,
+      "max_drawdown": 0.5610416666666667,
+      "peak_coverage": 0.7691666666666667,
+      "peak_step": 219.125,
+      "min20_coverage": 0.29576041666666664,
+      "drop_events_5pp": 56.75,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 28.9375,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 12.78125,
+      "any_drop_20pp": 0.9375,
+      "early51_150_coverage": 0.5978395833333334,
+      "maintain_coverage": 0.01237083333333333,
+      "throughput_mbps": 481.46931730765516,
+      "last100_throughput_mbps": 511.73370228339854,
+      "disconnection_ratio": 0.11741319444444444,
+      "robustness": 0.5259937210648148,
+      "sensing": 0.8628796875,
+      "boundary150_fraction": 0.05051649305555556,
+      "reflection_fraction": 0.0041796875,
+      "close_neighbor_fraction": 0.05572916666666666,
+      "nearest_neighbor_m": 425.23653939498024,
+      "speed_mps": 15.856424086449161,
+      "worst_fault_coverage": 0.3432593749999999,
+      "return": 260.2033635897416,
+      "mean_curve_peak_step": 359,
+      "mean_curve_peak_coverage": 0.6610416666666667,
+      "final_below30_scenes": 1,
+      "scenes_with_10pp_drop": 32,
+      "first100_coverage": 0.5005729166666667,
+      "post150_coverage": 0.616435,
+      "speed_factor_mean": 1.0,
+      "newly_disconnected_per_step": 0.5546875
+    },
+    "hop_scaled": {
+      "coverage": 0.5773015625,
+      "final_coverage": 0.6458333333333333,
+      "last100_coverage": 0.6400708333333334,
+      "max_drop_1": 0.350625,
+      "max_drop_5": 0.35062499999999996,
+      "max_drawdown": 0.39229166666666665,
+      "peak_coverage": 0.7429166666666667,
+      "peak_step": 288.6875,
+      "min20_coverage": 0.30221875,
+      "drop_events_5pp": 57.0625,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 24.65625,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 7.59375,
+      "any_drop_20pp": 0.84375,
+      "early51_150_coverage": 0.5468083333333333,
+      "maintain_coverage": 0.09326250000000003,
+      "throughput_mbps": 472.1981010731372,
+      "last100_throughput_mbps": 528.0996063672899,
+      "disconnection_ratio": 0.09560763888888889,
+      "robustness": 0.5212637731481481,
+      "sensing": 0.8617765625,
+      "boundary150_fraction": 0.08384114583333335,
+      "reflection_fraction": 0.0031293402777777778,
+      "close_neighbor_fraction": 0.04787760416666667,
+      "nearest_neighbor_m": 450.36043895034084,
+      "speed_mps": 8.419799821789788,
+      "worst_fault_coverage": 0.3547421875,
+      "return": 256.1045237239007,
+      "mean_curve_peak_step": 389,
+      "mean_curve_peak_coverage": 0.6649999999999999,
+      "final_below30_scenes": 0,
+      "scenes_with_10pp_drop": 32,
+      "first100_coverage": 0.44068124999999997,
+      "post150_coverage": 0.6306608333333333,
+      "speed_factor_mean": 0.5165049742284075,
+      "newly_disconnected_per_step": 0.42453125
+    }
+  },
+  "paired": [
+    {
+      "metric": "coverage",
+      "difference": -0.009010937499999998,
+      "low": -0.030822864583333342,
+      "high": 0.013096484374999976
+    },
+    {
+      "metric": "first100_coverage",
+      "difference": -0.059891666666666704,
+      "low": -0.07731307291666667,
+      "high": -0.042832864583333366
+    },
+    {
+      "metric": "post150_coverage",
+      "difference": 0.014225833333333372,
+      "low": -0.01808774999999996,
+      "high": 0.04555762500000005
+    },
+    {
+      "metric": "last100_coverage",
+      "difference": 0.029860416666666667,
+      "low": -0.008385312500000007,
+      "high": 0.06775536458333331
+    },
+    {
+      "metric": "final_coverage",
+      "difference": 0.030833333333333324,
+      "low": -0.011255208333333346,
+      "high": 0.07354687499999997
+    },
+    {
+      "metric": "throughput_mbps",
+      "difference": -9.271216234517958,
+      "low": -32.6446435507708,
+      "high": 15.050755504511967
+    },
+    {
+      "metric": "return",
+      "difference": -4.098839865840957,
+      "low": -13.90537420703868,
+      "high": 6.0387507838296255
+    },
+    {
+      "metric": "disconnection_ratio",
+      "difference": -0.02180555555555555,
+      "low": -0.03608246527777777,
+      "high": -0.008154296875000026
+    },
+    {
+      "metric": "max_drop_1",
+      "difference": -0.118125,
+      "low": -0.178125,
+      "high": -0.05979166666666666
+    },
+    {
+      "metric": "max_drop_5",
+      "difference": -0.1289583333333333,
+      "low": -0.18334375,
+      "high": -0.07832812500000003
+    },
+    {
+      "metric": "drop_events_10pp",
+      "difference": -4.28125,
+      "low": -9.59453125,
+      "high": 1.09375
+    },
+    {
+      "metric": "maintain_coverage",
+      "difference": 0.0808916666666667,
+      "low": 0.039719635416666677,
+      "high": 0.12031833333333337
+    },
+    {
+      "metric": "boundary150_fraction",
+      "difference": 0.03332465277777778,
+      "low": 0.019568576388888894,
+      "high": 0.04660633680555554
+    },
+    {
+      "metric": "speed_mps",
+      "difference": -7.436624264659373,
+      "low": -7.947728850458562,
+      "high": -6.884881021135908
+    }
+  ],
+  "sources": {
+    "original": {
+      "checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "checkpoint_step": 671744,
+      "group": "original",
+      "device": "cpu",
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "batch_size": 16,
+      "alpha_min": 0.25,
+      "k": 0.4,
+      "pre_action_hops": true,
+      "history_action": "original unscaled policy command",
+      "raw_unreachable_sentinel": 19,
+      "critic_queries": 0,
+      "actor_updates": 0,
+      "audit": {
+        "initial_hashes": [
+          "7c759de21e89734e83feda0537823d45893dc0232d919c530c618100caa9c0a5",
+          "c8bed729c2390c3c539aee340922deaf70091a4bef1aed01032f8703e361c2c5"
+        ],
+        "ue_path_hashes": [
+          "f060301e02ccee578e17f7e8ed24dfc1d7ea9cda0dfd38d5731bc0efd0cebc1d",
+          "9253ceafddc81433a7a78977773676fe2a7912b945a5b8e1790e1b9533e5199e"
+        ],
+        "action_rng_sequence_sha256": "76d85499ef268f3e918008b369137b646c9d5ff239777a110e611bbe61b1848f",
+        "first_action_hashes": [
+          "72ad3e312255f18e0db4187a2aa1673ff9519336c408ef3777f830cf26eaee9b",
+          "7887d4e3f5261a40518fbfba670063000f225ceadbc269410cf6cb83703a892b"
+        ]
+      }
+    },
+    "hop_scaled": {
+      "checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "checkpoint_step": 671744,
+      "group": "hop_scaled",
+      "device": "cpu",
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "batch_size": 16,
+      "alpha_min": 0.25,
+      "k": 0.4,
+      "pre_action_hops": true,
+      "history_action": "original unscaled policy command",
+      "raw_unreachable_sentinel": 19,
+      "critic_queries": 0,
+      "actor_updates": 0,
+      "audit": {
+        "initial_hashes": [
+          "7c759de21e89734e83feda0537823d45893dc0232d919c530c618100caa9c0a5",
+          "c8bed729c2390c3c539aee340922deaf70091a4bef1aed01032f8703e361c2c5"
+        ],
+        "ue_path_hashes": [
+          "f060301e02ccee578e17f7e8ed24dfc1d7ea9cda0dfd38d5731bc0efd0cebc1d",
+          "9253ceafddc81433a7a78977773676fe2a7912b945a5b8e1790e1b9533e5199e"
+        ],
+        "action_rng_sequence_sha256": "76d85499ef268f3e918008b369137b646c9d5ff239777a110e611bbe61b1848f",
+        "first_action_hashes": [
+          "72ad3e312255f18e0db4187a2aa1673ff9519336c408ef3777f830cf26eaee9b",
+          "7887d4e3f5261a40518fbfba670063000f225ceadbc269410cf6cb83703a892b"
+        ]
+      }
+    }
+  },
+  "alpha_by_hop": {
+    "1": 0.25,
+    "2": 0.49744470417776765,
+    "3": 0.663311849673484,
+    "4": 0.7744959222779728,
+    "5": 0.8490248349446433,
+    "6": 0.8989830591143522,
+    "7": 0.9324710582396503,
+    "8": 0.9549187353549614,
+    "9": 0.9699658633122901,
+    "10": 0.9800522548173507,
+    "11": 0.9868133652353563,
+    "12": 0.991345473082006,
+    "13": 0.9943834358224107,
+    "14": 0.9964198431464133,
+    "15": 0.9977848877975861,
+    "16": 0.9986999045910009,
+    "17": 0.999313258690086,
+    "18": 0.999724402238021,
+    "19": 1.0
+  },
+  "data_sha256": {
+    "original/episodes.csv": "9a400c87d45dccc56e331f18a14eb87f7f5e0236ec364038c51da581b2a038c6",
+    "original/provenance.json": "e026fa503e2e155854e6390fc366903eca77ee859413c5e954023dfbd51b6f86",
+    "original/trace_10000.npz": "e6061ae79156bd0fab9a9e71af231add956d18921667c98125d4658500968b84",
+    "original/step_metrics.npz": "b037f34312b4e484739e2412348fa1d8d6c8fb8bc74628d7bface5ef1f25d4b9",
+    "original/summary.json": "f9ff27b0c142dc4623b96c50b474a73f045b164bec16ca91e2c3109534eae874",
+    "original/trace_10001.npz": "9d1d5b192cc11a04ac4220cf2eea892fbcd65bd36badba1220bc9550b47265e1",
+    "hop_scaled/episodes.csv": "7402d7715adf0fa3605829d16cbb61aab3a5ff83466494984064e1ffa02aaa29",
+    "hop_scaled/provenance.json": "67347006b5ddccddef33862d15039095f01c93967052696152fff81fbb34eae4",
+    "hop_scaled/trace_10000.npz": "9c7d25739a6879f23c8ddf1ef0346cb8b0d4c0394c82e6fed52e7bfa678b6e6b",
+    "hop_scaled/step_metrics.npz": "7f8acfb448a54a65e221e594f74074e369b84eb90d870360c2374f0e0b013f09",
+    "hop_scaled/summary.json": "18bc1555fc54e23457511b0ab4471dc56938e8007c1d7d3f93d28c8b848a7cba",
+    "hop_scaled/trace_10001.npz": "f61774cd724901493ebc47fa9a3ba4d9383bb0ee0d0dda4449a1fb1cce75a4a0"
+  },
+  "fixed_scenes": {
+    "original/10000": [
+      {
+        "t": 0,
+        "coverage": 0.29333333333333333,
+        "connected": 10
+      },
+      {
+        "t": 150,
+        "coverage": 0.7,
+        "connected": 18
+      },
+      {
+        "t": 200,
+        "coverage": 0.6333333333333333,
+        "connected": 18
+      },
+      {
+        "t": 400,
+        "coverage": 0.7,
+        "connected": 18
+      }
+    ],
+    "hop_scaled/10000": [
+      {
+        "t": 0,
+        "coverage": 0.29333333333333333,
+        "connected": 10
+      },
+      {
+        "t": 150,
+        "coverage": 0.6933333333333334,
+        "connected": 18
+      },
+      {
+        "t": 200,
+        "coverage": 0.74,
+        "connected": 18
+      },
+      {
+        "t": 400,
+        "coverage": 0.7666666666666667,
+        "connected": 18
+      }
+    ],
+    "original/10001": [
+      {
+        "t": 0,
+        "coverage": 0.4266666666666667,
+        "connected": 14
+      },
+      {
+        "t": 150,
+        "coverage": 0.6266666666666667,
+        "connected": 15
+      },
+      {
+        "t": 200,
+        "coverage": 0.48,
+        "connected": 13
+      },
+      {
+        "t": 400,
+        "coverage": 0.4666666666666667,
+        "connected": 16
+      }
+    ],
+    "hop_scaled/10001": [
+      {
+        "t": 0,
+        "coverage": 0.4266666666666667,
+        "connected": 14
+      },
+      {
+        "t": 150,
+        "coverage": 0.68,
+        "connected": 16
+      },
+      {
+        "t": 200,
+        "coverage": 0.6533333333333333,
+        "connected": 16
+      },
+      {
+        "t": 400,
+        "coverage": 0.7266666666666667,
+        "connected": 18
+      }
+    ]
+  }
+}

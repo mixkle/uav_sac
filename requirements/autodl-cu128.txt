@@ -1,0 +1,13 @@
+# Direct dependency versions validated on the 2026-10-27 AutoDL image.
+# Python 3.12.3; complete installed inventory is in the deployment artifacts.
+# The deployed venv reuses image-provided torch/CUDA via --system-site-packages.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.8.0+cu128
+numpy==2.2.6
+numba==0.61.2
+llvmlite==0.44.0
+PyYAML==6.0.2
+matplotlib==3.10.5
+tensorboard==2.20.0
+psutil==7.0.0
+pytest==8.4.2

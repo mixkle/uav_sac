@@ -35,8 +35,8 @@ def test_unclipped_loss_retains_gradient_when_clipped_loss_is_flat():
 
 
 def test_only_one_experimental_config_difference():
-    base = load_config("configs/discrete_mappo_ablation_c_mobile_coverage.yaml")
-    variant = load_config("configs/discrete_mappo_critic_no_value_clip.yaml")
+    base = load_config("tests/fixtures/configs/discrete_mappo_ablation_c_mobile_coverage.yaml")
+    variant = load_config("tests/fixtures/configs/discrete_mappo_critic_no_value_clip.yaml")
     assert base.algo.value_clipping is True
     assert variant.algo.value_clipping is False
     variant.algo.value_clipping = True

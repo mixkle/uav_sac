@@ -101,6 +101,8 @@ def load_checkpoint(path, device="cpu", *, mmap=False):
     if target.is_dir():
         target = target / "metadata.pt"
     data = torch.load(target, map_location=device, weights_only=False, mmap=mmap)
+    if str(data.get("kind", "")).startswith("dppo_"):
+        raise ValueError("Diffusion DPPO uses a separate observation/action protocol; use the dppo commands")
     if (
         data.get("kind") in ("model", "full", "actor")
         and data.get("observation_version") != OBSERVATION_VERSION
@@ -326,15 +328,45 @@ METRIC_FIELDS = [
     "estimated_cost",
 ]
 
+TIME_FACTOR_METRIC_FIELDS = [
+    "critic_value_clip_fraction", "critic_clipped_loss_fraction",
+    "critic_average_prediction_mean", "critic_average_prediction_outside",
+    "critic_average_target_mean", "critic_average_target_outside",
+    "critic_return_normalizer_mean", "critic_return_normalizer_std",
+    "critic_average_normalizer_mean", "critic_average_normalizer_std",
+]
+
+SAC_TIME_FACTOR_METRIC_FIELDS = [
+    "sac_q1_mean", "sac_q2_mean", "sac_q_disagreement",
+    "sac_average_q_mean", "sac_average_target_mean", "sac_target_entropy_term",
+]
+
 
 class CSVLogger:
-    def __init__(self, path, fields):
+    def __init__(self, path, fields, additive_defaults=None):
         path = Path(path)
         exists = path.exists() and path.stat().st_size > 0
         if exists:
             with path.open() as file:
-                if next(csv.reader(file)) != fields:
+                previous = next(csv.reader(file))
+            if previous != fields:
+                added = set(fields) - set(previous)
+                if not additive_defaults or set(previous) - set(fields) or not added <= set(additive_defaults):
                     raise ValueError(f"CSV schema changed: {path}")
+                # Additive legacy-log migration: preserve every original row/value.
+                temporary = path.with_suffix(path.suffix + ".schema.tmp")
+                try:
+                    with path.open() as source, temporary.open("w", newline="") as target:
+                        writer = csv.DictWriter(target, fieldnames=fields)
+                        writer.writeheader()
+                        for row in csv.DictReader(source):
+                            for key in added:
+                                default = additive_defaults[key]
+                                row[key] = default(row) if callable(default) else default
+                            writer.writerow(row)
+                    os.replace(temporary, path)
+                finally:
+                    temporary.unlink(missing_ok=True)
         self.file = path.open("a", newline="")
         self.writer = csv.DictWriter(self.file, fieldnames=fields, extrasaction="raise")
         if not exists:

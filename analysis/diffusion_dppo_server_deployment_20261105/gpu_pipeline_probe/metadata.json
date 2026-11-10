@@ -1,0 +1,159 @@
+{
+  "config_hash": "0e0b44b31f9014bfb16a128f1e9093c034a4144cfbc2eef97c2c1e1ea19045d7",
+  "source_hash": "2087f5c5f9135a78cc59b1e3ea417edb0ada47b63dea9e4f2c3afe4522495d4a",
+  "python": "3.11.16 (main, Sep 29 2026, 14:59:26) [Clang 22.1.3 ]",
+  "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+  "cpu": "x86_64",
+  "logical_cpus": 48,
+  "container_limits": {
+    "affinity_cpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "dependencies": {
+    "numpy": "2.2.6",
+    "numba": "0.61.2",
+    "torch": "2.7.1+cu118",
+    "PyYAML": "6.0.2",
+    "matplotlib": "3.10.8",
+    "tensorboard": "2.20.0",
+    "pytest": "8.4.2"
+  },
+  "command": [
+    "/home/dym/uav_sac/src/uav_research/__main__.py",
+    "dppo",
+    "all",
+    "--config",
+    "deployment/gpu_pipeline_probe.yaml",
+    "--output",
+    "deployment/gpu_pipeline_probe"
+  ],
+  "seed": 0,
+  "random_streams": {
+    "worker_initialization_seeds": [
+      3325685309,
+      4103648563,
+      3657048384,
+      2522707060,
+      1295253812,
+      3842504751,
+      1372297251,
+      1354057513,
+      1978847091,
+      908424420,
+      261685865,
+      556245047,
+      1350570883,
+      3346831737,
+      1894500568,
+      2157346586
+    ],
+    "worker_movement_seed_sequences": [
+      [
+        3325685309,
+        201
+      ],
+      [
+        4103648563,
+        201
+      ],
+      [
+        3657048384,
+        201
+      ],
+      [
+        2522707060,
+        201
+      ],
+      [
+        1295253812,
+        201
+      ],
+      [
+        3842504751,
+        201
+      ],
+      [
+        1372297251,
+        201
+      ],
+      [
+        1354057513,
+        201
+      ],
+      [
+        1978847091,
+        201
+      ],
+      [
+        908424420,
+        201
+      ],
+      [
+        261685865,
+        201
+      ],
+      [
+        556245047,
+        201
+      ],
+      [
+        1350570883,
+        201
+      ],
+      [
+        3346831737,
+        201
+      ],
+      [
+        1894500568,
+        201
+      ],
+      [
+        2157346586,
+        201
+      ]
+    ],
+    "replay_seed": 300000,
+    "exploration_seed_sequence": [
+      0,
+      102
+    ],
+    "validation_seeds": [
+      10000,
+      10001
+    ],
+    "test_seeds": [
+      20000
+    ]
+  },
+  "created_at": "2026-11-05T10:02:22Z",
+  "provenance": {
+    "pretrained_path": "/home/dym/uav_sac/deployment/gpu_pipeline_probe/pretrain/best.pt",
+    "pretrained_sha256": "b0995725d00a3dfa9b0e153942f19892036cbb54dd518f15d233c5e350c7c5ac",
+    "pretraining_epoch": 1,
+    "pretraining_provenance": {
+      "dataset_sha256": "4d7b290d544724b18310a446ac7e7c3ed98dd038ad491925ae0153cac1fae62e",
+      "dataset_path": "/home/dym/uav_sac/deployment/gpu_pipeline_probe/demonstrations",
+      "source_hash": "2087f5c5f9135a78cc59b1e3ea417edb0ada47b63dea9e4f2c3afe4522495d4a"
+    }
+  },
+  "actor_parameters": 324867,
+  "critic_parameters": 1677057,
+  "probability": "coordinate sum; per UAV, per DDPM step ratio; mean over samples/UAV/steps",
+  "resource_allocation": "service slots and association only",
+  "reset": "baseline_greedy_then_topk"
+}

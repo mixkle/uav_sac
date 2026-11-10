@@ -10,7 +10,7 @@ from uav_research.actions import DISCRETE_DIRECTIONS
 
 
 def test_reference_scene_configs_and_continuous_defaults():
-    configs = [load_config(f"configs/{name}.yaml") for name in (
+    configs = [load_config(f"tests/fixtures/configs/{name}.yaml") for name in (
         "discrete_mappo", "discrete_mappo_wsl_50k", "discrete_mappo_no_robustness"
     )]
     # WSL overrides throughput reward while sharing the physical scene.
@@ -22,7 +22,7 @@ def test_reference_scene_configs_and_continuous_defaults():
     assert (e.fixed_obs_dim, e.fixed_obs_dim + 33, e.state_dim) == (101, 134, 6292)
     assert (e.horizon, e.max_speed * e.dt, e.robustness_weight) == (400, 30, 0)
     assert e.user_initialization == e.uav_initialization == "uniform"
-    for path in ("configs/main.yaml", "configs/wsl_50k.yaml"):
+    for path in ("tests/fixtures/configs/main.yaml", "tests/fixtures/configs/wsl_50k.yaml"):
         old = load_config(path).env
         assert (old.width, old.num_uavs, old.num_users, old.num_bs) == (1600, 16, 180, 2)
         assert old.user_initialization == "gaussian_mixture"
@@ -30,7 +30,7 @@ def test_reference_scene_configs_and_continuous_defaults():
 
 
 def test_uniform_users_ignore_inactive_cluster_settings():
-    cfg = load_config("configs/discrete_mappo.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo.yaml")
     # Inactive Gaussian fields must not constrain uniform sampling.
     cfg.env.user_initial_margin_fraction = .5
     cfg.env.user_cluster_std_fraction = 0
@@ -60,7 +60,7 @@ def test_uniform_users_ignore_inactive_cluster_settings():
 
 @pytest.mark.parametrize("backend", ["batch", "process"])
 def test_three_gateway_physics_match_reference_and_vector(backend):
-    cfg = load_config("configs/discrete_mappo_wsl_50k.yaml")
+    cfg = load_config("tests/fixtures/configs/discrete_mappo_wsl_50k.yaml")
     e = replace(cfg.env, horizon=4)
     scalar = [UAVEnvironment(e), UAVEnvironment(replace(e, backend="numpy"))]
     for env in scalar:
@@ -91,7 +91,7 @@ def test_three_gateway_physics_match_reference_and_vector(backend):
 
 
 def test_thirty_meter_actions_and_four_hundred_step_termination():
-    e = load_config("configs/discrete_mappo.yaml").env
+    e = load_config("tests/fixtures/configs/discrete_mappo.yaml").env
     env = UAVEnvironment(e)
     env.reset(30012)
     env.uav_xy[:] = [1750, 1750]

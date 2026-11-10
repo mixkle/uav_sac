@@ -1,0 +1,52 @@
+{
+  "device": "cuda:0",
+  "vector_steps": 32,
+  "environments": 16,
+  "joint_transitions": 512,
+  "inference_seconds": 0.7979844734072685,
+  "environment_seconds": 1.3521721698343754,
+  "results": [
+    {
+      "microbatch_agents": 128,
+      "update_seconds": 19.52591228298843,
+      "estimated_online_training_seconds_excluding_validation": 42392.2091193567,
+      "peak_rss_mib": 1249.34375,
+      "sum_process_peak_rss_mib": 1249.34375,
+      "peak_gpu_mib": 154.90380859375
+    },
+    {
+      "microbatch_agents": 256,
+      "update_seconds": 10.143455693498254,
+      "estimated_online_training_seconds_excluding_validation": 24040.12403031392,
+      "peak_rss_mib": 1249.40625,
+      "sum_process_peak_rss_mib": 1249.40625,
+      "peak_gpu_mib": 185.44140625
+    },
+    {
+      "microbatch_agents": 512,
+      "update_seconds": 5.678132425993681,
+      "estimated_online_training_seconds_excluding_validation": 15305.951719074976,
+      "peak_rss_mib": 1249.44140625,
+      "sum_process_peak_rss_mib": 1249.44140625,
+      "peak_gpu_mib": 242.81201171875
+    },
+    {
+      "microbatch_agents": 1024,
+      "update_seconds": 3.7611357253044844,
+      "estimated_online_training_seconds_excluding_validation": 11556.306172526907,
+      "peak_rss_mib": 1249.515625,
+      "sum_process_peak_rss_mib": 1249.515625,
+      "peak_gpu_mib": 356.974609375
+    },
+    {
+      "microbatch_agents": 2048,
+      "update_seconds": 2.8361442629247904,
+      "estimated_online_training_seconds_excluding_validation": 9747.022872112226,
+      "peak_rss_mib": 1249.625,
+      "sum_process_peak_rss_mib": 1249.625,
+      "peak_gpu_mib": 533.6904296875
+    }
+  ],
+  "note": "Rough linear estimate; short minibatches and excluded validation/IO limit accuracy",
+  "actor_parameters": 324867
+}

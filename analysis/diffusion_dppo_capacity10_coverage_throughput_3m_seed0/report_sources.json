@@ -1,0 +1,98 @@
+{
+  "labels": [
+    "step0",
+    "best_1m",
+    "last_1m",
+    "best",
+    "last",
+    "teacher_topk",
+    "baseline_best",
+    "baseline_last"
+  ],
+  "sources": {
+    "step0": {
+      "path": "/home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/step0.pt",
+      "sha256": "0a764cf4e143d98782dfa7308cb597709c31d3fc1402711a3c8d550fc7de1540",
+      "env_steps": 0,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/step0"
+    },
+    "best_1m": {
+      "path": "/home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/best.pt",
+      "sha256": "55e2962a29cbfc44276d04fecde6764baad20c2564a16b7abbfa3ad69bb6519a",
+      "env_steps": 40960,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/best"
+    },
+    "last_1m": {
+      "path": "/home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/last.pt",
+      "sha256": "c4943b4c4eebf2a06626f3c0e2774515dcc3319913f35c2490dbafe5d051bb48",
+      "env_steps": 1000000,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/last"
+    },
+    "teacher_topk": {
+      "path": "/home/dym/uav_sac/runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "step": 671744,
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/teacher_topk"
+    },
+    "baseline_best": {
+      "path": "/home/dym/uav_sac/runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "env_steps": 671744,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/baseline_best"
+    },
+    "baseline_last": {
+      "path": "/home/dym/uav_sac/runs/mappo_coverage_throughput_capacity10_1m_seed0/last.pt",
+      "sha256": "a0e9768b8c2350e0bf348d09e4ce7f3a68036eb41ffc0c633e9a8db3be6b6ea5",
+      "env_steps": 1000000,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/baseline_last"
+    },
+    "best": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0/best.pt",
+      "sha256": "7fc54c258b66115633bd60cae8f5b89ebfa11995c43848740018e81daa9651e2",
+      "env_steps": 2792000
+    },
+    "last": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0/last.pt",
+      "sha256": "14bbfb409524f9f5ee23ed4bc65c3183e84d8608f30a4ec849c8c70fcd7efeee",
+      "env_steps": 3000000
+    }
+  },
+  "validation_seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019,
+    10020,
+    10021,
+    10022,
+    10023,
+    10024,
+    10025,
+    10026,
+    10027,
+    10028,
+    10029,
+    10030,
+    10031
+  ],
+  "action_seed": 880001,
+  "moment_repeats": 64,
+  "run": "runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0",
+  "cached_reference_evaluations": true
+}

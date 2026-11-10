@@ -1,0 +1,100 @@
+{
+  "labels": [
+    "baseline_best",
+    "baseline_last",
+    "best",
+    "last"
+  ],
+  "sources": {
+    "baseline_best": {
+      "path": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "env_steps": 671744,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_5m_seed0/baseline_best",
+      "evaluation_reused": true,
+      "evaluation_device": "cuda:0"
+    },
+    "baseline_last": {
+      "path": "runs/mappo_coverage_throughput_capacity10_1m_seed0/last.pt",
+      "sha256": "a0e9768b8c2350e0bf348d09e4ce7f3a68036eb41ffc0c633e9a8db3be6b6ea5",
+      "env_steps": 1000000,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_5m_seed0/baseline_last",
+      "evaluation_reused": true,
+      "evaluation_device": "cuda:0"
+    },
+    "best": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/best.pt",
+      "sha256": "6f36a11f71cd719da87e04c9ac1f3c1cf1c0386758c7caae9c8ceeabf5985099",
+      "env_steps": 9550656,
+      "device": "cuda:0",
+      "physical_gpu": 0
+    },
+    "last": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/last.pt",
+      "sha256": "acfc7e3feb3282e08ff2775c5c22e61793b0ebaf2d7caf8efb86cfe13080e5b2",
+      "env_steps": 10000000,
+      "device": "cuda:0",
+      "physical_gpu": 2
+    },
+    "training_metrics.csv": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/metrics.csv",
+      "sha256": "795e333dd9a87e347c40064c3bc0ba182465c8bac32ddafaca50d681a4384260"
+    },
+    "training_validation.csv": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/validation.csv",
+      "sha256": "33ee073b17b8a6c5d1afd1e2e504ee0f62785d9e8581162b06adb0488c2c0e6c"
+    }
+  },
+  "validation_seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019,
+    10020,
+    10021,
+    10022,
+    10023,
+    10024,
+    10025,
+    10026,
+    10027,
+    10028,
+    10029,
+    10030,
+    10031
+  ],
+  "action_seed": 880001,
+  "moment_repeats": 64,
+  "run": "runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0",
+  "palette": {
+    "baseline": "#009E73",
+    "dppo": "#0072B2",
+    "secondary": "#E69F00",
+    "neutral": "#555555"
+  },
+  "comparison_groups": [
+    "baseline",
+    "10M DPPO"
+  ],
+  "report_script": {
+    "path": "scripts/report_dppo_baseline_comparison.py",
+    "sha256": "acfa0e95c0a005fa19a944ff1b5fbed82144b4549cd91df6ab994125839e7766"
+  },
+  "date": "2026-11-07"
+}

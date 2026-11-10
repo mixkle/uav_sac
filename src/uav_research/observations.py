@@ -7,6 +7,21 @@ import torch
 OBSERVATION_VERSION = "beacon-set-v2"
 
 
+def history_specification(cfg):
+    """Extra fixed features; absence in historical artifacts means no history."""
+    if cfg.observation_history == "none":
+        return {"mode": "none"}
+    if cfg.history_motion_source == "post_reflection_displacement":
+        return dict(mode="one_step", version=2,
+            fields=["previous_actual_dx", "previous_actual_dy", "previous_hop", "previous_sensed_count"],
+            action="post_reflection_displacement", motion_scale="max_speed*dt",
+            hop_scale=cfg.num_uavs+1, count_scale=cfg.capacity)
+    return dict(mode="one_step", version=1,
+                fields=["previous_command_x", "previous_command_y", "previous_hop", "previous_sensed_count"],
+                action="normalized_command_before_boundary", hop_scale=cfg.num_uavs + 1,
+                count_scale=cfg.capacity)
+
+
 @dataclass
 class TensorObservation:
     fixed: torch.Tensor
@@ -25,6 +40,27 @@ class TensorObservation:
         return TensorObservation(
             *(x.pin_memory() for x in (self.fixed, self.users, self.lengths))
         )
+
+    def split_agents(self):
+        """Preserve batch axes and one UAV axis; UE rows remain UAV-local.
+
+        The row ownership map is built once for the whole actor bank, not once
+        per user or per actor. This also keeps zero-length groups explicit.
+        """
+        if self.fixed.ndim < 2:
+            raise ValueError("Expected [...,U,F] fixed observation")
+        u = self.fixed.shape[-2]
+        lengths = self.lengths.reshape(-1, u)
+        owner = torch.repeat_interleave(
+            torch.arange(u, device=self.lengths.device).repeat(len(lengths)),
+            self.lengths,
+            output_size=len(self.users),
+        )
+        return [
+            TensorObservation(self.fixed[..., i:i+1, :], self.users[owner == i],
+                              lengths[:, i].contiguous())
+            for i in range(u)
+        ]
 
 
 @dataclass

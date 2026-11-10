@@ -12,7 +12,7 @@ from .config import Config, save_config, config_from_dict
 from .environment import uniform_disk
 from .evaluate import evaluate
 from .replay import JointReplay
-from .observations import OBSERVATION_VERSION, stack_observations
+from .observations import OBSERVATION_VERSION, stack_observations, history_specification
 from .checkpoints import save_full, restore_replay
 import shutil
 import psutil
@@ -28,13 +28,19 @@ from .runtime import (
     memory_stats,
     CSVLogger,
     METRIC_FIELDS,
+    TIME_FACTOR_METRIC_FIELDS,
+    SAC_TIME_FACTOR_METRIC_FIELDS,
     resolve_output,
     validate_resume_output,
 )
 from .vector import VectorEnvironment
+from .boundary import BOUNDARY_METRICS
 
 
 def train(cfg: Config, output, resume=None):
+    if cfg.algo.name == "diffusion_dppo":
+        from .diffusion_dppo.runner import train_online
+        return train_online(cfg, resolve_output(output), resume)
     cfg.validate()
     if cfg.run.total_steps % cfg.run.num_envs:
         raise ValueError(
@@ -87,6 +93,7 @@ def train(cfg: Config, output, resume=None):
             "validation_seeds",
             "test_seeds",
             "eval_interval",
+            "best_metric",
         ):
             if previous["run"][key] != getattr(cfg.run, key):
                 raise ValueError(f"Resume changed run.{key}")
@@ -109,7 +116,7 @@ def train(cfg: Config, output, resume=None):
 
                     candidate = json.loads((origin / "best_selection.json").read_text())
                     if (
-                        candidate["validation_return"] == restored["best_score"]
+                        candidate.get("selection_score", candidate["validation_return"]) == restored["best_score"]
                         and candidate["env_steps"] <= restored["env_steps"]
                     ):
                         best_model = load_checkpoint(origin / "best.pt")
@@ -135,8 +142,14 @@ def train(cfg: Config, output, resume=None):
     history.append({**session_metadata, "resume_from": str(resume) if resume else None})
     atomic_json(history_path, history)
     atomic_json(output / "metadata.json", session_metadata)
+    agent_fields = ([f"agent_{i}_{key}" for i in range(cfg.env.num_uavs)
+                     for key in ("coverage", "actor_loss", "entropy", "ppo_approx_kl", "ppo_clip_fraction",
+                                 "actor_grad_norm", "encoder_grad_norm", "history_input_grad_norm")]
+                    if cfg.algo.name == "mappo" else [])
     fields = (
-        METRIC_FIELDS
+        METRIC_FIELDS + BOUNDARY_METRICS
+        + (["history_input_grad_norm", "history_input_weight_norm"]
+           if cfg.env.observation_history == "one_step" else [])
         + (
             [f"action_{i}_frequency" for i in range(9)]
             + ["hover_fraction", "categorical_entropy", "max_action_probability"]
@@ -148,16 +161,24 @@ def train(cfg: Config, output, resume=None):
             for g in range(cfg.env.num_bs)
             for key in (f"bs_{g}_direct_uavs", f"bs_{g}_only_reachable")
         ]
+        + ((SAC_TIME_FACTOR_METRIC_FIELDS if cfg.algo.name == "sac" else TIME_FACTOR_METRIC_FIELDS)
+           if cfg.algo.critic_parameterization == "time_factor" else [])
+        + agent_fields
     )
-    logger = CSVLogger(output / "metrics.csv", fields)
+    additive_defaults = {key: "" for key in BOUNDARY_METRICS}
+    additive_defaults.update({key: "" for key in agent_fields})
+    additive_defaults.update(task_reward=lambda row: row.get("reward", ""),
+                             boundary_cost="", boundary_penalty=0.)
+    logger = CSVLogger(output / "metrics.csv", fields, additive_defaults=additive_defaults)
     validation_metrics = [
         "coverage", "discovery_fraction", "disconnection_ratio", "reward_primary",
-        "throughput_bps", "robustness", "retention_ratio", "return", "worst_fault_coverage",
+        "throughput_bps", "robustness", "retention_ratio", "return", "task_return", "boundary_penalty_return", "boundary_cost", "worst_fault_coverage",
         "user_displacement_mean", "uav_nearest_neighbor_mean", "uav_close_neighbor_fraction",
     ]
     eval_logger = CSVLogger(
         output / "validation.csv",
         ["env_steps", "elapsed_seconds"] + validation_metrics,
+        additive_defaults=dict(task_return=lambda row: row["return"], boundary_penalty_return=0., boundary_cost=""),
     )
     writer = None
     if cfg.run.tensorboard:
@@ -195,6 +216,10 @@ def train(cfg: Config, output, resume=None):
         seed=cfg.run.seed,
         env_steps=steps,
         config_hash=cfg.digest(),
+        best_metric=cfg.run.best_metric,
+        actor_sharing=cfg.algo.actor_sharing,
+        actor_parameters=sum(p.numel() for p in learner.actor.parameters()),
+        critic_parameters=sum(p.numel() for p in (learner.value if cfg.algo.name == "mappo" else learner.critic).parameters()),
         replay_allocated_bytes=replay.allocated_bytes if replay else 0,
         replay_worst_case_bytes=(
             replay.allocated_bytes
@@ -228,6 +253,7 @@ def train(cfg: Config, output, resume=None):
             kind="model",
             action_specification=action_specification(cfg.env, cfg.algo.name),
             observation_version=OBSERVATION_VERSION,
+            observation_history=history_specification(cfg.env),
             config=cfg.as_dict(),
             learner=learner.state_dict(),
             env_steps=steps,
@@ -264,8 +290,9 @@ def train(cfg: Config, output, resume=None):
         if writer:
             for key, value in means.items():
                 writer.add_scalar(f"validation/{key}", value, steps)
-        if means["return"] > best:
-            best = means["return"]
+        score = means[cfg.run.best_metric]
+        if score > best:
+            best = score
             stamp = time.perf_counter()
             atomic_save(output / "best.pt", light())
             phases["io"] += time.perf_counter() - stamp
@@ -273,7 +300,9 @@ def train(cfg: Config, output, resume=None):
                 output / "best_selection.json",
                 dict(
                     env_steps=steps,
-                    validation_return=best,
+                    validation_return=means["return"],
+                    validation_task_return=means["task_return"],
+                    selection_metric=cfg.run.best_metric, selection_score=best,
                     seeds=cfg.run.validation_seeds,
                 ),
             )
@@ -301,6 +330,9 @@ def train(cfg: Config, output, resume=None):
             "transitions_per_second": steps / max(elapsed(), 1e-9),
             **memory_stats(device),
         }
+        if cfg.algo.name == "mappo":
+            for i, value in enumerate(np.mean([info["agent_coverage"] for info in infos], axis=0)):
+                row[f"agent_{i}_coverage"] = float(value)
         row.update(
             {
                 f"{name}_seconds": phases[name]
@@ -536,7 +568,9 @@ def train(cfg: Config, output, resume=None):
                 elapsed_seconds=elapsed(),
                 phase_seconds=dict(phases),
                 resume_checkpoint=str(resume_path),
-                best_validation_return=best if math.isfinite(best) else None,
+                best_validation_score=best if math.isfinite(best) else None,
+                best_validation_return=(json.loads((output / "best_selection.json").read_text())["validation_return"]
+                                        if (output / "best_selection.json").exists() else None),
                 **memory_stats(device),
             )
             atomic_json(output / "manifest.json", manifest)

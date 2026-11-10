@@ -1,0 +1,90 @@
+{
+  "shared": {
+    "last_step": 1000000,
+    "best_step": 561792,
+    "ppo_updates": 489,
+    "actor_count": 1,
+    "actor_optimizer_steps": [
+      [
+        19560
+      ]
+    ],
+    "critic_optimizer_steps": [
+      19560
+    ],
+    "training_code_matches": true
+  },
+  "independent": {
+    "last_step": 1000000,
+    "best_step": 981632,
+    "ppo_updates": 489,
+    "actor_count": 18,
+    "actor_optimizer_steps": [
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ],
+      [
+        19560
+      ]
+    ],
+    "critic_optimizer_steps": [
+      19560
+    ],
+    "training_code_matches": true
+  },
+  "training_sources_unchanged": true,
+  "saved_analysis_sources_verified": true,
+  "validation_scenes": 32,
+  "best_last_action_repetitions": 3,
+  "reserved_test_used": false,
+  "extra_training_steps": 0,
+  "assessment_sha256": "5fc817b4c76ad7286c99d61adc965e61dcd2855af505087cace141e6e0f3ab25"
+}

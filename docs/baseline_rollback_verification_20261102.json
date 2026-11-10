@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-02",
+  "scope": "local workspace",
+  "baseline_config": "configs/mappo_full_reward_baseline_1m.yaml",
+  "algo": "mappo",
+  "action_space": "continuous",
+  "critic": "time_factor",
+  "observation_history": "one_step",
+  "obs_dim": 105,
+  "state_dim": 6292,
+  "total_steps": 1000000,
+  "removed_files": 513,
+  "removed_mib_approx": 595.41,
+  "all_previous_configs_unchanged": true,
+  "config_digests": {
+    "configs/sac_coverage_time_factor_relative_central_history_1m.yaml": "ce075dff454fae9f67cee504da5ed00ab1cc8ff841e3c8cd63927be4b65701d5",
+    "configs/mappo_coverage_shared_1m.yaml": "6b2d0400fc87a26fae2ed7ef225543a9f396b64b8b88ee814a25709030c46076",
+    "configs/mappo_coverage_independent_1p2m.yaml": "d4be3eec4053c23457a11b0e8324a652efc474679c8431d6a79f3e76eb51af7e",
+    "configs/mappo_full_reward_baseline_1m.yaml": "74d55ff5d29795e09fb5687ff97b74daa7587e82f5fb150f236184382b44e103",
+    "configs/sac_coverage_time_factor_relative_central_history_server_1m.yaml": "15d4012011e2ef3377675c35d8fb668fc4155f8eee6a9909fd57617fd12bbae7"
+  },
+  "retained_checkpoints_sha256": {
+    "runs/continuous_mappo_coverage_shared_central_history_resumed_400k_seed0/best.pt": "5ba744f2815c947a5ace0be6d549a2b7a7238bf54ad82097d5d52ae135350baa",
+    "runs/continuous_mappo_coverage_shared_central_history_resumed_400k_seed0/last.pt": "b3e91541c0ed8303d34244d963d1bd197a58761a3cb1488a8c3d06ccce803e4f",
+    "runs/continuous_mappo_coverage_independent_central_history_100k_seed0/best.pt": "d7c560df1ce384042122a5453c48fd75841c476d6cb5db7d790c62e7f4c0c55e",
+    "runs/continuous_mappo_coverage_independent_central_history_100k_seed0/last.pt": "754b1536ca79489ad7d9a167cfb0f981aff2bede83770d29380900519faf37b2",
+    "runs/sac_coverage_time_factor_relative_central_history_server_1m_seed0/best.pt": "cae2298030d7c8f8534178402d736732b7753a5dbc0cc2dc35a608839fb90e03",
+    "runs/sac_coverage_time_factor_relative_central_history_server_1m_seed0/last.pt": "bb24ee86e96ceaab7f8b39a70f662d79ea57022ed0e5128937e12f1161173e11"
+  },
+  "historical_last_models_loaded_and_acted": 3,
+  "regression_tests": {
+    "passed": 270,
+    "skipped": 1,
+    "seconds": 285.686,
+    "skip_reasons": [
+      "CUDA server acceptance"
+    ]
+  },
+  "source_sha256": "d6a577b0a9a7c199750e2f232364a4a9604e2cd0e294ab94e412705ed39c0ba9",
+  "formal_training_started": false
+}

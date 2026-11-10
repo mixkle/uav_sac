@@ -1,36 +1,24 @@
-> 新版 beacon-set-v2：服务器目前不可用，正式训练须等待通知。以下命令仅供恢复可用后参考；完整恢复文件已改为分块目录（无 .pt 后缀），旧版本检查点不能继续训练。新版参数以 configs/main.yaml 为准。
+# AutoDL执行与数据路径
 
-# 服务器部署与续训
+项目代码可放 `/root/uav_sac`，训练数据、缓存、环境及检查点放 `/root/autodl-tmp/uav_sac`。`scripts/server_env.sh` 设置数据盘缓存及8个CPU／4个Numba线程。
 
-代码目录 `/root/uav_sac`；实验、检查点、资源监控、虚拟环境和缓存目录 `/root/autodl-tmp/uav_sac`。
+已完成的SAC服务器为RTX3080Ti 12GB、10 vCPU Xeon Gold6248、30GB RAM、50GB数据盘。历史部署详情见[记录](sac_autodl_deployment_20261027.md)。
+
+## 完整奖励MAPPO baseline
+
+上传当前代码和配置并安装环境后，在tmux中手动启动：
 
 ```bash
+tmux new -s mappo_baseline
 cd /root/uav_sac
 source scripts/server_env.sh
-python -m uav_research train --config configs/server_probe.yaml --output runs/probe_seed0
+python -u -m uav_research train \
+  --config configs/mappo_full_reward_baseline_1m.yaml \
+  --output /root/autodl-tmp/uav_sac/runs/mappo_full_reward_baseline_1m_seed0
 ```
 
-CLI 的相对输出路径在 AutoDL 上自动解析到数据盘，也可以通过 `UAV_DATA_ROOT` 指定其他数据根目录。绝对路径保持原义。`server_env.sh` 同时设置缓存及临时文件路径。
+配置默认CPU8线程，适合当前MAPPO小MLP；本次没有部署或启动服务器训练。如改CUDA须另行测量，不直接套用SAC测速。
 
-采集资源使用率（`psutil` 为监控脚本的额外依赖）：
+完整恢复使用训练目录config.yaml及实际的resume目录，详见[训练说明](training_workflows_and_parameters.md)。best/last是轻量模型，不足以恢复Adam、随机流和环境。
 
-```bash
-python scripts/profile_run.py --output "$UAV_DATA_ROOT/profiles/probe_seed0" -- \
-  python -m uav_research train --config configs/server_probe.yaml --output runs/probe_seed0
-```
-
-`resources.csv` 中 CPU 百分比以一个逻辑核为 100%；需除以容器 CPU 配额才得到相对租用资源利用率。进程树 RSS 可能重复计算共享页；容器内存以 `cgroup_memory_mib` 为参考。GPU 利用率来自 NVIDIA 采样，不能仅凭显存大小判断效率。脚本同时保存训练 stdout、执行命令及汇总。
-
-短训默认保留主物理场景、10,000 条探索和每四条转移一次更新，只将总预算缩至 14,080 条转移、验证场景缩至四个；该配置用于效率和正确性检查，不作为论文性能证据。
-
-学习与场景参数以 [当前训练流程及参数](training_workflows_and_parameters.md) 为准。SAC actor/critic默认学习率1e-4/3e-4，MAPPO为5e-4/5e-4，显式配置优先。
-
-恢复示例：
-
-```bash
-python -m uav_research train --config configs/server_probe.yaml \
-  --output runs/resumed_branch \
-  --resume "$UAV_DATA_ROOT/runs/probe_seed0/resume_000000014080" --steps 16000
-```
-
-训练配置、并行环境数及评估日程必须兼容检查点。性能调优改变并行环境数时，应启动独立短训，不混入原训练分支。
+本地清理没有修改远端文件。下载服务器结果时优先轻量模型、日志和评估数据，完整SAC回放检查点较大。

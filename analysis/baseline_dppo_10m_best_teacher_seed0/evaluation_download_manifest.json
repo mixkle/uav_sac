@@ -1,0 +1,80 @@
+{
+  "files": [
+    {
+      "path": "baseline_best/action_moments.npz",
+      "bytes": 332708,
+      "sha256": "f625ed2fd170679d0a76a4801c668732ba09bea8d4fb0cf127c911f8ec103704"
+    },
+    {
+      "path": "baseline_best/critic_predictions.npz",
+      "bytes": 522515,
+      "sha256": "64f0bd3cf2efa955be94b5b03f03866a25e61c9d9ea0f8ebcd61a82cc5b8227a"
+    },
+    {
+      "path": "baseline_best/episodes.csv",
+      "bytes": 75760,
+      "sha256": "76d01f0966e23780a91c1952e9fc3e6280a50fbbc96cbcafe70116f2befdd4bf"
+    },
+    {
+      "path": "baseline_best/provenance.json",
+      "bytes": 1233,
+      "sha256": "eb0cfc2d249db889ff28186468f10a36404e2ab9c2769f66d7558a2309412e24"
+    },
+    {
+      "path": "baseline_best/step_metrics.npz",
+      "bytes": 1963551,
+      "sha256": "4fa7cf3a8cc673b96b519c005953d508136558c0d33d6e1f7da52e54f78f8234"
+    },
+    {
+      "path": "baseline_best/summary.json",
+      "bytes": 8679,
+      "sha256": "e8c0d14c4da9d20dab474e35589b7a5e68e904d40d02bfb8045c0902acdc59d9"
+    },
+    {
+      "path": "baseline_best/trace_10000.npz",
+      "bytes": 17672185,
+      "sha256": "f8054f00f0b7e2f465d0ecb085c8c1b3409933949d8dc291b8e5518620224d03"
+    },
+    {
+      "path": "baseline_best/trace_10001.npz",
+      "bytes": 17664170,
+      "sha256": "bba852dd9a99f0e39799033696fb22251cb61fb394b6318ea5c8cdc7621cddf9"
+    },
+    {
+      "path": "teacher_topk/action_moments.npz",
+      "bytes": 332595,
+      "sha256": "fe86d0f04d1fb8bcd01791fcc483194640020b978abf8bde69614fbdca339f45"
+    },
+    {
+      "path": "teacher_topk/episodes.csv",
+      "bytes": 95473,
+      "sha256": "ae8ec823bb46dd9065b8b4ebe346874a487e15dc996e4a0c0c3589b2ec5306a8"
+    },
+    {
+      "path": "teacher_topk/provenance.json",
+      "bytes": 1154,
+      "sha256": "4c3f6abe7a839d45f205d60ca0c7b46afb12d54cf51ccedad8ff089de423e3c3"
+    },
+    {
+      "path": "teacher_topk/step_metrics.npz",
+      "bytes": 2626263,
+      "sha256": "f138389ae785a53551d3e2bd5ab7f926158ad305d89f115a3693cbbee2242991"
+    },
+    {
+      "path": "teacher_topk/summary.json",
+      "bytes": 11385,
+      "sha256": "a4e471ae8850649141a416648169a3e693124cbb67a148f7a1b9befceedd623a"
+    },
+    {
+      "path": "teacher_topk/trace_10000.npz",
+      "bytes": 18224927,
+      "sha256": "b1211e2daf81d83b1e8036c9ceced87c4f2ba701024863afbdf2b5fa97979d31"
+    },
+    {
+      "path": "teacher_topk/trace_10001.npz",
+      "bytes": 18249833,
+      "sha256": "877cde7e1154ad8d6165471c167a61ced482d585672993c18c1b67471fc70900"
+    }
+  ],
+  "bytes": 77782431
+}

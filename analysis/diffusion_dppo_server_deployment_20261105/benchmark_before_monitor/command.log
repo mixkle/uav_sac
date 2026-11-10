@@ -1,0 +1,38 @@
+17:50:30 benchmark microbatch=128 epoch=1 updates=1
+17:51:00 benchmark microbatch=512 epoch=4 updates=15
+{
+  "device": "cuda:0",
+  "vector_steps": 32,
+  "environments": 16,
+  "joint_transitions": 512,
+  "inference_seconds": 0.8939305767416954,
+  "environment_seconds": 1.320926308631897,
+  "results": [
+    {
+      "microbatch_agents": 128,
+      "update_seconds": 18.852199831977487,
+      "estimated_online_training_seconds_excluding_validation": 41200.79522559326,
+      "peak_rss_mib": 1261.58984375,
+      "sum_process_peak_rss_mib": 1261.58984375,
+      "peak_gpu_mib": 154.90087890625
+    },
+    {
+      "microbatch_agents": 256,
+      "update_seconds": 9.712447576224804,
+      "estimated_online_training_seconds_excluding_validation": 23323.439813341014,
+      "peak_rss_mib": 1261.625,
+      "sum_process_peak_rss_mib": 1261.625,
+      "peak_gpu_mib": 185.435546875
+    },
+    {
+      "microbatch_agents": 512,
+      "update_seconds": 5.756083447486162,
+      "estimated_online_training_seconds_excluding_validation": 15584.79157752823,
+      "peak_rss_mib": 1261.7109375,
+      "sum_process_peak_rss_mib": 1261.7109375,
+      "peak_gpu_mib": 242.802734375
+    }
+  ],
+  "note": "Rough linear estimate; short minibatches and excluded validation/IO limit accuracy",
+  "actor_parameters": 324867
+}

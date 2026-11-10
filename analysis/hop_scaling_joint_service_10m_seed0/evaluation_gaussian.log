@@ -1,0 +1,12 @@
+BEGIN gaussian last env_steps 10000000
+12:11:02 evaluate scenes=10000..10015 t=1/400
+12:11:32 evaluate scenes=10016..10031 t=3/400
+DONE gaussian last {"coverage": 0.5932161458333334, "last100_coverage": 0.66553125, "throughput_bps": 557489051.0935409, "return": 267.01920772498886, "critic_rmse": 7.407123051586553}
+BEGIN gaussian best env_steps 970752
+12:12:00 evaluate scenes=10000..10015 t=1/400
+12:12:30 evaluate scenes=10016..10031 t=18/400
+DONE gaussian best {"coverage": 0.6921125, "last100_coverage": 0.7510416666666666, "throughput_bps": 693487235.2064193, "return": 313.83098587767574, "critic_rmse": 7.2765286800721585}
+BEGIN gaussian step0 env_steps 0
+12:12:56 evaluate scenes=10000..10015 t=1/400
+12:13:26 evaluate scenes=10016..10031 t=28/400
+DONE gaussian step0 {"coverage": 0.30459427083333335, "last100_coverage": 0.32229375000000005, "throughput_bps": 228577180.45071995, "return": 134.02849129070506, "critic_rmse": 45.293246467723456}

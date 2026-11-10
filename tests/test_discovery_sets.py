@@ -31,7 +31,7 @@ def test_launch_area_distribution_and_no_coverage_rejection():
 
 
 def test_sensing_gate_and_capacity_do_not_truncate_observation():
-    cfg = load_config("configs/smoke.yaml").env
+    cfg = load_config("tests/fixtures/configs/smoke.yaml").env
     cfg = replace(
         cfg, num_users=30, capacity=1, sensing_threshold_db=-100, sinr_threshold_db=-100
     )
@@ -49,7 +49,7 @@ def test_sensing_gate_and_capacity_do_not_truncate_observation():
 
 
 def test_set_permutation_empty_groups_and_gradient_ownership():
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     device = configure_runtime(cfg)
     learner = SAC(cfg, device)
     env = UAVEnvironment(cfg.env)
@@ -112,7 +112,7 @@ def test_set_permutation_empty_groups_and_gradient_ownership():
 
 
 def test_observation_stack_select_duplicate_and_reset():
-    cfg = load_config("configs/smoke.yaml").env
+    cfg = load_config("tests/fixtures/configs/smoke.yaml").env
     env = UAVEnvironment(cfg)
     a, _, _ = env.reset(1)
     b, _, _ = env.reset(2)
@@ -155,7 +155,7 @@ def test_actor_export_does_not_require_global_user_count(tmp_path):
     from uav_research.observations import OBSERVATION_VERSION
 
     for name in ("sac", "mappo", "matd3"):
-        cfg = load_config("configs/smoke.yaml")
+        cfg = load_config("tests/fixtures/configs/smoke.yaml")
         cfg.algo.name = name
         learner = make_learner(cfg, torch.device("cpu"))
         obs, _, _ = UAVEnvironment(cfg.env).reset(7)
@@ -179,7 +179,7 @@ def test_actor_export_does_not_require_global_user_count(tmp_path):
 
 
 def test_sensing_threshold_includes_equality():
-    cfg = load_config("configs/smoke.yaml").env
+    cfg = load_config("tests/fixtures/configs/smoke.yaml").env
     env = UAVEnvironment(cfg)
     env.reset(31)
     xy, ue = env.uav_xy.copy(), env.user_xy.copy()
@@ -193,7 +193,7 @@ def test_sensing_threshold_includes_equality():
 
 
 def test_critic_action_gradient_reaches_encoder_without_entropy():
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     configure_runtime(cfg)
     learner = SAC(cfg, torch.device("cpu"))
     obs, state, _ = UAVEnvironment(cfg.env).reset(1)

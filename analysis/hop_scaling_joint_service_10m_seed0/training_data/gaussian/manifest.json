@@ -1,0 +1,15 @@
+{
+  "env_steps": 10000000,
+  "updates": 4883,
+  "optimizer_steps": 195320,
+  "best_score": 313.83098587767574,
+  "best_step": 970752,
+  "elapsed_seconds": 96915.48738911003,
+  "full_checkpoint": "/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/checkpoints/full_010000000",
+  "status": "complete",
+  "evaluation_seconds": 40633.44110901281,
+  "io_seconds": 561.1138593498617,
+  "peak_rss_mib": 1536.5234375,
+  "sum_process_peak_rss_mib": 1536.5234375,
+  "peak_gpu_mib": 387.576171875
+}

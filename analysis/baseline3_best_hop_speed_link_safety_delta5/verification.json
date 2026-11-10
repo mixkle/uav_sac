@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "source_inputs_unchanged": true,
+  "representative_trace_steps_audited": 800,
+  "selected_upstream_constraints_rechecked": 7220,
+  "local_three_neighbor_selection": true,
+  "largest_feasible_scalar_verified": true,
+  "original_actor_history_preserved": true,
+  "pre_action_hops_verified": true,
+  "static_parent_formula_violations": 0,
+  "unit_tests": "9 passed (link geometry, local parent selection, state timing, batch/scalar, restoration, moving-parent counterexample)",
+  "checkpoint_unchanged": true,
+  "training_started": false,
+  "figure_exports": 24
+}

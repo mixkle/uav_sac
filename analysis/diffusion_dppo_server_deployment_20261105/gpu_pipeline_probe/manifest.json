@@ -1,0 +1,15 @@
+{
+  "env_steps": 2048,
+  "updates": 1,
+  "optimizer_steps": 40,
+  "best_score": 129.89084952008247,
+  "best_step": 0,
+  "elapsed_seconds": 36.71623997017741,
+  "full_checkpoint": "/home/dym/uav_sac/deployment/gpu_pipeline_probe/checkpoints/full_000002048",
+  "status": "complete",
+  "evaluation_seconds": 22.841586623340845,
+  "io_seconds": 0.5083411000669003,
+  "peak_rss_mib": 1426.953125,
+  "sum_process_peak_rss_mib": 1426.953125,
+  "peak_gpu_mib": 1466.78173828125
+}

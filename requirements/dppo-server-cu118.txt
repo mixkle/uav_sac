@@ -1,0 +1,4 @@
+# Isolated Python 3.11 environment for the inspected driver 535 / RTX 3090.
+--extra-index-url https://download.pytorch.org/whl/cu118
+-r common.lock.txt
+torch==2.7.1+cu118

@@ -25,7 +25,7 @@ VARIANTS = {
 
 
 def small_config(name):
-    cfg = load_config('configs/discrete_mappo_smoke.yaml')
+    cfg = load_config('tests/fixtures/configs/discrete_mappo_smoke.yaml')
     primary, speed, mu = VARIANTS[name]
     cfg.env.reward_primary = primary
     cfg.env.user_speed_std = speed
@@ -56,7 +56,7 @@ def assert_exact(a, b):
 
 
 def test_ablation_configs_only_change_three_environment_fields():
-    configs = [load_config(f'configs/discrete_mappo_ablation_{name}.yaml') for name in VARIANTS]
+    configs = [load_config(f'tests/fixtures/configs/discrete_mappo_ablation_{name}.yaml') for name in VARIANTS]
     base = configs[0].as_dict()
     for cfg in configs:
         data = cfg.as_dict()
@@ -225,7 +225,7 @@ def test_comparison_accepts_four_or_six_groups_and_checks_new_groups(tmp_path, m
     assert GROUPS == VARIANTS
     paths = []
     for name in VARIANTS:
-        cfg = load_config(f'configs/discrete_mappo_ablation_{name}.yaml')
+        cfg = load_config(f'tests/fixtures/configs/discrete_mappo_ablation_{name}.yaml')
         run = tmp_path / name
         run.mkdir()
         save_config(cfg, run / 'config.yaml')

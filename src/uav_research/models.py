@@ -1,9 +1,49 @@
 from __future__ import annotations
 import math
+import copy
 import torch
 from torch import nn
 from torch.distributions import Normal, Categorical
 from .observations import TensorObservation
+
+
+def add_history_inputs(actor, current_fixed_dim):
+    """Embed a freshly initialized actor, preserving its function and RNG stream."""
+    old = actor.net[0]
+    devices = [old.weight.device.index] if old.weight.is_cuda else []
+    with torch.random.fork_rng(devices=devices):
+        layer = nn.Linear(old.in_features + 4, old.out_features,
+                          device=old.weight.device, dtype=old.weight.dtype)
+    with torch.no_grad():
+        layer.weight.zero_()
+        layer.weight[:, :current_fixed_dim].copy_(old.weight[:, :current_fixed_dim])
+        layer.weight[:, current_fixed_dim + 4:].copy_(old.weight[:, current_fixed_dim:])
+        layer.bias.copy_(old.bias)
+    actor.net[0] = layer
+    actor.encoder.output_dim += 4
+
+
+def add_neighbor_inputs(actor, original_current_dim, extra_features):
+    """Insert zero-initialized neighbor columns before history/UE features.
+
+    Called only during fresh continuous-MAPPO construction with >3 slots.
+    The first three slots, history and UE representation keep their original
+    weights. Forking the RNG preserves both the critic and subsequent sampling.
+    """
+    if extra_features <= 0:
+        raise ValueError('Expected extra neighbor features')
+    old = actor.net[0]
+    devices = [old.weight.device.index] if old.weight.is_cuda else []
+    with torch.random.fork_rng(devices=devices):
+        layer = nn.Linear(old.in_features + extra_features, old.out_features,
+                          device=old.weight.device, dtype=old.weight.dtype)
+    with torch.no_grad():
+        layer.weight.zero_()
+        layer.weight[:, :original_current_dim].copy_(old.weight[:, :original_current_dim])
+        layer.weight[:, original_current_dim + extra_features:].copy_(old.weight[:, original_current_dim:])
+        layer.bias.copy_(old.bias)
+    actor.net[0] = layer
+    actor.encoder.output_dim += extra_features
 
 
 def mlp(input_dim, output_dim, hidden):
@@ -119,6 +159,40 @@ class GaussianActor(nn.Module):
         return log_prob, entropy
 
 
+class IndependentGaussianActors(nn.Module):
+    """Fixed UAV identities, independent encoders/MLPs, one joint noise draw.
+
+    Construction is deliberately RNG-free. The caller builds the source actor
+    and centralized critic first, then clones the untrained source actor here.
+    """
+
+    def __init__(self, source_actor, num_uavs):
+        super().__init__()
+        if not isinstance(source_actor, GaussianActor) or num_uavs < 1:
+            raise ValueError("Expected a Gaussian source actor and positive UAV count")
+        self.actors = nn.ModuleList([copy.deepcopy(source_actor) for _ in range(num_uavs)])
+        self.num_uavs = num_uavs
+        self.state_dependent_std = source_actor.state_dependent_std
+
+    def distribution(self, obs):
+        if not isinstance(obs, TensorObservation) or obs.fixed.shape[-2] != self.num_uavs:
+            raise ValueError("Actor bank requires the saved UAV count and fixed UAV order")
+        distributions = [actor.distribution(local) for actor, local in
+                         zip(self.actors, obs.split_agents())]
+        return Normal(torch.cat([d.loc for d in distributions], dim=-2),
+                      torch.cat([d.scale for d in distributions], dim=-2),
+                      validate_args=False)
+
+    # Both use distribution(), so sampling order and the disk Jacobian match
+    # the shared actor. PPO entropy also consumes one joint Gaussian draw.
+    sample = GaussianActor.sample
+    evaluate_latent = GaussianActor.evaluate_latent
+
+
+def policy_actor_modules(actor):
+    return list(actor.actors) if isinstance(actor, IndependentGaussianActors) else [actor]
+
+
 class CategoricalActor(nn.Module):
     def __init__(self, obs_dim, hidden, ue_hidden=32, count_scale=20):
         super().__init__()
@@ -165,6 +239,26 @@ class TwinQ(nn.Module):
         return self.q1(x).squeeze(-1), self.q2(x).squeeze(-1)
 
 
+class TimeFactorTwinQ(TwinQ):
+    """Cumulative soft-Q = (H_t/H_0) f(s,a), with fixed output scaling.
+
+    The inherited MLPs have exactly the direct critic's initialization. Keeping
+    H_0 fixed avoids adding moving normalization to SAC's target networks.
+    """
+
+    def __init__(self, state_dim, num_uavs, hidden, horizon, discount):
+        super().__init__(state_dim, num_uavs, hidden)
+        self.horizon_factor = DiscountedHorizon(horizon, discount)
+
+    def forward(self, state, actions, *, factors=None):
+        raw = super().forward(state, actions)
+        # SAC reuses the same states for critic/actor losses and diagnostics.
+        # Reuse their already checked factors within one update (never in replay).
+        h = self.horizon_factor(state) if factors is None else factors
+        scale = h / self.horizon_factor.table[-1].to(h)
+        return tuple(scale * q for q in raw)
+
+
 class ValueNormalizer(nn.Module):
     """Running return statistics with PopArt output rescaling."""
 
@@ -185,9 +279,9 @@ class ValueNormalizer(nn.Module):
         return value * self.std + self.mean
 
     @torch.no_grad()
-    def update(self, values, last_layer, optimizer):
+    def update_statistics(self, values):
+        """Statistics only: no output layer can be rescaled a second time."""
         values = values.detach().flatten()
-        old_mean, old_std = self.mean.clone(), self.std.clone()
         n = values.numel()
         mean, var = values.mean(), values.var(unbiased=False)
         total = self.count + n
@@ -201,6 +295,11 @@ class ValueNormalizer(nn.Module):
         self.mean.copy_(new_mean)
         self.variance.copy_((m2 / total).float().clamp_min(1e-4))
         self.count.copy_(total)
+
+    @torch.no_grad()
+    def update(self, values, last_layer, optimizer):
+        old_mean, old_std = self.mean.clone(), self.std.clone()
+        self.update_statistics(values)
         scale = old_std / self.std
         last_layer.weight.mul_(scale)
         last_layer.bias.copy_(
@@ -212,3 +311,24 @@ class ValueNormalizer(nn.Module):
                 state["exp_avg"].mul_(scale)
             if "exp_avg_sq" in state:
                 state["exp_avg_sq"].mul_(scale.square())
+
+
+class DiscountedHorizon(nn.Module):
+    """Analytic remaining-discount sum, indexed by the existing state time."""
+
+    def __init__(self, horizon, discount):
+        super().__init__()
+        self.horizon = horizon
+        remaining = torch.arange(horizon + 1, dtype=torch.float64)
+        factors = remaining if discount == 1 else -torch.expm1(remaining * math.log(discount)) / (1-discount)
+        self.register_buffer("table", factors)
+
+    def forward(self, states):
+        time = states[..., -1] * self.horizon
+        nearest = time.round()
+        valid = (torch.isfinite(time) & ((time-nearest).abs() <= 1e-4)
+                 & (nearest >= 0) & (nearest <= self.horizon)).all()
+        # One checked GPU -> CPU scalar, instead of four synchronizations.
+        if not valid:
+            raise ValueError("Invalid finite-horizon time in global state")
+        return self.table[self.horizon-nearest.long()].to(states.dtype)

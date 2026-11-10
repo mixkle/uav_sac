@@ -1,0 +1,3 @@
+# 回归测试夹具
+
+这些YAML固定历史接口与控制变量断言，仅由自动化测试读取，不是当前研究的训练配置入口。公开训练配置位于项目根目录configs/；当前baseline是mappo_full_reward_baseline_1m.yaml。此处不保存模型、日志或训练结果。

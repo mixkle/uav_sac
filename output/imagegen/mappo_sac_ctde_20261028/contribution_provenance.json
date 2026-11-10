@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-28",
+  "tool": "built-in image_gen",
+  "original": "mappo_sac_ctde.png",
+  "annotated": "mappo_sac_ctde_contributions.png",
+  "size": [
+    1774,
+    887
+  ],
+  "sha256": "25a0fd135e42adad24cfd7391d963b2ef10ae92b2c755f717c9f4e0a4aaff58c",
+  "prompt": "contribution_annotation_prompt.txt",
+  "notes": "contribution_notes.md",
+  "C1": "method contribution candidate, novelty not established",
+  "C2": "full model task contribution candidate, robustness reward disabled in depicted ablation",
+  "S1": "supporting adaptation, not claimed original architecture",
+  "pdf_type": "raster container"
+}

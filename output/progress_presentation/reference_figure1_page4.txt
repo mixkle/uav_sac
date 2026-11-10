@@ -1,0 +1,125 @@
+Diffusing to Coordinate: Efficient Online Multi-Agent Diffusion Policies
+Theorem 4.1. (Entropy Lower Bound for Decentralized
+Diffusion Policies) Given that the joint policy is factorized
+into independent diffusion processes, the entropy of the joint
+distribution H(πθ(a|s)) is lower-bounded by the sum of
+individual variational bounds:
+H(πθ(a|s)) ≥
+N
+X
+i=1
+lπθi(ai|s),
+(9)
+where lπθi(ai|s) = Eπθi
+h
+log πi(ai
+1:H|ai
+0,s)
+πθi(ai
+0:H|s)
+i
+is the evidence
+lower bound for each agent. The expectation is taken with
+respect to the agent’s diffusion policy πθi, representing the
+entire sequential trajectory generation process.
+Proof. (Sketch) The proof exploits the factorized struc-
+ture of our multi-agent policy, which allows the intractable
+joint entropy to decompose into a summation of individual
+marginal entropies. We then derive a tractable evidence
+lower bound (ELBO) for each agent’s diffusion trajectory
+via variational inference to complete the proof. Detailed
+derivations are provided in Appendix B.
+Since the exact computation of the joint policy entropy is
+intractable, the derived lower bound serves as a tractable
+surrogate for approximating the Maximum Entropy RL ob-
+jective (Haarnoja et al., 2017). Facilitating this helps us
+effectively incentivize exploration while harnessing the high
+expressiveness of diffusion policies. Under the CTDE frame-
+work, this formulation transforms joint entropy into a com-
+putable metric, providing unified global exploration bonuses
+that actively incentivize robust exploration while unlocking
+the full expressiveness of diffusion policies.
+Crucially, this theoretical foundation drives our proposed
+OMAD algorithm, which goes far beyond a simple policy
+factorization. Rather, OMAD is a holistic, system-level ar-
+chitecture meticulously designed for efficient multi-agent
+collaboration. By integrating this tailored entropy bound
+with our Centralized Joint Distributional Critic, OMAD ac-
+tively resolves the severe non-stationarity and compounded
+variance of multi-agent interactions. This comprehensive
+design ensures agents do not merely act independently, but
+achieve highly stable, synchronized off-policy learning for
+state-of-the-art cooperative performance.
+5. The OMAD Method
+This section introduces our proposed diffusion policy algo-
+rithm for online multi-agent reinforcement learning, with
+a systemic overview depicted in Figure 1. To tackle the
+challenges of applying diffusion models in online MARL,
+our framework integrates two strategic designs. (i) First, we
+construct a specialized network architecture that seamlessly
+unifies policy learning with iterative denoising action gener-
+ation. (ii) Second, to strictly adhere to the CTDE paradigm,
+we introduce a centralized distributional critic. This critic
+plays a pivotal role in guiding synchronized policy train-
+ing by maximizing a scaled joint entropy Evidence Lower
+Bound (ELBO). We detail the formulation and implementa-
+tion of these components below.
+5.1. Decentralized Diffusion Policy Formulation
+To scale diffusion-based control to multi-agent domains,
+we employ a factorized policy architecture πθ(a|s) =
+QN
+i=1 πθi(ai|s) (Zhong et al., 2024). This architecture, cor-
+responding to the decentralized execution phase (blue region
+in Figure 1), eschews joint space modeling to ensure effi-
+cient data collection while retaining policy expressiveness.
+We instantiate a reverse-time SDE introduced in Sec. 3.2
+for each agent i, parameterizing the drift with a specific
+score network fθi(ai
+t, s, t) ≈∇ai
+t log πi,t(ai
+t|s). This de-
+coupling facilitates efficient parallel sampling via the Euler-
+Maruyama solver, where the synchronized generation over
+H steps is governed by:
+ai
+h−1 = ai
+h + (βhai
+h + 2η2βhfθi(ai
+h, s, th))
+|
+{z
+}
+Drift (Score Guidance)
+δ + ξi
+h,
+(10)
+where th = hT/H and ξi
+h follows Eq. (4). The action
+ai
+0 is obtained by iteratively denoising ai
+H ∼N(0, η2I).
+Such scheme effectively captures complex multi-modal joint
+distributions through the composition of individual policies.
+5.2. Online Centralized Training the Diffusion Policy
+With the tractable entropy lower bound established in Theo-
+rem 4.1, we can now operationalize the Maximum Entropy
+principle within our multi-agent framework. Specifically,
+we substitute the computationally intractable exact entropy
+with the derived ELBO, utilizing it as a practical surrogate
+to guide exploration. This substitution enables stable and
+effective policy optimization even in high-dimensional joint
+action spaces. In this subsection, we formulate the overall
+objective for online centralized training, defining how the
+diffusion policy is jointly optimized with the scaled entropy
+regularization to balance reward maximization and explo-
+ration. This process corresponds to the orange-shaded phase
+on the right side of Figure 1.
+Tractable Maximum Entropy MARL Objective. Lever-
+aging the derived entropy evidence lower bound in Theo-
+rem 4.1, we formulate a tractable surrogate objective for
+Maximum Entropy MARL. In contrast to prior works that
+eschew entropy regularization (Ma et al., 2025) due to the
+intractable likelihoods of implicit policies, we explicitly in-
+corporate the variational lower bound lπθi as an intrinsic
+exploration bonus. The resulting joint objective is to maxi-
+4

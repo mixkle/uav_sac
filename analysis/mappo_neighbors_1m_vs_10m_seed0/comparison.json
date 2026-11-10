@@ -1,0 +1,2490 @@
+{
+  "groups": [
+    "neighbors3",
+    "neighbors4",
+    "neighbors5",
+    "baseline10m",
+    "dppo10m"
+  ],
+  "best": {
+    "neighbors3": {
+      "coverage": 0.5643843749999999,
+      "final_coverage": 0.585625,
+      "last100_coverage": 0.58106875,
+      "max_drop_1": 0.4518749999999999,
+      "max_drop_5": 0.46041666666666664,
+      "max_drawdown": 0.56125,
+      "peak_coverage": 0.7604166666666666,
+      "peak_step": 187.21875,
+      "min20_coverage": 0.29248958333333336,
+      "drop_events_5pp": 62.53125,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 33.375,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 15.25,
+      "any_drop_20pp": 0.96875,
+      "early51_150_coverage": 0.5691229166666667,
+      "maintain_coverage": 0.01194583333333332,
+      "throughput_mbps": 466.24936204719927,
+      "last100_throughput_mbps": 472.6394187449214,
+      "disconnection_ratio": 0.1290060763888889,
+      "robustness": 0.5056238715277778,
+      "sensing": 0.8591854166666666,
+      "boundary150_fraction": 0.06979166666666667,
+      "reflection_fraction": 0.007326388888888888,
+      "close_neighbor_fraction": 0.058185763888888895,
+      "nearest_neighbor_m": 422.71156490618813,
+      "speed_mps": 16.493558504359648,
+      "worst_fault_coverage": 0.3255390625,
+      "return": 250.62038264251728,
+      "mean_curve_peak_step": 245,
+      "mean_curve_peak_coverage": 0.6554166666666665,
+      "final_below30_scenes": 1,
+      "scenes_with_10pp_drop": 32,
+      "checkpoint_step": 671744
+    },
+    "neighbors4": {
+      "coverage": 0.6027625,
+      "final_coverage": 0.634375,
+      "last100_coverage": 0.6426291666666666,
+      "max_drop_1": 0.4945833333333334,
+      "max_drop_5": 0.4922916666666667,
+      "max_drawdown": 0.57625,
+      "peak_coverage": 0.7754166666666666,
+      "peak_step": 228.6875,
+      "min20_coverage": 0.29437500000000005,
+      "drop_events_5pp": 50.25,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 22.5625,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 9.40625,
+      "any_drop_20pp": 0.96875,
+      "early51_150_coverage": 0.6093437500000001,
+      "maintain_coverage": 0.03328541666666668,
+      "throughput_mbps": 504.82506479192114,
+      "last100_throughput_mbps": 537.1450232805321,
+      "disconnection_ratio": 0.11841145833333333,
+      "robustness": 0.5442936631944444,
+      "sensing": 0.875409375,
+      "boundary150_fraction": 0.04801649305555557,
+      "reflection_fraction": 0.0028559027777777775,
+      "close_neighbor_fraction": 0.03997395833333334,
+      "nearest_neighbor_m": 436.82388446429366,
+      "speed_mps": 19.55426138560814,
+      "worst_fault_coverage": 0.3563791666666667,
+      "return": 268.0290034555692,
+      "mean_curve_peak_step": 224,
+      "mean_curve_peak_coverage": 0.6747916666666667,
+      "final_below30_scenes": 1,
+      "scenes_with_10pp_drop": 32,
+      "checkpoint_step": 620544
+    },
+    "neighbors5": {
+      "coverage": 0.6068005208333334,
+      "final_coverage": 0.635625,
+      "last100_coverage": 0.63586875,
+      "max_drop_1": 0.39666666666666667,
+      "max_drop_5": 0.3879166666666667,
+      "max_drawdown": 0.46354166666666663,
+      "peak_coverage": 0.753125,
+      "peak_step": 216.15625,
+      "min20_coverage": 0.3055,
+      "drop_events_5pp": 34.25,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 17.5625,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 8.53125,
+      "any_drop_20pp": 0.9375,
+      "early51_150_coverage": 0.6163104166666666,
+      "maintain_coverage": 0.019558333333333344,
+      "throughput_mbps": 506.6587574150059,
+      "last100_throughput_mbps": 519.2079175682833,
+      "disconnection_ratio": 0.0883984375,
+      "robustness": 0.5527098958333333,
+      "sensing": 0.8542093749999999,
+      "boundary150_fraction": 0.04986111111111112,
+      "reflection_fraction": 0.003454861111111111,
+      "close_neighbor_fraction": 0.04256510416666667,
+      "nearest_neighbor_m": 429.4427041114251,
+      "speed_mps": 14.911738207270181,
+      "worst_fault_coverage": 0.4024578125,
+      "return": 269.74200872880033,
+      "mean_curve_peak_step": 267,
+      "mean_curve_peak_coverage": 0.6733333333333335,
+      "final_below30_scenes": 1,
+      "scenes_with_10pp_drop": 32,
+      "checkpoint_step": 980992
+    },
+    "baseline10m": {
+      "coverage": 0.614759375,
+      "final_coverage": 0.6714583333333334,
+      "last100_coverage": 0.6884145833333334,
+      "max_drop_1": 0.3258333333333333,
+      "max_drop_5": 0.3304166666666667,
+      "max_drawdown": 0.3860416666666666,
+      "peak_coverage": 0.7777083333333333,
+      "peak_step": 263.125,
+      "min20_coverage": 0.27488541666666666,
+      "drop_events_5pp": 30.75,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 12.6875,
+      "any_drop_10pp": 0.96875,
+      "drop_events_20pp": 4.0625,
+      "any_drop_20pp": 0.8125,
+      "early51_150_coverage": 0.5774958333333333,
+      "maintain_coverage": 0.11091874999999998,
+      "throughput_mbps": 516.1892642668014,
+      "last100_throughput_mbps": 581.5076501862443,
+      "disconnection_ratio": 0.09315972222222223,
+      "robustness": 0.5644340856481481,
+      "sensing": 0.8656807291666666,
+      "boundary150_fraction": 0.032482638888888894,
+      "reflection_fraction": 0.0012890624999999998,
+      "close_neighbor_fraction": 0.03369357638888889,
+      "nearest_neighbor_m": 425.11605630067186,
+      "speed_mps": 19.817890427788285,
+      "worst_fault_coverage": 0.43165885416666666,
+      "return": 273.43384409422947,
+      "mean_curve_peak_step": 228,
+      "mean_curve_peak_coverage": 0.7072916666666668,
+      "final_below30_scenes": 1,
+      "scenes_with_10pp_drop": 31,
+      "checkpoint_step": 3821568
+    },
+    "dppo10m": {
+      "coverage": 0.6389395833333333,
+      "final_coverage": 0.6677083333333333,
+      "last100_coverage": 0.66338125,
+      "max_drop_1": 0.40041666666666664,
+      "max_drop_5": 0.40875000000000006,
+      "max_drawdown": 0.47854166666666664,
+      "peak_coverage": 0.7816666666666667,
+      "peak_step": 203.75,
+      "min20_coverage": 0.3341041666666667,
+      "drop_events_5pp": 29.0625,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 11.40625,
+      "any_drop_10pp": 0.96875,
+      "drop_events_20pp": 4.40625,
+      "any_drop_20pp": 0.78125,
+      "early51_150_coverage": 0.6599458333333333,
+      "maintain_coverage": 0.003435416666666632,
+      "throughput_mbps": 584.2125930021286,
+      "last100_throughput_mbps": 616.7881691533044,
+      "disconnection_ratio": 0.08168402777777778,
+      "robustness": 0.5819513599537036,
+      "sensing": 0.8704880208333333,
+      "boundary150_fraction": 0.08543836805555557,
+      "reflection_fraction": 0.03285590277777778,
+      "close_neighbor_fraction": 0.04164496527777778,
+      "nearest_neighbor_m": 469.67482116376993,
+      "speed_mps": 13.534246257920138,
+      "worst_fault_coverage": 0.41639062499999996,
+      "return": 286.73383829344687,
+      "mean_curve_peak_step": 258,
+      "mean_curve_peak_coverage": 0.7004166666666668,
+      "final_below30_scenes": 0,
+      "scenes_with_10pp_drop": 31,
+      "checkpoint_step": 9550656
+    }
+  },
+  "last": {
+    "neighbors3": {
+      "coverage": 0.5670843750000001,
+      "final_coverage": 0.5816666666666668,
+      "last100_coverage": 0.5993333333333333,
+      "max_drop_1": 0.48875,
+      "max_drop_5": 0.49812500000000004,
+      "max_drawdown": 0.5760416666666667,
+      "peak_coverage": 0.75125,
+      "peak_step": 224.71875,
+      "min20_coverage": 0.29475,
+      "drop_events_5pp": 63.96875,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 32.96875,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 14.875,
+      "any_drop_20pp": 1.0,
+      "early51_150_coverage": 0.56498125,
+      "maintain_coverage": 0.03435208333333335,
+      "throughput_mbps": 471.2184111324633,
+      "last100_throughput_mbps": 501.7463792274795,
+      "disconnection_ratio": 0.1366189236111111,
+      "robustness": 0.506567505787037,
+      "sensing": 0.869628125,
+      "boundary150_fraction": 0.05861979166666667,
+      "reflection_fraction": 0.004609375,
+      "close_neighbor_fraction": 0.04997829861111111,
+      "nearest_neighbor_m": 437.3673525938662,
+      "speed_mps": 17.09957810696341,
+      "worst_fault_coverage": 0.3126526041666666,
+      "return": 251.96539859373138,
+      "mean_curve_peak_step": 229,
+      "mean_curve_peak_coverage": 0.6395833333333335,
+      "final_below30_scenes": 2,
+      "scenes_with_10pp_drop": 32
+    },
+    "neighbors4": {
+      "coverage": 0.5936421875,
+      "final_coverage": 0.5975,
+      "last100_coverage": 0.6181666666666668,
+      "max_drop_1": 0.4591666666666667,
+      "max_drop_5": 0.4666666666666667,
+      "max_drawdown": 0.5454166666666667,
+      "peak_coverage": 0.7691666666666667,
+      "peak_step": 235.21875,
+      "min20_coverage": 0.28608333333333336,
+      "drop_events_5pp": 42.1875,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 19.5625,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 9.96875,
+      "any_drop_20pp": 0.9375,
+      "early51_150_coverage": 0.60491875,
+      "maintain_coverage": 0.013247916666666663,
+      "throughput_mbps": 493.68947403694585,
+      "last100_throughput_mbps": 505.83853537204004,
+      "disconnection_ratio": 0.1202126736111111,
+      "robustness": 0.5360634548611112,
+      "sensing": 0.8673791666666667,
+      "boundary150_fraction": 0.06371961805555557,
+      "reflection_fraction": 0.0040104166666666665,
+      "close_neighbor_fraction": 0.04405381944444445,
+      "nearest_neighbor_m": 429.775718087863,
+      "speed_mps": 19.39095538551021,
+      "worst_fault_coverage": 0.35232447916666665,
+      "return": 263.78698028197044,
+      "mean_curve_peak_step": 182,
+      "mean_curve_peak_coverage": 0.6733333333333333,
+      "final_below30_scenes": 2,
+      "scenes_with_10pp_drop": 32
+    },
+    "neighbors5": {
+      "coverage": 0.5940463541666667,
+      "final_coverage": 0.6389583333333333,
+      "last100_coverage": 0.6233625,
+      "max_drop_1": 0.42604166666666665,
+      "max_drop_5": 0.43437499999999996,
+      "max_drawdown": 0.5170833333333333,
+      "peak_coverage": 0.7502083333333334,
+      "peak_step": 194.1875,
+      "min20_coverage": 0.2931458333333333,
+      "drop_events_5pp": 34.3125,
+      "any_drop_5pp": 1.0,
+      "drop_events_10pp": 18.96875,
+      "any_drop_10pp": 1.0,
+      "drop_events_20pp": 9.5,
+      "any_drop_20pp": 1.0,
+      "early51_150_coverage": 0.61095,
+      "maintain_coverage": 0.012412500000000012,
+      "throughput_mbps": 492.3970208198949,
+      "last100_throughput_mbps": 509.56015455646855,
+      "disconnection_ratio": 0.09040364583333332,
+      "robustness": 0.5393284722222222,
+      "sensing": 0.8455203124999999,
+      "boundary150_fraction": 0.061788194444444444,
+      "reflection_fraction": 0.0046223958333333325,
+      "close_neighbor_fraction": 0.045034722222222226,
+      "nearest_neighbor_m": 423.7582186876748,
+      "speed_mps": 15.51167720590866,
+      "worst_fault_coverage": 0.3830765625,
+      "return": 263.8797161103944,
+      "mean_curve_peak_step": 179,
+      "mean_curve_peak_coverage": 0.6610416666666665,
+      "final_below30_scenes": 0,
+      "scenes_with_10pp_drop": 32
+    }
+  },
+  "paired": [
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "coverage",
+      "difference": 0.038378125,
+      "low": 0.01288658854166667,
+      "high": 0.06243533854166668
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "last100_coverage",
+      "difference": 0.06156041666666667,
+      "low": 0.019521666666666694,
+      "high": 0.10022010416666667
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "final_coverage",
+      "difference": 0.04875,
+      "low": -0.013755208333333314,
+      "high": 0.1075
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "throughput_mbps",
+      "difference": 38.575702744721866,
+      "low": 15.160403700913399,
+      "high": 61.023654570715145
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "return",
+      "difference": 17.40862081305184,
+      "low": 6.07634842570611,
+      "high": 28.081330219721227
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "max_drop_1",
+      "difference": 0.04270833333333336,
+      "low": -0.03458854166666665,
+      "high": 0.12458333333333337
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "max_drop_5",
+      "difference": 0.031875,
+      "low": -0.048338541666666665,
+      "high": 0.11542187499999998
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "drop_events_10pp",
+      "difference": -10.8125,
+      "low": -17.9703125,
+      "high": -3.625
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "maintain_coverage",
+      "difference": 0.021339583333333356,
+      "low": -0.03233567708333333,
+      "high": 0.07320880208333334
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "disconnection_ratio",
+      "difference": -0.01059461805555556,
+      "low": -0.032982096354166685,
+      "high": 0.012126193576388843
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "coverage",
+      "difference": -0.011996875000000014,
+      "low": -0.03356005208333338,
+      "high": 0.00916694010416665
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "last100_coverage",
+      "difference": -0.04578541666666665,
+      "low": -0.07177885416666663,
+      "high": -0.020076354166666678
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "final_coverage",
+      "difference": -0.03708333333333334,
+      "low": -0.08583333333333334,
+      "high": 0.022713541666666625
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "throughput_mbps",
+      "difference": -11.36419947488018,
+      "low": -34.398319211155766,
+      "high": 13.561456264710076
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "return",
+      "difference": -5.404840638660282,
+      "low": -15.174341964891402,
+      "high": 4.377533479253668
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "max_drop_1",
+      "difference": 0.16875,
+      "low": 0.09435937500000001,
+      "high": 0.23916666666666667
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "max_drop_5",
+      "difference": 0.161875,
+      "low": 0.09020312500000001,
+      "high": 0.23146874999999995
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "drop_events_10pp",
+      "difference": 9.875,
+      "low": 4.0625,
+      "high": 15.71875
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "maintain_coverage",
+      "difference": -0.0776333333333333,
+      "low": -0.11408770833333329,
+      "high": -0.03973677083333331
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "baseline10m",
+      "metric": "disconnection_ratio",
+      "difference": 0.025251736111111103,
+      "low": 0.00944867621527777,
+      "high": 0.041168077256944435
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "coverage",
+      "difference": -0.036177083333333325,
+      "low": -0.05976623697916665,
+      "high": -0.012955729166666688
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "last100_coverage",
+      "difference": -0.020752083333333317,
+      "low": -0.06072161458333334,
+      "high": 0.019027604166666674
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "final_coverage",
+      "difference": -0.033333333333333326,
+      "low": -0.10397395833333335,
+      "high": 0.02168749999999988
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "throughput_mbps",
+      "difference": -79.38752821020756,
+      "low": -103.53580785886197,
+      "high": -54.062928025622504
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "return",
+      "difference": -18.704834837877737,
+      "low": -29.30109001634573,
+      "high": -8.081882891284222
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "max_drop_1",
+      "difference": 0.09416666666666665,
+      "low": -0.011046875000000003,
+      "high": 0.18980208333333326
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "max_drop_5",
+      "difference": 0.08354166666666667,
+      "low": -0.017500000000000005,
+      "high": 0.17896354166666664
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "drop_events_10pp",
+      "difference": 11.15625,
+      "low": 7.03125,
+      "high": 15.46875
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "maintain_coverage",
+      "difference": 0.029850000000000043,
+      "low": -0.01644572916666666,
+      "high": 0.07531796875000007
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors4",
+      "reference": "dppo10m",
+      "metric": "disconnection_ratio",
+      "difference": 0.03672743055555555,
+      "low": 0.01744574652777777,
+      "high": 0.05693641493055554
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "coverage",
+      "difference": 0.04241614583333333,
+      "low": 0.016064205729166673,
+      "high": 0.06803716145833329
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "last100_coverage",
+      "difference": 0.0548,
+      "low": 0.012952656250000015,
+      "high": 0.09532604166666665
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "final_coverage",
+      "difference": 0.049999999999999996,
+      "low": -0.005213541666666659,
+      "high": 0.10605729166666657
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "throughput_mbps",
+      "difference": 40.409395367806624,
+      "low": 14.881921648558661,
+      "high": 65.1347493746645
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "return",
+      "difference": 19.121626086283026,
+      "low": 7.16229935321941,
+      "high": 30.674786479908132
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "max_drop_1",
+      "difference": -0.05520833333333332,
+      "low": -0.11501041666666666,
+      "high": 0.006046874999999983
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "max_drop_5",
+      "difference": -0.07250000000000001,
+      "low": -0.1377239583333333,
+      "high": -0.005619791666666678
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "drop_events_10pp",
+      "difference": -15.8125,
+      "low": -22.84453125,
+      "high": -9.34375
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "maintain_coverage",
+      "difference": 0.007612500000000027,
+      "low": -0.04116067708333331,
+      "high": 0.0564250520833334
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "disconnection_ratio",
+      "difference": -0.0406076388888889,
+      "low": -0.05825737847222224,
+      "high": -0.021666449652777784
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "coverage",
+      "difference": -0.007958854166666684,
+      "low": -0.03278184895833337,
+      "high": 0.01738332031249998
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "last100_coverage",
+      "difference": -0.052545833333333326,
+      "low": -0.08675692708333328,
+      "high": -0.01723817708333333
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "final_coverage",
+      "difference": -0.035833333333333356,
+      "low": -0.09629166666666666,
+      "high": 0.031046874999999953
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "throughput_mbps",
+      "difference": -9.530506851795415,
+      "low": -37.01095191268338,
+      "high": 19.381416814363792
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "return",
+      "difference": -3.691835365429096,
+      "low": -14.984706158478119,
+      "high": 7.704124345882398
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "max_drop_1",
+      "difference": 0.07083333333333333,
+      "low": 0.0037447916666666485,
+      "high": 0.13418229166666656
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "max_drop_5",
+      "difference": 0.0575,
+      "low": -0.014182291666666652,
+      "high": 0.12541666666666668
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "drop_events_10pp",
+      "difference": 4.875,
+      "low": 0.030468750000000044,
+      "high": 10.5625
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "maintain_coverage",
+      "difference": -0.09136041666666664,
+      "low": -0.12902447916666662,
+      "high": -0.05136640625000006
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "baseline10m",
+      "metric": "disconnection_ratio",
+      "difference": -0.0047612847222222275,
+      "low": -0.020441623263888896,
+      "high": 0.012469726562499993
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "coverage",
+      "difference": -0.032139062499999996,
+      "low": -0.058214531250000014,
+      "high": -0.006980963541666659
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "last100_coverage",
+      "difference": -0.027512499999999995,
+      "low": -0.06306046875,
+      "high": 0.006597760416666627
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "final_coverage",
+      "difference": -0.03208333333333334,
+      "low": -0.08166666666666667,
+      "high": 0.012921874999999966
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "throughput_mbps",
+      "difference": -77.55383558712279,
+      "low": -103.57304366075478,
+      "high": -51.643452470089954
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "return",
+      "difference": -16.99182956464655,
+      "low": -28.73951964522027,
+      "high": -5.574820988097926
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "max_drop_1",
+      "difference": -0.003750000000000017,
+      "low": -0.11088541666666668,
+      "high": 0.09792187499999996
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "max_drop_5",
+      "difference": -0.020833333333333336,
+      "low": -0.12709895833333335,
+      "high": 0.08230729166666659
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "drop_events_10pp",
+      "difference": 6.15625,
+      "low": 1.21875,
+      "high": 11.719531249999996
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "maintain_coverage",
+      "difference": 0.016122916666666716,
+      "low": -0.021948437499999928,
+      "high": 0.05458281249999995
+    },
+    {
+      "checkpoint": "best",
+      "group": "neighbors5",
+      "reference": "dppo10m",
+      "metric": "disconnection_ratio",
+      "difference": 0.006714409722222217,
+      "low": -0.01189767795138889,
+      "high": 0.025535915798611072
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "coverage",
+      "difference": 0.026557812499999986,
+      "low": 0.004108984374999981,
+      "high": 0.04915229166666665
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "last100_coverage",
+      "difference": 0.018833333333333313,
+      "low": -0.01644390625000003,
+      "high": 0.05583531249999998
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "final_coverage",
+      "difference": 0.01583333333333333,
+      "low": -0.05917708333333335,
+      "high": 0.09458333333333331
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "throughput_mbps",
+      "difference": 22.471062904482558,
+      "low": 0.22397120078489263,
+      "high": 45.65160094449027
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "return",
+      "difference": 11.821581688239064,
+      "low": 1.718373361643147,
+      "high": 21.880199029559265
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "max_drop_1",
+      "difference": -0.029583333333333336,
+      "low": -0.11145833333333334,
+      "high": 0.05230729166666659
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "max_drop_5",
+      "difference": -0.03145833333333334,
+      "low": -0.11542708333333332,
+      "high": 0.04876562499999992
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "drop_events_10pp",
+      "difference": -13.40625,
+      "low": -20.59453125,
+      "high": -6.9359375000000085
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "maintain_coverage",
+      "difference": -0.021104166666666695,
+      "low": -0.06697328125000002,
+      "high": 0.02073411458333332
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors4",
+      "reference": "neighbors3",
+      "metric": "disconnection_ratio",
+      "difference": -0.016406250000000008,
+      "low": -0.039146918402777786,
+      "high": 0.0070792100694444275
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "coverage",
+      "difference": 0.026961979166666657,
+      "low": 0.008430507812499967,
+      "high": 0.046819986979166645
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "last100_coverage",
+      "difference": 0.024029166666666657,
+      "low": -0.011098906250000002,
+      "high": 0.0578731770833333
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "final_coverage",
+      "difference": 0.057291666666666664,
+      "low": -0.002296874999999997,
+      "high": 0.12146354166666663
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "throughput_mbps",
+      "difference": 21.178609687431628,
+      "low": -0.10602769602091748,
+      "high": 42.20650817117998
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "return",
+      "difference": 11.914317516663015,
+      "low": 3.6095616243847415,
+      "high": 20.79476975108193
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "max_drop_1",
+      "difference": -0.06270833333333334,
+      "low": -0.146046875,
+      "high": 0.02270833333333334
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "max_drop_5",
+      "difference": -0.06375,
+      "low": -0.146875,
+      "high": 0.02167187499999997
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "drop_events_10pp",
+      "difference": -14.0,
+      "low": -20.2203125,
+      "high": -7.936718750000004
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "maintain_coverage",
+      "difference": -0.021939583333333346,
+      "low": -0.06408838541666666,
+      "high": 0.021520937499999965
+    },
+    {
+      "checkpoint": "last",
+      "group": "neighbors5",
+      "reference": "neighbors3",
+      "metric": "disconnection_ratio",
+      "difference": -0.046215277777777786,
+      "low": -0.06209711371527779,
+      "high": -0.031197482638888892
+    }
+  ],
+  "neighbor_usage": {
+    "neighbors3": {
+      "best": {
+        "mean_degree": 2.4210069444444446,
+        "mean_observed": 2.068046875,
+        "degree_at_least4": 0.20799913194444444,
+        "degree_at_least5": 0.09125,
+        "degree_exceeds_slots": 0.20799913194444444,
+        "missing_neighbor_mean": 0.35296006944444447
+      },
+      "last": {
+        "mean_degree": 2.3455381944444444,
+        "mean_observed": 1.9932421875,
+        "degree_at_least4": 0.2102300347222222,
+        "degree_at_least5": 0.09598090277777778,
+        "degree_exceeds_slots": 0.2102300347222222,
+        "missing_neighbor_mean": 0.35229600694444446
+      }
+    },
+    "neighbors4": {
+      "best": {
+        "mean_degree": 2.430347222222222,
+        "mean_observed": 2.2984635416666666,
+        "degree_at_least4": 0.22483940972222222,
+        "degree_at_least5": 0.08963107638888888,
+        "degree_exceeds_slots": 0.08963107638888888,
+        "missing_neighbor_mean": 0.13188368055555555
+      },
+      "last": {
+        "mean_degree": 2.4068315972222223,
+        "mean_observed": 2.269700520833333,
+        "degree_at_least4": 0.2121267361111111,
+        "degree_at_least5": 0.08866753472222222,
+        "degree_exceeds_slots": 0.08866753472222222,
+        "missing_neighbor_mean": 0.13713107638888888
+      }
+    },
+    "neighbors5": {
+      "best": {
+        "mean_degree": 2.5206163194444446,
+        "mean_observed": 2.4600737847222223,
+        "degree_at_least4": 0.22586371527777777,
+        "degree_at_least5": 0.09837673611111111,
+        "degree_exceeds_slots": 0.040403645833333335,
+        "missing_neighbor_mean": 0.06054253472222222
+      },
+      "last": {
+        "mean_degree": 2.5746788194444443,
+        "mean_observed": 2.4765972222222223,
+        "degree_at_least4": 0.24184895833333334,
+        "degree_at_least5": 0.11802083333333334,
+        "degree_exceeds_slots": 0.05642361111111111,
+        "missing_neighbor_mean": 0.09808159722222222
+      }
+    }
+  },
+  "critic_best": {
+    "neighbors3": {
+      "all": {
+        "rmse": 10.56476334506115,
+        "mae": 8.182580256689999,
+        "bias": 0.08900593344474343
+      },
+      "first100": {
+        "rmse": 13.811534445525833,
+        "mae": 11.338096197106202,
+        "bias": 0.4961094980232016
+      },
+      "middle100": {
+        "rmse": 10.815116419827003,
+        "mae": 9.20339069688448,
+        "bias": -0.5149984479624493
+      },
+      "last100": {
+        "rmse": 5.05455375952424,
+        "mae": 3.520348540609746,
+        "bias": 0.28253041906421816
+      },
+      "last20": {
+        "rmse": 1.4295979680969104,
+        "mae": 0.9217682511318038,
+        "bias": 0.1289823822249953
+      },
+      "last1": {
+        "rmse": 0.124574094368899,
+        "mae": 0.08949226181824796,
+        "bias": -0.0013934827766933916
+      },
+      "time_centered_scene_correlation": 0.5589802893241033,
+      "normalized_rmse": 0.3148033071601227
+    },
+    "neighbors4": {
+      "all": {
+        "rmse": 9.199256515012255,
+        "mae": 7.207825800008542,
+        "bias": -4.391652960802329
+      },
+      "first100": {
+        "rmse": 10.24655229213348,
+        "mae": 8.325148594315113,
+        "bias": -5.0159229037175175
+      },
+      "middle100": {
+        "rmse": 10.655100640483848,
+        "mae": 8.884327160796488,
+        "bias": -5.929860350725967
+      },
+      "last100": {
+        "rmse": 4.6777186490949125,
+        "mae": 3.4974539843812256,
+        "bias": -1.746321354119993
+      },
+      "last20": {
+        "rmse": 1.3659988301181814,
+        "mae": 0.9846852014135135,
+        "bias": -0.42068892343393227
+      },
+      "last1": {
+        "rmse": 0.14404870112592993,
+        "mae": 0.10116974900770866,
+        "bias": -0.04083339496268816
+      },
+      "time_centered_scene_correlation": 0.38955825290672597,
+      "normalized_rmse": 0.26824110248401595
+    },
+    "neighbors5": {
+      "all": {
+        "rmse": 8.727163203055142,
+        "mae": 6.633055193190505,
+        "bias": -2.639156549971241
+      },
+      "first100": {
+        "rmse": 10.848077383986185,
+        "mae": 8.883688774606862,
+        "bias": -3.019884519870221
+      },
+      "middle100": {
+        "rmse": 9.16456272107791,
+        "mae": 7.437505006431195,
+        "bias": -3.511302213847044
+      },
+      "last100": {
+        "rmse": 3.9450264587554407,
+        "mae": 2.8036553186936373,
+        "bias": -1.0339094494098877
+      },
+      "last20": {
+        "rmse": 0.9234651380888559,
+        "mae": 0.6756138548512405,
+        "bias": -0.2632250863562645
+      },
+      "last1": {
+        "rmse": 0.11071253046214449,
+        "mae": 0.085594945524357,
+        "bias": -0.02665254816350359
+      },
+      "time_centered_scene_correlation": 0.4721530805266428,
+      "normalized_rmse": 0.24885669666570012
+    },
+    "baseline10m": {
+      "all": {
+        "rmse": 9.275819761829817,
+        "mae": 7.176848277416737,
+        "bias": -3.6903052204929656
+      },
+      "first100": {
+        "rmse": 10.4489034591554,
+        "mae": 8.591437881610728,
+        "bias": -2.996968839846803
+      },
+      "middle100": {
+        "rmse": 10.889129533731616,
+        "mae": 9.203519343205476,
+        "bias": -5.562236908467501
+      },
+      "last100": {
+        "rmse": 3.9189013140868383,
+        "mae": 2.8008614253563833,
+        "bias": -1.2919258969924703
+      },
+      "last20": {
+        "rmse": 0.9760496474027173,
+        "mae": 0.7070284848815391,
+        "bias": -0.2973086469235995
+      },
+      "last1": {
+        "rmse": 0.15026153057979522,
+        "mae": 0.09667734327190022,
+        "bias": -0.012437049553500997
+      },
+      "time_centered_scene_correlation": 0.5062726278272015,
+      "normalized_rmse": 0.2658791354039145
+    },
+    "dppo10m": {
+      "all": {
+        "rmse": 7.417800430854942,
+        "mae": 5.514317807512343,
+        "bias": -2.889869159398774
+      },
+      "first100": {
+        "rmse": 10.008580312243804,
+        "mae": 8.171574853062129,
+        "bias": -4.525021264654384
+      },
+      "middle100": {
+        "rmse": 7.506661359924556,
+        "mae": 5.990507043982999,
+        "bias": -3.1251395559368085
+      },
+      "last100": {
+        "rmse": 3.474954090400663,
+        "mae": 2.372828661074946,
+        "bias": -0.9200909599269442
+      },
+      "last20": {
+        "rmse": 1.009864735047376,
+        "mae": 0.6972537647791305,
+        "bias": -0.20559267707872841
+      },
+      "last1": {
+        "rmse": 0.0895622659096378,
+        "mae": 0.07125504107286224,
+        "bias": -0.03455484417261451
+      },
+      "time_centered_scene_correlation": 0.4677429918648498,
+      "normalized_rmse": 0.20382575380456078
+    }
+  },
+  "fixed_scenes": {
+    "neighbors3/10000": [
+      {
+        "time": 0,
+        "coverage": 0.29333333333333333,
+        "connected": 10,
+        "uu_links": 15,
+        "components": 6
+      },
+      {
+        "time": 150,
+        "coverage": 0.6266666666666667,
+        "connected": 17,
+        "uu_links": 21,
+        "components": 2
+      },
+      {
+        "time": 200,
+        "coverage": 0.68,
+        "connected": 17,
+        "uu_links": 22,
+        "components": 2
+      },
+      {
+        "time": 400,
+        "coverage": 0.5533333333333333,
+        "connected": 13,
+        "uu_links": 22,
+        "components": 3
+      }
+    ],
+    "neighbors4/10000": [
+      {
+        "time": 0,
+        "coverage": 0.29333333333333333,
+        "connected": 10,
+        "uu_links": 15,
+        "components": 6
+      },
+      {
+        "time": 150,
+        "coverage": 0.82,
+        "connected": 18,
+        "uu_links": 28,
+        "components": 1
+      },
+      {
+        "time": 200,
+        "coverage": 0.14,
+        "connected": 3,
+        "uu_links": 23,
+        "components": 3
+      },
+      {
+        "time": 400,
+        "coverage": 0.7466666666666667,
+        "connected": 18,
+        "uu_links": 20,
+        "components": 1
+      }
+    ],
+    "neighbors5/10000": [
+      {
+        "time": 0,
+        "coverage": 0.29333333333333333,
+        "connected": 10,
+        "uu_links": 15,
+        "components": 6
+      },
+      {
+        "time": 150,
+        "coverage": 0.64,
+        "connected": 16,
+        "uu_links": 23,
+        "components": 2
+      },
+      {
+        "time": 200,
+        "coverage": 0.7066666666666667,
+        "connected": 18,
+        "uu_links": 22,
+        "components": 2
+      },
+      {
+        "time": 400,
+        "coverage": 0.8266666666666667,
+        "connected": 18,
+        "uu_links": 18,
+        "components": 3
+      }
+    ],
+    "baseline10m/10000": [
+      {
+        "time": 0,
+        "coverage": 0.29333333333333333,
+        "connected": 10,
+        "uu_links": 15,
+        "components": 6
+      },
+      {
+        "time": 150,
+        "coverage": 0.6533333333333333,
+        "connected": 18,
+        "uu_links": 32,
+        "components": 1
+      },
+      {
+        "time": 200,
+        "coverage": 0.66,
+        "connected": 18,
+        "uu_links": 30,
+        "components": 2
+      },
+      {
+        "time": 400,
+        "coverage": 0.64,
+        "connected": 18,
+        "uu_links": 33,
+        "components": 1
+      }
+    ],
+    "dppo10m/10000": [
+      {
+        "time": 0,
+        "coverage": 0.29333333333333333,
+        "connected": 10,
+        "uu_links": 15,
+        "components": 6
+      },
+      {
+        "time": 150,
+        "coverage": 0.64,
+        "connected": 16,
+        "uu_links": 18,
+        "components": 2
+      },
+      {
+        "time": 200,
+        "coverage": 0.7066666666666667,
+        "connected": 15,
+        "uu_links": 19,
+        "components": 3
+      },
+      {
+        "time": 400,
+        "coverage": 0.6333333333333333,
+        "connected": 18,
+        "uu_links": 22,
+        "components": 2
+      }
+    ],
+    "neighbors3/10001": [
+      {
+        "time": 0,
+        "coverage": 0.4266666666666667,
+        "connected": 14,
+        "uu_links": 13,
+        "components": 7
+      },
+      {
+        "time": 150,
+        "coverage": 0.7133333333333334,
+        "connected": 16,
+        "uu_links": 17,
+        "components": 4
+      },
+      {
+        "time": 200,
+        "coverage": 0.7,
+        "connected": 16,
+        "uu_links": 24,
+        "components": 3
+      },
+      {
+        "time": 400,
+        "coverage": 0.72,
+        "connected": 18,
+        "uu_links": 28,
+        "components": 1
+      }
+    ],
+    "neighbors4/10001": [
+      {
+        "time": 0,
+        "coverage": 0.4266666666666667,
+        "connected": 14,
+        "uu_links": 13,
+        "components": 7
+      },
+      {
+        "time": 150,
+        "coverage": 0.52,
+        "connected": 16,
+        "uu_links": 16,
+        "components": 5
+      },
+      {
+        "time": 200,
+        "coverage": 0.6733333333333333,
+        "connected": 17,
+        "uu_links": 19,
+        "components": 3
+      },
+      {
+        "time": 400,
+        "coverage": 0.48,
+        "connected": 16,
+        "uu_links": 17,
+        "components": 5
+      }
+    ],
+    "neighbors5/10001": [
+      {
+        "time": 0,
+        "coverage": 0.4266666666666667,
+        "connected": 14,
+        "uu_links": 13,
+        "components": 7
+      },
+      {
+        "time": 150,
+        "coverage": 0.7466666666666667,
+        "connected": 18,
+        "uu_links": 15,
+        "components": 4
+      },
+      {
+        "time": 200,
+        "coverage": 0.76,
+        "connected": 18,
+        "uu_links": 17,
+        "components": 2
+      },
+      {
+        "time": 400,
+        "coverage": 0.7266666666666667,
+        "connected": 18,
+        "uu_links": 34,
+        "components": 1
+      }
+    ],
+    "baseline10m/10001": [
+      {
+        "time": 0,
+        "coverage": 0.4266666666666667,
+        "connected": 14,
+        "uu_links": 13,
+        "components": 7
+      },
+      {
+        "time": 150,
+        "coverage": 0.6266666666666667,
+        "connected": 17,
+        "uu_links": 17,
+        "components": 2
+      },
+      {
+        "time": 200,
+        "coverage": 0.74,
+        "connected": 18,
+        "uu_links": 25,
+        "components": 1
+      },
+      {
+        "time": 400,
+        "coverage": 0.68,
+        "connected": 18,
+        "uu_links": 30,
+        "components": 1
+      }
+    ],
+    "dppo10m/10001": [
+      {
+        "time": 0,
+        "coverage": 0.4266666666666667,
+        "connected": 14,
+        "uu_links": 13,
+        "components": 7
+      },
+      {
+        "time": 150,
+        "coverage": 0.7466666666666667,
+        "connected": 17,
+        "uu_links": 19,
+        "components": 3
+      },
+      {
+        "time": 200,
+        "coverage": 0.7666666666666667,
+        "connected": 17,
+        "uu_links": 25,
+        "components": 3
+      },
+      {
+        "time": 400,
+        "coverage": 0.7466666666666667,
+        "connected": 17,
+        "uu_links": 25,
+        "components": 2
+      }
+    ]
+  },
+  "abrupt_fixed_scenes": {
+    "neighbors3/10000": {
+      "time": 256,
+      "coverage_before": 0.8133333333333334,
+      "coverage_after": 0.6,
+      "connected_before": 18,
+      "connected_after": 12,
+      "coverage_next": 0.7933333333333333,
+      "connected_next": 18,
+      "newly_disconnected_uavs": [
+        1,
+        7,
+        8,
+        15,
+        16,
+        17
+      ],
+      "lost_users": 33,
+      "lost_users_with_disconnected_previous_server": 31,
+      "lost_uu_edges": [
+        [
+          1,
+          10
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          10,
+          16
+        ]
+      ],
+      "lost_ug_edges": [],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            1,
+            10
+          ],
+          "distance_before": 649.4690896800447,
+          "distance_after": 658.5272776857088,
+          "neighbor_ranks": [
+            2,
+            4
+          ],
+          "observed_at_both_ends": false
+        },
+        {
+          "uav_ids": [
+            5,
+            15
+          ],
+          "distance_before": 627.7982621972242,
+          "distance_after": 659.2293843041375,
+          "neighbor_ranks": [
+            1,
+            1
+          ],
+          "observed_at_both_ends": true
+        },
+        {
+          "uav_ids": [
+            10,
+            16
+          ],
+          "distance_before": 643.4563631553489,
+          "distance_after": 663.88155956208,
+          "neighbor_ranks": [
+            3,
+            3
+          ],
+          "observed_at_both_ends": true
+        }
+      ]
+    },
+    "neighbors4/10000": {
+      "time": 200,
+      "coverage_before": 0.8,
+      "coverage_after": 0.14,
+      "connected_before": 18,
+      "connected_after": 3,
+      "coverage_next": 0.7933333333333333,
+      "connected_next": 18,
+      "newly_disconnected_uavs": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        16,
+        17,
+        18
+      ],
+      "lost_users": 100,
+      "lost_users_with_disconnected_previous_server": 97,
+      "lost_uu_edges": [
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          7,
+          16
+        ]
+      ],
+      "lost_ug_edges": [],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            2,
+            6
+          ],
+          "distance_before": 635.5166850490521,
+          "distance_after": 682.9727503502862,
+          "neighbor_ranks": [
+            2,
+            3
+          ],
+          "observed_at_both_ends": true
+        },
+        {
+          "uav_ids": [
+            2,
+            10
+          ],
+          "distance_before": 633.3756483945009,
+          "distance_after": 659.6329104620067,
+          "neighbor_ranks": [
+            1,
+            5
+          ],
+          "observed_at_both_ends": false
+        },
+        {
+          "uav_ids": [
+            7,
+            16
+          ],
+          "distance_before": 647.4167391243902,
+          "distance_after": 667.2404417401262,
+          "neighbor_ranks": [
+            5,
+            1
+          ],
+          "observed_at_both_ends": false
+        }
+      ]
+    },
+    "neighbors5/10000": {
+      "time": 301,
+      "coverage_before": 0.7533333333333333,
+      "coverage_after": 0.5866666666666667,
+      "connected_before": 18,
+      "connected_after": 15,
+      "coverage_next": 0.7466666666666667,
+      "connected_next": 18,
+      "newly_disconnected_uavs": [
+        3,
+        7,
+        15
+      ],
+      "lost_users": 25,
+      "lost_users_with_disconnected_previous_server": 25,
+      "lost_uu_edges": [
+        [
+          3,
+          15
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          18
+        ]
+      ],
+      "lost_ug_edges": [
+        [
+          7,
+          2
+        ]
+      ],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            3,
+            15
+          ],
+          "distance_before": 638.160337921745,
+          "distance_after": 651.5640471927966,
+          "neighbor_ranks": [
+            1,
+            2
+          ],
+          "observed_at_both_ends": true
+        },
+        {
+          "uav_ids": [
+            9,
+            12
+          ],
+          "distance_before": 643.345393505409,
+          "distance_after": 663.1150152310439,
+          "neighbor_ranks": [
+            4,
+            3
+          ],
+          "observed_at_both_ends": true
+        },
+        {
+          "uav_ids": [
+            10,
+            18
+          ],
+          "distance_before": 648.9404656414735,
+          "distance_after": 664.9402812068263,
+          "neighbor_ranks": [
+            3,
+            1
+          ],
+          "observed_at_both_ends": true
+        }
+      ]
+    },
+    "baseline10m/10000": {
+      "time": 61,
+      "coverage_before": 0.6866666666666666,
+      "coverage_after": 0.5466666666666666,
+      "connected_before": 18,
+      "connected_after": 15,
+      "coverage_next": 0.6866666666666666,
+      "connected_next": 18,
+      "newly_disconnected_uavs": [
+        7,
+        15,
+        16
+      ],
+      "lost_users": 22,
+      "lost_users_with_disconnected_previous_server": 22,
+      "lost_uu_edges": [
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "lost_ug_edges": [],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            1,
+            10
+          ],
+          "distance_before": 638.8476329215699,
+          "distance_after": 660.7113354258428,
+          "neighbor_ranks": [
+            5,
+            3
+          ],
+          "observed_at_both_ends": false
+        },
+        {
+          "uav_ids": [
+            1,
+            14
+          ],
+          "distance_before": 614.7356564372025,
+          "distance_after": 653.0595461532055,
+          "neighbor_ranks": [
+            4,
+            3
+          ],
+          "observed_at_both_ends": false
+        },
+        {
+          "uav_ids": [
+            7,
+            17
+          ],
+          "distance_before": 634.160975985702,
+          "distance_after": 650.0778640140074,
+          "neighbor_ranks": [
+            2,
+            3
+          ],
+          "observed_at_both_ends": true
+        },
+        {
+          "uav_ids": [
+            8,
+            15
+          ],
+          "distance_before": 636.255647038413,
+          "distance_after": 658.9259304589864,
+          "neighbor_ranks": [
+            3,
+            2
+          ],
+          "observed_at_both_ends": true
+        },
+        {
+          "uav_ids": [
+            15,
+            17
+          ],
+          "distance_before": 635.7617027321369,
+          "distance_after": 661.9402538579747,
+          "neighbor_ranks": [
+            1,
+            4
+          ],
+          "observed_at_both_ends": false
+        }
+      ]
+    },
+    "dppo10m/10000": {
+      "time": 58,
+      "coverage_before": 0.62,
+      "coverage_after": 0.4,
+      "connected_before": 17,
+      "connected_after": 13,
+      "coverage_next": 0.4066666666666667,
+      "connected_next": 13,
+      "newly_disconnected_uavs": [
+        7,
+        8,
+        15,
+        17
+      ],
+      "lost_users": 34,
+      "lost_users_with_disconnected_previous_server": 33,
+      "lost_uu_edges": [
+        [
+          1,
+          14
+        ],
+        [
+          4,
+          18
+        ],
+        [
+          10,
+          13
+        ]
+      ],
+      "lost_ug_edges": [
+        [
+          17,
+          2
+        ]
+      ],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            1,
+            14
+          ],
+          "distance_before": 649.6854673630203,
+          "distance_after": 658.0957746615705,
+          "neighbor_ranks": [
+            4,
+            4
+          ],
+          "observed_at_both_ends": false
+        },
+        {
+          "uav_ids": [
+            4,
+            18
+          ],
+          "distance_before": 619.2267718679948,
+          "distance_after": 655.0341120276157,
+          "neighbor_ranks": [
+            2,
+            3
+          ],
+          "observed_at_both_ends": true
+        },
+        {
+          "uav_ids": [
+            10,
+            13
+          ],
+          "distance_before": 648.607765638425,
+          "distance_after": 665.1725330670963,
+          "neighbor_ranks": [
+            5,
+            3
+          ],
+          "observed_at_both_ends": false
+        }
+      ]
+    },
+    "neighbors3/10001": {
+      "time": 298,
+      "coverage_before": 0.7,
+      "coverage_after": 0.06,
+      "connected_before": 18,
+      "connected_after": 1,
+      "coverage_next": 0.6866666666666666,
+      "connected_next": 18,
+      "newly_disconnected_uavs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18
+      ],
+      "lost_users": 96,
+      "lost_users_with_disconnected_previous_server": 96,
+      "lost_uu_edges": [
+        [
+          12,
+          16
+        ]
+      ],
+      "lost_ug_edges": [],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            12,
+            16
+          ],
+          "distance_before": 639.9133505713156,
+          "distance_after": 659.2802388851337,
+          "neighbor_ranks": [
+            3,
+            1
+          ],
+          "observed_at_both_ends": true
+        }
+      ]
+    },
+    "neighbors4/10001": {
+      "time": 331,
+      "coverage_before": 0.62,
+      "coverage_after": 0.0,
+      "connected_before": 17,
+      "connected_after": 0,
+      "coverage_next": 0.56,
+      "connected_next": 15,
+      "newly_disconnected_uavs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18
+      ],
+      "lost_users": 93,
+      "lost_users_with_disconnected_previous_server": 93,
+      "lost_uu_edges": [
+        [
+          2,
+          6
+        ]
+      ],
+      "lost_ug_edges": [
+        [
+          8,
+          3
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            2,
+            6
+          ],
+          "distance_before": 632.8185995632182,
+          "distance_after": 685.3583919085997,
+          "neighbor_ranks": [
+            2,
+            2
+          ],
+          "observed_at_both_ends": true
+        }
+      ]
+    },
+    "neighbors5/10001": {
+      "time": 98,
+      "coverage_before": 0.6733333333333333,
+      "coverage_after": 0.43333333333333335,
+      "connected_before": 16,
+      "connected_after": 12,
+      "coverage_next": 0.5066666666666667,
+      "connected_next": 13,
+      "newly_disconnected_uavs": [
+        4,
+        10,
+        16,
+        18
+      ],
+      "lost_users": 37,
+      "lost_users_with_disconnected_previous_server": 36,
+      "lost_uu_edges": [
+        [
+          4,
+          18
+        ]
+      ],
+      "lost_ug_edges": [
+        [
+          16,
+          2
+        ]
+      ],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            4,
+            18
+          ],
+          "distance_before": 647.8660091813995,
+          "distance_after": 651.316290659088,
+          "neighbor_ranks": [
+            2,
+            2
+          ],
+          "observed_at_both_ends": true
+        }
+      ]
+    },
+    "baseline10m/10001": {
+      "time": 95,
+      "coverage_before": 0.6866666666666666,
+      "coverage_after": 0.54,
+      "connected_before": 16,
+      "connected_after": 14,
+      "coverage_next": 0.6666666666666666,
+      "connected_next": 16,
+      "newly_disconnected_uavs": [
+        4,
+        18
+      ],
+      "lost_users": 23,
+      "lost_users_with_disconnected_previous_server": 20,
+      "lost_uu_edges": [
+        [
+          5,
+          12
+        ],
+        [
+          9,
+          18
+        ]
+      ],
+      "lost_ug_edges": [],
+      "lost_link_geometry": [
+        {
+          "uav_ids": [
+            5,
+            12
+          ],
+          "distance_before": 643.1680642961257,
+          "distance_after": 673.3936470989327,
+          "neighbor_ranks": [
+            2,
+            3
+          ],
+          "observed_at_both_ends": true
+        },
+        {
+          "uav_ids": [
+            9,
+            18
+          ],
+          "distance_before": 642.1002615736834,
+          "distance_after": 651.7898164656566,
+          "neighbor_ranks": [
+            2,
+            1
+          ],
+          "observed_at_both_ends": true
+        }
+      ]
+    },
+    "dppo10m/10001": {
+      "time": 320,
+      "coverage_before": 0.7533333333333333,
+      "coverage_after": 0.0,
+      "connected_before": 17,
+      "connected_after": 0,
+      "coverage_next": 0.0,
+      "connected_next": 17,
+      "newly_disconnected_uavs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18
+      ],
+      "lost_users": 113,
+      "lost_users_with_disconnected_previous_server": 113,
+      "lost_uu_edges": [],
+      "lost_ug_edges": [
+        [
+          14,
+          1
+        ]
+      ],
+      "lost_link_geometry": []
+    }
+  },
+  "sources": {
+    "neighbors3": {
+      "checkpoint": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "env_steps": 671744,
+      "training_budget": 1000000,
+      "neighbor_slots": 3,
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "batch_size": 16,
+      "device": "cuda:0",
+      "training_device": "cpu",
+      "checkpoint_kind": "best",
+      "validation_difference": {
+        "coverage": -0.021928125000000076,
+        "return": -9.582980947224343,
+        "throughput_bps": -15219955.260455906
+      },
+      "script_sha256": "3174bc30bb7505adc49444c8c4645aeea0cb113d4307ba58a594d8aed885ee51"
+    },
+    "neighbors4": {
+      "checkpoint": "runs/mappo_capacity10_neighbors4_1m_seed0/best.pt",
+      "sha256": "28e8aaea253ec621661fda4dcd32d73758ed0837631520a28f4ac72e35138387",
+      "env_steps": 620544,
+      "training_budget": 1000000,
+      "neighbor_slots": 4,
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "batch_size": 16,
+      "device": "cuda:0",
+      "training_device": "cuda:0",
+      "checkpoint_kind": "best",
+      "validation_difference": {
+        "coverage": 0.0,
+        "return": 5.684341886080802e-14,
+        "throughput_bps": 0.0
+      },
+      "script_sha256": "3174bc30bb7505adc49444c8c4645aeea0cb113d4307ba58a594d8aed885ee51"
+    },
+    "neighbors5": {
+      "checkpoint": "runs/mappo_capacity10_neighbors5_1m_seed0/best.pt",
+      "sha256": "02a85c0baac9992f1c1c1aa23d39a7ed0b39baf84db7b41315119e5e21279f57",
+      "env_steps": 980992,
+      "training_budget": 1000000,
+      "neighbor_slots": 5,
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "batch_size": 16,
+      "device": "cuda:0",
+      "training_device": "cuda:0",
+      "checkpoint_kind": "best",
+      "validation_difference": {
+        "coverage": 0.0,
+        "return": 0.0,
+        "throughput_bps": 0.0
+      },
+      "script_sha256": "3174bc30bb7505adc49444c8c4645aeea0cb113d4307ba58a594d8aed885ee51"
+    },
+    "baseline10m": {
+      "checkpoint": "runs/mappo_coverage_throughput_capacity10_10m_seed0/best.pt",
+      "sha256": "3b591ca7788858cf28d91acf4b3362ae2a8dac199e13184773fcd8b00c19c9cb",
+      "env_steps": 3821568,
+      "training_budget": 10000000,
+      "action_seed": 880001,
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "batch_size": 16,
+      "device": "cuda:0",
+      "moment_repeats": 64,
+      "evaluation_source_digest": "2d8bcbdb4f3990fe2bdb3c47a96b328bc25ff9d5df3ec3820b66d16e8f90736f",
+      "evaluation_script_sha256": "736e4944b0210df6da7ae329e35b4f4ff395b4eaa2ab2b77e1d576bfb6e94e08",
+      "mode": "baseline_best",
+      "validation_reproduction": {
+        "coverage": 0.0,
+        "return": 1.1368683772161603e-13,
+        "throughput_bps": 0.0
+      },
+      "score_rule": "sigmoid((pre_move_downlink_SINR_db - threshold_db) / 10)",
+      "association": "baseline_centralized",
+      "teacher_is_posthoc_comparison": true,
+      "not_original_dppo_pretraining_teacher": true
+    },
+    "dppo10m": {
+      "checkpoint": "runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/best.pt",
+      "sha256": "6f36a11f71cd719da87e04c9ac1f3c1cf1c0386758c7caae9c8ceeabf5985099",
+      "env_steps": 9550656,
+      "pretraining_epoch": null,
+      "moment_repeats": 64,
+      "scene_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009,
+        10010,
+        10011,
+        10012,
+        10013,
+        10014,
+        10015,
+        10016,
+        10017,
+        10018,
+        10019,
+        10020,
+        10021,
+        10022,
+        10023,
+        10024,
+        10025,
+        10026,
+        10027,
+        10028,
+        10029,
+        10030,
+        10031
+      ],
+      "action_seed": 880001,
+      "device": "cuda:0"
+    }
+  },
+  "colors": {
+    "neighbors3": "#444444",
+    "neighbors4": "#009E73",
+    "neighbors5": "#E69F00",
+    "baseline10m": "#D62728",
+    "dppo10m": "#0072B2"
+  },
+  "uncertainty": "2000 paired scene bootstrap; seed 950001; not training-seed CI"
+}

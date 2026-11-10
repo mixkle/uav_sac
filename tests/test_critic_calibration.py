@@ -20,7 +20,7 @@ def test_full_returns_end_at_last_real_reward():
 
 
 def test_calibration_keeps_actor_and_normalizer_outputs_and_terminal_states(tmp_path):
-    cfg=load_config('configs/discrete_mappo_smoke.yaml');cfg.env.horizon=4
+    cfg=load_config('tests/fixtures/configs/discrete_mappo_smoke.yaml');cfg.env.horizon=4
     learner=make_learner(cfg,configure_runtime(cfg))
     for p in learner.actor.parameters():p.requires_grad_(False)
     original_actor=actor_digest(learner.actor)
@@ -41,7 +41,7 @@ def test_calibration_keeps_actor_and_normalizer_outputs_and_terminal_states(tmp_
 
 
 def test_optimizer_controls_preserve_weights_and_separate_history_from_lr():
-    cfg=load_config('configs/discrete_mappo_smoke.yaml')
+    cfg=load_config('tests/fixtures/configs/discrete_mappo_smoke.yaml')
     learner=make_learner(cfg,configure_runtime(cfg))
     learner.value(torch.zeros(2,cfg.env.state_dim)).sum().backward()
     learner.value_opt.step()
@@ -61,7 +61,7 @@ def test_optimizer_controls_preserve_weights_and_separate_history_from_lr():
 
 
 def test_calibration_resume_matches_uninterrupted_with_legacy_and_saved_permutation_rng():
-    cfg=load_config('configs/discrete_mappo_smoke.yaml')
+    cfg=load_config('tests/fixtures/configs/discrete_mappo_smoke.yaml')
     learner=make_learner(cfg,configure_runtime(cfg))
     generator=np.random.default_rng(17)
     data_rng=np.random.default_rng(81)

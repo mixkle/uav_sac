@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-06",
+  "formal_training_started": false,
+  "server_writes_restricted_to": "/home/dym/",
+  "run": "runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0",
+  "actual_steps": 3000000,
+  "best_step": 2792000,
+  "learning_contract_matches_1m": true,
+  "download": {
+    "passed": true,
+    "files": 15,
+    "bytes": 168163701,
+    "evaluation_files": 16,
+    "evaluation_sha256_verified": true
+  },
+  "reproducibility": {
+    "passed": true,
+    "analysis_sha256": "4213659838e1e4a1e613f3e4ecae27fa88c8842c28a9ee6ad5af7162367d6529",
+    "uses_saved_data_only": true
+  },
+  "evaluation_reproduction": {
+    "best": {
+      "return": 0.0,
+      "coverage": 0.0,
+      "last100_coverage": 0.0,
+      "final_coverage": 0.0,
+      "throughput_bps": 0.0
+    },
+    "last": {
+      "return": 0.0,
+      "coverage": 0.0,
+      "last100_coverage": 0.0,
+      "final_coverage": 0.0,
+      "throughput_bps": 0.0
+    },
+    "step0": {
+      "return": 0.0,
+      "coverage": 0.0,
+      "last100_coverage": 0.0,
+      "final_coverage": 0.0,
+      "throughput_bps": 0.0
+    }
+  },
+  "report": "analysis/diffusion_dppo_capacity10_coverage_throughput_3m_seed0/diagnosis.md",
+  "report_sha256": "a562b98ec6fd031fd241cf54fc50b9b64aa113f1c1c75a45d40ffd2f691b040b",
+  "analyzer_sha256": "5a623ae31c2325d906636b732f74e92d6aa40eb6332fc45b10e7b4d3c1afb25d"
+}

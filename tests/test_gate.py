@@ -7,7 +7,7 @@ from uav_research.evaluate import check_gate
 
 
 def fixtures(tmp_path):
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     configs = [copy.deepcopy(cfg) for _ in range(3)]
     configs[1].algo.name = "mappo"
     configs[2].env.robustness_weight = 0.0
@@ -50,7 +50,7 @@ def test_gate_requires_all_metrics_and_positive_ablation(tmp_path):
     paths = fixtures(tmp_path)
     report = check_gate(*paths, tmp_path / "gate.json")
     assert report["passed"] and report["training_steps"] == 256
-    data = load_config("configs/smoke.yaml").as_dict()
+    data = load_config("tests/fixtures/configs/smoke.yaml").as_dict()
     data["algo"]["name"] = "mappo"
     data["env"]["num_users"] = 25
     atomic_json(paths[1] / "evaluation_config.json", data)
@@ -64,7 +64,7 @@ def test_gate_rejects_unstable_training_and_missing_validation_scenes(tmp_path):
         paths[0] / "evaluation_source.json",
         dict(
             finite_training_metrics=False,
-            training_config=load_config("configs/smoke.yaml").as_dict(),
+            training_config=load_config("tests/fixtures/configs/smoke.yaml").as_dict(),
             training_manifest={"status": "completed", "env_steps": 256},
         ),
     )

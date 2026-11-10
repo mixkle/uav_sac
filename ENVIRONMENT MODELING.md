@@ -1,4 +1,8 @@
+> 当前研究运行入口（2026-10-29）：[完整奖励连续 MAPPO 1M baseline](configs/mappo_full_reward_baseline_1m.yaml)，共享 actor、相对坐标、一步历史、时间因子 critic。当前场景参数和奖励权重以该配置及[训练参数表](docs/training_workflows_and_parameters.md)为准；下文保留基础建模与历史推导。
+
 # ENVIRONMENT MODELING
+
+实现中另提供[同场景完整奖励SAC／解析时间因子双Q对照](docs/sac_full_reward_time_factor_experiment.md)：使用与最新离散MAPPO相同的3500×3500 m、18 UAV、150 UE、3 BS物理场景及400步回合，动作为连续圆盘，奖励为ρ+0.1τ+0.5J_rob−0.1D。direct与time_factor两组仅critic参数化不同，后者Q=(H_t/H_0)f(s,a)，SAC目标包含未来熵项。该独立实验不改写本文其余历史场景定义，完整约定与参数以链接文档和对应YAML为准。交付阶段只做本地验收，正式250k由用户启动。
 
 
 
@@ -329,7 +333,7 @@ $$
 $$
 O_i(o_i^{t+1}\mid s^{t+1})
 $$
-获得下一时刻的原始局部观测。当前模型采用无历史、确定性的观测规则，可写为 \(o_i^{t+1}=g_i(s^{t+1})\)。用户集合的神经网络编码属于 actor 内部计算，不属于环境观测函数。
+获得下一时刻的原始局部观测。无历史基准采用确定性规则 \(o_i^{t+1}=g_i(s^{t+1})\)；新增一步历史实验采用 \(o_i^{t+1}=g_i(s^{t+1},a_i^t,c_i^t,|\mathcal D_i^t|)\)，历史只由本机已获得的信息更新。用户集合的神经网络编码属于 actor 内部计算，不属于环境观测函数。
 
 #### 1. 状态空间 \[\mathcal S\]
 
@@ -352,15 +356,17 @@ $$
 
 根据实际可部署环境下 UAV 可获得的信息，局部观察可建模为：
 $$
-\mathbf o_i^t=[\mathbf o_i^{self}, \mathbf o_i^{BS}, \mathbf o_i^{neighbor}, \mathbf o_i^{ue}]
+\mathbf o_i^t=[\mathbf o_i^{self}, \mathbf o_i^{BS}, \mathbf o_i^{neighbor}, \mathbf o_i^{ue}, \mathbf s_i^{t-1}]
 $$
 **(1) 自身状态 \[o_i^{self} \]** 
 
 自身状态 \[o_i^{self} \] 为 UAV 自身的位置信息与连接信息，可表示为：
 $$
-\mathbf o_i^{self} = [x_i, y_i, h_i, c_i, n_i, \bold a_i]
+\mathbf o_i^{self} = [
+\frac{x_i}{L_x}, \frac{y_i}{L_y}, c_i, n_i, \bold a_i
+]
 $$
-其中，\[(x_i, y_i, h_i)\] 是 UAV 位置信息；\[c_i\] 为该 UAV \[i\] 能接入核心网的最短跳数的归一化：
+其中，\[(x_i, y_i, h_i)\] 是 UAV 位置信息，为归一化坐标，\[ L_x, L_y \] 是场景大小；\[c_i\] 为该 UAV \[i\] 能接入核心网的最短跳数的归一化：
 $$
 c_i=
 \frac {\min_{g\in\mathcal G}b_{i,g}} {U+1}
@@ -369,16 +375,18 @@ $$
 
 **(2) 基站状态 \[ o_i^{BS} \]**
 
-基站状态 \[ o_i^{BS} \] 为基站位置的先验信息：
+基站状态 \[ o_i^{BS} \] 为基站位置的先验信息，坐标转化为以自身UAV为原点的相对归一化坐标：
 $$
-\mathbf o_i^{BS} = \{x_j, y_j\}_{j=1}^G
+\mathbf o_i^{BS} = \{
+\frac{x_j-x_i}{L_x}, \frac{y_j-y_i}{L_y}
+\}_{j=1}^G
 $$
 **(3) 邻居状态 \[o_i^{neighbor}\]** 
 
 邻居状态 \[o_i^{neighbor}\] 为 UAV \[i\] 可直接连接的3架**最近邻** UAV 邻居的信息的聚合，可表示为：
 $$
 \mathbf o_i^{neighbor} = \{
-u_j,x_j,y_j,h_j,c_j,n_j, \bold a_j
+u_j,\frac{x_j-x_i}{L_x},\frac{y_j-y_i}{L_y},c_j,n_j, \bold a_j
 \}_{j=1}^3
 $$
  其中，\[u_j\] 为该 UAV 的编号，若连接 UAV 不足 3，则多余的向量该位置0作掩码；\[(x_j,y_j,h_j,c_j,\bold a_j)\]  为 UAV \[j\] 的自身状态观察。
@@ -404,7 +412,19 @@ $$
 \mathbf o_i^{ue}
 =\{\mathbf e_{i,j}:j\in\mathcal D_i\}.
 $$
-原始局部观察 \( o_i^t \) 由自身、基站、邻居信息和上述用户集合组成，是结构化数据，而非已经编码的固定长度向量。下文 SAC 部分定义可训练的集合编码器，将其转换为 actor 内部的固定长度特征。
+原始局部观察 \(o_i^t\) 由自身、基站、邻居信息、上述用户集合以及可选的一步历史组成，是结构化数据，而非已经编码的固定长度向量。下文 SAC 部分定义可训练的集合编码器，将其转换为 actor 内部的固定长度特征。
+
+**(5) 历史状态 \[ s_i^{t-1}\]** 
+
+历史状态 \[ s_i^{t-1} \] 为 UAV \[i\] 在 \[ t \] 时刻 的上一时刻 \[ t-1 \] 时刻的归一化二维指令动作、联网跳数与感知人数历史信息：
+$$
+\mathbf s_i^{t-1} = \{
+a_{i,x}^{t-1}, a_{i,y}^{t-1}, c_i^{t-1}, |\mathcal D_i^{t-1}|/K
+\}
+$$
+其中，\(a_i^{t-1}\) 为上一时刻的归一化圆盘指令，边界反射前；\(c_i^{t-1}=\min_g b_{i,g}^{t-1}/(U+1)\) 为归一化最短联网跳数；\(K\) 是每机容量，M1-C中为20；\[ |\mathcal D_i^{t-1}| \]  为上一时刻的感知人数。
+
+并且，在 \[ t=0 \] 时刻，上一刻动作为悬停，上一时刻UAV最短联网跳数与感知人数与目前 \[ t=0 \] 相同。 
 
 #### 3. 动作空间
 
@@ -735,7 +755,7 @@ $$
 
 #### 3. 参数共享的局部 actor
 
-actor 以 UAV 自身状态、基站先验、邻居状态及可变长度 UE 集合组成的原始局部观察 \(o_i^t\) 为输入，先编码用户集合，再输出二维高斯分布的均值和标准差。
+actor 以 UAV 自身状态、基站先验、邻居状态、可变长度 UE 集合及可选一步历史组成的原始局部观察 \(o_i^t\) 为输入，先编码用户集合，再输出二维高斯分布的均值和标准差。
 
 每个被感知用户的信息经过共享编码器 \(\phi_\psi:\mathbb R^4\to\mathbb R^{d_h}\)，再进行平均聚合：
 $$
@@ -753,7 +773,7 @@ $$
 \qquad
 \mathbf x_{i,\psi}^t=
 [\mathbf o_i^{self,t},\mathbf o_i^{BS,t},
-\mathbf o_i^{neighbor,t},\mathbf z_i^{ue,t}].
+\mathbf o_i^{neighbor,t},\mathbf s_i^{t-1},\mathbf z_i^{ue,t}].
 $$
 \(\mathbf z_i^{ue,t}\) 与 \(\mathbf x_{i,\psi}^t\) 是依赖当前参数的网络内部特征，不写入回放池来替代原始观察。
 
@@ -960,6 +980,10 @@ $$
 
 ## 五、新版实验实现约定（beacon-set-v2）
 
+2026-10-25桥接实验使用本文的连续高斯＋圆盘动作，由MAPPO的GAE/PPO训练，保留时间因子V(s)。连续actor可配置为与SAC一致的状态相关标准差，完整奖励和3500 m场景均沿用同场景SAC实验；同步提供相同相对坐标、100k预算的九动作MAPPO对照。此为独立算法对照，不替换本文SAC更新公式。配置、验证与正式用户启动命令见`docs/mappo_continuous_bridge_experiment.md`。
+
+2026-10-24坐标实验对应局部观察章节：自身水平坐标为`(x_i/L_x,y_i/L_y)`；BS及直连邻居水平坐标改为`((x_j-x_i)/L_x,(y_j-y_i)/L_y)`，UE维持原有相对坐标。配置`env.observation_coordinates: relative`启用；缺省`absolute`仅用于兼容此前实验。未发现邻居的完整槽位仍补零。为只比较坐标表达、保持网络结构，现有自身和有效邻居的常量高度槽位1暂予保留，数学观察式省略此无信息常量。critic全局状态不改为相对坐标。完整奖励、3500 m场景与SAC时间因子critic的100k独立实验使用`configs/sac_full_reward_time_factor_relative_100k.yaml`，CPU8线程，由用户启动；不将本文原1600 m场景参数混入该实验。详见`docs/sac_full_reward_time_factor_experiment.md`。
+
 实现中的 UE 行为相对坐标、上行 SNR/30 dB、本机服务标记；保留全部当前发现 UE，不按服务容量截断。共享编码器为 4→32→32 ReLU，按 UAV 求均值；空组输出零，再拼接感知人数/20。感知人数可以大于 1，累计发现量仅作历史诊断，不进入观察或奖励。主场景每架 UAV 固定部分 91 维，编码后 124 维，全局状态 6643 维；原始观察是固定数组、连续 UE 行及偏移三部分。
 
 每步关联候选同时满足本机发现、下行 SINR 达标、任一 BS 可达。发现不依赖核心网可达。通信计算使用 float64，模型与回放 float32。600 步为真正终止，不 bootstrap；UE 越界反射。
@@ -967,3 +991,8 @@ $$
 SAC 折扣 0.995，actor（含编码器）学习率 1e-4，critic 3e-4，温度 1e-4，初始温度 0.01，联合目标熵 −32。经验池保存 50,000 条原始联合转移；当前与下一观察分别打包，禁止保存编码后的历史特征作为训练输入。完整检查点按最多 256 条转移分块写入、原子发布，按块在 CPU 恢复。旧观察模型明确拒绝加载。MAPPO 和 MATD3 采用相同原始观察与编码器。
 
 完整默认值见 `configs/main.yaml`，数值与故障语义见 `docs/model_contract.md`。本地验证设置见 `configs/local_validation.yaml`，仅用于正确性和短流程检查；正式训练与多种子实验等待通知。熵正则有助于动作探索，但不保证形成协调展开、更高覆盖或超过 MAPPO。
+
+
+### M1-C 一步历史独立对照（2026-10-25）
+
+`env.observation_history: one_step`追加上面定义的4维，缺省`none`保留既有实验；不含上一服务人数。实现中历史置于固定数组末尾，UE编码仍在actor内拼接。M1-C使用3500 m、18 UAV、150 UE、3 BS与中心2500 m UE初始化，固定观察101→105维、actor输入134→138维；6292维全局状态和时间因子critic保持原设计。新增4列零初始化，其余初始网络参数与随机流配对。完整奖励、边界反射与100k预算沿用M1-C，不改变本文其余历史场景。正式训练由用户启动。详见[历史实验说明](docs/mappo_history_observation_experiment.md)。

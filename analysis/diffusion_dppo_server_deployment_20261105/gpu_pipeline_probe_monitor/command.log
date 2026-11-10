@@ -1,0 +1,28 @@
+18:02:02 demonstrations fit scene=300000 (1/2)
+18:02:05 demonstrations fit scene=300001 (2/2)
+18:02:07 demonstrations selection scene=301000 (1/1)
+18:02:09 pretrain epoch=1/1 samples=1024/14400 batches=1
+18:02:10 pretrain epoch=1 selection_loss=1.52021 best=1.52021
+18:02:10 evaluate scenes=301000..301000 t=1/400
+18:02:21 DPPO initialize device=cuda:0 environments=16 diffusion_steps=8
+18:02:22 validation begin env_steps=0
+18:02:33 validation env_steps=0 return=129.890850 coverage=29.5933% best_step=0
+18:02:33 rollout begin env_steps=0 vector_steps=128
+18:02:47 update complete env_steps=2048 reward=0.284432 coverage=25.8109% PPO=4.35s
+18:02:47 validation begin env_steps=2048
+18:02:58 validation env_steps=2048 return=129.004105 coverage=29.3875% best_step=0
+{
+  "env_steps": 2048,
+  "updates": 1,
+  "optimizer_steps": 40,
+  "best_score": 129.89084952008247,
+  "best_step": 0,
+  "elapsed_seconds": 36.71623997017741,
+  "full_checkpoint": "/home/dym/uav_sac/deployment/gpu_pipeline_probe/checkpoints/full_000002048",
+  "status": "complete",
+  "evaluation_seconds": 22.841586623340845,
+  "io_seconds": 0.5083411000669003,
+  "peak_rss_mib": 1426.953125,
+  "sum_process_peak_rss_mib": 1426.953125,
+  "peak_gpu_mib": 1466.78173828125
+}

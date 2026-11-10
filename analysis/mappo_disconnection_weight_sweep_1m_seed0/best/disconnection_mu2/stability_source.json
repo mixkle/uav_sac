@@ -1,0 +1,56 @@
+{
+  "evaluation": {
+    "sha256": "b6b516a891cea994cf77f737ba5e54c1b7322fede403e20174cfa0ae78ab3eab",
+    "scenes": [
+      10000,
+      10001,
+      10002,
+      10003,
+      10004,
+      10005,
+      10006,
+      10007,
+      10008,
+      10009,
+      10010,
+      10011,
+      10012,
+      10013,
+      10014,
+      10015,
+      10016,
+      10017,
+      10018,
+      10019,
+      10020,
+      10021,
+      10022,
+      10023,
+      10024,
+      10025,
+      10026,
+      10027,
+      10028,
+      10029,
+      10030,
+      10031
+    ],
+    "action_seed": 880001,
+    "batch_size": 16,
+    "device": "cuda:0",
+    "checkpoint": "/home/dym/uav_sac/runs/mappo_capacity10_stability_disconnection_mu2_1m_seed0/best.pt",
+    "kind": "best"
+  },
+  "checkpoint_step": 821248,
+  "weights": {
+    "disconnection_weight": 2.0,
+    "robustness_weight": 0.0
+  },
+  "selection": "own training reward",
+  "reward_curves_sha256": "9a7ac1b28551a056f24c6308b5d493531d79d4e4965bea57363d0373367dedf1",
+  "validation_difference": {
+    "coverage": 0.0,
+    "throughput_bps": 5.960464477539063e-08,
+    "return": 0.0
+  }
+}

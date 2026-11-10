@@ -1,0 +1,24 @@
+Edit this existing MAPPO/SAC research framework figure to ADD contribution annotations. Preserve its original algorithms, equations, network dimensions, labels, arrows, and layout in the main figure. Do not rewrite or redraw equations. Keep the same clean scientific-paper style, pale blue and cream panels. This is an annotation task, not a new algorithm figure.
+
+Expand the white canvas DOWNWARD by about 18% to fit a clean contribution key without covering the original content. The added labels are English, large and crisp.
+
+Place the following small badges OUTSIDE text areas, anchored to the upper-right corners of relevant blocks:
+- Purple badge "C1" on BOTH the MAPPO "Time-factor Team V" peach block and the SAC "Soft Twin-Q Critic Update" peach block. Add a thin PURPLE accent outline around each of these two existing blocks, without obscuring any equation or text. These two badges refer to ONE contribution, not two.
+- Amber badge "C2" on the left "UAV Network Environment" block. Add only a thin DASHED AMBER outline around that block. This marks the full-model task design; it does not imply the pure-coverage figure currently trains robustness.
+- Muted blue-gray badge "S1" on "Shared Feature Encoder", with a small matching blue-gray dot next to "one-step history" in the observation block. S1 is supporting engineering, not claimed as original architecture.
+
+In the new white bottom strip, add THREE restrained horizontally arranged rounded legend cards, with generous padding:
+Purple card:
+"C1  Analytic Horizon-factor Critic"
+"Method contribution candidate"
+Amber card:
+"C2  Failure-aware Multi-hop Service"
+"Task contribution; full model only"
+Blue-gray card:
+"S1  Local Set + One-step History"
+"Supporting adaptation"
+
+Under these three cards put one concise line, legible but smaller:
+"Current figure: pure-coverage ablation. Robustness reward is disabled here; prior-art review is required for novelty claims."
+
+There must be NO visual badge on standard MAPPO, SAC, CTDE, PPO clipping, replay buffers, automatic temperature, generic Gaussian actors or PopArt claiming those components are original. Do not add claims of SAC performance improvement. Do not change reward r=ρ into a robustness reward. Preserve the C1 formula V=H*m for MAPPO and Q=(H/H0)*f for SAC. Keep original flow arrows and their directions untouched. No watermarks, no marketing slogans. The overall result should look like a carefully annotated research figure suitable for discussing paper contributions.

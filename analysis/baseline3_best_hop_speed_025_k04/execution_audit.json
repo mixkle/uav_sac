@@ -1,0 +1,57 @@
+{
+  "paired_audits": {
+    "original": {
+      "initial_hashes": [
+        "7c759de21e89734e83feda0537823d45893dc0232d919c530c618100caa9c0a5",
+        "c8bed729c2390c3c539aee340922deaf70091a4bef1aed01032f8703e361c2c5"
+      ],
+      "ue_path_hashes": [
+        "f060301e02ccee578e17f7e8ed24dfc1d7ea9cda0dfd38d5731bc0efd0cebc1d",
+        "9253ceafddc81433a7a78977773676fe2a7912b945a5b8e1790e1b9533e5199e"
+      ],
+      "action_rng_sequence_sha256": "76d85499ef268f3e918008b369137b646c9d5ff239777a110e611bbe61b1848f",
+      "first_action_hashes": [
+        "72ad3e312255f18e0db4187a2aa1673ff9519336c408ef3777f830cf26eaee9b",
+        "7887d4e3f5261a40518fbfba670063000f225ceadbc269410cf6cb83703a892b"
+      ]
+    },
+    "hop_scaled": {
+      "initial_hashes": [
+        "7c759de21e89734e83feda0537823d45893dc0232d919c530c618100caa9c0a5",
+        "c8bed729c2390c3c539aee340922deaf70091a4bef1aed01032f8703e361c2c5"
+      ],
+      "ue_path_hashes": [
+        "f060301e02ccee578e17f7e8ed24dfc1d7ea9cda0dfd38d5731bc0efd0cebc1d",
+        "9253ceafddc81433a7a78977773676fe2a7912b945a5b8e1790e1b9533e5199e"
+      ],
+      "action_rng_sequence_sha256": "76d85499ef268f3e918008b369137b646c9d5ff239777a110e611bbe61b1848f",
+      "first_action_hashes": [
+        "72ad3e312255f18e0db4187a2aa1673ff9519336c408ef3777f830cf26eaee9b",
+        "7887d4e3f5261a40518fbfba670063000f225ceadbc269410cf6cb83703a892b"
+      ]
+    }
+  },
+  "checkpoint_unchanged": true,
+  "actor_parameters_unchanged": true,
+  "tests": "4 hop-scale tests passed",
+  "formal_training": false,
+  "runtime": {
+    "torch": "2.7.1+cpu",
+    "numpy": "2.2.6",
+    "device": "cpu",
+    "cpu_threads": 8,
+    "numba_threads": 4
+  },
+  "physical_source_sha256": {
+    "src/uav_research/hop_speed_diagnostic.py": "ff2fa8b64eef836cdabefa3a2d50160ccfc5a07d3201e6330974a0bec7ec865c",
+    "src/uav_research/environment.py": "e04c063f4dc5130ebddf30bcadb992b622c61f182cc3d03a919515cf634d8178",
+    "src/uav_research/vector.py": "7cc17cc55204f6b0ee2290acce652cd559cbbcd6cf85eb067823f9c3d7650752",
+    "src/uav_research/models.py": "d37023144961d487ea7e4b2a561551c26cd2c21fa809f7d05920b9c6296aa145",
+    "src/uav_research/diffusion_dppo/evaluation.py": "3a5f42132e1013b922cff0de166bb03872651c1ba5b0793375663806bce01257"
+  },
+  "original_cpu_validation_difference": {
+    "coverage": 0.0,
+    "throughput_bps": 0.0,
+    "return_": 0.0
+  }
+}

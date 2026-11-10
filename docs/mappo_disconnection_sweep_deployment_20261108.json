@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-08",
+  "server": "dym@10.16.63.110",
+  "root": "/home/dym/uav_sac",
+  "groups": {
+    "disconnection_mu05": {
+      "disconnection_weight": 0.5,
+      "total_steps": 1000000,
+      "neighbor_slots": 3,
+      "gpu": 0,
+      "cpu_affinity": "0-7",
+      "session": "mappo-mu05"
+    },
+    "disconnection_mu2": {
+      "disconnection_weight": 2.0,
+      "total_steps": 1000000,
+      "neighbor_slots": 3,
+      "gpu": 1,
+      "cpu_affinity": "8-15",
+      "session": "mappo-mu2"
+    },
+    "disconnection_mu5": {
+      "disconnection_weight": 5.0,
+      "total_steps": 1000000,
+      "neighbor_slots": 3,
+      "gpu": 2,
+      "cpu_affinity": "16-23",
+      "session": "mappo-mu5"
+    }
+  },
+  "uploaded_files": {
+    "src/uav_research/coverage_stability.py": "4fcaeef0f16702262e80801d85767a8956553858bdfd8357b9b612dcfe6f40f0",
+    "scripts/train_mappo_stability_rewards_server.sh": "24b87a64b59de42d92922f7d74ebdb7d21baf265f25341bb1dcb942074f6e15a",
+    "scripts/launch_mappo_disconnection_sweep_server.sh": "44ece6ec8c3264412c5776e4eeb7c99af9333bcfc8dc100013cf564c2beaf053",
+    "tests/test_coverage_stability_rewards.py": "54b2e83eefcbff27f3c767c381187f0f57097b8327078d8da137b1840bde9af9",
+    "docs/mappo_disconnection_weight_sweep_1m.md": "7673453ba1bcddf3a48b3a159e164230aafb0f72e4315235af2a9383b55aadaf",
+    "configs/mappo_capacity10_stability_disconnection_mu05_1m_server.yaml": "90f036b0f592c4a8761c29697ce6ca248fc317ef7a8f482e04d64af2eb78c6a3",
+    "configs/mappo_capacity10_stability_disconnection_mu2_1m_server.yaml": "cc14a3f4102fa5dbacb6b7ecc08a7ace166c87b1c3dc506e216cd9ddd39b33f0",
+    "configs/mappo_capacity10_stability_disconnection_mu5_1m_server.yaml": "bd5b66450126ef70bf56146b7cba80528915c359324f93c2ece2d967cc7ee4d0"
+  },
+  "remote_sha256_verified": true,
+  "preflight_all_passed": true,
+  "local_tests": {
+    "command": "pytest -q tests/test_coverage_stability_rewards.py tests/test_disconnection_reward.py",
+    "passed": 35
+  },
+  "formal_training_started": false,
+  "server_writes_restricted_to": "/home/dym"
+}

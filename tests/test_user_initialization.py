@@ -57,8 +57,8 @@ def test_margin_is_reset_only_not_a_new_physical_boundary():
 
 
 def test_uniform_interior_is_only_affine_change_to_baseline_initial_users():
-    baseline = load_config('configs/discrete_mappo_ablation_c_mobile_coverage.yaml')
-    variant = load_config('configs/discrete_mappo_central_ue_250k.yaml')
+    baseline = load_config('tests/fixtures/configs/discrete_mappo_ablation_c_mobile_coverage.yaml')
+    variant = load_config('tests/fixtures/configs/discrete_mappo_central_ue_250k.yaml')
     expected = copy.deepcopy(baseline)
     expected.env.user_initialization = 'uniform_interior'
     expected.env.user_initial_margin_fraction = 1 / 7
@@ -86,14 +86,14 @@ def test_uniform_interior_is_only_affine_change_to_baseline_initial_users():
 
 @pytest.mark.parametrize('margin', [-.1, .5, float('nan')])
 def test_uniform_interior_invalid_margin(margin):
-    cfg = load_config('configs/discrete_mappo_central_ue_250k.yaml')
+    cfg = load_config('tests/fixtures/configs/discrete_mappo_central_ue_250k.yaml')
     cfg.env.user_initial_margin_fraction = margin
     with pytest.raises(ValueError, match='margin'):
         cfg.validate()
 
 
 def test_uniform_interior_motion_can_leave_initial_square():
-    cfg = load_config('configs/discrete_mappo_central_ue_250k.yaml').env
+    cfg = load_config('tests/fixtures/configs/discrete_mappo_central_ue_250k.yaml').env
     env = UAVEnvironment(cfg)
     env.reset(8)
     positions = env.user_xy.copy()
@@ -107,7 +107,7 @@ def test_uniform_interior_motion_can_leave_initial_square():
 def test_uniform_interior_vector_paths(backend):
     from uav_research.vector import VectorEnvironment
     from uav_research.runtime import configure_runtime
-    cfg = load_config('configs/discrete_mappo_central_ue_250k.yaml')
+    cfg = load_config('tests/fixtures/configs/discrete_mappo_central_ue_250k.yaml')
     configure_runtime(cfg)
     envs = [UAVEnvironment(cfg.env) for _ in range(2)]
     for i, env in enumerate(envs):

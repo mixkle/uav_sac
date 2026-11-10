@@ -1,0 +1,69 @@
+{
+  "checkpoint": "runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/best.pt",
+  "checkpoint_sha256": "55e2962a29cbfc44276d04fecde6764baad20c2564a16b7abbfa3ad69bb6519a",
+  "env_steps": 40960,
+  "source_hash": "2087f5c5f9135a78cc59b1e3ea417edb0ada47b63dea9e4f2c3afe4522495d4a",
+  "scenes": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019,
+    10020,
+    10021,
+    10022,
+    10023,
+    10024,
+    10025,
+    10026,
+    10027,
+    10028,
+    10029,
+    10030,
+    10031
+  ],
+  "action_seed": 880001,
+  "device": "cuda:0",
+  "metrics": {
+    "coverage": 0.5488661458333367,
+    "sinr_score_coverage": 0.5490552083333369,
+    "throughput_bps": 482829309.17518556,
+    "sinr_score_throughput_bps": 482973000.41424966,
+    "reward": 0.6132433870566916,
+    "sinr_score_reward": 0.6134516083885659,
+    "changed_owner_fraction": 0.009936458333333504
+  },
+  "paired": {
+    "coverage": {
+      "difference": 0.0001890625000000208,
+      "low": 0.00015050781250001912,
+      "high": 0.00022864583333333604
+    },
+    "throughput_bps": {
+      "difference": 143691.2390617393,
+      "low": 131499.9450840811,
+      "high": 156421.76424949407
+    },
+    "reward": {
+      "difference": 0.0002082213318748416,
+      "low": 0.00016876274082359643,
+      "high": 0.0002479814104626552
+    }
+  },
+  "interpretation": "Same physical transitions; SINR scores from pre-action information. Shadow association does not change future observations, movement or history. This is not closed-loop performance."
+}

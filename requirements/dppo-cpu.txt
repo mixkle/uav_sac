@@ -1,0 +1,4 @@
+# CPU compatibility verification; do not replace the existing WSL virtualenv.
+--extra-index-url https://download.pytorch.org/whl/cpu
+-r common.lock.txt
+torch==2.7.1+cpu

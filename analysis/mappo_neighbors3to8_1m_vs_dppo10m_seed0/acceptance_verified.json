@@ -1,0 +1,20 @@
+{
+  "groups": [
+    "neighbors3",
+    "neighbors4",
+    "neighbors5",
+    "neighbors6",
+    "neighbors7",
+    "neighbors8",
+    "dppo10m"
+  ],
+  "downloaded_files_sha256": 372,
+  "raw_evaluation_files": 56,
+  "training_log_files": 24,
+  "frozen_checkpoints_sha256": 7,
+  "figure_exports": 30,
+  "source_files_unchanged": true,
+  "evaluation": "32 paired scenes, 400 steps, CUDA FP32, action seed 880001, batch 16",
+  "new_groups_reproduce_training_validation": true,
+  "production_training_code_changed": false
+}

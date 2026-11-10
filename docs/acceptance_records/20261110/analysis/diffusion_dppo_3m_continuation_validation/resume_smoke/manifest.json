@@ -1,0 +1,15 @@
+{
+  "env_steps": 1002048,
+  "updates": 490,
+  "optimizer_steps": 19600,
+  "best_score": 245.29735482267665,
+  "best_step": 40960,
+  "elapsed_seconds": 12477.577880831435,
+  "full_checkpoint": "deployment/continuation_3m_resume_smoke/checkpoints/full_001002048",
+  "status": "interrupted",
+  "evaluation_seconds": 5492.317735813558,
+  "io_seconds": 61.80166548490524,
+  "peak_rss_mib": 2047.21484375,
+  "sum_process_peak_rss_mib": 2047.21484375,
+  "peak_gpu_mib": 1632.04931640625
+}

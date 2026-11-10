@@ -48,7 +48,14 @@ class EnvConfig:
     robustness_weight: float = 0.5
     # Missing in historical configs: retain their original reward semantics.
     disconnection_weight: float = 0.0
+    boundary_penalty_weight: float = 0.0
+    boundary_penalty_margin_m: float = 150.0
     neighbor_slots: int = 3
+    # Historical checkpoints/configs used absolute BS and neighbor positions.
+    observation_coordinates: str = "absolute"
+    observation_history: str = "none"
+    motion_scaling: dict = field(default_factory=lambda: dict(enabled=False, min_ratio=.25, hop_growth=.4))
+    history_motion_source: str = "command"
     sinr_scale_db: float = 30.0
     action_space: str = "continuous"
     uav_boundary: str = "clip"
@@ -66,7 +73,8 @@ class EnvConfig:
 
     @property
     def reward_component_names(self):
-        return [self.reward_primary, "throughput", "robustness", "disconnection"]
+        names = [self.reward_primary, "throughput", "robustness", "disconnection"]
+        return names + (["boundary"] if self.boundary_penalty_weight > 0 else [])
 
     @property
     def num_bs(self):
@@ -82,6 +90,10 @@ class EnvConfig:
 
     @property
     def fixed_obs_dim(self):
+        return self.current_obs_dim + (4 if self.observation_history == "one_step" else 0)
+
+    @property
+    def current_obs_dim(self):
         return self.self_dim + 2 * self.num_bs + self.neighbor_slots * self.neighbor_dim
 
     @property
@@ -140,6 +152,9 @@ class AlgoConfig:
     gae_lambda: float = 0.95
     ppo_clip: float = 0.2
     value_clipping: bool = True
+    critic_parameterization: str = "direct"
+    actor_sharing: str = "shared"
+    mappo_state_dependent_std: bool = False
     entropy_coef: float = 0.01
     max_grad_norm: float = 0.5
     td3_policy_delay: int = 2
@@ -184,6 +199,7 @@ class RunConfig:
     deterministic: bool = True
     evaluation_policy: str = "deterministic"
     evaluation_action_seed: int = 880001
+    best_metric: str = "return"
 
 
 @dataclass
@@ -194,6 +210,22 @@ class Config:
 
     def validate(self):
         e, a, r = self.env, self.algo, self.run
+        from .motion import hop_speed_factor
+        ms = e.motion_scaling
+        if (not isinstance(ms, dict) or set(ms) != {"enabled", "min_ratio", "hop_growth"}
+                or type(ms["enabled"]) is not bool):
+            raise ValueError("motion_scaling requires enabled, min_ratio, hop_growth")
+        hop_speed_factor([1], e.num_uavs, ms["min_ratio"], ms["hop_growth"])
+        if e.history_motion_source not in ("command", "post_reflection_displacement"):
+            raise ValueError("Invalid history_motion_source")
+        if ms["enabled"] and e.action_space != "continuous":
+            raise ValueError("Hop scaling requires continuous motion")
+        if e.history_motion_source != "command" and e.observation_history != "one_step":
+            raise ValueError("Executed history requires one_step history")
+        if e.observation_history not in ("none", "one_step"):
+            raise ValueError("observation_history must be none or one_step")
+        if e.observation_history == "one_step" and not (a.name in ("mappo", "sac") and e.action_space == "continuous"):
+            raise ValueError("one_step history experiment requires continuous MAPPO or SAC")
         positives = (
             e.width,
             e.height,
@@ -268,6 +300,14 @@ class Config:
             raise ValueError("Speed scales and reward weights must be nonnegative")
         if not math.isfinite(e.disconnection_weight):
             raise ValueError("Disconnection reward weight must be finite")
+        if not math.isfinite(e.boundary_penalty_weight) or e.boundary_penalty_weight < 0:
+            raise ValueError("boundary_penalty_weight must be finite and nonnegative")
+        if not math.isfinite(e.boundary_penalty_margin_m) or e.boundary_penalty_margin_m <= 0:
+            raise ValueError("boundary_penalty_margin_m must be finite and positive")
+        if e.boundary_penalty_weight > 0 and e.boundary_penalty_margin_m >= min(e.width, e.height) / 2:
+            raise ValueError("Boundary penalty margin must be less than half the shorter side")
+        if r.best_metric not in ("return", "task_return"):
+            raise ValueError("best_metric must be return or task_return")
         if e.reward_primary not in ("coverage", "sensing"):
             raise ValueError("reward_primary must be coverage or sensing")
         if (
@@ -338,12 +378,36 @@ class Config:
             "process",
         ):
             raise ValueError("Unknown environment/vector backend")
-        if e.neighbor_slots != 3:
-            raise ValueError("The paper observation fixes exactly three neighbor slots")
+        if (not isinstance(e.neighbor_slots, int) or isinstance(e.neighbor_slots, bool)
+                or e.neighbor_slots < 1):
+            raise ValueError("neighbor_slots must be a positive integer")
+        if e.observation_coordinates not in ("absolute", "relative"):
+            raise ValueError("observation_coordinates must be absolute or relative")
         if a.name not in ("sac", "mappo", "matd3"):
             raise ValueError("Unknown learner")
+        if a.actor_sharing not in ("shared", "independent"):
+            raise ValueError("actor_sharing must be shared or independent")
+        if a.actor_sharing == "independent" and not (
+            a.name == "mappo" and e.action_space == "continuous"
+        ):
+            raise ValueError("Independent actors require continuous MAPPO")
         if not isinstance(a.value_clipping, bool):
             raise ValueError("value_clipping must be a boolean")
+        if not isinstance(a.mappo_state_dependent_std, bool):
+            raise ValueError("mappo_state_dependent_std must be a boolean")
+        if a.mappo_state_dependent_std and not (
+            a.name == "mappo" and e.action_space == "continuous"
+        ):
+            raise ValueError("mappo_state_dependent_std requires continuous MAPPO")
+        if a.critic_parameterization not in ("direct", "time_factor"):
+            raise ValueError("critic_parameterization must be direct or time_factor")
+        if a.critic_parameterization == "time_factor" and not (
+            e.reward_primary == "coverage" and (
+                (a.name == "mappo" and e.action_space in ("discrete9", "continuous"))
+                or (a.name == "sac" and e.action_space == "continuous")
+            )
+        ):
+            raise ValueError("time_factor critic requires MAPPO or continuous SAC with coverage primary reward")
         if (
             not 0 < a.discount <= 1
             or not 0 < a.polyak <= 1
@@ -391,6 +455,9 @@ def load_config(path: str | Path | None = None) -> Config:
 
 def config_from_dict(data: dict) -> Config:
     """Explicit modes for new runs; preserve historical BS-launch configurations."""
+    if data.get("algo", {}).get("name") in ("diffusion_dppo", "gaussian_service_mappo") or "diffusion" in data:
+        from .diffusion_dppo.config import from_dict
+        return from_dict(data)
     unknown = set(data) - {"env", "algo", "run"}
     if unknown:
         raise ValueError(f"Unknown config sections: {unknown}")

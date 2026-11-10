@@ -1,0 +1,85 @@
+{
+  "source": "/home/dym/uav_sac/analysis/diffusion_dppo_capacity10_coverage_throughput_10m_seed0",
+  "files": [
+    {
+      "path": "best/action_moments.npz",
+      "bytes": 335115,
+      "sha256": "f8016ac9f09b1879fa076892eced523db50b39bbfd6c5fd614c14ec1401deb94"
+    },
+    {
+      "path": "best/critic_predictions.npz",
+      "bytes": 520839,
+      "sha256": "bf947d8d30b8c12096f2cd49eae18a4e007b083d3d0ccfdc7264b5acb124fbd6"
+    },
+    {
+      "path": "best/episodes.csv",
+      "bytes": 122393,
+      "sha256": "892931bee63ed703e043ff2be582eb43fab7cea62968d565a7178032e95f9c26"
+    },
+    {
+      "path": "best/provenance.json",
+      "bytes": 669,
+      "sha256": "ff07462bbee5ebfd71153b5399dd893361e655d6da8dbcb03c570eeb42c33654"
+    },
+    {
+      "path": "best/step_metrics.npz",
+      "bytes": 3510253,
+      "sha256": "5ab54fba429a53988f6365478add4b3319c86efd247494f8effa94191b68ba46"
+    },
+    {
+      "path": "best/summary.json",
+      "bytes": 13244,
+      "sha256": "a2939f5a2652d921e402a5c65255a1bd626add7c7f278fc5142ae046971fc047"
+    },
+    {
+      "path": "best/trace_10000.npz",
+      "bytes": 18085307,
+      "sha256": "1f25c6f0c74537ad7ec15fdce610183381cd665cc9f04f3f9440759199223d0f"
+    },
+    {
+      "path": "best/trace_10001.npz",
+      "bytes": 18066955,
+      "sha256": "fe9b714ca1fb16205ea1ed296ac6073e121fee383146ec740144bf6bf4da8367"
+    },
+    {
+      "path": "last/action_moments.npz",
+      "bytes": 335060,
+      "sha256": "400b5a06a43bcf24888fca05f812dab774ad0e7f458df04461b4fc218dc0e093"
+    },
+    {
+      "path": "last/critic_predictions.npz",
+      "bytes": 522257,
+      "sha256": "511728b5427a92ed616f952daf0491058272229f9f64e373c04c41f88d61b01f"
+    },
+    {
+      "path": "last/episodes.csv",
+      "bytes": 123182,
+      "sha256": "f7e301fe69aae6584b3cea7c92fb0cd16ae74e0e3dd01bc96fb7456a6dd8d10a"
+    },
+    {
+      "path": "last/provenance.json",
+      "bytes": 670,
+      "sha256": "cc7cba9540b6ff7d53e93a20a5a19b94d5754aae342b6282d843d6725073161e"
+    },
+    {
+      "path": "last/step_metrics.npz",
+      "bytes": 3495862,
+      "sha256": "b2b530319e2d576139cb1984314419fabbeea38de4fba1a95200ed3890077d0d"
+    },
+    {
+      "path": "last/summary.json",
+      "bytes": 13265,
+      "sha256": "79adc2d10b30aa08bf48dc29a576ce974dde06c13676964ae24f06e8b168ce6c"
+    },
+    {
+      "path": "last/trace_10000.npz",
+      "bytes": 18033998,
+      "sha256": "c31890e8a654c76bcd7c5fbd325e93d1be504d37a46e70331813472635d3f182"
+    },
+    {
+      "path": "last/trace_10001.npz",
+      "bytes": 18100503,
+      "sha256": "646e076419e90c24e88ef97e59e5f58fe6ede693628f28635d39496db3419326"
+    }
+  ]
+}

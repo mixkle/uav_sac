@@ -1,0 +1,93 @@
+{
+  "labels": [
+    "baseline_best",
+    "baseline_last",
+    "best",
+    "last"
+  ],
+  "sources": {
+    "baseline_best": {
+      "path": "runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt",
+      "sha256": "0d213ecf7b4fb4642a0eef9231153f89837484b1341d0d0db18e029cb595eaa6",
+      "env_steps": 671744,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/baseline_best",
+      "evaluation_reused": true,
+      "evaluation_device": "cuda:0"
+    },
+    "baseline_last": {
+      "path": "runs/mappo_coverage_throughput_capacity10_1m_seed0/last.pt",
+      "sha256": "a0e9768b8c2350e0bf348d09e4ce7f3a68036eb41ffc0c633e9a8db3be6b6ea5",
+      "env_steps": 1000000,
+      "evaluation_reused_from": "analysis/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/baseline_last",
+      "evaluation_reused": true,
+      "evaluation_device": "cuda:0"
+    },
+    "best": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_5m_seed0/best.pt",
+      "sha256": "daa0b7f0ae3a3ebaa4ee0049f3d5b28c4d2a1c4b8a10ca6bf6a095debd7cde20",
+      "env_steps": 4601536,
+      "device": "cuda:0"
+    },
+    "last": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_5m_seed0/last.pt",
+      "sha256": "b38fe13eca52b448e025bd14b1a4b61a662dd3f108f630f4542c83ab37b065c9",
+      "env_steps": 5000000,
+      "device": "cuda:0"
+    },
+    "training_metrics.csv": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_5m_seed0/metrics.csv",
+      "sha256": "6171a375b8cfb37b742568d975f5a8387f38e264d8fae7a46642a5b7d8f66f41"
+    },
+    "training_validation.csv": {
+      "path": "runs/diffusion_dppo_capacity10_coverage_throughput_5m_seed0/validation.csv",
+      "sha256": "51673f663220ae5af456d931995390504cdd99942f2b181617773466c491cb0c"
+    }
+  },
+  "validation_seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019,
+    10020,
+    10021,
+    10022,
+    10023,
+    10024,
+    10025,
+    10026,
+    10027,
+    10028,
+    10029,
+    10030,
+    10031
+  ],
+  "action_seed": 880001,
+  "moment_repeats": 64,
+  "run": "runs/diffusion_dppo_capacity10_coverage_throughput_5m_seed0",
+  "palette": {
+    "baseline": "#009E73",
+    "dppo": "#0072B2",
+    "secondary": "#E69F00",
+    "neutral": "#555555"
+  },
+  "comparison_groups": [
+    "baseline",
+    "5M DPPO"
+  ]
+}

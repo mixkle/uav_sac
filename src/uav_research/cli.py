@@ -6,13 +6,18 @@ from .runtime import configure_runtime, resolve_output
 
 
 def main(argv=None):
+    import sys
+    arguments = list(sys.argv[1:] if argv is None else argv)
+    if arguments and arguments[0] in ("dppo", "gaussian_service_mappo"):
+        from .diffusion_dppo.cli import main as dppo_main
+        return dppo_main(arguments[1:])
     parser = argparse.ArgumentParser(
         description="Dual-gateway UAV research experiments"
     )
     sub = parser.add_subparsers(dest="command", required=True)
     for name in ("check-env", "benchmark", "train", "evaluate"):
         p = sub.add_parser(name)
-        p.add_argument("--config", default="configs/main.yaml")
+        p.add_argument("--config", default="configs/mappo_full_reward_baseline_1m.yaml")
         p.add_argument("--output", required=True)
         p.add_argument("--device", choices=["auto", "cpu", "cuda"])
         p.add_argument("--algo", choices=["sac", "mappo", "matd3"])
@@ -51,7 +56,7 @@ def main(argv=None):
         help="Common reward weight when comparing lambda ablations",
     )
     p = sub.add_parser("calibrate")
-    p.add_argument("--config", default="configs/main.yaml")
+    p.add_argument("--config", default="configs/mappo_full_reward_baseline_1m.yaml")
     p.add_argument("--output", required=True)
     p.add_argument("--seeds", nargs="+", type=int, default=list(range(30000, 30008)))
     p = sub.add_parser("export-actor")
@@ -88,7 +93,7 @@ def main(argv=None):
     p.add_argument("--ablation", required=True)
     p.add_argument("--output", required=True)
     p = sub.add_parser("suite")
-    p.add_argument("--config", default="configs/smoke.yaml")
+    p.add_argument("--config", default="tests/fixtures/configs/smoke.yaml")
     p.add_argument("--output", required=True)
     p.add_argument("--stage", choices=["pilot", "multiseed"], default="pilot")
     p.add_argument("--gate")

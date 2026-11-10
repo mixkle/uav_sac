@@ -1,11 +1,13 @@
 from __future__ import annotations
+from .boundary import boundary_distances, directional_boundary_cost, outward_components, reward_contributions
 
 import copy
 import numpy as np
 from .config import EnvConfig
 from .actions import decode_actions
 from . import kernels
-from .observations import RawObservation
+from .observations import RawObservation, history_specification
+from .motion import hop_speed_factor, motion_contract
 
 C_LIGHT = 299792458.0
 
@@ -103,6 +105,9 @@ class UAVEnvironment:
         self.last_action_ids = np.full(cfg.num_uavs, 8, np.int64)
         self.last_action = np.zeros((cfg.num_uavs, 2), np.float32)
         self.actual_displacement = np.zeros_like(self.uav_xy)
+        self.action_origin_xy = self.uav_xy.copy()
+        self.boundary_cost_per_uav = np.zeros(cfg.num_uavs, np.float64)
+        self.history = None
 
     def reset(self, seed=None):
         if seed is not None:
@@ -113,6 +118,12 @@ class UAVEnvironment:
             self.initial_seed = int(seed)
         e = self.cfg
         self.t = 0
+        self.history = None
+        self.boundary_cost_per_uav.fill(0)
+        self.pre_action_hops = np.full(e.num_uavs, e.num_uavs+1, np.int64)
+        self.speed_factor = np.ones(e.num_uavs)
+        self.command_displacement = np.zeros((e.num_uavs, 2))
+        self.effective_displacement = np.zeros((e.num_uavs, 2))
         self.last_action.fill(0)
         self.last_action_ids.fill(8)
         self.actual_displacement.fill(0)
@@ -130,6 +141,7 @@ class UAVEnvironment:
             self.uav_xy[e.num_uavs // 2 :, 1] = (
                 e.height - self.uav_xy[e.num_uavs // 2 :, 1]
             )
+        self.action_origin_xy = self.uav_xy.copy()
         self.initial_uav_xy = self.uav_xy.copy()
         self.ever_discovered = np.zeros(e.num_users, bool)
         self.first_service_step = -1
@@ -151,12 +163,21 @@ class UAVEnvironment:
         if not 0 <= t <= e.horizon:
             raise ValueError("Invalid task time")
         self.uav_xy, self.user_xy, self.t = u.copy(), m.copy(), int(t)
+        self.history = None
         self.initial_user_xy = self.user_xy.copy()
         self.user_speed_mean = 0.0
+        self.action_origin_xy = self.uav_xy.copy()
         self.initial_uav_xy = self.uav_xy.copy()
         self.ever_discovered = np.zeros(e.num_users, bool)
         self.first_service_step = -1
         self.zero_coverage_steps = 0
+        self.pre_action_hops = np.full(e.num_uavs, e.num_uavs+1, np.int64)
+        self.speed_factor = np.ones(e.num_uavs)
+        self.command_displacement = np.zeros((e.num_uavs, 2))
+        self.effective_displacement = np.zeros((e.num_uavs, 2))
+        self.last_action.fill(0)
+        self.actual_displacement.fill(0)
+        self.boundary_cost_per_uav.fill(0)
         self._refresh()
         return self.obs.copy(), self.state.copy(), self.info.copy()
 
@@ -173,14 +194,31 @@ class UAVEnvironment:
             raise ValueError("Actions must lie in the normalized unit disk")
         if self.t >= e.horizon:
             raise RuntimeError("Task ended: reset before stepping")
+        if e.observation_history == "one_step":
+            self.history = np.column_stack([
+                action, self.B.min(axis=1) / (e.num_uavs + 1),
+                self.sensed.sum(axis=1) / e.capacity,
+            ]).astype(np.float32)
         previous = self.uav_xy.copy()
-        proposed = previous + action * e.max_speed * e.dt
+        self.action_origin_xy = previous.copy()
+        self.boundary_cost_per_uav = directional_boundary_cost(
+            previous, action, e.width, e.height, e.boundary_penalty_margin_m)
+        self.pre_action_hops = self.B.min(1).copy()
+        ms = e.motion_scaling
+        self.speed_factor = (hop_speed_factor(self.pre_action_hops, e.num_uavs, ms["min_ratio"], ms["hop_growth"])
+                             if ms["enabled"] else np.ones(e.num_uavs))
+        self.command_displacement = action * e.max_speed * e.dt
+        self.effective_displacement = self.command_displacement.astype(np.float64)*self.speed_factor[:, None]
+        # Preserve historical floating arithmetic exactly when disabled.
+        proposed = previous + (self.effective_displacement if ms["enabled"] else self.command_displacement)
         self.uav_xy = (
             reflect(proposed, [e.width, e.height])
             if e.uav_boundary == "reflect"
             else np.clip(proposed, [0, 0], [e.width, e.height])
         )
         self.actual_displacement = self.uav_xy - previous
+        if e.observation_history == "one_step" and e.history_motion_source == "post_reflection_displacement":
+            self.history[:, :2] = self.actual_displacement/(e.max_speed*e.dt)
         self.last_action = action.copy()
         v = np.clip(
             self.movement_rng.normal(0, e.user_speed_std, e.num_users),
@@ -275,8 +313,16 @@ class UAVEnvironment:
                 e.capacity,
                 e.neighbor_slots,
                 e.sinr_scale_db,
+                e.observation_coordinates == "relative",
             )
         )
+        if e.observation_history == "one_step":
+            if self.history is None:
+                self.history = np.column_stack([
+                    np.zeros((e.num_uavs, 2)), best_hop / (e.num_uavs + 1),
+                    self.sensed.sum(axis=1) / e.capacity,
+                ]).astype(np.float32)
+            self.obs.fixed = np.concatenate([self.obs.fixed, self.history], axis=-1)
         seen = self.sensed.any(axis=0)
         discovery_fraction = float(seen.mean())
         primary_reward = discovery_fraction if e.reward_primary == "sensing" else coverage
@@ -306,7 +352,24 @@ class UAVEnvironment:
             ]
         ).astype(np.float32)
         sinr_percentiles = np.percentile(self.Y, [10, 50, 90])
+        task_reward = primary_reward + e.throughput_weight * tau + e.robustness_weight * robust - disconnection_penalty
+        boundary_cost = float(self.boundary_cost_per_uav.mean())
+        boundary_penalty = e.boundary_penalty_weight * boundary_cost
+        distance = boundary_distances(self.uav_xy, e.width, e.height).min(-1)
+        pre_distance = boundary_distances(self.action_origin_xy, e.width, e.height)
+        in_buffer = pre_distance < e.boundary_penalty_margin_m
+        edge = boundary_distances(self.user_xy, e.width, e.height).min(-1) < 150.
+        served = self.C.any(axis=0)
         info = dict(
+            task_reward=task_reward, boundary_cost=boundary_cost, boundary_penalty=boundary_penalty,
+            boundary_distance_mean=float(distance.mean()),
+            boundary_within_50_fraction=float((distance < 50).mean()),
+            boundary_within_100_fraction=float((distance < 100).mean()),
+            boundary_within_150_fraction=float((distance < 150).mean()),
+            boundary_buffer_fraction=float(in_buffer.any(-1).mean()),
+            boundary_outward_fraction=float((in_buffer & (outward_components(self.last_action) > 1e-8)).any(-1).mean()),
+            edge_users=int(edge.sum()), edge_served_users=int((edge & served).sum()),
+            interior_users=int((~edge).sum()), interior_served_users=int((~edge & served).sum()),
             discovered_users=int(seen.sum()),
             discovery_fraction=discovery_fraction,
             cumulative_discovery_fraction=float(self.ever_discovered.mean()),
@@ -334,10 +397,11 @@ class UAVEnvironment:
             observed_count_mean=float(self.sensed.sum(axis=1).mean()),
             observed_count_max=int(self.sensed.sum(axis=1).max()),
             reward_primary=primary_reward,
-            reward=primary_reward + e.throughput_weight * tau + e.robustness_weight * robust - disconnection_penalty,
+            reward=task_reward - boundary_penalty,
             disconnection_ratio=disconnection_ratio,
             disconnection_penalty=disconnection_penalty,
             coverage=coverage,
+            agent_coverage=(self.counts / e.num_users).tolist(),
             throughput_bps=throughput,
             tau=tau,
             robustness=robust,
@@ -359,15 +423,19 @@ class UAVEnvironment:
             sinr_db_p50=float(sinr_percentiles[1]),
             sinr_db_p90=float(sinr_percentiles[2]),
             boundary_reflection_fraction=float(e.uav_boundary == "reflect") * float(
-                np.any(np.abs(self.actual_displacement - self.last_action * e.max_speed * e.dt) > 1e-5, axis=1).mean()
+                np.any(np.abs(self.actual_displacement - self.effective_displacement) > 1e-5, axis=1).mean()
             ),
+            speed_factor_mean=float(self.speed_factor.mean()),
+            effective_action_norm_mean=float((np.linalg.norm(self.last_action, axis=1)*self.speed_factor).mean()),
+            pre_action_connected_fraction=float((self.pre_action_hops <= e.num_uavs).mean()),
+            newly_disconnected_fraction=float(((self.pre_action_hops <= e.num_uavs) & (self.B.min(1) > e.num_uavs)).mean()) if self.t else 0.,
             action_norm_mean=float(np.linalg.norm(self.last_action, axis=1).mean()),
             boundary_clip_fraction=float(e.uav_boundary == "clip") * float(
                 np.mean(
                     np.any(
                         np.abs(
                             self.actual_displacement
-                            - self.last_action * e.max_speed * e.dt
+                            - self.effective_displacement
                         )
                         > 1e-5,
                         axis=1,
@@ -391,7 +459,11 @@ class UAVEnvironment:
             self.info["hover_fraction"] = float((self.last_action_ids == 8).mean())
 
     def snapshot(self):
-        return dict(
+        return dict(motion_contract=motion_contract(self.cfg),
+            pre_action_hops=self.pre_action_hops.copy(), speed_factor=self.speed_factor.copy(),
+            command_displacement=self.command_displacement.copy(), effective_displacement=self.effective_displacement.copy(),
+            **(dict(observation_history="one_step", history_specification=history_specification(self.cfg), history=self.history.copy())
+               if self.cfg.observation_history == "one_step" else {}),
             uav_xy=self.uav_xy.copy(),
             user_xy=self.user_xy.copy(),
             initial_user_xy=self.initial_user_xy.copy(),
@@ -408,12 +480,34 @@ class UAVEnvironment:
                 else {}
             ),
             actual_displacement=self.actual_displacement.copy(),
+            action_origin_xy=self.action_origin_xy.copy(),
+            boundary_cost_per_uav=self.boundary_cost_per_uav.copy(),
             rng=copy.deepcopy(self.rng.bit_generator.state),
             movement_rng=copy.deepcopy(self.movement_rng.bit_generator.state),
             initial_seed=self.initial_seed,
         )
 
     def restore(self, data):
+        expected = motion_contract(self.cfg)
+        old_default = dict(motion_scaling=dict(enabled=False, min_ratio=.25, hop_growth=.4), history_motion_source="command")
+        if data.get("motion_contract", old_default) != expected:
+            raise ValueError("Snapshot motion/history contract mismatch")
+        for name, default in (("pre_action_hops", np.full(self.cfg.num_uavs,self.cfg.num_uavs+1)),
+                ("speed_factor", np.ones(self.cfg.num_uavs)),
+                ("command_displacement", data["action"]*self.cfg.max_speed*self.cfg.dt),
+                ("effective_displacement", data["action"]*self.cfg.max_speed*self.cfg.dt)):
+            if name not in data and expected != old_default:
+                raise ValueError("Snapshot requires complete executed motion metadata")
+            setattr(self, name, np.asarray(data.get(name, default)).copy())
+        if data.get("observation_history", "none") != self.cfg.observation_history:
+            raise ValueError("Snapshot observation_history does not match environment")
+        if self.cfg.observation_history == "one_step":
+            history = np.asarray(data.get("history"), dtype=np.float32)
+            if data.get("history_specification") != history_specification(self.cfg):
+                raise ValueError("Snapshot history specification does not match environment")
+            if history.shape != (self.cfg.num_uavs, 4) or not np.isfinite(history).all():
+                raise ValueError("Snapshot requires complete finite one_step history")
+            self.history = history.copy()
         self.uav_xy, self.user_xy, self.t = (
             data["uav_xy"].copy(),
             data["user_xy"].copy(),
@@ -424,6 +518,8 @@ class UAVEnvironment:
             "action_ids", np.full(self.cfg.num_uavs, 8, np.int64)
         ).copy()
         self.actual_displacement = data["actual_displacement"].copy()
+        self.action_origin_xy = data.get("action_origin_xy", self.uav_xy).copy()
+        self.boundary_cost_per_uav = data.get("boundary_cost_per_uav", np.zeros(self.cfg.num_uavs)).copy()
         # Old snapshots did not track UE displacement; start that diagnostic here.
         self.initial_user_xy = data.get("initial_user_xy", self.user_xy).copy()
         self.user_speed_mean = data.get("user_speed_mean", 0.0)
@@ -440,7 +536,10 @@ class UAVEnvironment:
         self.info["zero_coverage_steps"] = zero_steps
 
     def trace_frame(self):
-        return dict(
+        return dict(pre_action_hops=self.pre_action_hops.copy(), speed_factor=self.speed_factor.copy(),
+            command_displacement=self.command_displacement.copy(), effective_displacement=self.effective_displacement.copy(),
+            **(dict(observation_history=self.history.copy())
+               if self.cfg.observation_history == "one_step" else {}),
             uav_xy=self.uav_xy.copy(),
             user_xy=self.user_xy.copy(),
             action=self.last_action.copy(),
@@ -450,6 +549,8 @@ class UAVEnvironment:
                 else {}
             ),
             actual_displacement=self.actual_displacement.copy(),
+            action_origin_xy=self.action_origin_xy.copy(),
+            boundary_cost_per_uav=self.boundary_cost_per_uav.copy(),
             A=self.A.copy(),
             B=self.B.copy(),
             C=self.C.copy(),
@@ -457,6 +558,7 @@ class UAVEnvironment:
             uplink=self.uplink.copy(),
             sensed=self.sensed.copy(),
             coverage=self.info["coverage"],
+            agent_coverage=np.asarray(self.info["agent_coverage"], dtype=np.float64),
             discovery_fraction=self.info["discovery_fraction"],
             cumulative_discovery_fraction=self.info["cumulative_discovery_fraction"],
             reward_primary=self.info["reward_primary"],
@@ -468,12 +570,10 @@ class UAVEnvironment:
                 [self.info["coverage"], self.info["tau"], self.info["robustness"], self.info["disconnection_ratio"]]
             ),
             reward=self.info["reward"],
-            reward_contributions=np.array([
-                self.info["reward_primary"],
-                self.cfg.throughput_weight * self.info["tau"],
-                self.cfg.robustness_weight * self.info["robustness"],
-                -self.info["disconnection_penalty"],
-            ]),
+            reward_contributions=reward_contributions(self.info, self.cfg),
+            task_reward=self.info['task_reward'],
+            boundary_cost=self.info['boundary_cost'],
+            boundary_penalty=self.info['boundary_penalty'],
             disconnection_ratio=self.info["disconnection_ratio"],
             disconnection_penalty=self.info["disconnection_penalty"],
             fault_coverage=self.retained.copy(),

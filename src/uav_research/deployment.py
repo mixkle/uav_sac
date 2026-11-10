@@ -1,10 +1,10 @@
 """Actor-only artifacts: no critic and no global UE population dependency."""
 
 import torch
-from .models import GaussianActor, DeterministicActor, CategoricalActor
+from .models import GaussianActor, DeterministicActor, CategoricalActor, IndependentGaussianActors
 from .actions import action_specification, validate_action_specification
 from .config import config_from_dict
-from .observations import OBSERVATION_VERSION, as_tensor_observation
+from .observations import OBSERVATION_VERSION, as_tensor_observation, history_specification
 from .runtime import atomic_save, load_checkpoint
 
 
@@ -15,7 +15,13 @@ def export_actor(checkpoint, output):
     validate_action_specification(data, cfg.env, cfg.algo.name)
     actor = data["learner"]["actor"]
     # Infer the fixed dimension from the saved actor input, rather than population M.
-    fixed_dim = actor["net.0.weight"].shape[1] - a["ue_hidden"] - 1
+    sharing = cfg.algo.actor_sharing
+    if data['learner'].get('actor_sharing', 'shared') != sharing:
+        raise ValueError('Actor sharing metadata differs from checkpoint configuration')
+    if sharing == 'independent' and data['learner'].get('actor_agent_ids') != list(range(e['num_uavs'])):
+        raise ValueError('Independent actor count/order is incompatible')
+    first_layer = "actors.0.net.0.weight" if sharing == "independent" else "net.0.weight"
+    fixed_dim = actor[first_layer].shape[1] - a["ue_hidden"] - 1
     specification = dict(
         fixed_dim=fixed_dim,
         hidden=a["hidden"],
@@ -24,11 +30,17 @@ def export_actor(checkpoint, output):
         log_std_min=a["log_std_min"],
         log_std_max=a["log_std_max"],
         algorithm=a["name"],
+        state_dependent_std=(
+            cfg.algo.mappo_state_dependent_std if a["name"] == "mappo" else True
+        ),
+        actor_sharing=sharing,
     )
     artifact = dict(
         kind="actor",
         action_specification=action_specification(cfg.env, cfg.algo.name),
         observation_version=OBSERVATION_VERSION,
+        observation_coordinates=cfg.env.observation_coordinates,
+        observation_history=history_specification(cfg.env),
         specification=specification,
         actor=actor,
         scales={
@@ -36,6 +48,7 @@ def export_actor(checkpoint, output):
             for k in ("width", "height", "max_speed", "dt", "capacity", "sinr_scale_db")
         },
         num_uavs=e["num_uavs"],
+        **({"actor_agent_ids": list(range(e['num_uavs']))} if sharing == 'independent' else {}),
         bs_positions=e["bs_positions"],
         env_steps=data["env_steps"],
     )
@@ -55,6 +68,17 @@ class DeployedActor:
         self.device = torch.device(device)
         self.artifact = load_checkpoint(path)
         a = self.artifact["specification"]
+        history = self.artifact.get("observation_history", {"mode": "none"})
+        if history.get("mode") not in ("none", "one_step"):
+            raise ValueError("Unknown actor observation_history")
+        if history.get("mode") == "one_step" and (
+            history.get("version") != 1 or history.get("fields") != [
+                "previous_command_x", "previous_command_y", "previous_hop", "previous_sensed_count"]
+            or history.get("count_scale") != a["count_scale"]
+            or history.get("hop_scale") != self.artifact["num_uavs"] + 1
+            or history.get("action") != "normalized_command_before_boundary"
+        ):
+            raise ValueError("Incompatible actor history specification")
         self.deterministic_actor = a["algorithm"] == "matd3"
         mode = self.artifact.get("action_specification", {}).get(
             "action_space", "continuous"
@@ -89,10 +113,19 @@ class DeployedActor:
                 a["hidden"],
                 a["log_std_min"],
                 a["log_std_max"],
-                state_dependent_std=a["algorithm"] != "mappo",
+                state_dependent_std=a.get("state_dependent_std", a["algorithm"] != "mappo"),
                 ue_hidden=a["ue_hidden"],
                 count_scale=a["count_scale"],
             )
+        sharing = a.get('actor_sharing', 'shared')
+        if sharing not in ('shared', 'independent'):
+            raise ValueError('Unknown exported actor_sharing')
+        if sharing == 'independent':
+            count = self.artifact['num_uavs']
+            if (mode != 'continuous' or a['algorithm'] != 'mappo'
+                    or self.artifact.get('actor_agent_ids') != list(range(count))):
+                raise ValueError('Independent actor routing specification is incompatible')
+            self.actor = IndependentGaussianActors(self.actor, count)
         self.actor.load_state_dict(self.artifact["actor"])
         self.actor.to(self.device).eval()
 

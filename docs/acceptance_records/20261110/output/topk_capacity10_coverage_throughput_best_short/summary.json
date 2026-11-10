@@ -1,0 +1,5844 @@
+{
+  "groups": {
+    "teacher": {
+      "P0": {
+        "all": {
+          "served": {
+            "mean": 61.325,
+            "low": 54.75,
+            "high": 67.9
+          },
+          "coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "throughput_bps": {
+            "mean": 344726759.5558334,
+            "low": 300363905.6973151,
+            "high": 389089613.4143517
+          },
+          "tau": {
+            "mean": 0.4596356794077779,
+            "low": 0.40048520759642015,
+            "high": 0.5187861512191356
+          },
+          "robustness": {
+            "mean": 0.3749999999999999,
+            "low": 0.330185185185185,
+            "high": 0.4198148148148147
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.0459635679407778,
+            "low": 0.04004852075964203,
+            "high": 0.05187861512191357
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45479690127411115,
+            "low": 0.40504852075964204,
+            "high": 0.5045452817885803
+          },
+          "protocol_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "fill_gain": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "reassignment_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.45,
+            "low": 2.4,
+            "high": 2.5
+          },
+          "rejected_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_messages": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0013888888888888887,
+            "low": 0.0,
+            "high": 0.0027777777777777775
+          }
+        },
+        "first100": {
+          "served": {
+            "mean": 61.325,
+            "low": 54.75,
+            "high": 67.9
+          },
+          "coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "throughput_bps": {
+            "mean": 344726759.5558334,
+            "low": 300363905.6973151,
+            "high": 389089613.4143517
+          },
+          "tau": {
+            "mean": 0.4596356794077779,
+            "low": 0.40048520759642015,
+            "high": 0.5187861512191356
+          },
+          "robustness": {
+            "mean": 0.3749999999999999,
+            "low": 0.330185185185185,
+            "high": 0.4198148148148147
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.0459635679407778,
+            "low": 0.04004852075964203,
+            "high": 0.05187861512191357
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45479690127411115,
+            "low": 0.40504852075964204,
+            "high": 0.5045452817885803
+          },
+          "protocol_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "fill_gain": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "reassignment_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.45,
+            "low": 2.4,
+            "high": 2.5
+          },
+          "rejected_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_messages": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0013888888888888887,
+            "low": 0.0,
+            "high": 0.0027777777777777775
+          }
+        },
+        "last100": {
+          "served": {
+            "mean": 61.325,
+            "low": 54.75,
+            "high": 67.9
+          },
+          "coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "throughput_bps": {
+            "mean": 344726759.5558334,
+            "low": 300363905.6973151,
+            "high": 389089613.4143517
+          },
+          "tau": {
+            "mean": 0.4596356794077779,
+            "low": 0.40048520759642015,
+            "high": 0.5187861512191356
+          },
+          "robustness": {
+            "mean": 0.3749999999999999,
+            "low": 0.330185185185185,
+            "high": 0.4198148148148147
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.0459635679407778,
+            "low": 0.04004852075964203,
+            "high": 0.05187861512191357
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45479690127411115,
+            "low": 0.40504852075964204,
+            "high": 0.5045452817885803
+          },
+          "protocol_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "fill_gain": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "reassignment_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.45,
+            "low": 2.4,
+            "high": 2.5
+          },
+          "rejected_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_messages": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0013888888888888887,
+            "low": 0.0,
+            "high": 0.0027777777777777775
+          }
+        },
+        "terminal": {
+          "served": {
+            "mean": 56.0,
+            "low": 51.0,
+            "high": 61.0
+          },
+          "coverage": {
+            "mean": 0.37333333333333335,
+            "low": 0.34,
+            "high": 0.4066666666666667
+          },
+          "throughput_bps": {
+            "mean": 330282408.0336393,
+            "low": 311816812.9664595,
+            "high": 348748003.1008191
+          },
+          "tau": {
+            "mean": 0.44037654404485244,
+            "low": 0.41575575062194603,
+            "high": 0.46499733746775884
+          },
+          "robustness": {
+            "mean": 0.3401851851851848,
+            "low": 0.3159259259259258,
+            "high": 0.3644444444444439
+          },
+          "disconnection": {
+            "mean": 0.27777777777777773,
+            "low": 0.16666666666666663,
+            "high": 0.38888888888888884
+          },
+          "reward_coverage": {
+            "mean": 0.37333333333333335,
+            "low": 0.34,
+            "high": 0.4066666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.044037654404485246,
+            "low": 0.04157557506219461,
+            "high": 0.046499733746775886
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.4173709877378186,
+            "low": 0.38157557506219464,
+            "high": 0.4531664004134426
+          },
+          "protocol_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_gain": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reassignment_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "timing_loss": {
+            "mean": 16.5,
+            "low": 9.0,
+            "high": 24.0
+          },
+          "feasibility_loss": {
+            "mean": 77.5,
+            "low": 65.0,
+            "high": 90.0
+          },
+          "duplicate_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "invalidated_proposals": {
+            "mean": 9.5,
+            "low": 1.0,
+            "high": 18.0
+          },
+          "rejected_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "fill_rounds": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_messages": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      },
+      "P1": {
+        "all": {
+          "served": {
+            "mean": 61.35,
+            "low": 54.75,
+            "high": 67.95
+          },
+          "coverage": {
+            "mean": 0.40900000000000014,
+            "low": 0.3650000000000001,
+            "high": 0.4530000000000001
+          },
+          "throughput_bps": {
+            "mean": 344758869.1772139,
+            "low": 300363905.6973151,
+            "high": 389153832.65711266
+          },
+          "tau": {
+            "mean": 0.4596784922362852,
+            "low": 0.40048520759642015,
+            "high": 0.5188717768761503
+          },
+          "robustness": {
+            "mean": 0.3751574074074073,
+            "low": 0.330185185185185,
+            "high": 0.4201296296296295
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.40900000000000014,
+            "low": 0.3650000000000001,
+            "high": 0.4530000000000001
+          },
+          "reward_throughput": {
+            "mean": 0.045967849223628524,
+            "low": 0.04004852075964203,
+            "high": 0.05188717768761503
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45496784922362854,
+            "low": 0.40504852075964204,
+            "high": 0.504887177687615
+          },
+          "protocol_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_gain": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "reassignment_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.45,
+            "low": 2.4,
+            "high": 2.5
+          },
+          "rejected_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_messages": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "first100": {
+          "served": {
+            "mean": 61.35,
+            "low": 54.75,
+            "high": 67.95
+          },
+          "coverage": {
+            "mean": 0.40900000000000014,
+            "low": 0.3650000000000001,
+            "high": 0.4530000000000001
+          },
+          "throughput_bps": {
+            "mean": 344758869.1772139,
+            "low": 300363905.6973151,
+            "high": 389153832.65711266
+          },
+          "tau": {
+            "mean": 0.4596784922362852,
+            "low": 0.40048520759642015,
+            "high": 0.5188717768761503
+          },
+          "robustness": {
+            "mean": 0.3751574074074073,
+            "low": 0.330185185185185,
+            "high": 0.4201296296296295
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.40900000000000014,
+            "low": 0.3650000000000001,
+            "high": 0.4530000000000001
+          },
+          "reward_throughput": {
+            "mean": 0.045967849223628524,
+            "low": 0.04004852075964203,
+            "high": 0.05188717768761503
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45496784922362854,
+            "low": 0.40504852075964204,
+            "high": 0.504887177687615
+          },
+          "protocol_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_gain": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "reassignment_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.45,
+            "low": 2.4,
+            "high": 2.5
+          },
+          "rejected_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_messages": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "last100": {
+          "served": {
+            "mean": 61.35,
+            "low": 54.75,
+            "high": 67.95
+          },
+          "coverage": {
+            "mean": 0.40900000000000014,
+            "low": 0.3650000000000001,
+            "high": 0.4530000000000001
+          },
+          "throughput_bps": {
+            "mean": 344758869.1772139,
+            "low": 300363905.6973151,
+            "high": 389153832.65711266
+          },
+          "tau": {
+            "mean": 0.4596784922362852,
+            "low": 0.40048520759642015,
+            "high": 0.5188717768761503
+          },
+          "robustness": {
+            "mean": 0.3751574074074073,
+            "low": 0.330185185185185,
+            "high": 0.4201296296296295
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.40900000000000014,
+            "low": 0.3650000000000001,
+            "high": 0.4530000000000001
+          },
+          "reward_throughput": {
+            "mean": 0.045967849223628524,
+            "low": 0.04004852075964203,
+            "high": 0.05188717768761503
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45496784922362854,
+            "low": 0.40504852075964204,
+            "high": 0.504887177687615
+          },
+          "protocol_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_gain": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "reassignment_loss": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.45,
+            "low": 2.4,
+            "high": 2.5
+          },
+          "rejected_proposals": {
+            "mean": 1.425,
+            "low": 0.25,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_messages": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "terminal": {
+          "served": {
+            "mean": 56.0,
+            "low": 51.0,
+            "high": 61.0
+          },
+          "coverage": {
+            "mean": 0.37333333333333335,
+            "low": 0.34,
+            "high": 0.4066666666666667
+          },
+          "throughput_bps": {
+            "mean": 330282408.0336393,
+            "low": 311816812.9664595,
+            "high": 348748003.1008191
+          },
+          "tau": {
+            "mean": 0.44037654404485244,
+            "low": 0.41575575062194603,
+            "high": 0.46499733746775884
+          },
+          "robustness": {
+            "mean": 0.3401851851851848,
+            "low": 0.3159259259259258,
+            "high": 0.3644444444444439
+          },
+          "disconnection": {
+            "mean": 0.27777777777777773,
+            "low": 0.16666666666666663,
+            "high": 0.38888888888888884
+          },
+          "reward_coverage": {
+            "mean": 0.37333333333333335,
+            "low": 0.34,
+            "high": 0.4066666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.044037654404485246,
+            "low": 0.04157557506219461,
+            "high": 0.046499733746775886
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.4173709877378186,
+            "low": 0.38157557506219464,
+            "high": 0.4531664004134426
+          },
+          "protocol_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_gain": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reassignment_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "timing_loss": {
+            "mean": 16.5,
+            "low": 9.0,
+            "high": 24.0
+          },
+          "feasibility_loss": {
+            "mean": 77.5,
+            "low": 65.0,
+            "high": 90.0
+          },
+          "duplicate_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "invalidated_proposals": {
+            "mean": 9.5,
+            "low": 1.0,
+            "high": 18.0
+          },
+          "rejected_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "fill_rounds": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_messages": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      }
+    },
+    "constant": {
+      "P0": {
+        "all": {
+          "served": {
+            "mean": 61.1,
+            "low": 54.75,
+            "high": 67.45
+          },
+          "coverage": {
+            "mean": 0.40733333333333344,
+            "low": 0.3650000000000001,
+            "high": 0.44966666666666677
+          },
+          "throughput_bps": {
+            "mean": 336290478.2446133,
+            "low": 300154141.45506626,
+            "high": 372426815.03416026
+          },
+          "tau": {
+            "mean": 0.44838730432615104,
+            "low": 0.40020552194008846,
+            "high": 0.49656908671221356
+          },
+          "robustness": {
+            "mean": 0.3736759259259258,
+            "low": 0.33022222222222203,
+            "high": 0.4171296296296295
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.40733333333333344,
+            "low": 0.3650000000000001,
+            "high": 0.44966666666666677
+          },
+          "reward_throughput": {
+            "mean": 0.044838730432615104,
+            "low": 0.04002055219400884,
+            "high": 0.04965690867122136
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45217206376594843,
+            "low": 0.40502055219400884,
+            "high": 0.49932357533788796
+          },
+          "protocol_loss": {
+            "mean": 0.275,
+            "low": 0.0,
+            "high": 0.55
+          },
+          "fill_gain": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "reassignment_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.65,
+            "low": 2.5,
+            "high": 2.8
+          },
+          "rejected_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "fill_messages": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0125,
+            "low": 0.0,
+            "high": 0.025
+          }
+        },
+        "first100": {
+          "served": {
+            "mean": 61.1,
+            "low": 54.75,
+            "high": 67.45
+          },
+          "coverage": {
+            "mean": 0.40733333333333344,
+            "low": 0.3650000000000001,
+            "high": 0.44966666666666677
+          },
+          "throughput_bps": {
+            "mean": 336290478.2446133,
+            "low": 300154141.45506626,
+            "high": 372426815.03416026
+          },
+          "tau": {
+            "mean": 0.44838730432615104,
+            "low": 0.40020552194008846,
+            "high": 0.49656908671221356
+          },
+          "robustness": {
+            "mean": 0.3736759259259258,
+            "low": 0.33022222222222203,
+            "high": 0.4171296296296295
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.40733333333333344,
+            "low": 0.3650000000000001,
+            "high": 0.44966666666666677
+          },
+          "reward_throughput": {
+            "mean": 0.044838730432615104,
+            "low": 0.04002055219400884,
+            "high": 0.04965690867122136
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45217206376594843,
+            "low": 0.40502055219400884,
+            "high": 0.49932357533788796
+          },
+          "protocol_loss": {
+            "mean": 0.275,
+            "low": 0.0,
+            "high": 0.55
+          },
+          "fill_gain": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "reassignment_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.65,
+            "low": 2.5,
+            "high": 2.8
+          },
+          "rejected_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "fill_messages": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0125,
+            "low": 0.0,
+            "high": 0.025
+          }
+        },
+        "last100": {
+          "served": {
+            "mean": 61.1,
+            "low": 54.75,
+            "high": 67.45
+          },
+          "coverage": {
+            "mean": 0.40733333333333344,
+            "low": 0.3650000000000001,
+            "high": 0.44966666666666677
+          },
+          "throughput_bps": {
+            "mean": 336290478.2446133,
+            "low": 300154141.45506626,
+            "high": 372426815.03416026
+          },
+          "tau": {
+            "mean": 0.44838730432615104,
+            "low": 0.40020552194008846,
+            "high": 0.49656908671221356
+          },
+          "robustness": {
+            "mean": 0.3736759259259258,
+            "low": 0.33022222222222203,
+            "high": 0.4171296296296295
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.40733333333333344,
+            "low": 0.3650000000000001,
+            "high": 0.44966666666666677
+          },
+          "reward_throughput": {
+            "mean": 0.044838730432615104,
+            "low": 0.04002055219400884,
+            "high": 0.04965690867122136
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45217206376594843,
+            "low": 0.40502055219400884,
+            "high": 0.49932357533788796
+          },
+          "protocol_loss": {
+            "mean": 0.275,
+            "low": 0.0,
+            "high": 0.55
+          },
+          "fill_gain": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "reassignment_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.65,
+            "low": 2.5,
+            "high": 2.8
+          },
+          "rejected_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "fill_messages": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0125,
+            "low": 0.0,
+            "high": 0.025
+          }
+        },
+        "terminal": {
+          "served": {
+            "mean": 56.0,
+            "low": 51.0,
+            "high": 61.0
+          },
+          "coverage": {
+            "mean": 0.37333333333333335,
+            "low": 0.34,
+            "high": 0.4066666666666667
+          },
+          "throughput_bps": {
+            "mean": 330287096.1764545,
+            "low": 311816812.9664595,
+            "high": 348757379.38644946
+          },
+          "tau": {
+            "mean": 0.4403827949019393,
+            "low": 0.41575575062194603,
+            "high": 0.4650098391819326
+          },
+          "robustness": {
+            "mean": 0.34037037037037005,
+            "low": 0.3159259259259258,
+            "high": 0.3648148148148143
+          },
+          "disconnection": {
+            "mean": 0.27777777777777773,
+            "low": 0.16666666666666663,
+            "high": 0.38888888888888884
+          },
+          "reward_coverage": {
+            "mean": 0.37333333333333335,
+            "low": 0.34,
+            "high": 0.4066666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.04403827949019394,
+            "low": 0.04157557506219461,
+            "high": 0.04650098391819327
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.4173716128235273,
+            "low": 0.38157557506219464,
+            "high": 0.45316765058485997
+          },
+          "protocol_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_gain": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reassignment_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "timing_loss": {
+            "mean": 16.5,
+            "low": 9.0,
+            "high": 24.0
+          },
+          "feasibility_loss": {
+            "mean": 77.5,
+            "low": 65.0,
+            "high": 90.0
+          },
+          "duplicate_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "invalidated_proposals": {
+            "mean": 9.5,
+            "low": 1.0,
+            "high": 18.0
+          },
+          "rejected_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "fill_rounds": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_messages": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      },
+      "P1": {
+        "all": {
+          "served": {
+            "mean": 61.325,
+            "low": 54.75,
+            "high": 67.9
+          },
+          "coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "throughput_bps": {
+            "mean": 337004884.8566793,
+            "low": 300154141.45506626,
+            "high": 373855628.25829244
+          },
+          "tau": {
+            "mean": 0.44933984647557246,
+            "low": 0.40020552194008846,
+            "high": 0.49847417101105645
+          },
+          "robustness": {
+            "mean": 0.3750277777777776,
+            "low": 0.33022222222222203,
+            "high": 0.41983333333333317
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.04493398464755725,
+            "low": 0.04002055219400884,
+            "high": 0.04984741710110566
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45376731798089054,
+            "low": 0.40502055219400884,
+            "high": 0.5025140837677723
+          },
+          "protocol_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "fill_gain": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "reassignment_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.65,
+            "low": 2.5,
+            "high": 2.8
+          },
+          "rejected_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "fill_messages": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "first100": {
+          "served": {
+            "mean": 61.325,
+            "low": 54.75,
+            "high": 67.9
+          },
+          "coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "throughput_bps": {
+            "mean": 337004884.8566793,
+            "low": 300154141.45506626,
+            "high": 373855628.25829244
+          },
+          "tau": {
+            "mean": 0.44933984647557246,
+            "low": 0.40020552194008846,
+            "high": 0.49847417101105645
+          },
+          "robustness": {
+            "mean": 0.3750277777777776,
+            "low": 0.33022222222222203,
+            "high": 0.41983333333333317
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.04493398464755725,
+            "low": 0.04002055219400884,
+            "high": 0.04984741710110566
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45376731798089054,
+            "low": 0.40502055219400884,
+            "high": 0.5025140837677723
+          },
+          "protocol_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "fill_gain": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "reassignment_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.65,
+            "low": 2.5,
+            "high": 2.8
+          },
+          "rejected_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "fill_messages": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "last100": {
+          "served": {
+            "mean": 61.325,
+            "low": 54.75,
+            "high": 67.9
+          },
+          "coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "throughput_bps": {
+            "mean": 337004884.8566793,
+            "low": 300154141.45506626,
+            "high": 373855628.25829244
+          },
+          "tau": {
+            "mean": 0.44933984647557246,
+            "low": 0.40020552194008846,
+            "high": 0.49847417101105645
+          },
+          "robustness": {
+            "mean": 0.3750277777777776,
+            "low": 0.33022222222222203,
+            "high": 0.41983333333333317
+          },
+          "disconnection": {
+            "mean": 0.2763888888888889,
+            "low": 0.23888888888888893,
+            "high": 0.31388888888888894
+          },
+          "reward_coverage": {
+            "mean": 0.4088333333333334,
+            "low": 0.3650000000000001,
+            "high": 0.4526666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.04493398464755725,
+            "low": 0.04002055219400884,
+            "high": 0.04984741710110566
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45376731798089054,
+            "low": 0.40502055219400884,
+            "high": 0.5025140837677723
+          },
+          "protocol_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "fill_gain": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "reassignment_loss": {
+            "mean": 0.05,
+            "low": 0.0,
+            "high": 0.1
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.65,
+            "low": 2.5,
+            "high": 2.8
+          },
+          "rejected_proposals": {
+            "mean": 1.45,
+            "low": 0.3,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "fill_messages": {
+            "mean": 0.225,
+            "low": 0.0,
+            "high": 0.45
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "terminal": {
+          "served": {
+            "mean": 56.0,
+            "low": 51.0,
+            "high": 61.0
+          },
+          "coverage": {
+            "mean": 0.37333333333333335,
+            "low": 0.34,
+            "high": 0.4066666666666667
+          },
+          "throughput_bps": {
+            "mean": 330287096.1764545,
+            "low": 311816812.9664595,
+            "high": 348757379.38644946
+          },
+          "tau": {
+            "mean": 0.4403827949019393,
+            "low": 0.41575575062194603,
+            "high": 0.4650098391819326
+          },
+          "robustness": {
+            "mean": 0.34037037037037005,
+            "low": 0.3159259259259258,
+            "high": 0.3648148148148143
+          },
+          "disconnection": {
+            "mean": 0.27777777777777773,
+            "low": 0.16666666666666663,
+            "high": 0.38888888888888884
+          },
+          "reward_coverage": {
+            "mean": 0.37333333333333335,
+            "low": 0.34,
+            "high": 0.4066666666666667
+          },
+          "reward_throughput": {
+            "mean": 0.04403827949019394,
+            "low": 0.04157557506219461,
+            "high": 0.04650098391819327
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.4173716128235273,
+            "low": 0.38157557506219464,
+            "high": 0.45316765058485997
+          },
+          "protocol_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_gain": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reassignment_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "timing_loss": {
+            "mean": 16.5,
+            "low": 9.0,
+            "high": 24.0
+          },
+          "feasibility_loss": {
+            "mean": 77.5,
+            "low": 65.0,
+            "high": 90.0
+          },
+          "duplicate_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "invalidated_proposals": {
+            "mean": 9.5,
+            "low": 1.0,
+            "high": 18.0
+          },
+          "rejected_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "fill_rounds": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_messages": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      }
+    },
+    "random": {
+      "P0": {
+        "all": {
+          "served": {
+            "mean": 61.16,
+            "low": 54.75,
+            "high": 67.57
+          },
+          "coverage": {
+            "mean": 0.4077333333333334,
+            "low": 0.36500000000000005,
+            "high": 0.4504666666666668
+          },
+          "throughput_bps": {
+            "mean": 337357562.003002,
+            "low": 299942456.12487113,
+            "high": 374772667.88113284
+          },
+          "tau": {
+            "mean": 0.44981008267066935,
+            "low": 0.39992327483316165,
+            "high": 0.499696890508177
+          },
+          "robustness": {
+            "mean": 0.3740222222222221,
+            "low": 0.3301962962962961,
+            "high": 0.4178481481481481
+          },
+          "disconnection": {
+            "mean": 0.27638888888888885,
+            "low": 0.23888888888888893,
+            "high": 0.3138888888888888
+          },
+          "reward_coverage": {
+            "mean": 0.4077333333333334,
+            "low": 0.36500000000000005,
+            "high": 0.4504666666666668
+          },
+          "reward_throughput": {
+            "mean": 0.04498100826706694,
+            "low": 0.03999232748331617,
+            "high": 0.04996968905081771
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45271434160040036,
+            "low": 0.4049923274833162,
+            "high": 0.5004363557174845
+          },
+          "protocol_loss": {
+            "mean": 0.215,
+            "low": 0.0,
+            "high": 0.43
+          },
+          "fill_gain": {
+            "mean": 0.18624999999999997,
+            "low": 0.0,
+            "high": 0.37249999999999994
+          },
+          "reassignment_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.5975,
+            "low": 2.5,
+            "high": 2.695
+          },
+          "rejected_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.1575,
+            "low": 0.0,
+            "high": 0.315
+          },
+          "fill_messages": {
+            "mean": 0.19,
+            "low": 0.0,
+            "high": 0.38
+          },
+          "fill_rejections": {
+            "mean": 0.00375,
+            "low": 0.0,
+            "high": 0.0075
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.009791666666666669,
+            "low": 0.0,
+            "high": 0.019583333333333338
+          }
+        },
+        "first100": {
+          "served": {
+            "mean": 61.16,
+            "low": 54.75,
+            "high": 67.57
+          },
+          "coverage": {
+            "mean": 0.4077333333333334,
+            "low": 0.36500000000000005,
+            "high": 0.4504666666666668
+          },
+          "throughput_bps": {
+            "mean": 337357562.003002,
+            "low": 299942456.12487113,
+            "high": 374772667.88113284
+          },
+          "tau": {
+            "mean": 0.44981008267066935,
+            "low": 0.39992327483316165,
+            "high": 0.499696890508177
+          },
+          "robustness": {
+            "mean": 0.3740222222222221,
+            "low": 0.3301962962962961,
+            "high": 0.4178481481481481
+          },
+          "disconnection": {
+            "mean": 0.27638888888888885,
+            "low": 0.23888888888888893,
+            "high": 0.3138888888888888
+          },
+          "reward_coverage": {
+            "mean": 0.4077333333333334,
+            "low": 0.36500000000000005,
+            "high": 0.4504666666666668
+          },
+          "reward_throughput": {
+            "mean": 0.04498100826706694,
+            "low": 0.03999232748331617,
+            "high": 0.04996968905081771
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45271434160040036,
+            "low": 0.4049923274833162,
+            "high": 0.5004363557174845
+          },
+          "protocol_loss": {
+            "mean": 0.215,
+            "low": 0.0,
+            "high": 0.43
+          },
+          "fill_gain": {
+            "mean": 0.18624999999999997,
+            "low": 0.0,
+            "high": 0.37249999999999994
+          },
+          "reassignment_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.5975,
+            "low": 2.5,
+            "high": 2.695
+          },
+          "rejected_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.1575,
+            "low": 0.0,
+            "high": 0.315
+          },
+          "fill_messages": {
+            "mean": 0.19,
+            "low": 0.0,
+            "high": 0.38
+          },
+          "fill_rejections": {
+            "mean": 0.00375,
+            "low": 0.0,
+            "high": 0.0075
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.009791666666666669,
+            "low": 0.0,
+            "high": 0.019583333333333338
+          }
+        },
+        "last100": {
+          "served": {
+            "mean": 61.16,
+            "low": 54.75,
+            "high": 67.57
+          },
+          "coverage": {
+            "mean": 0.4077333333333334,
+            "low": 0.36500000000000005,
+            "high": 0.4504666666666668
+          },
+          "throughput_bps": {
+            "mean": 337357562.003002,
+            "low": 299942456.12487113,
+            "high": 374772667.88113284
+          },
+          "tau": {
+            "mean": 0.44981008267066935,
+            "low": 0.39992327483316165,
+            "high": 0.499696890508177
+          },
+          "robustness": {
+            "mean": 0.3740222222222221,
+            "low": 0.3301962962962961,
+            "high": 0.4178481481481481
+          },
+          "disconnection": {
+            "mean": 0.27638888888888885,
+            "low": 0.23888888888888893,
+            "high": 0.3138888888888888
+          },
+          "reward_coverage": {
+            "mean": 0.4077333333333334,
+            "low": 0.36500000000000005,
+            "high": 0.4504666666666668
+          },
+          "reward_throughput": {
+            "mean": 0.04498100826706694,
+            "low": 0.03999232748331617,
+            "high": 0.04996968905081771
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45271434160040036,
+            "low": 0.4049923274833162,
+            "high": 0.5004363557174845
+          },
+          "protocol_loss": {
+            "mean": 0.215,
+            "low": 0.0,
+            "high": 0.43
+          },
+          "fill_gain": {
+            "mean": 0.18624999999999997,
+            "low": 0.0,
+            "high": 0.37249999999999994
+          },
+          "reassignment_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.5975,
+            "low": 2.5,
+            "high": 2.695
+          },
+          "rejected_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.1575,
+            "low": 0.0,
+            "high": 0.315
+          },
+          "fill_messages": {
+            "mean": 0.19,
+            "low": 0.0,
+            "high": 0.38
+          },
+          "fill_rejections": {
+            "mean": 0.00375,
+            "low": 0.0,
+            "high": 0.0075
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.009791666666666669,
+            "low": 0.0,
+            "high": 0.019583333333333338
+          }
+        },
+        "terminal": {
+          "served": {
+            "mean": 56.0,
+            "low": 51.0,
+            "high": 61.0
+          },
+          "coverage": {
+            "mean": 0.3733333333333332,
+            "low": 0.3399999999999999,
+            "high": 0.40666666666666645
+          },
+          "throughput_bps": {
+            "mean": 330157648.8107119,
+            "low": 311816812.9664594,
+            "high": 348498484.65496445
+          },
+          "tau": {
+            "mean": 0.4402101984142826,
+            "low": 0.4157557506219459,
+            "high": 0.4646646462066193
+          },
+          "robustness": {
+            "mean": 0.3402499999999997,
+            "low": 0.3159259259259259,
+            "high": 0.3645740740740736
+          },
+          "disconnection": {
+            "mean": 0.2777777777777778,
+            "low": 0.16666666666666657,
+            "high": 0.388888888888889
+          },
+          "reward_coverage": {
+            "mean": 0.3733333333333332,
+            "low": 0.3399999999999999,
+            "high": 0.40666666666666645
+          },
+          "reward_throughput": {
+            "mean": 0.044021019841428255,
+            "low": 0.04157557506219459,
+            "high": 0.046466464620661924
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.41735435317476166,
+            "low": 0.38157557506219475,
+            "high": 0.4531331312873285
+          },
+          "protocol_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_gain": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reassignment_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "timing_loss": {
+            "mean": 16.5,
+            "low": 9.0,
+            "high": 24.0
+          },
+          "feasibility_loss": {
+            "mean": 77.5,
+            "low": 65.0,
+            "high": 90.0
+          },
+          "duplicate_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "invalidated_proposals": {
+            "mean": 9.5,
+            "low": 1.0,
+            "high": 18.0
+          },
+          "rejected_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "fill_rounds": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_messages": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      },
+      "P1": {
+        "all": {
+          "served": {
+            "mean": 61.34625,
+            "low": 54.75,
+            "high": 67.9425
+          },
+          "coverage": {
+            "mean": 0.4089750000000001,
+            "low": 0.36500000000000005,
+            "high": 0.4529500000000001
+          },
+          "throughput_bps": {
+            "mean": 338209810.1404872,
+            "low": 299942456.12487113,
+            "high": 376477164.1561032
+          },
+          "tau": {
+            "mean": 0.45094641352064957,
+            "low": 0.39992327483316165,
+            "high": 0.5019695522081375
+          },
+          "robustness": {
+            "mean": 0.3751453703703702,
+            "low": 0.3301962962962961,
+            "high": 0.4200944444444444
+          },
+          "disconnection": {
+            "mean": 0.27638888888888885,
+            "low": 0.23888888888888893,
+            "high": 0.3138888888888888
+          },
+          "reward_coverage": {
+            "mean": 0.4089750000000001,
+            "low": 0.36500000000000005,
+            "high": 0.4529500000000001
+          },
+          "reward_throughput": {
+            "mean": 0.045094641352064965,
+            "low": 0.03999232748331617,
+            "high": 0.05019695522081376
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45406964135206496,
+            "low": 0.4049923274833162,
+            "high": 0.5031469552208138
+          },
+          "protocol_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "fill_gain": {
+            "mean": 0.18624999999999997,
+            "low": 0.0,
+            "high": 0.37249999999999994
+          },
+          "reassignment_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.5975,
+            "low": 2.5,
+            "high": 2.695
+          },
+          "rejected_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.1575,
+            "low": 0.0,
+            "high": 0.315
+          },
+          "fill_messages": {
+            "mean": 0.19,
+            "low": 0.0,
+            "high": 0.38
+          },
+          "fill_rejections": {
+            "mean": 0.00375,
+            "low": 0.0,
+            "high": 0.0075
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "first100": {
+          "served": {
+            "mean": 61.34625,
+            "low": 54.75,
+            "high": 67.9425
+          },
+          "coverage": {
+            "mean": 0.4089750000000001,
+            "low": 0.36500000000000005,
+            "high": 0.4529500000000001
+          },
+          "throughput_bps": {
+            "mean": 338209810.1404872,
+            "low": 299942456.12487113,
+            "high": 376477164.1561032
+          },
+          "tau": {
+            "mean": 0.45094641352064957,
+            "low": 0.39992327483316165,
+            "high": 0.5019695522081375
+          },
+          "robustness": {
+            "mean": 0.3751453703703702,
+            "low": 0.3301962962962961,
+            "high": 0.4200944444444444
+          },
+          "disconnection": {
+            "mean": 0.27638888888888885,
+            "low": 0.23888888888888893,
+            "high": 0.3138888888888888
+          },
+          "reward_coverage": {
+            "mean": 0.4089750000000001,
+            "low": 0.36500000000000005,
+            "high": 0.4529500000000001
+          },
+          "reward_throughput": {
+            "mean": 0.045094641352064965,
+            "low": 0.03999232748331617,
+            "high": 0.05019695522081376
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45406964135206496,
+            "low": 0.4049923274833162,
+            "high": 0.5031469552208138
+          },
+          "protocol_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "fill_gain": {
+            "mean": 0.18624999999999997,
+            "low": 0.0,
+            "high": 0.37249999999999994
+          },
+          "reassignment_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.5975,
+            "low": 2.5,
+            "high": 2.695
+          },
+          "rejected_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.1575,
+            "low": 0.0,
+            "high": 0.315
+          },
+          "fill_messages": {
+            "mean": 0.19,
+            "low": 0.0,
+            "high": 0.38
+          },
+          "fill_rejections": {
+            "mean": 0.00375,
+            "low": 0.0,
+            "high": 0.0075
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "last100": {
+          "served": {
+            "mean": 61.34625,
+            "low": 54.75,
+            "high": 67.9425
+          },
+          "coverage": {
+            "mean": 0.4089750000000001,
+            "low": 0.36500000000000005,
+            "high": 0.4529500000000001
+          },
+          "throughput_bps": {
+            "mean": 338209810.1404872,
+            "low": 299942456.12487113,
+            "high": 376477164.1561032
+          },
+          "tau": {
+            "mean": 0.45094641352064957,
+            "low": 0.39992327483316165,
+            "high": 0.5019695522081375
+          },
+          "robustness": {
+            "mean": 0.3751453703703702,
+            "low": 0.3301962962962961,
+            "high": 0.4200944444444444
+          },
+          "disconnection": {
+            "mean": 0.27638888888888885,
+            "low": 0.23888888888888893,
+            "high": 0.3138888888888888
+          },
+          "reward_coverage": {
+            "mean": 0.4089750000000001,
+            "low": 0.36500000000000005,
+            "high": 0.4529500000000001
+          },
+          "reward_throughput": {
+            "mean": 0.045094641352064965,
+            "low": 0.03999232748331617,
+            "high": 0.05019695522081376
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.45406964135206496,
+            "low": 0.4049923274833162,
+            "high": 0.5031469552208138
+          },
+          "protocol_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "fill_gain": {
+            "mean": 0.18624999999999997,
+            "low": 0.0,
+            "high": 0.37249999999999994
+          },
+          "reassignment_loss": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "timing_loss": {
+            "mean": 2.95,
+            "low": 1.9,
+            "high": 4.0
+          },
+          "feasibility_loss": {
+            "mean": 85.675,
+            "low": 80.1,
+            "high": 91.25
+          },
+          "duplicate_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "invalidated_proposals": {
+            "mean": 2.5975,
+            "low": 2.5,
+            "high": 2.695
+          },
+          "rejected_proposals": {
+            "mean": 1.4425000000000001,
+            "low": 0.28500000000000003,
+            "high": 2.6
+          },
+          "fill_rounds": {
+            "mean": 0.1575,
+            "low": 0.0,
+            "high": 0.315
+          },
+          "fill_messages": {
+            "mean": 0.19,
+            "low": 0.0,
+            "high": 0.38
+          },
+          "fill_rejections": {
+            "mean": 0.00375,
+            "low": 0.0,
+            "high": 0.0075
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "terminal": {
+          "served": {
+            "mean": 56.0,
+            "low": 51.0,
+            "high": 61.0
+          },
+          "coverage": {
+            "mean": 0.3733333333333332,
+            "low": 0.3399999999999999,
+            "high": 0.40666666666666645
+          },
+          "throughput_bps": {
+            "mean": 330157648.8107119,
+            "low": 311816812.9664594,
+            "high": 348498484.65496445
+          },
+          "tau": {
+            "mean": 0.4402101984142826,
+            "low": 0.4157557506219459,
+            "high": 0.4646646462066193
+          },
+          "robustness": {
+            "mean": 0.3402499999999997,
+            "low": 0.3159259259259259,
+            "high": 0.3645740740740736
+          },
+          "disconnection": {
+            "mean": 0.2777777777777778,
+            "low": 0.16666666666666657,
+            "high": 0.388888888888889
+          },
+          "reward_coverage": {
+            "mean": 0.3733333333333332,
+            "low": 0.3399999999999999,
+            "high": 0.40666666666666645
+          },
+          "reward_throughput": {
+            "mean": 0.044021019841428255,
+            "low": 0.04157557506219459,
+            "high": 0.046466464620661924
+          },
+          "reward_robustness": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reward_disconnection": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward": {
+            "mean": 0.41735435317476166,
+            "low": 0.38157557506219475,
+            "high": 0.4531331312873285
+          },
+          "protocol_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_gain": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "reassignment_loss": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "timing_loss": {
+            "mean": 16.5,
+            "low": 9.0,
+            "high": 24.0
+          },
+          "feasibility_loss": {
+            "mean": 77.5,
+            "low": 65.0,
+            "high": 90.0
+          },
+          "duplicate_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "invalidated_proposals": {
+            "mean": 9.5,
+            "low": 1.0,
+            "high": 18.0
+          },
+          "rejected_proposals": {
+            "mean": 2.0,
+            "low": 0.0,
+            "high": 4.0
+          },
+          "fill_rounds": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_messages": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "fill_rejections": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "idle_with_unserved_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      }
+    }
+  },
+  "differences": {
+    "teacher_fill_minus_one": {
+      "all": {
+        "served": {
+          "mean": 0.02499999999999858,
+          "low": 0.0,
+          "high": 0.04999999999999716
+        },
+        "coverage": {
+          "mean": 0.00016666666666670382,
+          "low": 0.0,
+          "high": 0.00033333333333340764
+        },
+        "throughput_bps": {
+          "mean": 32109.621380478144,
+          "low": 0.0,
+          "high": 64219.24276095629
+        },
+        "tau": {
+          "mean": 4.281282850732149e-05,
+          "low": 0.0,
+          "high": 8.562565701464298e-05
+        },
+        "robustness": {
+          "mean": 0.00015740740740741166,
+          "low": 0.0,
+          "high": 0.0003148148148148233
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.00016666666666670382,
+          "low": 0.0,
+          "high": 0.00033333333333340764
+        },
+        "reward_throughput": {
+          "mean": 4.2812828507272915e-06,
+          "low": 0.0,
+          "high": 8.562565701454583e-06
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.000170947949517386,
+          "low": 0.0,
+          "high": 0.000341895899034772
+        },
+        "protocol_loss": {
+          "mean": -0.025,
+          "low": -0.05,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.0013888888888888887,
+          "low": -0.0027777777777777775,
+          "high": 0.0
+        }
+      },
+      "first100": {
+        "served": {
+          "mean": 0.02499999999999858,
+          "low": 0.0,
+          "high": 0.04999999999999716
+        },
+        "coverage": {
+          "mean": 0.00016666666666670382,
+          "low": 0.0,
+          "high": 0.00033333333333340764
+        },
+        "throughput_bps": {
+          "mean": 32109.621380478144,
+          "low": 0.0,
+          "high": 64219.24276095629
+        },
+        "tau": {
+          "mean": 4.281282850732149e-05,
+          "low": 0.0,
+          "high": 8.562565701464298e-05
+        },
+        "robustness": {
+          "mean": 0.00015740740740741166,
+          "low": 0.0,
+          "high": 0.0003148148148148233
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.00016666666666670382,
+          "low": 0.0,
+          "high": 0.00033333333333340764
+        },
+        "reward_throughput": {
+          "mean": 4.2812828507272915e-06,
+          "low": 0.0,
+          "high": 8.562565701454583e-06
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.000170947949517386,
+          "low": 0.0,
+          "high": 0.000341895899034772
+        },
+        "protocol_loss": {
+          "mean": -0.025,
+          "low": -0.05,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.0013888888888888887,
+          "low": -0.0027777777777777775,
+          "high": 0.0
+        }
+      },
+      "last100": {
+        "served": {
+          "mean": 0.02499999999999858,
+          "low": 0.0,
+          "high": 0.04999999999999716
+        },
+        "coverage": {
+          "mean": 0.00016666666666670382,
+          "low": 0.0,
+          "high": 0.00033333333333340764
+        },
+        "throughput_bps": {
+          "mean": 32109.621380478144,
+          "low": 0.0,
+          "high": 64219.24276095629
+        },
+        "tau": {
+          "mean": 4.281282850732149e-05,
+          "low": 0.0,
+          "high": 8.562565701464298e-05
+        },
+        "robustness": {
+          "mean": 0.00015740740740741166,
+          "low": 0.0,
+          "high": 0.0003148148148148233
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.00016666666666670382,
+          "low": 0.0,
+          "high": 0.00033333333333340764
+        },
+        "reward_throughput": {
+          "mean": 4.2812828507272915e-06,
+          "low": 0.0,
+          "high": 8.562565701454583e-06
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.000170947949517386,
+          "low": 0.0,
+          "high": 0.000341895899034772
+        },
+        "protocol_loss": {
+          "mean": -0.025,
+          "low": -0.05,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.0013888888888888887,
+          "low": -0.0027777777777777775,
+          "high": 0.0
+        }
+      },
+      "terminal": {
+        "served": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "throughput_bps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "tau": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_throughput": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "protocol_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        }
+      }
+    },
+    "constant_fill_minus_one": {
+      "all": {
+        "served": {
+          "mean": 0.22500000000000142,
+          "low": 0.0,
+          "high": 0.45000000000000284
+        },
+        "coverage": {
+          "mean": 0.0014999999999999736,
+          "low": 0.0,
+          "high": 0.002999999999999947
+        },
+        "throughput_bps": {
+          "mean": 714406.6120660901,
+          "low": 0.0,
+          "high": 1428813.2241321802
+        },
+        "tau": {
+          "mean": 0.0009525421494214481,
+          "low": 0.0,
+          "high": 0.0019050842988428962
+        },
+        "robustness": {
+          "mean": 0.0013518518518518263,
+          "low": 0.0,
+          "high": 0.0027037037037036526
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.0014999999999999736,
+          "low": 0.0,
+          "high": 0.002999999999999947
+        },
+        "reward_throughput": {
+          "mean": 9.525421494214689e-05,
+          "low": 0.0,
+          "high": 0.00019050842988429378
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0015952542149421656,
+          "low": 0.0,
+          "high": 0.003190508429884331
+        },
+        "protocol_loss": {
+          "mean": -0.22500000000000003,
+          "low": -0.45000000000000007,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.0125,
+          "low": -0.025,
+          "high": 0.0
+        }
+      },
+      "first100": {
+        "served": {
+          "mean": 0.22500000000000142,
+          "low": 0.0,
+          "high": 0.45000000000000284
+        },
+        "coverage": {
+          "mean": 0.0014999999999999736,
+          "low": 0.0,
+          "high": 0.002999999999999947
+        },
+        "throughput_bps": {
+          "mean": 714406.6120660901,
+          "low": 0.0,
+          "high": 1428813.2241321802
+        },
+        "tau": {
+          "mean": 0.0009525421494214481,
+          "low": 0.0,
+          "high": 0.0019050842988428962
+        },
+        "robustness": {
+          "mean": 0.0013518518518518263,
+          "low": 0.0,
+          "high": 0.0027037037037036526
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.0014999999999999736,
+          "low": 0.0,
+          "high": 0.002999999999999947
+        },
+        "reward_throughput": {
+          "mean": 9.525421494214689e-05,
+          "low": 0.0,
+          "high": 0.00019050842988429378
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0015952542149421656,
+          "low": 0.0,
+          "high": 0.003190508429884331
+        },
+        "protocol_loss": {
+          "mean": -0.22500000000000003,
+          "low": -0.45000000000000007,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.0125,
+          "low": -0.025,
+          "high": 0.0
+        }
+      },
+      "last100": {
+        "served": {
+          "mean": 0.22500000000000142,
+          "low": 0.0,
+          "high": 0.45000000000000284
+        },
+        "coverage": {
+          "mean": 0.0014999999999999736,
+          "low": 0.0,
+          "high": 0.002999999999999947
+        },
+        "throughput_bps": {
+          "mean": 714406.6120660901,
+          "low": 0.0,
+          "high": 1428813.2241321802
+        },
+        "tau": {
+          "mean": 0.0009525421494214481,
+          "low": 0.0,
+          "high": 0.0019050842988428962
+        },
+        "robustness": {
+          "mean": 0.0013518518518518263,
+          "low": 0.0,
+          "high": 0.0027037037037036526
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.0014999999999999736,
+          "low": 0.0,
+          "high": 0.002999999999999947
+        },
+        "reward_throughput": {
+          "mean": 9.525421494214689e-05,
+          "low": 0.0,
+          "high": 0.00019050842988429378
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0015952542149421656,
+          "low": 0.0,
+          "high": 0.003190508429884331
+        },
+        "protocol_loss": {
+          "mean": -0.22500000000000003,
+          "low": -0.45000000000000007,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.0125,
+          "low": -0.025,
+          "high": 0.0
+        }
+      },
+      "terminal": {
+        "served": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "throughput_bps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "tau": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_throughput": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "protocol_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        }
+      }
+    },
+    "random_fill_minus_one": {
+      "all": {
+        "served": {
+          "mean": 0.18625000000000114,
+          "low": 0.0,
+          "high": 0.3725000000000023
+        },
+        "coverage": {
+          "mean": 0.001241666666666641,
+          "low": 0.0,
+          "high": 0.002483333333333282
+        },
+        "throughput_bps": {
+          "mean": 852248.1374851763,
+          "low": 0.0,
+          "high": 1704496.2749703526
+        },
+        "tau": {
+          "mean": 0.0011363308499802716,
+          "low": 0.0,
+          "high": 0.002272661699960543
+        },
+        "robustness": {
+          "mean": 0.001123148148148151,
+          "low": 0.0,
+          "high": 0.002246296296296302
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.001241666666666641,
+          "low": 0.0,
+          "high": 0.002483333333333282
+        },
+        "reward_throughput": {
+          "mean": 0.00011363308499802438,
+          "low": 0.0,
+          "high": 0.00022726616999604876
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0013552997516646514,
+          "low": 0.0,
+          "high": 0.002710599503329303
+        },
+        "protocol_loss": {
+          "mean": -0.18625,
+          "low": -0.3725,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.009791666666666669,
+          "low": -0.019583333333333338,
+          "high": 0.0
+        }
+      },
+      "first100": {
+        "served": {
+          "mean": 0.18625000000000114,
+          "low": 0.0,
+          "high": 0.3725000000000023
+        },
+        "coverage": {
+          "mean": 0.001241666666666641,
+          "low": 0.0,
+          "high": 0.002483333333333282
+        },
+        "throughput_bps": {
+          "mean": 852248.1374851763,
+          "low": 0.0,
+          "high": 1704496.2749703526
+        },
+        "tau": {
+          "mean": 0.0011363308499802716,
+          "low": 0.0,
+          "high": 0.002272661699960543
+        },
+        "robustness": {
+          "mean": 0.001123148148148151,
+          "low": 0.0,
+          "high": 0.002246296296296302
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.001241666666666641,
+          "low": 0.0,
+          "high": 0.002483333333333282
+        },
+        "reward_throughput": {
+          "mean": 0.00011363308499802438,
+          "low": 0.0,
+          "high": 0.00022726616999604876
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0013552997516646514,
+          "low": 0.0,
+          "high": 0.002710599503329303
+        },
+        "protocol_loss": {
+          "mean": -0.18625,
+          "low": -0.3725,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.009791666666666669,
+          "low": -0.019583333333333338,
+          "high": 0.0
+        }
+      },
+      "last100": {
+        "served": {
+          "mean": 0.18625000000000114,
+          "low": 0.0,
+          "high": 0.3725000000000023
+        },
+        "coverage": {
+          "mean": 0.001241666666666641,
+          "low": 0.0,
+          "high": 0.002483333333333282
+        },
+        "throughput_bps": {
+          "mean": 852248.1374851763,
+          "low": 0.0,
+          "high": 1704496.2749703526
+        },
+        "tau": {
+          "mean": 0.0011363308499802716,
+          "low": 0.0,
+          "high": 0.002272661699960543
+        },
+        "robustness": {
+          "mean": 0.001123148148148151,
+          "low": 0.0,
+          "high": 0.002246296296296302
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.001241666666666641,
+          "low": 0.0,
+          "high": 0.002483333333333282
+        },
+        "reward_throughput": {
+          "mean": 0.00011363308499802438,
+          "low": 0.0,
+          "high": 0.00022726616999604876
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0013552997516646514,
+          "low": 0.0,
+          "high": 0.002710599503329303
+        },
+        "protocol_loss": {
+          "mean": -0.18625,
+          "low": -0.3725,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": -0.009791666666666669,
+          "low": -0.019583333333333338,
+          "high": 0.0
+        }
+      },
+      "terminal": {
+        "served": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "throughput_bps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "tau": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_throughput": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "protocol_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        }
+      }
+    },
+    "constant_minus_teacher_P0": {
+      "all": {
+        "served": {
+          "mean": -0.22500000000000142,
+          "low": -0.45000000000000284,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": -0.0014999999999999736,
+          "low": -0.002999999999999947,
+          "high": 0.0
+        },
+        "throughput_bps": {
+          "mean": -8436281.31122014,
+          "low": -16662798.380191445,
+          "high": -209764.24224883318
+        },
+        "tau": {
+          "mean": -0.011248375081626877,
+          "low": -0.02221706450692207,
+          "high": -0.0002796856563316852
+        },
+        "robustness": {
+          "mean": -0.0013240740740740886,
+          "low": -0.0026851851851851793,
+          "high": 3.703703703700212e-05
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": -0.0014999999999999736,
+          "low": -0.002999999999999947,
+          "high": 0.0
+        },
+        "reward_throughput": {
+          "mean": -0.0011248375081626995,
+          "low": -0.0022217064506922096,
+          "high": -2.7968565633189335e-05
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": -0.002624837508162753,
+          "low": -0.005221706450692309,
+          "high": -2.7968565633196274e-05
+        },
+        "protocol_loss": {
+          "mean": 0.22500000000000003,
+          "low": 0.0,
+          "high": 0.45000000000000007
+        },
+        "fill_gain": {
+          "mean": 0.2,
+          "low": 0.0,
+          "high": 0.4
+        },
+        "reassignment_loss": {
+          "mean": 0.025,
+          "low": 0.0,
+          "high": 0.05
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.024999999999999994,
+          "low": 0.0,
+          "high": 0.04999999999999999
+        },
+        "invalidated_proposals": {
+          "mean": 0.19999999999999996,
+          "low": 0.0,
+          "high": 0.3999999999999999
+        },
+        "rejected_proposals": {
+          "mean": 0.024999999999999994,
+          "low": 0.0,
+          "high": 0.04999999999999999
+        },
+        "fill_rounds": {
+          "mean": 0.17500000000000002,
+          "low": 0.0,
+          "high": 0.35000000000000003
+        },
+        "fill_messages": {
+          "mean": 0.2,
+          "low": 0.0,
+          "high": 0.4
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.011111111111111112,
+          "low": 0.0,
+          "high": 0.022222222222222223
+        }
+      },
+      "first100": {
+        "served": {
+          "mean": -0.22500000000000142,
+          "low": -0.45000000000000284,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": -0.0014999999999999736,
+          "low": -0.002999999999999947,
+          "high": 0.0
+        },
+        "throughput_bps": {
+          "mean": -8436281.31122014,
+          "low": -16662798.380191445,
+          "high": -209764.24224883318
+        },
+        "tau": {
+          "mean": -0.011248375081626877,
+          "low": -0.02221706450692207,
+          "high": -0.0002796856563316852
+        },
+        "robustness": {
+          "mean": -0.0013240740740740886,
+          "low": -0.0026851851851851793,
+          "high": 3.703703703700212e-05
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": -0.0014999999999999736,
+          "low": -0.002999999999999947,
+          "high": 0.0
+        },
+        "reward_throughput": {
+          "mean": -0.0011248375081626995,
+          "low": -0.0022217064506922096,
+          "high": -2.7968565633189335e-05
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": -0.002624837508162753,
+          "low": -0.005221706450692309,
+          "high": -2.7968565633196274e-05
+        },
+        "protocol_loss": {
+          "mean": 0.22500000000000003,
+          "low": 0.0,
+          "high": 0.45000000000000007
+        },
+        "fill_gain": {
+          "mean": 0.2,
+          "low": 0.0,
+          "high": 0.4
+        },
+        "reassignment_loss": {
+          "mean": 0.025,
+          "low": 0.0,
+          "high": 0.05
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.024999999999999994,
+          "low": 0.0,
+          "high": 0.04999999999999999
+        },
+        "invalidated_proposals": {
+          "mean": 0.19999999999999996,
+          "low": 0.0,
+          "high": 0.3999999999999999
+        },
+        "rejected_proposals": {
+          "mean": 0.024999999999999994,
+          "low": 0.0,
+          "high": 0.04999999999999999
+        },
+        "fill_rounds": {
+          "mean": 0.17500000000000002,
+          "low": 0.0,
+          "high": 0.35000000000000003
+        },
+        "fill_messages": {
+          "mean": 0.2,
+          "low": 0.0,
+          "high": 0.4
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.011111111111111112,
+          "low": 0.0,
+          "high": 0.022222222222222223
+        }
+      },
+      "last100": {
+        "served": {
+          "mean": -0.22500000000000142,
+          "low": -0.45000000000000284,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": -0.0014999999999999736,
+          "low": -0.002999999999999947,
+          "high": 0.0
+        },
+        "throughput_bps": {
+          "mean": -8436281.31122014,
+          "low": -16662798.380191445,
+          "high": -209764.24224883318
+        },
+        "tau": {
+          "mean": -0.011248375081626877,
+          "low": -0.02221706450692207,
+          "high": -0.0002796856563316852
+        },
+        "robustness": {
+          "mean": -0.0013240740740740886,
+          "low": -0.0026851851851851793,
+          "high": 3.703703703700212e-05
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": -0.0014999999999999736,
+          "low": -0.002999999999999947,
+          "high": 0.0
+        },
+        "reward_throughput": {
+          "mean": -0.0011248375081626995,
+          "low": -0.0022217064506922096,
+          "high": -2.7968565633189335e-05
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": -0.002624837508162753,
+          "low": -0.005221706450692309,
+          "high": -2.7968565633196274e-05
+        },
+        "protocol_loss": {
+          "mean": 0.22500000000000003,
+          "low": 0.0,
+          "high": 0.45000000000000007
+        },
+        "fill_gain": {
+          "mean": 0.2,
+          "low": 0.0,
+          "high": 0.4
+        },
+        "reassignment_loss": {
+          "mean": 0.025,
+          "low": 0.0,
+          "high": 0.05
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.024999999999999994,
+          "low": 0.0,
+          "high": 0.04999999999999999
+        },
+        "invalidated_proposals": {
+          "mean": 0.19999999999999996,
+          "low": 0.0,
+          "high": 0.3999999999999999
+        },
+        "rejected_proposals": {
+          "mean": 0.024999999999999994,
+          "low": 0.0,
+          "high": 0.04999999999999999
+        },
+        "fill_rounds": {
+          "mean": 0.17500000000000002,
+          "low": 0.0,
+          "high": 0.35000000000000003
+        },
+        "fill_messages": {
+          "mean": 0.2,
+          "low": 0.0,
+          "high": 0.4
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.011111111111111112,
+          "low": 0.0,
+          "high": 0.022222222222222223
+        }
+      },
+      "terminal": {
+        "served": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "throughput_bps": {
+          "mean": 4688.142815172672,
+          "low": 0.0,
+          "high": 9376.285630345345
+        },
+        "tau": {
+          "mean": 6.250857086886885e-06,
+          "low": 0.0,
+          "high": 1.250171417377377e-05
+        },
+        "robustness": {
+          "mean": 0.00018518518518520488,
+          "low": 0.0,
+          "high": 0.00037037037037040976
+        },
+        "disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_throughput": {
+          "mean": 6.250857086907702e-07,
+          "low": 0.0,
+          "high": 1.2501714173815404e-06
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": 6.250857086942396e-07,
+          "low": 0.0,
+          "high": 1.2501714173884793e-06
+        },
+        "protocol_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        }
+      }
+    },
+    "random_minus_teacher_P0": {
+      "all": {
+        "served": {
+          "mean": -0.16500000000000625,
+          "low": -0.3300000000000125,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": -0.0010999999999999899,
+          "low": -0.0021999999999999242,
+          "high": -5.551115123125783e-17
+        },
+        "throughput_bps": {
+          "mean": -7369197.552831411,
+          "low": -14316945.53321886,
+          "high": -421449.5724439621
+        },
+        "tau": {
+          "mean": -0.00982559673710856,
+          "low": -0.019089260710958622,
+          "high": -0.0005619327632584992
+        },
+        "robustness": {
+          "mean": -0.0009777777777777719,
+          "low": -0.0019666666666666166,
+          "high": 1.111111111107288e-05
+        },
+        "disconnection": {
+          "mean": -8.326672684688674e-17,
+          "low": -1.6653345369377348e-16,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": -0.0010999999999999899,
+          "low": -0.0021999999999999242,
+          "high": -5.551115123125783e-17
+        },
+        "reward_throughput": {
+          "mean": -0.0009825596737108588,
+          "low": -0.0019089260710958636,
+          "high": -5.619327632585408e-05
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": -0.002082559673710821,
+          "low": -0.004108926071095809,
+          "high": -5.6193276325833263e-05
+        },
+        "protocol_loss": {
+          "mean": 0.16499999999999998,
+          "low": 0.0,
+          "high": 0.32999999999999996
+        },
+        "fill_gain": {
+          "mean": 0.16124999999999998,
+          "low": 0.0,
+          "high": 0.32249999999999995
+        },
+        "reassignment_loss": {
+          "mean": 0.0037499999999999964,
+          "low": 0.0,
+          "high": 0.007499999999999993
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.017500000000000016,
+          "low": 0.0,
+          "high": 0.03500000000000003
+        },
+        "invalidated_proposals": {
+          "mean": 0.14749999999999996,
+          "low": 0.0,
+          "high": 0.29499999999999993
+        },
+        "rejected_proposals": {
+          "mean": 0.017500000000000016,
+          "low": 0.0,
+          "high": 0.03500000000000003
+        },
+        "fill_rounds": {
+          "mean": 0.1325,
+          "low": 0.0,
+          "high": 0.265
+        },
+        "fill_messages": {
+          "mean": 0.165,
+          "low": 0.0,
+          "high": 0.33
+        },
+        "fill_rejections": {
+          "mean": 0.00375,
+          "low": 0.0,
+          "high": 0.0075
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.00840277777777778,
+          "low": 0.0,
+          "high": 0.01680555555555556
+        }
+      },
+      "first100": {
+        "served": {
+          "mean": -0.16500000000000625,
+          "low": -0.3300000000000125,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": -0.0010999999999999899,
+          "low": -0.0021999999999999242,
+          "high": -5.551115123125783e-17
+        },
+        "throughput_bps": {
+          "mean": -7369197.552831411,
+          "low": -14316945.53321886,
+          "high": -421449.5724439621
+        },
+        "tau": {
+          "mean": -0.00982559673710856,
+          "low": -0.019089260710958622,
+          "high": -0.0005619327632584992
+        },
+        "robustness": {
+          "mean": -0.0009777777777777719,
+          "low": -0.0019666666666666166,
+          "high": 1.111111111107288e-05
+        },
+        "disconnection": {
+          "mean": -8.326672684688674e-17,
+          "low": -1.6653345369377348e-16,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": -0.0010999999999999899,
+          "low": -0.0021999999999999242,
+          "high": -5.551115123125783e-17
+        },
+        "reward_throughput": {
+          "mean": -0.0009825596737108588,
+          "low": -0.0019089260710958636,
+          "high": -5.619327632585408e-05
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": -0.002082559673710821,
+          "low": -0.004108926071095809,
+          "high": -5.6193276325833263e-05
+        },
+        "protocol_loss": {
+          "mean": 0.16499999999999998,
+          "low": 0.0,
+          "high": 0.32999999999999996
+        },
+        "fill_gain": {
+          "mean": 0.16124999999999998,
+          "low": 0.0,
+          "high": 0.32249999999999995
+        },
+        "reassignment_loss": {
+          "mean": 0.0037499999999999964,
+          "low": 0.0,
+          "high": 0.007499999999999993
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.017500000000000016,
+          "low": 0.0,
+          "high": 0.03500000000000003
+        },
+        "invalidated_proposals": {
+          "mean": 0.14749999999999996,
+          "low": 0.0,
+          "high": 0.29499999999999993
+        },
+        "rejected_proposals": {
+          "mean": 0.017500000000000016,
+          "low": 0.0,
+          "high": 0.03500000000000003
+        },
+        "fill_rounds": {
+          "mean": 0.1325,
+          "low": 0.0,
+          "high": 0.265
+        },
+        "fill_messages": {
+          "mean": 0.165,
+          "low": 0.0,
+          "high": 0.33
+        },
+        "fill_rejections": {
+          "mean": 0.00375,
+          "low": 0.0,
+          "high": 0.0075
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.00840277777777778,
+          "low": 0.0,
+          "high": 0.01680555555555556
+        }
+      },
+      "last100": {
+        "served": {
+          "mean": -0.16500000000000625,
+          "low": -0.3300000000000125,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": -0.0010999999999999899,
+          "low": -0.0021999999999999242,
+          "high": -5.551115123125783e-17
+        },
+        "throughput_bps": {
+          "mean": -7369197.552831411,
+          "low": -14316945.53321886,
+          "high": -421449.5724439621
+        },
+        "tau": {
+          "mean": -0.00982559673710856,
+          "low": -0.019089260710958622,
+          "high": -0.0005619327632584992
+        },
+        "robustness": {
+          "mean": -0.0009777777777777719,
+          "low": -0.0019666666666666166,
+          "high": 1.111111111107288e-05
+        },
+        "disconnection": {
+          "mean": -8.326672684688674e-17,
+          "low": -1.6653345369377348e-16,
+          "high": 0.0
+        },
+        "reward_coverage": {
+          "mean": -0.0010999999999999899,
+          "low": -0.0021999999999999242,
+          "high": -5.551115123125783e-17
+        },
+        "reward_throughput": {
+          "mean": -0.0009825596737108588,
+          "low": -0.0019089260710958636,
+          "high": -5.619327632585408e-05
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": -0.002082559673710821,
+          "low": -0.004108926071095809,
+          "high": -5.6193276325833263e-05
+        },
+        "protocol_loss": {
+          "mean": 0.16499999999999998,
+          "low": 0.0,
+          "high": 0.32999999999999996
+        },
+        "fill_gain": {
+          "mean": 0.16124999999999998,
+          "low": 0.0,
+          "high": 0.32249999999999995
+        },
+        "reassignment_loss": {
+          "mean": 0.0037499999999999964,
+          "low": 0.0,
+          "high": 0.007499999999999993
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.017500000000000016,
+          "low": 0.0,
+          "high": 0.03500000000000003
+        },
+        "invalidated_proposals": {
+          "mean": 0.14749999999999996,
+          "low": 0.0,
+          "high": 0.29499999999999993
+        },
+        "rejected_proposals": {
+          "mean": 0.017500000000000016,
+          "low": 0.0,
+          "high": 0.03500000000000003
+        },
+        "fill_rounds": {
+          "mean": 0.1325,
+          "low": 0.0,
+          "high": 0.265
+        },
+        "fill_messages": {
+          "mean": 0.165,
+          "low": 0.0,
+          "high": 0.33
+        },
+        "fill_rejections": {
+          "mean": 0.00375,
+          "low": 0.0,
+          "high": 0.0075
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.00840277777777778,
+          "low": 0.0,
+          "high": 0.01680555555555556
+        }
+      },
+      "terminal": {
+        "served": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "coverage": {
+          "mean": -1.6653345369377348e-16,
+          "low": -2.220446049250313e-16,
+          "high": -1.1102230246251565e-16
+        },
+        "throughput_bps": {
+          "mean": -124759.22292739153,
+          "low": -249518.44585466385,
+          "high": -1.1920928955078125e-07
+        },
+        "tau": {
+          "mean": -0.00016634563056983076,
+          "low": -0.0003326912611395505,
+          "high": -1.1102230246251565e-16
+        },
+        "robustness": {
+          "mean": 6.481481481490636e-05,
+          "low": 1.1102230246251565e-16,
+          "high": 0.0001296296296297017
+        },
+        "disconnection": {
+          "mean": 5.551115123125783e-17,
+          "low": -5.551115123125783e-17,
+          "high": 1.6653345369377348e-16
+        },
+        "reward_coverage": {
+          "mean": -1.6653345369377348e-16,
+          "low": -2.220446049250313e-16,
+          "high": -1.1102230246251565e-16
+        },
+        "reward_throughput": {
+          "mean": -1.6634563056987933e-05,
+          "low": -3.326912611396199e-05,
+          "high": -1.3877787807814457e-17
+        },
+        "reward_robustness": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reward_disconnection": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "task_reward": {
+          "mean": -1.6634563056977525e-05,
+          "low": -3.326912611406607e-05,
+          "high": 1.1102230246251565e-16
+        },
+        "protocol_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_gain": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "reassignment_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "timing_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "feasibility_loss": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "duplicate_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "invalidated_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "rejected_proposals": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rounds": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_messages": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "fill_rejections": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        },
+        "idle_with_unserved_fraction": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0
+        }
+      }
+    }
+  },
+  "scoring_effects": {
+    "teacher": {
+      "P0": {
+        "all": {
+          "owner_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "first100": {
+          "owner_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "last100": {
+          "owner_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "terminal": {
+          "owner_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      },
+      "P1": {
+        "all": {
+          "owner_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "first100": {
+          "owner_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "last100": {
+          "owner_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "terminal": {
+          "owner_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        }
+      }
+    },
+    "constant": {
+      "P0": {
+        "all": {
+          "owner_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "served_count_change_fraction": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.002632376175079278,
+            "low": 4.3045899466348515e-05,
+            "high": 0.005221706450692207
+          }
+        },
+        "first100": {
+          "owner_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "served_count_change_fraction": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.002632376175079278,
+            "low": 4.3045899466348515e-05,
+            "high": 0.005221706450692207
+          }
+        },
+        "last100": {
+          "owner_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "served_count_change_fraction": {
+            "mean": 0.2,
+            "low": 0.0,
+            "high": 0.4
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.002632376175079278,
+            "low": 4.3045899466348515e-05,
+            "high": 0.005221706450692207
+          }
+        },
+        "terminal": {
+          "owner_change_fraction": {
+            "mean": 0.5,
+            "low": 0.0,
+            "high": 1.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.5,
+            "low": 0.0,
+            "high": 1.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 6.250857086942396e-07,
+            "low": 0.0,
+            "high": 1.2501714173884793e-06
+          }
+        }
+      },
+      "P1": {
+        "all": {
+          "owner_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "served_count_change_fraction": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0012080699096545273,
+            "low": 4.3045899466348515e-05,
+            "high": 0.002373093919842706
+          }
+        },
+        "first100": {
+          "owner_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "served_count_change_fraction": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0012080699096545273,
+            "low": 4.3045899466348515e-05,
+            "high": 0.002373093919842706
+          }
+        },
+        "last100": {
+          "owner_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "served_count_change_fraction": {
+            "mean": 0.025,
+            "low": 0.0,
+            "high": 0.05
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.825,
+            "low": 0.7,
+            "high": 0.95
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.0012080699096545273,
+            "low": 4.3045899466348515e-05,
+            "high": 0.002373093919842706
+          }
+        },
+        "terminal": {
+          "owner_change_fraction": {
+            "mean": 0.5,
+            "low": 0.0,
+            "high": 1.0
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.5,
+            "low": 0.0,
+            "high": 1.0
+          },
+          "task_reward_absolute_delta": {
+            "mean": 6.250857086942396e-07,
+            "low": 0.0,
+            "high": 1.2501714173884793e-06
+          }
+        }
+      }
+    },
+    "random": {
+      "P0": {
+        "all": {
+          "owner_change_fraction": {
+            "mean": 0.8600000000000001,
+            "low": 0.7725000000000001,
+            "high": 0.9475
+          },
+          "served_count_change_fraction": {
+            "mean": 0.145,
+            "low": 0.0,
+            "high": 0.29
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.8600000000000001,
+            "low": 0.7725000000000001,
+            "high": 0.9475
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.00210073777245653,
+            "low": 6.370589234182378e-05,
+            "high": 0.004137769652571236
+          }
+        },
+        "first100": {
+          "owner_change_fraction": {
+            "mean": 0.8600000000000001,
+            "low": 0.7725000000000001,
+            "high": 0.9475
+          },
+          "served_count_change_fraction": {
+            "mean": 0.145,
+            "low": 0.0,
+            "high": 0.29
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.8600000000000001,
+            "low": 0.7725000000000001,
+            "high": 0.9475
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.00210073777245653,
+            "low": 6.370589234182378e-05,
+            "high": 0.004137769652571236
+          }
+        },
+        "last100": {
+          "owner_change_fraction": {
+            "mean": 0.8600000000000001,
+            "low": 0.7725000000000001,
+            "high": 0.9475
+          },
+          "served_count_change_fraction": {
+            "mean": 0.145,
+            "low": 0.0,
+            "high": 0.29
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.8600000000000001,
+            "low": 0.7725000000000001,
+            "high": 0.9475
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.00210073777245653,
+            "low": 6.370589234182378e-05,
+            "high": 0.004137769652571236
+          }
+        },
+        "terminal": {
+          "owner_change_fraction": {
+            "mean": 0.45,
+            "low": 0.0,
+            "high": 0.9
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.45,
+            "low": 0.0,
+            "high": 0.9
+          },
+          "task_reward_absolute_delta": {
+            "mean": 1.7915008490275442e-05,
+            "low": 0.0,
+            "high": 3.5830016980550884e-05
+          }
+        }
+      },
+      "P1": {
+        "all": {
+          "owner_change_fraction": {
+            "mean": 0.85875,
+            "low": 0.7725000000000001,
+            "high": 0.945
+          },
+          "served_count_change_fraction": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.85875,
+            "low": 0.7725000000000001,
+            "high": 0.945
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.001030729171562666,
+            "low": 6.370589234182378e-05,
+            "high": 0.001997752450783508
+          }
+        },
+        "first100": {
+          "owner_change_fraction": {
+            "mean": 0.85875,
+            "low": 0.7725000000000001,
+            "high": 0.945
+          },
+          "served_count_change_fraction": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.85875,
+            "low": 0.7725000000000001,
+            "high": 0.945
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.001030729171562666,
+            "low": 6.370589234182378e-05,
+            "high": 0.001997752450783508
+          }
+        },
+        "last100": {
+          "owner_change_fraction": {
+            "mean": 0.85875,
+            "low": 0.7725000000000001,
+            "high": 0.945
+          },
+          "served_count_change_fraction": {
+            "mean": 0.028749999999999998,
+            "low": 0.0,
+            "high": 0.057499999999999996
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.85875,
+            "low": 0.7725000000000001,
+            "high": 0.945
+          },
+          "task_reward_absolute_delta": {
+            "mean": 0.001030729171562666,
+            "low": 6.370589234182378e-05,
+            "high": 0.001997752450783508
+          }
+        },
+        "terminal": {
+          "owner_change_fraction": {
+            "mean": 0.45,
+            "low": 0.0,
+            "high": 0.9
+          },
+          "served_count_change_fraction": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "task_reward_change_fraction": {
+            "mean": 0.45,
+            "low": 0.0,
+            "high": 0.9
+          },
+          "task_reward_absolute_delta": {
+            "mean": 1.7915008490275442e-05,
+            "low": 0.0,
+            "high": 3.5830016980550884e-05
+          }
+        }
+      }
+    }
+  },
+  "bootstrap": {
+    "unit": "scenario, after averaging time and random-score repeats",
+    "repeats": 2000,
+    "seed": 950001,
+    "training_seed_interval": false
+  },
+  "scenarios": 2,
+  "transitions": 40,
+  "score_random_repeats": 20,
+  "source_coverage": 0.42883333333333334,
+  "distributions": {
+    "teacher": {
+      "positive_fraction": 0.05,
+      "mean": 0.05,
+      "median": 0.0,
+      "p95": 0.04999999999999716,
+      "max": 1.0,
+      "histogram": {
+        "0": 38,
+        "1": 2
+      }
+    },
+    "constant": {
+      "positive_fraction": 0.2,
+      "mean": 0.275,
+      "median": 0.0,
+      "p95": 2.0,
+      "max": 2.0,
+      "histogram": {
+        "0": 32,
+        "1": 5,
+        "2": 3
+      }
+    },
+    "random": {
+      "positive_fraction": 0.1625,
+      "mean": 0.215,
+      "median": 0.0,
+      "p95": 2.0,
+      "max": 2.0,
+      "histogram": {
+        "0": 670,
+        "1": 88,
+        "2": 42
+      }
+    }
+  },
+  "severe_case": {
+    "scene_seed": 10001,
+    "step": 4,
+    "scoring_index": 1,
+    "protocol_loss": 2.0
+  },
+  "auxiliary": {
+    "pre_edges": {
+      "mean": 67.45,
+      "low": 59.85,
+      "high": 75.05
+    },
+    "known_edges": {
+      "mean": 64.725,
+      "low": 57.35,
+      "high": 72.1
+    },
+    "full_edges": {
+      "mean": 68.275,
+      "low": 62.1,
+      "high": 74.45
+    },
+    "over_capacity_fraction": {
+      "mean": 0.03611111111111111,
+      "low": 0.0,
+      "high": 0.07222222222222222
+    },
+    "multi_candidate_fraction": {
+      "mean": 0.009666666666666667,
+      "low": 0.002,
+      "high": 0.017333333333333333
+    },
+    "max_candidate_uavs": {
+      "mean": 1.65,
+      "low": 1.3,
+      "high": 2.0
+    },
+    "source_served": {
+      "mean": 64.325,
+      "low": 58.75,
+      "high": 69.9
+    },
+    "one_candidate_fraction": {
+      "mean": 0.4121666666666667,
+      "low": 0.3476666666666667,
+      "high": 0.4766666666666667
+    },
+    "no_candidate_fraction": {
+      "mean": 0.5781666666666667,
+      "low": 0.5213333333333333,
+      "high": 0.635
+    }
+  },
+  "audit_capacity": 10,
+  "trajectory_capacity": 10,
+  "link_rate_scale": 1.0,
+  "audit_reward_weights": [
+    1.0,
+    0.1,
+    0.0,
+    -0.0
+  ],
+  "solver_seconds": {
+    "O1": 0.0038707910000539414,
+    "O2": 0.0006240110003545851,
+    "all_scores_and_schemes": 0.11349441700031093
+  }
+}

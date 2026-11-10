@@ -1,0 +1,80 @@
+{
+  "source": "/home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0",
+  "files": [
+    {
+      "path": "best.pt",
+      "bytes": 24078453,
+      "sha256": "6f36a11f71cd719da87e04c9ac1f3c1cf1c0386758c7caae9c8ceeabf5985099"
+    },
+    {
+      "path": "checkpoints/full_009950016/index.json",
+      "bytes": 91,
+      "sha256": "4dbe2fe4728d820037f808fae8e081d7f074d476335cc23379153231b9cbc648"
+    },
+    {
+      "path": "checkpoints/full_009950016/metadata.pt",
+      "bytes": 49958521,
+      "sha256": "04a0353b2b10aa511e07ec86561ca2f58d024f3f59617dd4a044afa96fa14904"
+    },
+    {
+      "path": "checkpoints/full_010000000/index.json",
+      "bytes": 91,
+      "sha256": "fc3f5894c33f28dec584e61d353fac926f12a3b6f3d5d406783958218a9148b1"
+    },
+    {
+      "path": "checkpoints/full_010000000/metadata.pt",
+      "bytes": 49969273,
+      "sha256": "c862155232e2dcd88230e9f09631c04613b9e27fae983488d7ae389fd9cc9577"
+    },
+    {
+      "path": "config.yaml",
+      "bytes": 6443,
+      "sha256": "582f7a30c165dd2a4bd676c6d8fb66c6eb7aac7505df96b100d1ed9b915ff81b"
+    },
+    {
+      "path": "continuation.json",
+      "bytes": 539,
+      "sha256": "ab0fb3114956de240ba22395665c04837a7fd71dd9edaf9b852a65346996ab43"
+    },
+    {
+      "path": "last.pt",
+      "bytes": 24078453,
+      "sha256": "acfc7e3feb3282e08ff2775c5c22e61793b0ebaf2d7caf8efb86cfe13080e5b2"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 518,
+      "sha256": "ea63c164cfcfc70df8a0ffbc19ca1ef705eb79620b85e6542ee258d68e56d6a7"
+    },
+    {
+      "path": "metadata.json",
+      "bytes": 5213,
+      "sha256": "31b6a4052b3f8c9c6d889743ca161589c8793199606049e0a9208202a577ec4f"
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 12030266,
+      "sha256": "795e333dd9a87e347c40064c3bc0ba182465c8bac32ddafaca50d681a4384260"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 516,
+      "sha256": "5a600c4da18b9ca513f6a68238a81b6ca2c6d9545ffa907fb225294b478aa401"
+    },
+    {
+      "path": "step0.pt",
+      "bytes": 8038291,
+      "sha256": "0a764cf4e143d98782dfa7308cb597709c31d3fc1402711a3c8d550fc7de1540"
+    },
+    {
+      "path": "tensorboard/events.out.tfevents.1793954865.xyc-SYS-7048GR-TR.280439.0",
+      "bytes": 21265024,
+      "sha256": "3dfca2cf5f1b5c40c930c06c32bcb93061ed63974aea3fc987ff41b9785e9dcb"
+    },
+    {
+      "path": "validation.csv",
+      "bytes": 160453,
+      "sha256": "33ee073b17b8a6c5d1afd1e2e504ee0f62785d9e8581162b06adb0488c2c0e6c"
+    }
+  ]
+}

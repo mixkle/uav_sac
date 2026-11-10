@@ -1,0 +1,15 @@
+{
+  "env_steps": 1000000,
+  "updates": 489,
+  "optimizer_steps": 19560,
+  "best_score": 245.29735482267665,
+  "best_step": 40960,
+  "elapsed_seconds": 12460.883622393012,
+  "full_checkpoint": "/home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/checkpoints/full_001000000",
+  "status": "complete",
+  "evaluation_seconds": 5492.317735813558,
+  "io_seconds": 61.618488201871514,
+  "peak_rss_mib": 1577.5546875,
+  "sum_process_peak_rss_mib": 1577.5546875,
+  "peak_gpu_mib": 2927.35791015625
+}

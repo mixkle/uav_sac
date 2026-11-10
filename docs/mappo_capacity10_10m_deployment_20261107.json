@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "verified_files": 49,
+  "formal_training_started": false,
+  "from_scratch": true,
+  "steps": 10000000,
+  "output": "/home/dym/uav_sac/runs/mappo_coverage_throughput_capacity10_10m_seed0",
+  "torch": "2.7.1+cu118",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "config_sha256": "27ea5ef87d8e168840369ddab07b9ee72790891df6e1f58563f9185777a025df",
+  "cuda_forward_passed": true,
+  "initial_actor_and_critic_match_original": true,
+  "optimizer_state_empty": true,
+  "optimizer_updates": 0,
+  "actions_shape": [
+    16,
+    18,
+    2
+  ],
+  "state_shape": [
+    16,
+    6292
+  ],
+  "gpu_peak_mib": 47.0859375
+}

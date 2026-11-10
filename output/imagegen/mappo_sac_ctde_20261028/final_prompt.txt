@@ -1,0 +1,44 @@
+Create a polished scientific framework diagram for a machine-learning research paper, original content in the clean visual style of the user's reference Fig.1: pale blue execution panel, pale cream training panel, cyan actor blocks, peach critic blocks, dark teal outlines, rounded corners, orthogonal arrows, subtle stacked agent cards, cylindrical buffers, crisp English mathematical typography. White surrounding canvas. Landscape 2:1, highest supported resolution. No shadows, no gradients, no watermarks. Use LARGE readable labels and generous whitespace. Fewer arrows and accurate semantics are essential.
+
+COMPOSITION: Three equally tall rounded columns. Left 32%: "Decentralized Execution". Middle 33% and right 33% grouped under a thin shared heading "Centralized Training". Middle title "(a) MAPPO · On-policy"; right title "(b) SAC · Off-policy". Blue left background, cream middle and right. Make each column a simple vertical flow. NO long crossing optimization arrows. Parameter updates are expressed as text INSIDE loss blocks, not as complicated feedback loops. Show only the explicit arrows enumerated below; avoid inventing more arrows.
+
+LEFT COLUMN, top to bottom:
+1. Rounded "Local Observation oᵢ" block. Text lines: "Relative geometry + one-step history" and "Discovered UE set".
+2. Solid downward arrow to cyan "Shared Feature Encoder". Text "UE MLP 4→32→32 · mean pooling + count" and "105 fixed + 33 encoded = 138".
+3. Solid downward arrow to three slightly stacked cyan cards. Front card reads "Local Gaussian Actor πθ". Text "MLP 256×256 → μᵢ, log σᵢ", "zᵢ ~ N(μᵢ, diag σᵢ²)", and "aᵢ = zᵢ / √(1+‖zᵢ‖²)". Small line "Shared parameters · local inputs".
+4. Solid downward arrow labeled "Joint action a=(a₁,…,aᵤ)" to a light blue "UAV Network Environment" box. Include a small restrained line-art UAV / user / base-station vignette inside it, not a chart. Text "18 UAVs · 150 UEs · 3 BSs" and "30 m/step · reflected boundaries".
+5. Environment has one side loop going UP along the far LEFT edge, with arrowhead into "Local Observation oᵢ", labeled "Next local observations". The loop MUST start at Environment and terminate at Local Observation.
+6. Solid downward arrow from Environment to a bottom box "Joint Transition Data" with "(o,s,a,r,o′,s′,d)" and "r = ρ: connected service coverage".
+7. Use a small cyan connection badge "DATA" by the joint-transition box and matching "DATA" badges next to BOTH training-buffer cylinders. Paired connection badges intentionally replace long cross-panel arrows. Do NOT draw global state s into the actor.
+
+MIDDLE MAPPO COLUMN, top to bottom:
+1. Cyan cylinder "Rollout Buffer", text "16 environments × 128 steps", "Store raw o, s, z, old log π, V, r, d". Small "DATA" badge.
+2. Solid downward arrow labeled "s" into peach "Time-factor Team V" block. Text "Vφ(sₜ) = Hₜ mφ(sₜ)", "6292 → 256 → 256 → 1", "Average-reward PopArt".
+3. Solid downward arrow labeled "V(sₜ), V(sₜ₊₁)" into "GAE & Return Targets" light neutral block. Text "δₜ = rₜ + γ(1−dₜ)V(sₜ₊₁) − V(sₜ)" and "Team advantage Âₜ; cumulative target Rₜ". Small "Targets detached ⊥".
+4. Solid downward arrow that branches into TWO side-by-side loss cards of equal width:
+   LEFT CYAN "Actor Update", text "Per-agent PPO ratio", "Clipped surrogate + entropy", "Update θ".
+   RIGHT PEACH "Critic Update", text "V(s) versus Rₜ", "Normalized Huber + value clipping", "Update φ".
+   Both cards receive GAE results; the critic prediction source is explicitly named in its text. Do NOT draw action-gradient arrows or target-critic modules anywhere in MAPPO.
+5. Bottom compact note: "10 epochs × 4 minibatches" and "Entropy regularizes actor only".
+No arrows need to leave these loss cards; updates are stated inside the cards.
+
+RIGHT SAC COLUMN, top to bottom:
+1. Cyan cylinder "Joint Replay Buffer D", text "50,000 transitions · batch 256", "Warmup 10k · update every 4 transitions". Small "DATA" badge.
+2. Solid downward arrow into one spacious PEACH module "Soft Twin-Q Critic Update". Inside this ONE module use three clearly separated text sections:
+   first: "Qⱼ(sₜ,aₜ) = (Hₜ/H₀) fφⱼ(sₜ,aₜ)" and "Two MLPs: 6328→256→256→1".
+   second: "a′ ~ current πθ", then "y = r + γ(1−d)[minⱼ Q̄ⱼ(s′,a′) − α log πθ(a′|o′)]", then a small "y: stop gradient ⊥".
+   third: "LQ = Σⱼ E[(Qⱼ − y)²]", "Update φ; Polyak update target Q̄".
+   These lines are in ONE combined module: do not draw any internal arrows. No target actor.
+3. One solid downward arrow DIRECTLY FROM this Soft Twin-Q module TO the next actor-loss module, labeled "Action gradient ∂Q/∂a". The source is the whole current twin-Q update module, not a separate TD-loss box or target box.
+4. Large CYAN module "Reparameterized Actor Update". Inside exact text:
+   "a ~ πθ(·|o)"
+   "Lπ = E[α log πθ(a|o) − minⱼ Qⱼ(s,a)]"
+   "Update θ through a"
+   "Q weights frozen during actor update"
+5. Under that actor-loss block, a green small module "Automatic Temperature α". Text "Joint target entropy −36" and "α weights actor loss and future entropy". Use NO arrows into or out of this small module; this avoids implying alpha is an actor-network input. It is a supporting optimizer, as its text explains.
+6. Bottom concise note: "log π is summed over UAVs" and "Q includes future policy entropy".
+
+COMMON BOTTOM FOOTER across all three columns, modest size: "Hₜ = Σₖ₌₀^(T−t−1) γᵏ    |    γ = 0.995    |    T = 400    |    H₃₉₉ = 1, H₄₀₀ = 0".
+Small caption below: "Current continuous-action, pure-coverage comparison. Centralized critics are used during training only."
+
+ACCURACY: Retain exactly two policy-update mechanisms: MAPPO clipped probability ratios with shared team GAE, SAC Q action derivatives. MAPPO V=H*m with PopArt; SAC Q=(H/H0)*f without PopArt. The Gaussian variable BEFORE disk transform is z, NOT a. No diffusion models, distributional critics, recurrent networks, KL critic losses, target actor, global-state actor inputs, or fabricated results. Keep diagram uncluttered and all arrowheads deliberate. This is a conceptual algorithmic framework, not a performance chart.

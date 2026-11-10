@@ -1,0 +1,22 @@
+{
+  "rebuild_identical_numerics": true,
+  "numerical_data_unchanged_after_recolour": true,
+  "comparison_sha256": "db49b0671c12b324b4b25589a5f3f1351669cc17cb900798445f6163e68f0e6f",
+  "script_sha256": "d978355b65bdd6a006cee8fc6aac9dfef8af4fee402f01f1f43d394aeffc3377",
+  "plots": 14,
+  "formats": [
+    "PDF",
+    "SVG",
+    "PNG"
+  ],
+  "palette": {
+    "baseline": "#009E73",
+    "dppo": "#0072B2"
+  },
+  "purple_removed_verified": true,
+  "comparison_groups": [
+    "baseline",
+    "5M DPPO"
+  ],
+  "validation_reproduction_exact": true
+}

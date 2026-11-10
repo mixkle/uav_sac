@@ -1,0 +1,20 @@
+[
+  ".venv-dppo/bin/python",
+  "-u",
+  "-m",
+  "uav_research",
+  "dppo",
+  "benchmark",
+  "--config",
+  "configs/diffusion_dppo_capacity10_coverage_throughput_1m_server.yaml",
+  "--output",
+  "deployment/benchmark_after",
+  "--vector-steps",
+  "32",
+  "--microbatches",
+  "128",
+  "256",
+  "512",
+  "1024",
+  "2048"
+]

@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-29",
+  "criterion": "Keep runs whose actual manifest.env_steps >= 1000000; preserve their full history, best/last and recovery artifacts. Local workspace only.",
+  "kept_runs": [
+    {
+      "path": "runs/continuous_mappo_coverage_independent_central_history_100k_seed0",
+      "env_steps": 1200000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/continuous_mappo_coverage_shared_central_history_resumed_400k_seed0",
+      "env_steps": 1000000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "env_steps": 1000000,
+      "status": "completed"
+    }
+  ],
+  "removed_runs": [
+    {
+      "path": "runs/continuous_mappo_coverage_shared_central_history_100k_seed0",
+      "env_steps": 161440,
+      "status": "running"
+    },
+    {
+      "path": "runs/continuous_mappo_full_reward_time_factor_relative_100k_seed0",
+      "env_steps": 100000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/continuous_mappo_full_reward_time_factor_relative_boundary_100k_seed0",
+      "env_steps": 100000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/continuous_mappo_full_reward_time_factor_relative_central_100k_seed0",
+      "env_steps": 100000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/continuous_mappo_full_reward_time_factor_relative_central_boundary_100k_seed0",
+      "env_steps": 100000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/continuous_mappo_full_reward_time_factor_relative_central_history_100k_seed0",
+      "env_steps": 100000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/discrete_mappo_0.5_disconnection_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/discrete_mappo_250k_seed0",
+      "env_steps": 100000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/discrete_mappo_full_reward_time_factor_relative_100k_seed0",
+      "env_steps": 100000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/discrete_mappo_soft_service_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_ablation_a_mobile_connected_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_ablation_b_static_connected_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_ablation_c_mobile_coverage_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_ablation_d_mobile_sensing_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_ablation_e_mobile_sensing_connected_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_ablation_f_static_coverage_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_central_ue_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_critic_no_value_clip_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_full_reward_direct_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_full_reward_direct_main_check_seed0",
+      "env_steps": 2048,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_full_reward_time_factor_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_full_reward_time_factor_main_check_seed0",
+      "env_steps": 2048,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_time_factor_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/mappo_time_factor_main_check_seed0",
+      "env_steps": 2048,
+      "status": "completed"
+    },
+    {
+      "path": "runs/sac_continuous_250k_seed0",
+      "env_steps": 61040,
+      "status": "stopped"
+    },
+    {
+      "path": "runs/sac_coverage_time_factor_relative_central_history_1m_seed0",
+      "env_steps": 88528,
+      "status": "stopped"
+    },
+    {
+      "path": "runs/sac_full_reward_direct_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/sac_full_reward_time_factor_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/sac_full_reward_time_factor_relative_100k_seed0",
+      "env_steps": 100000,
+      "status": "completed"
+    },
+    {
+      "path": "runs/wsl_discrete_mappo_paper_scene_250k_seed0",
+      "env_steps": 250000,
+      "status": "completed"
+    }
+  ],
+  "removed_analysis": [
+    "analysis/critic_mc_coverage_250k_seed0",
+    "analysis/critic_time_factor_coverage_250k_seed0",
+    "analysis/critic_value_clipping_250k_seed0",
+    "analysis/discrete_mappo_250k_seed0",
+    "analysis/discrete_mappo_250k_seed0_console.log",
+    "analysis/discrete_mappo_soft_service_250k_seed0",
+    "analysis/mappo_actor_sharing_coverage_100k_seed0",
+    "analysis/mappo_actor_sharing_coverage_400k_seed0",
+    "analysis/mappo_boundary_central_100k_seed0",
+    "analysis/mappo_central_action_blocks_100k_seed0",
+    "analysis/mappo_central_action_values_100k_seed0",
+    "analysis/mappo_central_best_deployment_branches_100k_seed0",
+    "analysis/mappo_central_best_generalization_100k_seed0",
+    "analysis/mappo_central_history_100k_seed0",
+    "analysis/mappo_central_motion_scale_100k_seed0",
+    "analysis/mappo_central_ue_250k_seed0",
+    "analysis/mappo_continuous_bridge_100k_seed0",
+    "analysis/mappo_discrete_250k_seed0",
+    "analysis/mappo_full_reward_time_factor_250k_seed0",
+    "analysis/mappo_release_mc_calibration_100k_seed0",
+    "analysis/mappo_time_factor_250k_seed0",
+    "analysis/sac_autodl_deployment_20261027",
+    "analysis/sac_coverage_history_implementation_checks",
+    "analysis/sac_full_reward_time_factor_250k_seed0",
+    "analysis/sac_full_reward_time_factor_relative_100k_seed0",
+    "analysis/ue_reward_ablation_extension_ef_20261019",
+    "analysis/ue_reward_ablations_250k_seed0"
+  ],
+  "removed_configs": [
+    "configs/continuous_mappo_coverage_independent_central_history_100k.yaml",
+    "configs/continuous_mappo_coverage_shared_central_history_100k.yaml",
+    "configs/continuous_mappo_full_reward_time_factor_relative_100k.yaml",
+    "configs/continuous_mappo_full_reward_time_factor_relative_boundary_100k.yaml",
+    "configs/continuous_mappo_full_reward_time_factor_relative_central_100k.yaml",
+    "configs/continuous_mappo_full_reward_time_factor_relative_central_boundary_100k.yaml",
+    "configs/continuous_mappo_full_reward_time_factor_relative_central_history_100k.yaml",
+    "configs/critic_mc_coverage.yaml",
+    "configs/critic_release_mc_calibration.yaml",
+    "configs/critic_time_factor_coverage.yaml",
+    "configs/discrete_mappo.yaml",
+    "configs/discrete_mappo_ablation_a_mobile_connected.yaml",
+    "configs/discrete_mappo_ablation_b_static_connected.yaml",
+    "configs/discrete_mappo_ablation_c_mobile_coverage.yaml",
+    "configs/discrete_mappo_ablation_d_mobile_sensing.yaml",
+    "configs/discrete_mappo_ablation_e_mobile_sensing_connected.yaml",
+    "configs/discrete_mappo_ablation_f_static_coverage.yaml",
+    "configs/discrete_mappo_central_ue_250k.yaml",
+    "configs/discrete_mappo_critic_no_value_clip.yaml",
+    "configs/discrete_mappo_full_reward_direct_250k.yaml",
+    "configs/discrete_mappo_full_reward_time_factor_250k.yaml",
+    "configs/discrete_mappo_full_reward_time_factor_relative_100k.yaml",
+    "configs/discrete_mappo_no_robustness.yaml",
+    "configs/discrete_mappo_smoke.yaml",
+    "configs/discrete_mappo_time_factor_250k.yaml",
+    "configs/discrete_mappo_wsl_50k.yaml",
+    "configs/local_validation.yaml",
+    "configs/main.yaml",
+    "configs/sac_continuous_250k.yaml",
+    "configs/sac_full_reward_direct_250k.yaml",
+    "configs/sac_full_reward_time_factor_250k.yaml",
+    "configs/sac_full_reward_time_factor_relative_100k.yaml",
+    "configs/server_probe.yaml",
+    "configs/smoke.yaml",
+    "configs/wsl_50k.yaml"
+  ],
+  "removed_docs": [
+    "docs/central_ue_initialization_experiment.md",
+    "docs/critic_mc_coverage_experiment.md",
+    "docs/critic_time_factor_experiment.md",
+    "docs/critic_value_clipping_ablation.md",
+    "docs/development_timeline_20261019.md",
+    "docs/full_reward_time_factor_experiment.md",
+    "docs/mappo_action_block_diagnostic.md",
+    "docs/mappo_action_value_diagnostic.md",
+    "docs/mappo_boundary_central_experiment.md",
+    "docs/mappo_central_generalization_check.md",
+    "docs/mappo_continuous_bridge_experiment.md",
+    "docs/mappo_deployment_branch_check.md",
+    "docs/mappo_history_observation_experiment.md",
+    "docs/mappo_motion_scale_diagnostic.md",
+    "docs/mappo_release_mc_calibration.md",
+    "docs/online_time_factor_critic_experiment.md",
+    "docs/reward_update_20261014.md",
+    "docs/sac_full_reward_time_factor_experiment.md",
+    "docs/ue_motion_reward_ablations.md"
+  ],
+  "test_fixtures": [
+    "tests/fixtures/configs/sac_coverage_time_factor_relative_central_history_1m.yaml",
+    "tests/fixtures/configs/continuous_mappo_coverage_shared_central_history_100k.yaml",
+    "tests/fixtures/configs/sac_full_reward_direct_250k.yaml",
+    "tests/fixtures/configs/discrete_mappo_no_robustness.yaml",
+    "tests/fixtures/configs/discrete_mappo_ablation_e_mobile_sensing_connected.yaml",
+    "tests/fixtures/configs/discrete_mappo_full_reward_time_factor_relative_100k.yaml",
+    "tests/fixtures/configs/discrete_mappo_ablation_f_static_coverage.yaml",
+    "tests/fixtures/configs/discrete_mappo_critic_no_value_clip.yaml",
+    "tests/fixtures/configs/discrete_mappo_time_factor_250k.yaml",
+    "tests/fixtures/configs/continuous_mappo_full_reward_time_factor_relative_boundary_100k.yaml",
+    "tests/fixtures/configs/continuous_mappo_coverage_independent_central_history_100k.yaml",
+    "tests/fixtures/configs/continuous_mappo_full_reward_time_factor_relative_100k.yaml",
+    "tests/fixtures/configs/discrete_mappo_full_reward_direct_250k.yaml",
+    "tests/fixtures/configs/sac_full_reward_time_factor_250k.yaml",
+    "tests/fixtures/configs/sac_full_reward_time_factor_relative_100k.yaml",
+    "tests/fixtures/configs/discrete_mappo_ablation_c_mobile_coverage.yaml",
+    "tests/fixtures/configs/continuous_mappo_full_reward_time_factor_relative_central_100k.yaml",
+    "tests/fixtures/configs/wsl_50k.yaml",
+    "tests/fixtures/configs/discrete_mappo_smoke.yaml",
+    "tests/fixtures/configs/discrete_mappo_ablation_a_mobile_connected.yaml",
+    "tests/fixtures/configs/discrete_mappo_full_reward_time_factor_250k.yaml",
+    "tests/fixtures/configs/main.yaml",
+    "tests/fixtures/configs/discrete_mappo.yaml",
+    "tests/fixtures/configs/continuous_mappo_full_reward_time_factor_relative_central_boundary_100k.yaml",
+    "tests/fixtures/configs/discrete_mappo_ablation_b_static_connected.yaml",
+    "tests/fixtures/configs/discrete_mappo_wsl_50k.yaml",
+    "tests/fixtures/configs/continuous_mappo_full_reward_time_factor_relative_central_history_100k.yaml",
+    "tests/fixtures/configs/discrete_mappo_ablation_d_mobile_sensing.yaml",
+    "tests/fixtures/configs/smoke.yaml",
+    "tests/fixtures/configs/sac_coverage_time_factor_relative_central_history_server_1m.yaml",
+    "tests/fixtures/configs/discrete_mappo_central_ue_250k.yaml"
+  ]
+}

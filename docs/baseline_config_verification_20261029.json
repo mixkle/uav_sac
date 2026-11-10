@@ -1,0 +1,98 @@
+{
+  "public_configs_load": [
+    "sac_coverage_time_factor_relative_central_history_1m.yaml",
+    "mappo_coverage_shared_1m.yaml",
+    "mappo_coverage_independent_1p2m.yaml",
+    "mappo_full_reward_baseline_1m.yaml",
+    "sac_coverage_time_factor_relative_central_history_server_1m.yaml"
+  ],
+  "baseline_diff_from_shared_1m": "Only throughput=.1, robustness=.5, disconnection=.1; all other effective settings identical",
+  "obs_dim": 105,
+  "state_dim": 6292,
+  "ppo_rounds": 489,
+  "last_rollout_joint_transitions": 576,
+  "last_rollout_vector_steps": 36,
+  "formal_training_started": false,
+  "reward_checks": [
+    {
+      "seed": 30020,
+      "step": 1,
+      "reward": 0.24609232618615853,
+      "parts": [
+        0.18666666666666668,
+        0.0101664002602326,
+        0.08814814814814814,
+        -0.03888888888888889
+      ]
+    },
+    {
+      "seed": 30020,
+      "step": 2,
+      "reward": 0.2718984127964217,
+      "parts": [
+        0.2,
+        0.010787301685310538,
+        0.09444444444444446,
+        -0.03333333333333333
+      ]
+    },
+    {
+      "seed": 30020,
+      "step": 3,
+      "reward": 0.2664037412676289,
+      "parts": [
+        0.2,
+        0.01084818571207329,
+        0.09444444444444446,
+        -0.03888888888888889
+      ]
+    },
+    {
+      "seed": 30021,
+      "step": 1,
+      "reward": 0.3175342922513281,
+      "parts": [
+        0.24,
+        0.011423181140217032,
+        0.11055555555555557,
+        -0.044444444444444446
+      ]
+    },
+    {
+      "seed": 30021,
+      "step": 2,
+      "reward": 0.3281950927637939,
+      "parts": [
+        0.24666666666666667,
+        0.012269166837867993,
+        0.1137037037037037,
+        -0.044444444444444446
+      ]
+    },
+    {
+      "seed": 30021,
+      "step": 3,
+      "reward": 0.31852450358425033,
+      "parts": [
+        0.24,
+        0.012413392473139198,
+        0.11055555555555557,
+        -0.044444444444444446
+      ]
+    }
+  ],
+  "regression_tests": {
+    "passed": 270,
+    "skipped": 1,
+    "seconds": 285.48,
+    "skip_reason": "CUDA unavailable locally"
+  },
+  "retained_checkpoints_sha256": {
+    "runs/continuous_mappo_coverage_shared_central_history_resumed_400k_seed0/best.pt": "5ba744f2815c947a5ace0be6d549a2b7a7238bf54ad82097d5d52ae135350baa",
+    "runs/continuous_mappo_coverage_shared_central_history_resumed_400k_seed0/last.pt": "b3e91541c0ed8303d34244d963d1bd197a58761a3cb1488a8c3d06ccce803e4f",
+    "runs/continuous_mappo_coverage_independent_central_history_100k_seed0/best.pt": "d7c560df1ce384042122a5453c48fd75841c476d6cb5db7d790c62e7f4c0c55e",
+    "runs/continuous_mappo_coverage_independent_central_history_100k_seed0/last.pt": "754b1536ca79489ad7d9a167cfb0f981aff2bede83770d29380900519faf37b2",
+    "runs/sac_coverage_time_factor_relative_central_history_server_1m_seed0/best.pt": "cae2298030d7c8f8534178402d736732b7753a5dbc0cc2dc35a608839fb90e03",
+    "runs/sac_coverage_time_factor_relative_central_history_server_1m_seed0/last.pt": "bb24ee86e96ceaab7f8b39a70f662d79ea57022ed0e5128937e12f1161173e11"
+  }
+}

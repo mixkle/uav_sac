@@ -1,0 +1,135 @@
+{
+  "value": {
+    "stages": {
+      "all": {
+        "rmse": 7.465958773505171,
+        "mae": 5.67241879827415,
+        "bias": -4.335180992676982,
+        "prediction_mean": 76.6384103151178,
+        "label_mean": 80.97359130779479,
+        "label_std": 34.27804944106672,
+        "normalized_rmse": 0.21780582312132965
+      },
+      "first100": {
+        "rmse": 9.333165065152388,
+        "mae": 7.047667057708926,
+        "bias": -5.189216754812853,
+        "prediction_mean": 109.75056621551514,
+        "label_mean": 114.93978297032798,
+        "label_std": 8.061327816827472,
+        "normalized_rmse": 1.1577701933507831
+      },
+      "middle100": {
+        "rmse": 7.995896448730589,
+        "mae": 6.790892125019491,
+        "bias": -5.162988969071773,
+        "prediction_mean": 85.48226612329483,
+        "label_mean": 90.64525509236661,
+        "label_std": 10.217049110039081,
+        "normalized_rmse": 0.7826033096849824
+      },
+      "last100": {
+        "rmse": 3.326999456080792,
+        "mae": 2.4752407581718487,
+        "bias": -1.8804241153441235,
+        "prediction_mean": 29.157785340156405,
+        "label_mean": 31.038209455500528,
+        "label_std": 16.61708302869024,
+        "normalized_rmse": 0.2002156124716088
+      },
+      "last20": {
+        "rmse": 0.8555850811976864,
+        "mae": 0.6532932551562413,
+        "bias": -0.3413015951002683,
+        "prediction_mean": 6.901599023770541,
+        "label_mean": 7.2429006188708085,
+        "label_std": 4.034993841322324,
+        "normalized_rmse": 0.212041235958194
+      },
+      "last1": {
+        "rmse": 0.20271622175507933,
+        "mae": 0.12629602866868178,
+        "bias": 0.022384294892350828,
+        "prediction_mean": 0.6750926282256842,
+        "label_mean": 0.6527083333333333,
+        "label_std": 0.20296660490911633,
+        "normalized_rmse": 0.9987663825083485
+      }
+    },
+    "time_centered_correlation": 0.3384740421485326
+  },
+  "average": {
+    "stages": {
+      "all": {
+        "rmse": 0.0645589498142953,
+        "mae": 0.052392629056294326,
+        "bias": -0.038820102376718325,
+        "prediction_mean": 0.6741748088600152,
+        "label_mean": 0.7129949112367335,
+        "label_std": 0.05672087966088175,
+        "normalized_rmse": 1.1381866818757957
+      },
+      "first100": {
+        "rmse": 0.05657524813219869,
+        "mae": 0.04274486421060354,
+        "bias": -0.03155701539084934,
+        "prediction_mean": 0.6651310493911974,
+        "label_mean": 0.6966880647820468,
+        "label_std": 0.05232981557817315,
+        "normalized_rmse": 1.081128368352139
+      },
+      "middle100": {
+        "rmse": 0.0635930013189435,
+        "mae": 0.05410531727877728,
+        "bias": -0.04111828259989064,
+        "prediction_mean": 0.6780406775320769,
+        "label_mean": 0.7191589601319676,
+        "label_std": 0.0520972563352554,
+        "normalized_rmse": 1.2206593166770794
+      },
+      "last100": {
+        "rmse": 0.0736572951444618,
+        "mae": 0.05940093397592902,
+        "bias": -0.03985354387853676,
+        "prediction_mean": 0.6773156196962478,
+        "label_mean": 0.7171691635747846,
+        "label_std": 0.0664802134120227,
+        "normalized_rmse": 1.107958163250137
+      },
+      "last20": {
+        "rmse": 0.09252234821610436,
+        "mae": 0.07120665193630367,
+        "bias": -0.027980163405289166,
+        "prediction_mean": 0.6772977478756943,
+        "label_mean": 0.7052779112809835,
+        "label_std": 0.09057623116787325,
+        "normalized_rmse": 1.0214859574431199
+      },
+      "last1": {
+        "rmse": 0.20271622175507933,
+        "mae": 0.12629602866868178,
+        "bias": 0.022384294892350828,
+        "prediction_mean": 0.6750926282256842,
+        "label_mean": 0.6527083333333333,
+        "label_std": 0.20296660490911633,
+        "normalized_rmse": 0.9987663825083485
+      }
+    },
+    "time_centered_correlation": 0.3634162148424434
+  },
+  "value_semantics": "environment V without entropy",
+  "moment_semantics": "64-sample Gaussian",
+  "alpha": 0.0,
+  "moment_mean": {
+    "command_variance_m2": 258.4125061035156,
+    "near_hover_probability": 0.004195149522274733,
+    "mean_command_displacement_m": 16.198577880859375,
+    "entropy_nats_per_agent": -0.8357047438621521
+  },
+  "movement_mean": {
+    "command_displacement_m": 16.062343546673656,
+    "actual_displacement_m": 16.04218064007453,
+    "near_zero_command_fraction": 0.003984375000000071,
+    "near_zero_actual_fraction": 0.003988715277777849
+  }
+}

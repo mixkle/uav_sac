@@ -14,7 +14,7 @@ from uav_research.suite import run_suite
 
 @pytest.mark.parametrize("name", ["sac", "mappo", "matd3"])
 def test_full_pipeline_and_resume_matches_uninterrupted(tmp_path, name):
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     cfg.algo.name = name
     cfg.algo.warmup_steps = 16
     cfg.run.total_steps = 64
@@ -75,7 +75,7 @@ def test_full_pipeline_and_resume_matches_uninterrupted(tmp_path, name):
 
 
 def test_plot_artifacts_and_no_single_seed_ci(tmp_path):
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     cfg.run.total_steps = 32
     cfg.run.validation_seeds = [10000]
     cfg.run.tensorboard = False
@@ -107,7 +107,7 @@ def test_plot_artifacts_and_no_single_seed_ci(tmp_path):
 
 
 def test_multiseed_rejects_failed_gate(tmp_path):
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     path = tmp_path / "gate.json"
     path.write_text(json.dumps({"passed": False}))
     with pytest.raises(ValueError, match="gate failed"):
@@ -115,7 +115,7 @@ def test_multiseed_rejects_failed_gate(tmp_path):
 
 
 def test_baselines_use_local_input_and_reproduce_movement(tmp_path):
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     for method in ("static", "random", "heuristic"):
         first, _ = evaluate(cfg, Baseline(cfg, method), [10000], method=method)
         second, _ = evaluate(cfg, Baseline(cfg, method), [10000], method=method)
@@ -125,7 +125,7 @@ def test_baselines_use_local_input_and_reproduce_movement(tmp_path):
 
 
 def test_batched_evaluation_preserves_scenes_and_baseline_rng():
-    cfg = load_config("configs/smoke.yaml")
+    cfg = load_config("tests/fixtures/configs/smoke.yaml")
     for method in ("static", "random", "heuristic"):
         cfg.run.num_envs = 1
         scalar, _ = evaluate(cfg, Baseline(cfg, method), [10000, 10001])

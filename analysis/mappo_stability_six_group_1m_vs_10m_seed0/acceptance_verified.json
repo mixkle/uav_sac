@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "groups": [
+    "baseline_best",
+    "dppo_best",
+    "teacher_topk",
+    "disconnection",
+    "robustness",
+    "combined"
+  ],
+  "main_models": "best",
+  "new_last_supplemental": true,
+  "training_files_verified": 348,
+  "evaluation_files_verified": 48,
+  "references_reused_with_hash_check": true,
+  "common_initial_uav_and_exogenous_ue_paths": true,
+  "unique_capacity_feasible_associations": true,
+  "fixed_failure_diagnostics_and_rewards_consistent": true,
+  "new_best_last_validation_reproduced": true,
+  "figures": 11,
+  "comparison_sha256": "8c5c412c3d06d1b7ff1f8f6d9adcfa458af4ea674c3e39eaf0ece6f0eb728e3d"
+}

@@ -1,0 +1,358 @@
+{
+  "metrics": {
+    "step0": {
+      "diffusion": {
+        "coverage": 0.5386953125,
+        "last100_coverage": 0.59755625,
+        "final_coverage": 0.5860416666666667,
+        "throughput_bps": 471268210.4715326,
+        "return": 240.61242955848175,
+        "max_drop_1": 0.281875,
+        "max_drop_5": 0.315625,
+        "drop_events_10pp": 16.71875,
+        "coverage_q05": 0.30114583333333333,
+        "maintain_coverage": 0.10166458333333336,
+        "network_loss_events": 71.90625
+      },
+      "gaussian": {
+        "coverage": 0.30459427083333335,
+        "last100_coverage": 0.32229375000000005,
+        "final_coverage": 0.335625,
+        "throughput_bps": 228577180.45071995,
+        "return": 134.02849129070506,
+        "max_drop_1": 0.14833333333333334,
+        "max_drop_5": 0.16354166666666664,
+        "drop_events_10pp": 3.8125,
+        "coverage_q05": 0.2145625,
+        "maintain_coverage": 0.03679166666666666,
+        "network_loss_events": 15.1875
+      }
+    },
+    "best": {
+      "diffusion": {
+        "coverage": 0.6058723958333334,
+        "last100_coverage": 0.6524333333333333,
+        "final_coverage": 0.6441666666666667,
+        "throughput_bps": 536961232.8792164,
+        "return": 270.9868907535582,
+        "max_drop_1": 0.325,
+        "max_drop_5": 0.33375,
+        "drop_events_10pp": 13.4375,
+        "coverage_q05": 0.33608333333333335,
+        "maintain_coverage": 0.06301458333333329,
+        "network_loss_events": 49.875
+      },
+      "gaussian": {
+        "coverage": 0.6921125,
+        "last100_coverage": 0.7510416666666666,
+        "final_coverage": 0.725625,
+        "throughput_bps": 693487235.2064193,
+        "return": 313.83098587767574,
+        "max_drop_1": 0.260625,
+        "max_drop_5": 0.27083333333333337,
+        "drop_events_10pp": 5.28125,
+        "coverage_q05": 0.4191041666666667,
+        "maintain_coverage": 0.07095416666666664,
+        "network_loss_events": 35.21875
+      }
+    },
+    "last": {
+      "diffusion": {
+        "coverage": 0.5766234375,
+        "last100_coverage": 0.5961229166666667,
+        "final_coverage": 0.5885416666666666,
+        "throughput_bps": 505563008.11314505,
+        "return": 257.612735432701,
+        "max_drop_1": 0.334375,
+        "max_drop_5": 0.34416666666666673,
+        "drop_events_10pp": 12.9375,
+        "coverage_q05": 0.3403541666666667,
+        "maintain_coverage": 0.01930833333333335,
+        "network_loss_events": 48.75
+      },
+      "gaussian": {
+        "coverage": 0.5932161458333334,
+        "last100_coverage": 0.66553125,
+        "final_coverage": 0.6729166666666666,
+        "throughput_bps": 557489051.0935409,
+        "return": 267.01920772498886,
+        "max_drop_1": 0.28541666666666665,
+        "max_drop_5": 0.2995833333333333,
+        "drop_events_10pp": 8.0625,
+        "coverage_q05": 0.3245416666666667,
+        "maintain_coverage": 0.10233125000000004,
+        "network_loss_events": 24.46875
+      }
+    }
+  },
+  "paired_differences": [
+    {
+      "checkpoint": "step0",
+      "metric": "coverage",
+      "difference": 0.23410104166666668,
+      "low": 0.1975733723958333,
+      "high": 0.27201569010416665
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "last100_coverage",
+      "difference": 0.2752625,
+      "low": 0.22597453124999997,
+      "high": 0.3217914062499999
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "final_coverage",
+      "difference": 0.2504166666666667,
+      "low": 0.19498437500000002,
+      "high": 0.3075156249999999
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "throughput_bps",
+      "difference": 242691030.0208127,
+      "low": 206660503.14732206,
+      "high": 276962707.1179765
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "return",
+      "difference": 106.58393826777666,
+      "low": 90.5566530096461,
+      "high": 123.34828715416037
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "max_drop_1",
+      "difference": 0.13354166666666667,
+      "low": 0.08332812499999999,
+      "high": 0.18230208333333328
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "max_drop_5",
+      "difference": 0.15208333333333335,
+      "low": 0.09604166666666666,
+      "high": 0.20395833333333335
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "drop_events_10pp",
+      "difference": 12.90625,
+      "low": 9.12421875,
+      "high": 16.750781249999996
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "coverage_q05",
+      "difference": 0.08658333333333337,
+      "low": 0.047552083333333356,
+      "high": 0.1297666666666666
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "maintain_coverage",
+      "difference": 0.06487291666666671,
+      "low": 0.02304833333333335,
+      "high": 0.10532119791666672
+    },
+    {
+      "checkpoint": "step0",
+      "metric": "network_loss_events",
+      "difference": 56.71875,
+      "low": 47.84375,
+      "high": 65.53125
+    },
+    {
+      "checkpoint": "best",
+      "metric": "coverage",
+      "difference": -0.08624010416666668,
+      "low": -0.10586938802083339,
+      "high": -0.06679281250000003
+    },
+    {
+      "checkpoint": "best",
+      "metric": "last100_coverage",
+      "difference": -0.09860833333333335,
+      "low": -0.12747583333333332,
+      "high": -0.06873218750000001
+    },
+    {
+      "checkpoint": "best",
+      "metric": "final_coverage",
+      "difference": -0.08145833333333333,
+      "low": -0.11791666666666664,
+      "high": -0.043750000000000004
+    },
+    {
+      "checkpoint": "best",
+      "metric": "throughput_bps",
+      "difference": -156526002.32720292,
+      "low": -179308140.7588769,
+      "high": -132560245.01032591
+    },
+    {
+      "checkpoint": "best",
+      "metric": "return",
+      "difference": -42.84409512411749,
+      "low": -51.60363958355465,
+      "high": -33.794842354578165
+    },
+    {
+      "checkpoint": "best",
+      "metric": "max_drop_1",
+      "difference": 0.06437499999999999,
+      "low": 0.0010416666666666682,
+      "high": 0.1312552083333333
+    },
+    {
+      "checkpoint": "best",
+      "metric": "max_drop_5",
+      "difference": 0.06291666666666666,
+      "low": -0.0008541666666666573,
+      "high": 0.13020833333333331
+    },
+    {
+      "checkpoint": "best",
+      "metric": "drop_events_10pp",
+      "difference": 8.15625,
+      "low": 5.65625,
+      "high": 11.000781249999996
+    },
+    {
+      "checkpoint": "best",
+      "metric": "coverage_q05",
+      "difference": -0.08302083333333335,
+      "low": -0.11884973958333336,
+      "high": -0.04881953125000008
+    },
+    {
+      "checkpoint": "best",
+      "metric": "maintain_coverage",
+      "difference": -0.007939583333333345,
+      "low": -0.03972130208333334,
+      "high": 0.02265322916666664
+    },
+    {
+      "checkpoint": "best",
+      "metric": "network_loss_events",
+      "difference": 14.65625,
+      "low": 8.0625,
+      "high": 21.6875
+    },
+    {
+      "checkpoint": "last",
+      "metric": "coverage",
+      "difference": -0.01659270833333331,
+      "low": -0.0379229817708333,
+      "high": 0.0047813151041666835
+    },
+    {
+      "checkpoint": "last",
+      "metric": "last100_coverage",
+      "difference": -0.06940833333333338,
+      "low": -0.09901973958333338,
+      "high": -0.03978328125000008
+    },
+    {
+      "checkpoint": "last",
+      "metric": "final_coverage",
+      "difference": -0.084375,
+      "low": -0.146671875,
+      "high": -0.036869791666666686
+    },
+    {
+      "checkpoint": "last",
+      "metric": "throughput_bps",
+      "difference": -51926042.98039581,
+      "low": -78942635.7036246,
+      "high": -25829163.330674917
+    },
+    {
+      "checkpoint": "last",
+      "metric": "return",
+      "difference": -9.406472292287777,
+      "low": -19.09916206686622,
+      "high": 0.574935435530507
+    },
+    {
+      "checkpoint": "last",
+      "metric": "max_drop_1",
+      "difference": 0.048958333333333326,
+      "low": -0.0012604166666666855,
+      "high": 0.10063020833333332
+    },
+    {
+      "checkpoint": "last",
+      "metric": "max_drop_5",
+      "difference": 0.044583333333333336,
+      "low": -0.006041666666666634,
+      "high": 0.09604166666666666
+    },
+    {
+      "checkpoint": "last",
+      "metric": "drop_events_10pp",
+      "difference": 4.875,
+      "low": 1.59375,
+      "high": 8.5625
+    },
+    {
+      "checkpoint": "last",
+      "metric": "coverage_q05",
+      "difference": 0.01581250000000002,
+      "low": -0.00460572916666665,
+      "high": 0.0369690104166667
+    },
+    {
+      "checkpoint": "last",
+      "metric": "maintain_coverage",
+      "difference": -0.0830229166666667,
+      "low": -0.12031802083333339,
+      "high": -0.04733833333333338
+    },
+    {
+      "checkpoint": "last",
+      "metric": "network_loss_events",
+      "difference": 24.28125,
+      "low": 14.46796875,
+      "high": 34.250781249999996
+    }
+  ],
+  "costs": {
+    "diffusion": {
+      "online": {
+        "elapsed_seconds": 132364.3608131688,
+        "env_steps": 10000000,
+        "peak_rss_mib": 1570.0546875,
+        "peak_gpu_mib": 1607.34326171875
+      },
+      "pretraining": {
+        "elapsed_seconds": 1798.4712582714856,
+        "epoch": 50,
+        "batches": 45000,
+        "peak_rss_mib": 1350.67578125,
+        "peak_gpu_mib": 133.673828125
+      },
+      "demonstrations": {
+        "elapsed_seconds": 329.3409230299294,
+        "expected_joint_transitions": 64000
+      },
+      "model": {
+        "actor_parameters": 324867,
+        "critic_parameters": 1677057
+      }
+    },
+    "gaussian": {
+      "online": {
+        "elapsed_seconds": 96915.48738911003,
+        "env_steps": 10000000,
+        "peak_rss_mib": 1536.5234375,
+        "peak_gpu_mib": 387.576171875
+      },
+      "model": {
+        "actor_parameters": 291270,
+        "critic_parameters": 1677057
+      }
+    }
+  }
+}

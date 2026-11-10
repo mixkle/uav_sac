@@ -1,0 +1,10 @@
+{
+  "source_run": "/home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0",
+  "source_checkpoint": "/home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/checkpoints/full_001000000",
+  "source_checkpoint_sha256": "2cad6cd4a175c9715c01284aa4c79ab35ef60cf50c361e3d627631d4290b74bf",
+  "source_steps": 1000000,
+  "source_updates": 489,
+  "total_steps": 3000000,
+  "additional_steps": 2000000,
+  "note": "Copied CSV prefix and original step0; full state resumes via --resume. No pretraining."
+}

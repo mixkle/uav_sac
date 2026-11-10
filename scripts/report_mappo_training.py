@@ -52,7 +52,8 @@ def training_figures(run, output, cfg):
         ax.plot(x, smooth(y), color=color, lw=1.8, label="Trailing mean: 9 logged points")
         ax.set(xlabel="Joint environment transitions (k)", ylabel="Loss", title=title)
         ax.legend(fontsize=7)
-    title = f"Discrete MAPPO | seed {cfg.run.seed} | {cfg.run.total_steps:,} transitions"
+    action_label = 'Discrete' if cfg.env.action_space == 'discrete9' else 'Continuous'
+    title = f"{action_label} MAPPO | seed {cfg.run.seed} | {cfg.run.total_steps:,} transitions"
     fig.suptitle(title, fontsize=11)
     save_figure(fig, output, "loss_curves")
 
@@ -215,7 +216,8 @@ def episode_component_plots(evaluations, output):
 
 def write_report(report, output, cfg, metrics, history):
     manifest=report['manifest'];actual=manifest['env_steps'];e=cfg.env
-    text=f"# 离散MAPPO训练验证：实际{actual:,}步\n\n"
+    action_label = '离散' if e.action_space == 'discrete9' else '连续'
+    text=f"# {action_label}MAPPO训练验证：实际{actual:,}步\n\n"
     text+=(f"运行目录：{report['run']}。保存配置、完成状态和检查点显示实际预算"
            f"{actual:,}条联合转移、{manifest['updates']}轮PPO，正常完成，耗时{manifest['elapsed_seconds']/60:.2f}分钟。"
            '本次按保存配置验证，没有追加训练。\n\n')
@@ -260,13 +262,25 @@ def write_report(report, output, cfg, metrics, history):
     (output/'report.md').write_text(text)
 
 
-def topology(trace, output, checkpoint_name, checkpoint_step, cfg):
+def topology(trace, output, checkpoint_name, checkpoint_step, cfg, boundary_overlay=False, frame_steps=None):
     style()
     with np.load(trace) as data:
         uav, ue, bs = data["uav_xy"], data["user_xy"], data["bs_positions"]
-        frames = [0, (len(uav) - 1) // 2, len(uav) - 1]
-        fig, axes = plt.subplots(1, 3, figsize=(13, 4.4))
+        episode_start_step = int(data['episode_start_step']) if 'episode_start_step' in data else 0
+        frozen_mask = data['frozen_mask'] if 'frozen_mask' in data else np.zeros(len(uav[0]), bool)
+        frames = frame_steps if frame_steps is not None else [0, (len(uav) - 1) // 2, len(uav) - 1]
+        fig, axes = plt.subplots(1, len(frames), figsize=(4.33 * len(frames), 4.4), squeeze=False)
+        axes = axes.flat
         for ax, t in zip(axes, frames):
+            if boundary_overlay:
+                from matplotlib.patches import Rectangle
+                w, h, d = cfg.env.width, cfg.env.height, cfg.env.boundary_penalty_margin_m
+                for x, y, rw, rh in [(0,0,d,h),(w-d,0,d,h),(d,0,w-2*d,d),(d,h-d,w-2*d,d)]:
+                    ax.add_patch(Rectangle((x,y),rw,rh,facecolor='#D55E00',alpha=.06,zorder=0))
+                if cfg.env.user_initialization == 'uniform_interior':
+                    m = cfg.env.user_initial_margin_fraction
+                    ax.add_patch(Rectangle((m*w,m*h),(1-2*m)*w,(1-2*m)*h,fill=False,
+                                           ls=':',lw=1.2,edgecolor='#009E73',zorder=0))
             served = data["C"][t].any(axis=0)
             sensed = data['sensed'][t].any(axis=0) if 'sensed' in data else served
             only_sensed = sensed & ~served
@@ -294,11 +308,14 @@ def topology(trace, output, checkpoint_name, checkpoint_step, cfg):
                        color=COLORS[0], edgecolors="white", lw=.5, zorder=4)
             ax.scatter(uav[t, ~connected, 0], uav[t, ~connected, 1], marker="^", s=48,
                        color=COLORS[4], edgecolors="white", lw=.5, zorder=4)
+            if frozen_mask.any():
+                ax.scatter(uav[t, frozen_mask, 0], uav[t, frozen_mask, 1], s=100,
+                           facecolors='none', edgecolors='black', lw=1.1, zorder=6)
             ax.scatter(bs[:, 0], bs[:, 1], marker="*", s=160, color=COLORS[1],
                        clip_on=False, zorder=5)
             ax.set(xlim=(0, float(data["width"])), ylim=(0, float(data["height"])),
                    aspect="equal", xlabel="x (m)", ylabel="y (m)",
-                   title=f"Step {t} | coverage {served.mean():.1%}\n"
+                   title=f"Step {t + episode_start_step} | coverage {served.mean():.1%}\n"
                          f"Sensed {sensed.mean():.1%} | reachable UAVs {connected.sum()}/{len(connected)}")
         handles = [
             Line2D([], [], marker="*", color=COLORS[1], ls="none", label="BS"),
@@ -312,8 +329,13 @@ def topology(trace, output, checkpoint_name, checkpoint_step, cfg):
             Line2D([], [], color="#777777", alpha=.5, label="UAV trajectory"),
         ]
         scene = int(data["scene_seed"])
+        if frozen_mask.any():
+            handles.append(Line2D([], [], marker='o', markerfacecolor='none', color='black',
+                                  ls='none', label='Frozen UAV'))
+        scene_label = str(data['scene_id']) if 'scene_id' in data else f'validation scene {scene}'
+        action_label = str(data['action_description']) if 'action_description' in data else f'{cfg.run.evaluation_policy} actions'
         fig.suptitle(f"{checkpoint_name.capitalize()} checkpoint ({checkpoint_step:,} transitions)"
-                     f" | validation scene {scene} | {cfg.run.evaluation_policy} actions", fontsize=11)
+                     f" | {scene_label} | {action_label}", fontsize=11)
         fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(.5, -.14),
                    ncol=4, fontsize=8, frameon=False)
         save_figure(fig, output, f"topology_{checkpoint_name}_{scene}")
@@ -354,8 +376,8 @@ def build_report(run, output):
     cfg = load_config(run / "config.yaml")
     source_hashes={name:hashlib.sha256((run/name).read_bytes()).hexdigest()
                    for name in ('config.yaml','manifest.json','metrics.csv','validation.csv','best.pt','last.pt')}
-    if cfg.algo.name != "mappo" or cfg.env.action_space != "discrete9":
-        raise ValueError("This report requires discrete MAPPO")
+    if cfg.algo.name != "mappo":
+        raise ValueError("This report requires MAPPO")
     metrics, history = training_figures(run, figures, cfg)
     evaluation = {}
     device = configure_runtime(cfg)

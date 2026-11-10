@@ -1,0 +1,81 @@
+{
+  "last_step": 1200000,
+  "best_step": 1200000,
+  "ppo_updates": 587,
+  "best_last_learner_identical": true,
+  "training_code_matches": true,
+  "source_checkpoint_count": 2,
+  "actor_optimizer_steps": [
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ],
+    [
+      23480
+    ]
+  ],
+  "critic_optimizer_steps": [
+    23480
+  ],
+  "training_sources_unchanged": true,
+  "shared_1m_cached_models_match_current_files": true,
+  "cached_1m_artifacts_verified": true,
+  "validation_scenes": 32,
+  "action_repetitions": 3,
+  "independent_validation_episodes_collected": 96,
+  "reserved_test_used": false,
+  "extra_training_steps": 0,
+  "analysis_sources_verified": true,
+  "unequal_training_budgets": {
+    "shared": 1000000,
+    "independent": 1200000
+  },
+  "assessment_sha256": "d3d90d12853de39cda22bc1637b633318d676e9d96a1b071eef789079988c0cd"
+}

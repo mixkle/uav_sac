@@ -1,0 +1,88 @@
+{
+  "project": "/home/dym/uav_sac",
+  "neighbors": [
+    6,
+    7,
+    8
+  ],
+  "gpus": [
+    0,
+    1,
+    2
+  ],
+  "local_tests_passed": 21,
+  "files": {
+    "configs/mappo_capacity10_neighbors6_1m_server.yaml": "26b8280821b210fac7b68d63dfc080fb764e6b271e3389e1c933c4e7f5356bb6",
+    "configs/mappo_capacity10_neighbors7_1m_server.yaml": "08cb63055bb3e02de01cc97bba0efd00edd9b047b7f6038093770cc055e8653f",
+    "configs/mappo_capacity10_neighbors8_1m_server.yaml": "3e797168ff7d5418b8b17cef439015dc5d980ed1278ef729cbc6d2baf7855274",
+    "scripts/train_mappo_neighbors_server.sh": "1d853724814329a04d12c3626c75addeba03edf3a9ad49427fd455c99a4959f6",
+    "scripts/launch_mappo_neighbors_server.sh": "e713088385ff3da242870c3741a4f8300b0116eef8da301093967d1ab042cc9d",
+    "scripts/launch_mappo_neighbors678_server.sh": "98c41cfa215e14296a2d5f0cf7572059a8f98a5a32ec44672a23aa90b0d88002",
+    "scripts/check_mappo_neighbors.py": "770c3e07753050820bdb07cfaf2a69233b0233ea17531c44a6b3f39190a4376b",
+    "tests/test_neighbor_observation_ablation.py": "70a64ee4ff92c28ec469fc89aa8228568c7a4dc90e08e0c76dc26c6f1b6e7a07",
+    "docs/mappo_capacity10_neighbors678_1m.md": "e4e60dbf3d9427c013acfd18f7ef793725963f1b5c2c290742033944e2e90af5",
+    "docs/training_workflows_and_parameters.md": "785a92f1a035a36fdeebc72a3dd905ce7fea1b6a69f0514237782be28048d1c1"
+  },
+  "cuda_checks": [
+    {
+      "check": "passed",
+      "device": "cuda:0",
+      "gpu": "NVIDIA GeForce RTX 3090",
+      "neighbors": 6,
+      "num_envs": 16,
+      "fixed_observation": 177,
+      "actor_input": 210,
+      "critic_input": 6292,
+      "baseline_actor_parameters": 103620,
+      "actor_parameters": 122052,
+      "critic_parameters": 1677057,
+      "initial_action_max_abs_difference": 5.960464477539063e-08,
+      "initial_policy_equal_within_tolerance": true,
+      "initial_critic_and_rng_exact": true,
+      "fixed_action_physics_exact": true,
+      "optimization_updates": 0,
+      "formal_training_started": false
+    },
+    {
+      "check": "passed",
+      "device": "cuda:0",
+      "gpu": "NVIDIA GeForce RTX 3090",
+      "neighbors": 7,
+      "num_envs": 16,
+      "fixed_observation": 201,
+      "actor_input": 234,
+      "critic_input": 6292,
+      "baseline_actor_parameters": 103620,
+      "actor_parameters": 128196,
+      "critic_parameters": 1677057,
+      "initial_action_max_abs_difference": 0.0,
+      "initial_policy_equal_within_tolerance": true,
+      "initial_critic_and_rng_exact": true,
+      "fixed_action_physics_exact": true,
+      "optimization_updates": 0,
+      "formal_training_started": false
+    },
+    {
+      "check": "passed",
+      "device": "cuda:0",
+      "gpu": "NVIDIA GeForce RTX 3090",
+      "neighbors": 8,
+      "num_envs": 16,
+      "fixed_observation": 225,
+      "actor_input": 258,
+      "critic_input": 6292,
+      "baseline_actor_parameters": 103620,
+      "actor_parameters": 134340,
+      "critic_parameters": 1677057,
+      "initial_action_max_abs_difference": 5.960464477539063e-08,
+      "initial_policy_equal_within_tolerance": true,
+      "initial_critic_and_rng_exact": true,
+      "fixed_action_physics_exact": true,
+      "optimization_updates": 0,
+      "formal_training_started": false
+    }
+  ],
+  "preflight": "passed",
+  "formal_training_started": false,
+  "start_command": "cd /home/dym/uav_sac && bash scripts/launch_mappo_neighbors678_server.sh"
+}

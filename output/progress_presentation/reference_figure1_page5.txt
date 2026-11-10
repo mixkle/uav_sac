@@ -1,0 +1,151 @@
+Diffusing to Coordinate: Efficient Online Multi-Agent Diffusion Policies
+Decentralized Execution & Data Collection
+Replay
+Buffer
+𝒟
+Joint State 𝑠
+Joint Action 
+𝑎= (𝑎!
+", … 𝑎!
+#)
+Environment
+Centralized Training
+Target Distributional
+Critic 𝑟+ 𝛾𝑍$(𝑠%, 𝑎′)
+Centralized Distributional
+Critic 𝑍$(𝑠, 𝑎)
+𝑠, 𝑎
+𝑟, 𝑠′
+𝑠
+KL Loss 
+ℒ(𝜙)
+∇!ℒ(𝜙)
+Stop Gradient
+𝑎% =
+𝑎!
+" %, … , 𝑎!
+# %
+𝑎= (𝑎!
+", … , 𝑎!
+#)
+0 𝑙&!"
+'
+Auto
+Tuning
+Policy Loss 
+ℒ(𝜃)
+Joint ∇(ℒ(𝜃)
+Agent 𝑖 : Diffusion Policy 𝜋!!
+Noise
+𝑎"
+# ∼𝒩
+𝑎$
+#
+…
+…
+Action 
+𝑎%
+#
+Denoise
+Denoise
+Agent 𝑖 : Diffusion Policy 𝜋!!
+Noise
+𝑎"
+# ∼𝒩
+𝑎$
+#
+…
+…
+Action 
+𝑎%
+#
+Denoise
+Denoise
+𝑠, 𝑟, 𝑠%, 𝑑𝑜𝑛𝑒
+𝑎
+Figure 1. The CTDE framework of OMAD. The left panel illustrates Decentralized Execution, where agents independently sample actions
+via a denoising diffusion process. The right panel depicts Centralized Training, where a shared Distributional Critic provides unified
+Value Guidance to jointly optimize policies, stabilized by adaptive regularization for the entropy evidence lower bound.
+mize the cumulative discounted sum of the reward and the
+scaled entropy surrogate:
+J(πθ(·|s)) := Eπθ
+" ∞
+X
+t=0
+N
+X
+i=1
+γt(ri
+t + αlπθi(ai
+t, st))
+#
+.
+(11)
+Here, α > 0 is the temperature parameter regulating the
+stochasticity of the policy, consistent with the maximum
+entropy reinforcement learning framework (Haarnoja et al.,
+2018). This objective fundamentally transforms the opti-
+mization landscape: by maximizing Eq. (11), agents are
+driven to maximize expected returns while simultaneously
+maintaining high stochasticity in their diffusion policies,
+thereby preventing premature convergence.
+To effectively optimize this tractable entropy-regularized
+objective, we adopt the CTDE paradigm. Crucially, we in-
+troduce a centralized distributional critic to model the value
+distribution of the joint state-action pairs, providing a more
+robust signal to guide the diffusion policy optimization.
+Centralized Joint Distributional Critic Learning. To
+tackle the inherent multimodality of multi-agent diffusion,
+we propose a Joint Distributional Critic Zϕ(s, a). Departing
+from standard CTDE methods that compress returns into the
+expected joint return Qϕ(s, a) = E[Zϕ(s, a)], we model the
+full value distribution (Bellemare et al., 2017). Crucially,
+this disentangles true coordination signals from the com-
+pounded stochasticity of interacting diffusion policies for
+robust supervision that stabilizes joint optimization.
+We implement the critic (located in the top-right of Figure 1)
+using the CrossQ architecture (Bhatt et al., 2024) adapted
+for the multi-agent domain. We define the distributional
+Bellman operator applied to the joint return distribution.
+Specifically, the target distribution is constructed by aug-
+menting shared rewards with the derived sum of individual
+entropy lower bounds, thereby enforcing a unified objective:
+T Zϕ(s, a) :=
+N
+X
+i=1
+ri + γ(Zϕ(s′, a′) + α
+N
+X
+i=1
+lπθ′
+i((a′)i|s′)),
+(12)
+where a′ = ((a′)1, . . . , (a′)N) denotes the joint action sam-
+pled from the target diffusion policies πθi given the next
+state s′. Here, the equality holds in distribution. This formu-
+lation ensures that the critic evaluates the global quality of
+joint actions while accounting for the exploration bonuses
+of all agents, thereby aligning individual incentives with the
+global objective, which is written as:
+L(ϕ) = E[KL(Zϕ(s, a), sg(T Zϕ(s, a)))] + ξH(Zϕ(s, a)).
+(13)
+To efficiently optimize this target, we instantiate a multi-
+agent CrossQ (Bhatt et al., 2024) mechanism by combin-
+ing stop-gradients sg(·) with input Batch Normalization,
+enabling high data efficiency without divergence. Further-
+more, our entropy-regularized distributional critic (Zϕ with
+coefficient ξ) captures the granular uncertainty of joint in-
+teractions, surpassing expectation-based baselines.
+Synchronized Diffusion Policy Optimization. We for-
+mulate the multi-agent policy optimization as an itera-
+tive projection problem, aiming to align the joint pol-
+icy πθ with the distribution derived by the learned critic,
+i.e., πθ(a|s) ∝exp( 1
+αQϕ(s, a)) corresponding to Eq. (2)
+(which is located in the bottom-right of Figure 1). This cor-
+responds to minimizing the KL divergence term, expressed
+as: DKL(πθ(·|s)∥1
+Z exp( 1
+αQϕ(s, ·))). However, direct opti-
+5

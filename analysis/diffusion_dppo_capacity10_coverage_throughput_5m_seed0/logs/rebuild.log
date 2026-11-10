@@ -1,0 +1,34 @@
+{
+  "output": "analysis/diffusion_dppo_capacity10_coverage_throughput_5m_seed0",
+  "best_step": 4601536,
+  "models": {
+    "baseline_best": {
+      "coverage": 0.5643843749999999,
+      "throughput_bps": 466249362.04719925,
+      "return": 250.62038264251728,
+      "last100_coverage": 0.58106875,
+      "maintain_coverage": 0.01194583333333332
+    },
+    "baseline_last": {
+      "coverage": 0.5670843750000001,
+      "throughput_bps": 471218411.1324632,
+      "return": 251.96539859373138,
+      "last100_coverage": 0.5993333333333333,
+      "maintain_coverage": 0.03435208333333335
+    },
+    "best": {
+      "coverage": 0.5949359375000001,
+      "throughput_bps": 532141026.32611334,
+      "return": 266.35522973739273,
+      "last100_coverage": 0.5931166666666666,
+      "maintain_coverage": -0.03439791666666665
+    },
+    "last": {
+      "coverage": 0.5919354166666667,
+      "throughput_bps": 526409260.69778746,
+      "return": 264.84932723721533,
+      "last100_coverage": 0.60209375,
+      "maintain_coverage": -0.026852083333333332
+    }
+  }
+}

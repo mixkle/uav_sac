@@ -1,0 +1,29 @@
+{
+  "tests": {
+    "passed": 16,
+    "failed": 0,
+    "command": "pytest -q tests/test_topk_diagnostic.py"
+  },
+  "short_run": "output/topk_capacity10_coverage_throughput_best_short",
+  "scenarios": 32,
+  "steps_per_scene": 400,
+  "random_score_repeats": 20,
+  "source_baseline_config": "configs/mappo_coverage_throughput_capacity10_1m.yaml",
+  "checkpoint_step": 671744,
+  "source_training_steps": 1000000,
+  "reward_weights": [
+    1,
+    0.1,
+    0,
+    0
+  ],
+  "rate_scale": 1,
+  "source_coverage_reproduced_exactly": true,
+  "source_return_reproduced_exactly": true,
+  "model_updates": 0,
+  "reserved_test_scenes_used": false,
+  "all_scoring_and_count_invariants_checked": true,
+  "saved_data_rebuild_exact": true,
+  "protected_file_count": 291,
+  "old_diagnostics_and_training_run_unchanged": true
+}

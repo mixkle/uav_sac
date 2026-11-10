@@ -1,0 +1,12 @@
+[
+  ".venv-dppo/bin/python",
+  "-u",
+  "-m",
+  "uav_research",
+  "dppo",
+  "all",
+  "--config",
+  "deployment/gpu_pipeline_probe.yaml",
+  "--output",
+  "deployment/gpu_pipeline_probe"
+]

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "groups": [
+    "baseline_best",
+    "dppo_best",
+    "teacher_topk"
+  ],
+  "training_download_verified": true,
+  "evaluation_download_verified": true,
+  "same_initial_state_and_ue_paths": true,
+  "same_baseline_teacher_first_action": true,
+  "association_unique_capacity_feasible": true,
+  "topk_union_and_proposal_capacity_verified": true,
+  "reward_components_and_mc_verified": true,
+  "baseline_training_validation_reproduced": true,
+  "figures": 14,
+  "palette": {
+    "baseline_best": "#D62728",
+    "dppo_best": "#0072B2",
+    "teacher_topk": "#E69F00"
+  },
+  "comparison_sha256": "92796e3d26b23b3071bd7e6c55fec4edc03b4c7d468b48556e97bdf5a3e0919d"
+}

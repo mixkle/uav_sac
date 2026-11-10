@@ -1,4 +1,5 @@
 .venv/
+.venv-dppo-compat/
 __pycache__/
 *.py[cod]
 *.nbc
@@ -9,15 +10,28 @@ __pycache__/
 build/
 dist/
 runs/
-analysis/*
-!analysis/critic_time_factor_coverage_250k_seed0/
+# Publish readable reports and plots; raw arrays and weights use Release assets.
+analysis/**
+!analysis/**/
+!analysis/**/*.md
+!analysis/**/*.json
+!analysis/**/*.csv
+!analysis/**/*.yaml
+!analysis/**/*.py
+!analysis/**/*.txt
+!analysis/**/*.log
+!analysis/**/*.png
+!analysis/**/*.svg
 .ruff_cache/
 
 # Local reference papers and private configuration.
 *.pdf
-!analysis/critic_time_factor_coverage_250k_seed0/**/*.pdf
+!analysis/**/*.pdf
 .env
 .env.*
 !.env.example
 *.pem
 *.key
+
+# Local GitHub credentials.
+Github_token.txt

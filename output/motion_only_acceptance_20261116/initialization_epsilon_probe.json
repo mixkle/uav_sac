@@ -1,0 +1,38 @@
+[
+  {
+    "group": "M1",
+    "chain_shape": [
+      288,
+      2,
+      2
+    ],
+    "score_latent_coordinates": 0,
+    "command_norm_mean": 0.6980080008506775,
+    "command_norm_p95": 0.9289613366127014,
+    "latent_norm_mean": 1.2500848770141602,
+    "latent_norm_p99": 3.2422845363616943,
+    "logp_recompute_abs_max": 0.0,
+    "score_head_parameters": 0,
+    "fresh_adam": true,
+    "initialization": "random",
+    "formal_training": false
+  },
+  {
+    "group": "M2",
+    "chain_shape": [
+      288,
+      9,
+      2
+    ],
+    "score_latent_coordinates": 0,
+    "command_norm_mean": 0.9997945427894592,
+    "command_norm_p95": 0.999996542930603,
+    "latent_norm_mean": 188.61244201660156,
+    "latent_norm_p99": 499.58099365234375,
+    "logp_recompute_abs_max": 0.0001361370086669922,
+    "score_head_parameters": 0,
+    "fresh_adam": true,
+    "initialization": "random",
+    "formal_training": false
+  }
+]

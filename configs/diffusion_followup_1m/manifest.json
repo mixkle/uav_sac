@@ -1,0 +1,56 @@
+{
+  "version": "diffusion-followup-f2b-f2c-a1b-v1",
+  "runs": {
+    "F2b": {
+      "config": "configs/diffusion_followup_1m/F2b.yaml",
+      "sha256": "f87d069ab59834e357a5d3c6a5f0b8159c7b86375e7da43e0ee882bbbc56294d",
+      "output": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/F2b_seed0",
+      "reference": "A3"
+    },
+    "F2c": {
+      "config": "configs/diffusion_followup_1m/F2c.yaml",
+      "sha256": "8ffdf5c6bbee2662071060c5b90c37695a0db276a4327553e2090862160e5982",
+      "output": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/F2c_seed0",
+      "reference": "A3"
+    },
+    "A1b": {
+      "config": "configs/diffusion_followup_1m/A1b.yaml",
+      "sha256": "64ecc43fb93ca8b1d219f55c8c870fb597c08c8d2e53b01ae3f98a9bd89f0b15",
+      "output": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/A1b_seed0",
+      "reference": "A1"
+    }
+  },
+  "old_alias_unchanged": "configs/system_ablation_1m/manifest.json still maps F2b to A3; use ONLY follow-up CLI for new F2b",
+  "demonstrations": "/mnt/disk2/dym/uav_sac/runs/system_ablation_1m/demonstrations",
+  "action_seeds": [
+    880001,
+    880002,
+    880003
+  ],
+  "init_audit": {
+    "pools": "16 original training worker reset scenes + 128 independent reset scenes 932000..932127",
+    "repeats": 64,
+    "seed": 993001,
+    "thresholds": {
+      "latent_norm_mean_min": 0.1,
+      "latent_norm_mean_max": 5.0,
+      "latent_norm_p99_max": 15.0,
+      "movement_norm_p95_max": 0.99,
+      "movement_norm_mean_max": 0.95,
+      "score_saturation_01_max": 0.05,
+      "movement_norm_mean_min": 0.1,
+      "score_latent_std_min": 0.05,
+      "logp_abs_tolerance": 0.002,
+      "logp_relative_tolerance": 0.0002
+    }
+  },
+  "sensitivity_seed": 993101,
+  "training": {
+    "online_joint_steps": 1000000,
+    "seed": 0,
+    "pretrain_F2c_epochs": 50,
+    "F2b_actor": "exact A3 online step0 actor; fresh critic/normalizers/Adam",
+    "F2c_actor": "same data/random seed, gate disabled during ALL BC/online/inference",
+    "A1b_actor": "no teacher/BC; normal-reference epsilon residual, zero output projections"
+  }
+}

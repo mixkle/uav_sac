@@ -1,0 +1,62 @@
+{
+  "device": "cuda:0",
+  "repetitions_diffusion": 5,
+  "repetitions_rule": 20,
+  "rows": [
+    {
+      "checkpoint": "best",
+      "method": "diffusion_1_joint_samples",
+      "median_seconds": 0.02549799717962742,
+      "minimum_seconds": 0.02523920312523842,
+      "env_batch": 16,
+      "uav_groups": 288,
+      "candidate_edges": 1614
+    },
+    {
+      "checkpoint": "best",
+      "method": "diffusion_16_joint_samples",
+      "median_seconds": 0.40589037723839283,
+      "minimum_seconds": 0.4035195969045162,
+      "env_batch": 16,
+      "uav_groups": 288,
+      "candidate_edges": 1614
+    },
+    {
+      "checkpoint": "best",
+      "method": "sinr_quality_plus_topk",
+      "median_seconds": 0.0017055748030543327,
+      "minimum_seconds": 0.0016963370144367218,
+      "env_batch": 16,
+      "uav_groups": 288,
+      "candidate_edges": 1614
+    },
+    {
+      "checkpoint": "last",
+      "method": "diffusion_1_joint_samples",
+      "median_seconds": 0.025047948583960533,
+      "minimum_seconds": 0.024993853643536568,
+      "env_batch": 16,
+      "uav_groups": 288,
+      "candidate_edges": 1607
+    },
+    {
+      "checkpoint": "last",
+      "method": "diffusion_16_joint_samples",
+      "median_seconds": 0.40346490405499935,
+      "minimum_seconds": 0.4025431200861931,
+      "env_batch": 16,
+      "uav_groups": 288,
+      "candidate_edges": 1607
+    },
+    {
+      "checkpoint": "last",
+      "method": "sinr_quality_plus_topk",
+      "median_seconds": 0.0017032139003276825,
+      "minimum_seconds": 0.0016937069594860077,
+      "env_batch": 16,
+      "uav_groups": 288,
+      "candidate_edges": 1607
+    }
+  ],
+  "note": "Only inference/rule computation; no physical step, I/O or preprocessing costs. Concurrent workload can influence timing."
+}

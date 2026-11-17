@@ -1,0 +1,15 @@
+{
+  "trajectories": 576,
+  "groups": 2,
+  "checkpoints_per_group": 3,
+  "scenes": 32,
+  "action_seeds": [
+    880001,
+    880002,
+    880003
+  ],
+  "horizon": 400,
+  "selection_log_reproduced": true,
+  "bootstrap_scenes": 2000,
+  "seed": 950001
+}

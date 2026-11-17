@@ -1,4 +1,12 @@
 # Source this file on the training server before running project commands.
+uav_generic_script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+case "$uav_generic_script_dir" in
+  /home/dym/*)
+    source "$uav_generic_script_dir/dppo_server_env.sh"
+    export PATH="$uav_dppo_root/.venv-dppo/bin:$PATH"
+    return 0 2>/dev/null || exit 0
+    ;;
+esac
 export UAV_DATA_ROOT=/root/autodl-tmp/uav_sac
 export XDG_CACHE_HOME="$UAV_DATA_ROOT/cache"
 export MPLCONFIGDIR="$UAV_DATA_ROOT/cache/matplotlib"

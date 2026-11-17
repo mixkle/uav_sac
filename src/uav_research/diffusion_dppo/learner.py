@@ -43,7 +43,7 @@ class DiffusionLearner:
             if dev.index >= torch.cuda.device_count():
                 raise ValueError(f"Actor update device {dev} is not visible")
         self.actor = make_service_actor(cfg).to(self.device)
-        if e.motion_scaling["enabled"]:
+        if e.motion_scaling["enabled"] or cfg.diffusion.ablation:
             # Paired new algorithms start with an identical team critic despite
             # their different actor parameter counts/random initialization draws.
             devices = [self.device.index or 0] if self.device.type == "cuda" else []
@@ -93,6 +93,7 @@ class DiffusionLearner:
                 self.actor_opt.zero_grad(set_to_none=True)
                 stats = torch.zeros(4+2*self.actor.steps, device=self.device)
                 grouped = torch.zeros((3, 3), device=self.device)
+                branch_stats = torch.zeros(4,device=self.device)
                 for lo in range(0, len(groups), d.microbatch_agents):
                     hi = min(lo+d.microbatch_agents, len(groups))
                     selected = group_np[lo:hi]
@@ -122,6 +123,16 @@ class DiffusionLearner:
                         stats[3] += (oldp-newp).mean()*weight
                         stats[4:4+self.actor.steps] += kl.mean(0)*weight
                         stats[4+self.actor.steps:] += clip.mean(0)*weight
+                        if d.ablation:
+                            nm,ns=self.actor.last_evaluate_parts
+                            om=torch.as_tensor(chosen_chain.movement_logp,device=self.device)
+                            os=torch.as_tensor(chosen_chain.score_logp,device=self.device)
+                            for j,difference in enumerate((nm-om,ns-os)):
+                                branch_ratio=difference.exp()
+                                if not torch.isfinite(branch_ratio).all():
+                                    raise FloatingPointError('Nonfinite branch diagnostic ratio')
+                                branch_stats[j*2]+=((branch_ratio-1)-difference).mean()*weight
+                                branch_stats[j*2+1]+=((branch_ratio-1).abs()>a.ppo_clip).float().mean()*weight
                         count = torch.as_tensor(selected_obs.candidate_lengths, device=self.device)
                         for j, mask in enumerate((count == 0, (count > 0) & (count <= self.cfg.env.capacity),
                                                   count > self.cfg.env.capacity)):
@@ -129,9 +140,9 @@ class DiffusionLearner:
                             grouped[j, 1] += clip[mask].sum()
                             grouped[j, 2] += mask.sum()*self.actor.steps
                 actor_grad = nn.utils.clip_grad_norm_(self.actor.parameters(), a.max_grad_norm, error_if_nonfinite=True)
-                gradients = dict(encoder_grad_norm=gradient_norm(self.actor.ue),
-                    movement_head_grad_norm=gradient_norm(self.actor.movement_head),
-                    score_head_grad_norm=gradient_norm(self.actor.score_head))
+                gradients = dict(encoder_grad_norm=gradient_norm(self.actor.ue).to(self.device),
+                    movement_head_grad_norm=gradient_norm(self.actor.movement_head).to(self.device),
+                    score_head_grad_norm=gradient_norm(self.actor.score_head).to(self.device))
                 self.actor_opt.step()
                 raw_value, avg, _ = self.value_components(state[indices])
                 predicted = self.normalizer.normalize(raw_value)
@@ -152,6 +163,9 @@ class DiffusionLearner:
                 for k in range(self.actor.steps):
                     row[f"denoise_{self.actor.steps-k}_kl" if self.cfg.algo.name == "diffusion_dppo" else "gaussian_joint_kl"] = stats[4+k]
                     row[f"denoise_{self.actor.steps-k}_clip" if self.cfg.algo.name == "diffusion_dppo" else "gaussian_joint_clip"] = stats[4+self.actor.steps+k]
+                if d.ablation:
+                    row.update(movement_conditional_kl=branch_stats[0],movement_only_ratio_clip=branch_stats[1],
+                        score_conditional_kl=branch_stats[2],score_only_ratio_clip=branch_stats[3])
                 for j, name in enumerate(("empty", "within_capacity", "over_capacity")):
                     row[f"candidates_{name}_kl"] = grouped[j, 0]/grouped[j, 2].clamp_min(1)
                     row[f"candidates_{name}_clip"] = grouped[j, 1]/grouped[j, 2].clamp_min(1)

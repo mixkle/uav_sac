@@ -1,0 +1,15 @@
+{
+  "env_steps": 10000000,
+  "updates": 4884,
+  "optimizer_steps": 195360,
+  "best_score": 0.6348270833333334,
+  "best_step": 4100672,
+  "elapsed_seconds": 65566.76009549014,
+  "full_checkpoint": "/mnt/disk2/dym/uav_sac/runs/motion_only_sinr_topk_10m/M1_seed0/checkpoints/full_010000000",
+  "status": "complete",
+  "evaluation_seconds": 8544.166524291039,
+  "io_seconds": 768.6361661031842,
+  "peak_rss_mib": 1530.296875,
+  "sum_process_peak_rss_mib": 1530.296875,
+  "peak_gpu_mib": 215.01708984375
+}

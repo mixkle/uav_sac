@@ -1,0 +1,28 @@
+{
+  "server": "dym@10.16.63.110",
+  "code": "/home/dym/uav_sac",
+  "data": "/mnt/disk2/dym/uav_sac",
+  "sha256": {
+    "configs/m2_motion_neighbor_controls_10m/M2-N5.yaml": "e4fe133b497524efff8f4d70075670f8b91b5ca1878c63cfdce61512691f09b7",
+    "configs/m2_motion_neighbor_controls_10m/M2-N5_stage1_1m.yaml": "af778ebb27f7978aec80703cefb10fe07a7010b97ceddda1566e7b5ece9bb8ba",
+    "configs/m2_motion_neighbor_controls_10m/M2-N7.yaml": "875207ef506994702749457b4b073f4f2fa8b71fb76a6f1af76c625c88cdd6f2",
+    "configs/m2_motion_neighbor_controls_10m/M2-N7_stage1_1m.yaml": "ee66846c89079dcdf059e663c43359ee93719366d94e15ab90b325ba444b4694",
+    "configs/m2_motion_neighbor_controls_10m/M2-N9.yaml": "9646412a9482669a2ad3cd07a6fe175f769d1009d5d228a32929eb07471d3667",
+    "configs/m2_motion_neighbor_controls_10m/M2-N9_stage1_1m.yaml": "9defc8743e35a2ba20316bcf09766edb5f2ed63cd89e10cd31fd0f30d8818f2b",
+    "configs/m2_motion_neighbor_controls_10m/M2-NoHop.yaml": "2ee842deb4edc35b76452164f6a98e0361c700e28dd5f2211df1569efb548db9",
+    "configs/m2_motion_neighbor_controls_10m/M2-NoHop_stage1_1m.yaml": "4cebbee90450cf00fbf0142fe0cd08e765668ab0859e2ed6e812c477a3f582ae",
+    "configs/m2_motion_neighbor_controls_10m/manifest.json": "1185300b250a23483369bf94e4e6dfd00f2cf1ee5c7010995a36ebc3bcf25df1",
+    "docs/m2_motion_neighbor_controls_10m.md": "9ea99b035d8f68399984750865ab0a9189dc069d51ede8bbd974c0ef51fc5fc2",
+    "docs/system_ablation_1m.md": "a635f16f392fb17d6c9a6a49df51de0b67cabfb95f7f8a75827bbffb17750588",
+    "scripts/build_m2_control_configs.py": "21c220af8ba1d95c844e18a3e88b3f92110313f5151afe3b73880c38e174f5ad",
+    "scripts/check_m2_controls.py": "7e24186d99b20afd55cd8ce52e5d6dae6f7ec52f42d77d870ad6d9efc41b6205",
+    "scripts/launch_m2_controls_server.sh": "a549c1dd31ec0b5558d60ea644c59e5625d3bf5cd6d5d6d1c691ebff397cade3",
+    "scripts/m2_control_experiments.py": "78972d766030c66dd6a9d93f6d2ab73db839240af37d1183f8a54e64b2b908f7",
+    "scripts/resume_motion_only_10m.py": "3709c1aa9a6fb544d48f51885eae5f158bbd095bd4c3021495a832f6753f7681",
+    "scripts/train_m2_controls_server.sh": "9009480dd8f83fb6ecae2c762ec3bbb2a2659723ce757093a6d4d0a967902df7",
+    "tests/test_m2_control_experiments.py": "9a83a41166cdc4dc246300e0b85976ce881d350f79bc0db47c5e255dec703b97"
+  },
+  "all_upload_hashes_match": true,
+  "cuda_acceptance_groups": 4,
+  "formal_training_started": false
+}

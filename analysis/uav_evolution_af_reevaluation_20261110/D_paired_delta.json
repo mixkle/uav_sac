@@ -1,0 +1,104 @@
+{
+  "contrast": "Hop-scaled minus original",
+  "values": {
+    "tail100_coverage_pct": 2.9860416666666674,
+    "tail50_coverage_pct": 3.0366666666666666,
+    "final_coverage_pct": 3.083333333333333,
+    "tail100_throughput_mbps": 16.365904083891415,
+    "tail50_throughput_mbps": 11.54951124070932,
+    "final_throughput_mbps": 18.307853619465053,
+    "tail100_coverage_std_pp": -2.302294048849663,
+    "tail50_coverage_std_pp": -2.646033449916612,
+    "episode_return": -4.098839865840957,
+    "tail100_connected_pct": 3.7500000000000018,
+    "tail50_connected_pct": 2.7812499999999987,
+    "final_connected_pct": 2.7777777777777777,
+    "tail100_drop_count": -1.6875,
+    "tail50_drop_count": -1.34375,
+    "tail100_max_drop_pp": -11.104166666666668,
+    "tail50_max_drop_pp": -10.60416666666667,
+    "tail100_coverage_p05_pct": 5.553125000000001,
+    "tail50_coverage_p05_pct": 6.3760416666666675,
+    "formation_step": 53.4375,
+    "scene_count": 32,
+    "action_repetitions": 1
+  },
+  "intervals": {
+    "tail100_coverage_pct": [
+      -0.8385312500000006,
+      6.775536458333333
+    ],
+    "tail50_coverage_pct": [
+      -0.7612708333333333,
+      7.007625000000001
+    ],
+    "final_coverage_pct": [
+      -1.1255208333333342,
+      7.354687499999998
+    ],
+    "tail100_throughput_mbps": [
+      -24.554768884217925,
+      56.695396781108116
+    ],
+    "tail50_throughput_mbps": [
+      -28.541849893947457,
+      53.23461984822212
+    ],
+    "final_throughput_mbps": [
+      -26.771471021697494,
+      67.51473355205249
+    ],
+    "tail100_coverage_std_pp": [
+      -4.615875430525806,
+      -0.11241124367631017
+    ],
+    "tail50_coverage_std_pp": [
+      -4.855065130955207,
+      -0.5602898414234834
+    ],
+    "episode_return": [
+      -13.90537420703868,
+      6.0387507838296255
+    ],
+    "tail100_connected_pct": [
+      0.8331163194444464,
+      6.887196180555561
+    ],
+    "tail50_connected_pct": [
+      0.0936631944444436,
+      5.698611111111105
+    ],
+    "final_connected_pct": [
+      -1.7361111111111107,
+      7.98611111111111
+    ],
+    "tail100_drop_count": [
+      -4.25,
+      0.7507812499999957
+    ],
+    "tail50_drop_count": [
+      -2.71953125,
+      -0.0625
+    ],
+    "tail100_max_drop_pp": [
+      -19.000520833333333,
+      -3.24895833333334
+    ],
+    "tail50_max_drop_pp": [
+      -18.292187499999997,
+      -3.414062500000014
+    ],
+    "tail100_coverage_p05_pct": [
+      -1.6314843749999983,
+      12.785677083333333
+    ],
+    "tail50_coverage_p05_pct": [
+      -0.23049479166666775,
+      13.333697916666658
+    ],
+    "formation_step": [
+      27.56171875,
+      77.84453124999999
+    ]
+  }
+}

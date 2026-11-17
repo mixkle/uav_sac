@@ -5,7 +5,7 @@ export CUDA_VISIBLE_DEVICES="${UAV_PREP_GPU:-0}"
 source "$uav_script_dir/dppo_server_env.sh"
 cd "$uav_dppo_root"
 uav_config="$uav_dppo_root/configs/diffusion_dppo_hop_scaling_capacity10_10m_server.yaml"
-uav_run="$uav_dppo_root/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0"
+uav_run="$UAV_DATA_ROOT/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0"
 uav_python="$uav_dppo_root/.venv-dppo/bin/python"
 case "${1:-all}" in
   collect) exec taskset -c "${UAV_CPU_AFFINITY:-0-11}" "$uav_python" -u -m uav_research dppo collect --config "$uav_config" --output "$uav_run/demonstrations" ;;

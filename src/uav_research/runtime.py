@@ -113,18 +113,29 @@ def load_checkpoint(path, device="cpu", *, mmap=False):
     return data
 
 
+def _default_data_root(project_root=None):
+    """Recognize this server even for a direct CLI call without sourcing env."""
+    project = Path(project_root) if project_root is not None else Path(__file__).resolve().parents[2]
+    if project.is_relative_to('/home/dym'):
+        if not Path('/mnt/disk2').is_mount():
+            raise RuntimeError('/mnt/disk2 is not mounted; refusing system-disk output')
+        return '/mnt/disk2/dym/uav_sac'
+    try:
+        if Path('/root/autodl-tmp').is_dir():
+            return '/root/autodl-tmp/uav_sac'
+    except PermissionError:
+        pass
+    return None
+
+
 def resolve_output(path):
-    """Relative artifacts use the data disk on AutoDL; absolute paths stay explicit."""
+    """Default relative artifacts to the server data disk; honor explicit paths."""
     path = Path(path).expanduser()
     if path.is_absolute():
         return path
     root = os.environ.get("UAV_DATA_ROOT")
     if root is None:
-        try:
-            if Path("/root/autodl-tmp").is_dir():
-                root = "/root/autodl-tmp/uav_sac"
-        except PermissionError:
-            pass
+        root = _default_data_root()
     return Path(root).expanduser() / path if root else path
 
 

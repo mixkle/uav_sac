@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-13",
+  "groups": 19,
+  "checkpoint_evaluations": 171,
+  "checkpoints": 57,
+  "scenes_per_evaluation": 32,
+  "horizon": 400,
+  "action_seeds": [
+    880001,
+    880002,
+    880003
+  ],
+  "heldout_test_used": false,
+  "weights_updated": false,
+  "training_validation_reproduction": "all 57 checkpoints <=1e-6",
+  "downloaded_checkpoint_hashes": "57 checked against 171 sources.json entries",
+  "output_server": "/mnt/disk2/dym/uav_sac/analysis/diffusion_gaussian_ablation_1m",
+  "output_local": "/home/mixkle/uav_sac/analysis/diffusion_gaussian_ablation_1m",
+  "models_local": "/home/mixkle/uav_sac/runs/system_ablation_1m",
+  "resume_checkpoints": "Full resume artifacts remain on server; downloaded step0/best/last are lightweight models",
+  "saved_mc_audit": "All 171 finite; coverage+throughput MC decomposition and H scaling verified",
+  "figures_png": 159
+}

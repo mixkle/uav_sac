@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "regression_command": "OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=2 OMP_NUM_THREADS=2 .venv/bin/python -m pytest tests/test_score_rules.py tests/test_association_timing.py tests/test_diffusion_followup.py tests/test_system_ablation.py tests/test_diffusion_dppo.py -q",
+  "initial_regression_tests_passed": 92,
+  "initial_regression_seconds": 62.32,
+  "added_snapshot_rng_test_passed": true,
+  "focused_score_rule_tests_passed": 8,
+  "focused_seconds": 1.24,
+  "unique_tests_passed": 93
+}

@@ -1,0 +1,17 @@
+{
+  "local_git_commit": "eb3c1f7a946e5509dc8972eab802f18f408ac30a",
+  "local_worktree_dirty": true,
+  "existing_changes_preserved": true,
+  "files": {
+    "src/uav_research/association_timing.py": "23f9ae8f03187b0281df8b917d18f423a6ee4dfebb00b87b679fddb159dc929c",
+    "src/uav_research/association_timing_experiment.py": "11a16cdd615206daaec49934398c829415ea72ab839168d1908de3829b7cef3a",
+    "scripts/diagnose_association_timing.py": "052c3baaf016f0ae90abeee93b33892833e675a818c7a0af965a0ee1b17035eb",
+    "scripts/verify_association_timing.py": "a9fa3156992e64badbf86723586529e50e16cc8045c5bce1d0aad2638469b90a",
+    "scripts/launch_association_timing_server.sh": "0ee3522157751709dd8088b461bf8f48327b09cf235a91a91088c07d6203d47f",
+    "tests/test_association_timing.py": "45680e1d2bbc0604f404707cf1bf649f3ab84a65ca1c810ec3182c80c396138a",
+    "docs/association_timing_t1_t3.md": "69af468829384e96cdc7b7aa60508a311d3199649a2664bbf91efa5457631818"
+  },
+  "server_git": "Repository directory has no .git; deployed source hashes identify this experiment",
+  "local_tests": "55 passed (26 timing/followup + 29 diffusion/hop)",
+  "server_tests": "8 timing tests passed; 4 scenes x 5 steps CUDA T1 smoke passed"
+}

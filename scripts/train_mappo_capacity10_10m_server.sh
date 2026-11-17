@@ -17,7 +17,7 @@ case "$CUDA_VISIBLE_DEVICES" in
   ""|*,*) echo "Set CUDA_VISIBLE_DEVICES to exactly one allocated GPU." >&2; exit 2 ;;
 esac
 uav_baseline_config="$uav_dppo_root/configs/mappo_coverage_throughput_capacity10_10m_server.yaml"
-uav_baseline_output="$uav_dppo_root/runs/mappo_coverage_throughput_capacity10_10m_seed0"
+uav_baseline_output="$UAV_DATA_ROOT/runs/mappo_coverage_throughput_capacity10_10m_seed0"
 "$uav_dppo_root/.venv-dppo/bin/python" - "$uav_baseline_config" "$uav_baseline_output" <<'PY'
 import json
 import os
@@ -33,7 +33,7 @@ expected = original.as_dict()
 expected['run'].update(total_steps=10_000_000, device='cuda:0')
 if cfg.as_dict() != expected:
     raise SystemExit('Config differs from the original baseline beyond steps/device.')
-if output.resolve().parent != (Path.cwd() / 'runs').resolve():
+if output.resolve().parent != (Path(os.environ['UAV_DATA_ROOT']) / 'runs').resolve():
     raise SystemExit('Output must be inside this project runs directory.')
 if output.exists() and (not output.is_dir() or any(output.iterdir())):
     raise SystemExit('Fresh run requires an empty/new output directory; refusing to overwrite.')
@@ -50,8 +50,8 @@ PY
 if [[ "${1:-}" == --check ]]; then
   exit 0
 fi
-mkdir -p "$uav_dppo_root/logs"
-uav_baseline_log="$uav_dppo_root/logs/mappo_capacity10_10m_$(date +%Y%m%d_%H%M%S).log"
+mkdir -p "$UAV_DATA_ROOT/logs"
+uav_baseline_log="$UAV_DATA_ROOT/logs/mappo_capacity10_10m_$(date +%Y%m%d_%H%M%S).log"
 echo "Starting fresh 10M baseline. Console log: $uav_baseline_log"
 exec taskset -c "${UAV_CPU_AFFINITY:-0-11}" "$uav_dppo_root/.venv-dppo/bin/python" -u -m uav_research train \
   --config "$uav_baseline_config" \

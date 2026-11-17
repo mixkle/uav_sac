@@ -1,0 +1,26 @@
+{
+  "checkpoint": "last",
+  "checkpoint_path": "/mnt/disk2/dym/uav_sac/runs/system_ablation_1m/A3_seed0/last.pt",
+  "checkpoint_sha256": "631ed56ef0997d850d9ba92f85ea74cd670baa22861a988c9f445bf2dde3985d",
+  "actual_online_steps": 1000000,
+  "actor_sha256": "7837fdb0b1d7bdc336bc98a1388c32faab754eb6b34dd7d9d4ac1d04ee5c5e6d",
+  "optimizer_created": false,
+  "version": 1,
+  "action_seed": 880003,
+  "repeats": 16,
+  "smoke": false,
+  "reference": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last",
+  "fixed_steps": [
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    325,
+    350,
+    375,
+    400
+  ],
+  "rules_hash": "2cf06623d66f82ccdf79ddd61981cb140f76b1102a2081c19e56c6a38ec9ddef"
+}

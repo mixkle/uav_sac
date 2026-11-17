@@ -1,6 +1,23 @@
 # 结果目录与清理状态
 
-更新日期：2026-11-10。按本地实际文件和manifest整理；主要入口见[项目导航](project_structure.md)。
+更新日期：2026-11-17。按本地实际文件和manifest整理；主要入口见[项目导航](project_structure.md)。
+
+## 2026-11-17 同步入口
+
+- [系统消融 A–F：汇总、图表与逐场景指标](../analysis/diffusion_gaussian_ablation_1m/report.md)。
+- [F2b/F2c/A1b 追加实验](../analysis/diffusion_followup_f2b_f2c_a1b_20261113/report.md)。
+- [T1–T3 关联时序诊断](../analysis/t1_t2_t3_post_motion_association/analysis.md)。
+- [S1/S2 评分机制与规则诊断](../analysis/score_rule_s1_s2_20261116/report.md)。
+- [仅运动 M1/M2 10M：best/last 与部署维持](../analysis/motion_only_sinr_topk_10m/report.md)。
+- [M2-NoHop/N5/N7/N9 新配置与启动方式](m2_motion_neighbor_controls_10m.md)：已部署并验收，交付时未启动正式训练，不计作已完成结果。
+
+[本次 GitHub 结果快照范围](../artifacts/20261117/README.md)及逐文件 SHA256 清单区分已入库摘要与仍保留在本地/服务器的原始数据。下文旧实验表是历史记录，不代表上述新增实验的最新排名。
+
+## 统一后期指标复评
+
+[按实验演进A–F分组的19指标完整复评](../analysis/uav_evolution_af_reevaluation_20261110/report.md)为最新入口：33条核心记录、78条分组补充记录，覆盖后100/50步、终态、时间标准差、回报、联网、骤降、P05及首次达标时间。[全部指标中文CSV](../analysis/uav_evolution_af_reevaluation_20261110/全部指标_中文.csv)。本版按用户要求使用“各轨迹时间标准差的算术平均”，与下列旧版RMS标准差分开。
+
+[后100步与终态五指标总报告](../analysis/tail100_all_completed_results_20261110/report.md)覆盖现存正式运行及历史baseline，保留best/last、设备和场景差异。标准差只统计场景内部时间波动；[公式与范围](tail100_evaluation_protocol.md)。历史报告及best选择未改。
 
 ## 当前主实验：跳数缩放联合控制
 

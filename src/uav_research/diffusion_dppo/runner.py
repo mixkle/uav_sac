@@ -17,7 +17,7 @@ from .storage import (artifact, load, ensure_budget, save_online_full, Progress,
 from .evaluation import evaluate
 
 
-def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=None):
+def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=None, observer=None):
     cfg.validate()
     output = Path(output)
     ensure_budget(cfg, output)
@@ -33,6 +33,7 @@ def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=N
              f"microbatch_agents={cfg.diffusion.microbatch_agents}; critic and sampling={device}", True)
     steps, best, best_step, next_eval, elapsed_before = 0, -float("inf"), 0, cfg.run.eval_interval, 0.
     provenance = {}
+    best_point = None
     restored = None
     if resume:
         restored = load(resume, cfg, {"dppo_full"})
@@ -48,10 +49,14 @@ def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=N
         steps, best, best_step, next_eval = [restored[k] for k in ("env_steps", "best_score", "best_step", "next_eval")]
         elapsed_before = restored["elapsed_seconds"]
         provenance = restored["provenance"]
+        best_point = restored.get('best_point')
         if steps >= cfg.run.total_steps:
             raise ValueError("Resume checkpoint already reaches requested total budget")
         if not (output/"best.pt").exists():
             atomic_save(output/"best.pt", restored["best_artifact"])
+    elif cfg.diffusion.ablation:
+        from ..system_ablation.initialization import initialize
+        provenance = initialize(learner, pretrained)
     elif cfg.algo.name == "diffusion_dppo":
         source = Path(pretrained or cfg.diffusion.pretrained_checkpoint)
         initial = load(source, cfg, {"dppo_pretrain"})
@@ -59,6 +64,8 @@ def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=N
         provenance = dict(pretrained_path=str(source), pretrained_sha256=file_hash(source),
                           pretraining_epoch=initial["epoch"], pretraining_provenance=initial["provenance"])
     save_config(cfg, output/"config.yaml")
+    if cfg.diffusion.ablation:
+        save_config(cfg,output/'resolved_config.yaml')
     atomic_json(output/"metadata.json", dict(metadata(cfg, device), provenance=provenance,
         actor_update_devices=[str(d) for d in learner.actor_update_devices] or [str(device)],
         actor_parameters=sum(p.numel() for p in learner.actor.parameters()),
@@ -107,6 +114,7 @@ def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=N
         snapshot = artifact(cfg, "full", env_steps=steps, learner=learner.state_dict(),
             environments=vector.snapshot(), observation=obs.copy(), state=state.copy(),
             rng=rng_state(), best_score=best, best_step=best_step, next_eval=next_eval,
+            best_point=best_point,
             num_envs=cfg.run.num_envs, elapsed_seconds=elapsed(), provenance=provenance,
             phase_times=copy.deepcopy(phase_times),
             best_artifact=load(output/"best.pt", kinds={"dppo_model"}))
@@ -114,8 +122,11 @@ def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=N
         phase_times["io_seconds"] += time.perf_counter()-stamp
         return path
 
-    validation = CSVLogger(output/"validation.csv", ["env_steps", "elapsed_seconds", "return", "task_return",
-        "coverage", "throughput_bps", "last100_coverage", "final_coverage", "best_score", "best_step"])
+    validation_fields = ["env_steps", "elapsed_seconds", "return", "task_return",
+        "coverage", "throughput_bps", "last100_coverage", "final_coverage", "best_score", "best_step"]
+    if cfg.diffusion.ablation:
+        validation_fields += ['last100_throughput_bps','selection_primary','selection_secondary']
+    validation = CSVLogger(output/"validation.csv", validation_fields)
     logger = None
     if cfg.run.tensorboard:
         from torch.utils.tensorboard import SummaryWriter
@@ -124,7 +135,7 @@ def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=N
         writer = None
 
     def validate():
-        nonlocal best, best_step
+        nonlocal best, best_step, best_point
         light()  # Preserve current weights before expensive validation.
         progress(f"validation begin env_steps={steps}", True)
         stamp = time.perf_counter()
@@ -132,13 +143,22 @@ def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=N
         phase_times["evaluation_seconds"] += time.perf_counter()-stamp
         summary = result["summary"]
         score = summary["return"]  # No boundary costs: task return == train return.
-        if score > best:
+        selected = score > best
+        if cfg.diffusion.ablation:
+            from ..system_ablation.settings import better
+            selected, point = better(summary,best_point)
+            score = point[0]
+        if selected:
             best, best_step = score, steps
+            if cfg.diffusion.ablation: best_point=point
             atomic_save(output/"best.pt", model())
+        selection_fields = dict(last100_throughput_bps=summary['last100_throughput_bps'],
+            selection_primary=point[0],selection_secondary=point[1]) if cfg.diffusion.ablation else {}
         validation.write(dict(env_steps=steps, elapsed_seconds=elapsed(),
             **{k: summary[k] for k in ("return", "coverage", "throughput_bps", "last100_coverage", "final_coverage")},
-            task_return=score, best_score=best, best_step=best_step))
-        progress(f"validation env_steps={steps} return={score:.6f} coverage={summary['coverage']:.4%} best_step={best_step}", True)
+            task_return=summary['return'], best_score=best, best_step=best_step,**selection_fields))
+        progress(f"validation env_steps={steps} return={summary['return']:.6f} coverage={summary['coverage']:.4%} "
+                 f"last100_coverage={summary['last100_coverage']:.4%} best_step={best_step}", True)
 
     try:
         if not restored:
@@ -204,6 +224,7 @@ def train_online(cfg, output, resume=None, pretrained=None, stop_after_updates=N
                     writer.add_scalar(k, v, steps)
                 writer.flush()
             progress(f"update complete env_steps={steps} reward={row['reward']:.6f} coverage={row['coverage']:.4%} PPO={update:.2f}s", True)
+            if observer is not None:observer(cfg,output,learner,steps)
             light()
             if steps >= next_eval or steps == cfg.run.total_steps:
                 while next_eval <= steps:

@@ -1,0 +1,57 @@
+{
+  "group": "M2-NoHop",
+  "output": "/mnt/disk2/dym/uav_sac/runs/m2_motion_neighbor_controls_10m/M2-NoHop_seed0",
+  "stage1_output": "/mnt/disk2/dym/uav_sac/runs/m2_motion_neighbor_controls_1m/M2-NoHop_seed0",
+  "stage1_steps": 1000000,
+  "total_steps": 10000000,
+  "neighbor_slots": 3,
+  "fixed_observation_dim": 105,
+  "critic_state_dim": 6292,
+  "motion_rule": "none",
+  "source_steps": 0,
+  "resume_checkpoint": null,
+  "formal_training_started": false
+}
+{
+  "group": "M2-N5",
+  "output": "/mnt/disk2/dym/uav_sac/runs/m2_motion_neighbor_controls_10m/M2-N5_seed0",
+  "stage1_output": "/mnt/disk2/dym/uav_sac/runs/m2_motion_neighbor_controls_1m/M2-N5_seed0",
+  "stage1_steps": 1000000,
+  "total_steps": 10000000,
+  "neighbor_slots": 5,
+  "fixed_observation_dim": 153,
+  "critic_state_dim": 6292,
+  "motion_rule": "exponential",
+  "source_steps": 0,
+  "resume_checkpoint": null,
+  "formal_training_started": false
+}
+{
+  "group": "M2-N7",
+  "output": "/mnt/disk2/dym/uav_sac/runs/m2_motion_neighbor_controls_10m/M2-N7_seed0",
+  "stage1_output": "/mnt/disk2/dym/uav_sac/runs/m2_motion_neighbor_controls_1m/M2-N7_seed0",
+  "stage1_steps": 1000000,
+  "total_steps": 10000000,
+  "neighbor_slots": 7,
+  "fixed_observation_dim": 201,
+  "critic_state_dim": 6292,
+  "motion_rule": "exponential",
+  "source_steps": 0,
+  "resume_checkpoint": null,
+  "formal_training_started": false
+}
+{
+  "group": "M2-N9",
+  "output": "/mnt/disk2/dym/uav_sac/runs/m2_motion_neighbor_controls_10m/M2-N9_seed0",
+  "stage1_output": "/mnt/disk2/dym/uav_sac/runs/m2_motion_neighbor_controls_1m/M2-N9_seed0",
+  "stage1_steps": 1000000,
+  "total_steps": 10000000,
+  "neighbor_slots": 9,
+  "fixed_observation_dim": 249,
+  "critic_state_dim": 6292,
+  "motion_rule": "exponential",
+  "source_steps": 0,
+  "resume_checkpoint": null,
+  "formal_training_started": false
+}
+All four groups passed; NO formal training started.

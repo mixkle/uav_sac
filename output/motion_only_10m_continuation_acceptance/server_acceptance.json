@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "groups": [
+    {
+      "group": "M1",
+      "source_steps": 1000000,
+      "source_best_step": 600064,
+      "checkpoint": "/mnt/disk2/dym/uav_sac/runs/motion_only_sinr_topk_1m/M1_seed0/checkpoints/full_001000000",
+      "sha256": "94dc4aadd20c13a7f7b7f05d6e52909bdf11875e344d912c2d0c86ef84b597df",
+      "target_steps": 10000000,
+      "additional_steps": 9000000
+    },
+    {
+      "group": "M2",
+      "source_steps": 1000000,
+      "source_best_step": 950272,
+      "checkpoint": "/mnt/disk2/dym/uav_sac/runs/motion_only_sinr_topk_1m/M2_seed0/checkpoints/full_001000000",
+      "sha256": "0a4ba02bf055ab7bbf81cf72bc32567ad556a62796e8c556c27887d1e397b747",
+      "target_steps": 10000000,
+      "additional_steps": 9000000
+    }
+  ],
+  "uploaded_hashes_match": true,
+  "server_tests": "16 passed in 33.89s",
+  "formal_training_started": false
+}

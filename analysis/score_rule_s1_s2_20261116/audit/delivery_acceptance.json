@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "frozen_checkpoints": {
+    "best": 251904,
+    "last": 1000000
+  },
+  "s1_snapshots": 2296,
+  "fixed_snapshots": 1920,
+  "repeats_per_snapshot": 16,
+  "parquet_rows": 4506960,
+  "comparison_rows": 18,
+  "per_episode_rows": 1728,
+  "per_step_rows": 691200,
+  "peak_case_rss_gib": 1.1301002502441406,
+  "figure_groups": 9,
+  "formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "new_training_steps": 0,
+  "held_out_test_set_used": false,
+  "calibration_lock": "2cf06623d66f82ccdf79ddd61981cb140f76b1102a2081c19e56c6a38ec9ddef",
+  "source_actor_files_unchanged": true,
+  "local_saved_data_rebuild_passed": true,
+  "artifact_sha256": {
+    "report.md": "1a8942b9568ffad699d16074f41cd350163dec83e3e1b10675b8fbb4fc20861d",
+    "s1/ranking_summary.csv": "d3732db491cdd130bd818885383868e360ed758fce7fa05fb77eb2da6a378d10",
+    "s1/noise_summary.csv": "63128cc7cf8a4f7af76faa96f25a3e314e36cd62e7e1935832bc76158af800d4",
+    "s1/event_summary.csv": "f84d0882a9e952a4dbb1244c5032342dc41411882cd197ec8a9b0d5e78ff7817",
+    "s1/score_effect_summary.csv": "60655c2040227fa19659654b93273e759e11efa7360bcf993240480729f61f2d",
+    "s1/score_effect_paired.csv": "6b2323c681b8acfbbbfc02a499f30b336855f81c5a9ad4422a53b904d9fcbc8e",
+    "s1/score_samples.parquet": "55863c9f8528ad688b074b2abaebd8da7913aff6810b7300ea6273ff0d117912",
+    "s2/comparison.csv": "fb7b966f0179a6295bc12534d26c0b140239532c1c5797ff8109c2da39f3e552",
+    "s2/paired_differences.csv": "6991b5a1af0bb6b9a2f396588451b8debce69b26305e59e2162f287590b00475",
+    "s2/per_episode.csv": "eb45cf0058264e2be916ac31457f5ae3447597ecaf487f027f7545d9526f5e67",
+    "s2/per_scene.csv": "4268118663e5644ca6bd539baebd84af380a7706dceb1956d85573646e240292",
+    "s2/per_step.csv": "cb06b321098ecb43e0a294d330f7f3a1bdcc3cc221d2658926ad9b3dac060ba0"
+  }
+}

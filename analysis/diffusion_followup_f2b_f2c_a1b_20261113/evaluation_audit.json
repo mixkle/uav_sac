@@ -1,0 +1,84 @@
+{
+  "status": "complete",
+  "new_evaluations": 27,
+  "new_full_episodes": 864,
+  "reference_evaluations_reused": 45,
+  "total_summaries": 24,
+  "total_episodes": 2304,
+  "all_new_models_sha256_verified": true,
+  "all_mc_reward_components_match": true,
+  "seed880001_reproduction": [
+    {
+      "group": "F2b",
+      "checkpoint": "step0",
+      "online_steps": 0,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    },
+    {
+      "group": "F2b",
+      "checkpoint": "best",
+      "online_steps": 401408,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    },
+    {
+      "group": "F2b",
+      "checkpoint": "last",
+      "online_steps": 1000000,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    },
+    {
+      "group": "F2c",
+      "checkpoint": "step0",
+      "online_steps": 0,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    },
+    {
+      "group": "F2c",
+      "checkpoint": "best",
+      "online_steps": 200704,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    },
+    {
+      "group": "F2c",
+      "checkpoint": "last",
+      "online_steps": 1000000,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    },
+    {
+      "group": "A1b",
+      "checkpoint": "step0",
+      "online_steps": 0,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    },
+    {
+      "group": "A1b",
+      "checkpoint": "best",
+      "online_steps": 751616,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    },
+    {
+      "group": "A1b",
+      "checkpoint": "last",
+      "online_steps": 1000000,
+      "coverage_abs_difference": 0.0,
+      "throughput_abs_difference_bps": 0.0
+    }
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 950001,
+  "training_seeds": [
+    0
+  ],
+  "heldout_test_used": false,
+  "full_resume_checkpoints": "remain on server",
+  "local_weights": "runs/diffusion_followup_1m/{F2b,F2c,A1b}_seed0",
+  "formal_training_started_by_evaluator": false
+}

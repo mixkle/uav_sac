@@ -3,6 +3,7 @@ from dataclasses import dataclass
 import math
 import time
 import torch
+import numpy as np
 from torch import nn
 
 from ..models import disk_transform
@@ -117,7 +118,10 @@ class DiffusionActor(nn.Module):
         std_m = std[:, None] if std.ndim else std
         lm = (-.5*((next_movement-mu_m)/std_m).square()-std_m.log()-.5*math.log(2*math.pi)).sum(-1)
         ls = -.5*((next_scores-mu_s)/std_s).square()-std_s.log()-.5*math.log(2*math.pi)
-        return lm + sum_segments(ls[:, None], encoding.lengths).squeeze(-1)
+        score_lp=sum_segments(ls[:, None], encoding.lengths).squeeze(-1)
+        if self.cfg.diffusion.ablation:
+            self.last_evaluate_parts=(lm.detach(),score_lp.detach())
+        return lm + score_lp
 
     @torch.no_grad()
     def sample(self, obs, generator=None, deterministic=False):
@@ -131,11 +135,12 @@ class DiffusionActor(nn.Module):
         if events:
             events[1].record()
         m = torch.randn((obs.groups, 2), device=device, generator=generator)
-        s = torch.randn((len(obs.candidate_ids),), device=device, generator=generator)
+        s = torch.randn((len(encoded.candidates),), device=device, generator=generator)
         if deterministic:
             m.zero_()
             s.zero_()
         movements, scores, logps = [m], [s], []
+        branch_logps=[]
         for step in reversed(range(self.steps)):
             mu_m, mu_s = self.transition(encoded, m, s, step)
             if deterministic:
@@ -144,6 +149,7 @@ class DiffusionActor(nn.Module):
                 nm = mu_m + self.transition_std[step]*torch.randn(m.shape, device=device, generator=generator)
                 ns = mu_s + self.transition_std[step]*torch.randn(s.shape, device=device, generator=generator)
             logps.append(self.logp_from_mean(encoded.lengths, mu_m, mu_s, nm, ns, step))
+            if self.cfg.diffusion.ablation:branch_logps.append(self.last_sample_parts)
             m, s = nm, ns
             movements.append(m)
             scores.append(s)
@@ -154,9 +160,13 @@ class DiffusionActor(nn.Module):
         if not (torch.isfinite(mchain).all() & torch.isfinite(schain).all() & torch.isfinite(logp).all()):
             raise FloatingPointError("Nonfinite DDPM sample/transition probability")
         command = disk_transform(m)[0].cpu().numpy().reshape(*obs.fixed.shape[:-1], 2)
-        route = offsets(obs.candidate_lengths)
+        motion_only = bool(self.cfg.diffusion.ablation) and not self.cfg.diffusion.ablation.get("score_actions",True)
+        route = offsets(np.zeros(obs.groups,np.int64) if motion_only else obs.candidate_lengths)
         action = ServiceAction(command, s.sigmoid().cpu().numpy(), obs.candidate_ids.copy(), route)
         chain = DiffusionChain(mchain.cpu().numpy(), schain.cpu().numpy(), route.copy(), logp.cpu().numpy())
+        if branch_logps:
+            chain.movement_logp=torch.stack([x[0] for x in branch_logps],1).cpu().numpy()
+            chain.score_logp=torch.stack([x[1] for x in branch_logps],1).cpu().numpy()
         finished = time.perf_counter()
         self.last_sample_timing = dict(
             encoding_seconds=events[0].elapsed_time(events[1])/1000 if events else encoded_at-started,
@@ -168,7 +178,9 @@ class DiffusionActor(nn.Module):
         std = self.transition_std[step]
         lm = (-.5*((nm-mu_m)/std).square()-std.log()-.5*math.log(2*math.pi)).sum(-1)
         ls = -.5*((ns-mu_s)/std).square()-std.log()-.5*math.log(2*math.pi)
-        return lm+sum_segments(ls[:, None], lengths).squeeze(-1)
+        score_lp=sum_segments(ls[:, None], lengths).squeeze(-1)
+        if self.cfg.diffusion.ablation:self.last_sample_parts=(lm.detach(),score_lp.detach())
+        return lm+score_lp
 
     def evaluate_chain(self, obs, chain):
         """Batch all 8 transitions; UE/context encoding computed once per update."""
@@ -193,6 +205,8 @@ class DiffusionActor(nn.Module):
         step = torch.arange(l-1, -1, -1, device=device).repeat(n)
         result = self.logp(expanded, m[:, :-1].reshape(-1, 2), s[row, position],
                            m[:, 1:].reshape(-1, 2), s[row, position+1], step)
+        if self.cfg.diffusion.ablation:
+            self.last_evaluate_parts=tuple(x.reshape(n,l) for x in self.last_evaluate_parts)
         return result.reshape(n, l)
 
     def denoising_loss(self, obs, target_movement, target_scores, *, generator=None, steps=None, noise=None):
@@ -216,6 +230,9 @@ class DiffusionActor(nn.Module):
 
 
 def make_service_actor(cfg):
+    if cfg.diffusion.ablation:
+        from ..system_ablation.policy import make_actor
+        return make_actor(cfg)
     if cfg.algo.name == "gaussian_service_mappo":
         from .gaussian import GaussianServiceActor
         return GaussianServiceActor(cfg)

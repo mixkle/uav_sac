@@ -40,11 +40,16 @@ class GaussianServiceActor(nn.Module):
         return m[:,:2],m[:,2:].clamp(a.log_std_min,a.log_std_max),s[:,0],s[:,1].clamp(a.log_std_min,a.log_std_max)
 
     @staticmethod
-    def joint_logp(enc, params, movement, scores):
+    def joint_logp_parts(enc, params, movement, scores):
         mm,ml,sm,sl = params
         lm = (-.5*((movement-mm)*(-ml).exp()).square()-ml-.5*math.log(2*math.pi)).sum(-1)
         ls = -.5*((scores-sm)*(-sl).exp()).square()-sl-.5*math.log(2*math.pi)
-        return lm+sum_segments(ls[:,None],enc.lengths).squeeze(-1)
+        return lm,sum_segments(ls[:,None],enc.lengths).squeeze(-1)
+
+    @staticmethod
+    def joint_logp(enc, params, movement, scores):
+        lm,ls=GaussianServiceActor.joint_logp_parts(enc,params,movement,scores)
+        return lm+ls
 
     @torch.no_grad()
     def sample(self, obs, generator=None, deterministic=False):
@@ -59,7 +64,8 @@ class GaussianServiceActor(nn.Module):
         mm,ml,sm,sl = params
         m = mm if deterministic else mm+ml.exp()*torch.randn(mm.shape,device=device,generator=generator)
         s = sm if deterministic else sm+sl.exp()*torch.randn(sm.shape,device=device,generator=generator)
-        logp = self.joint_logp(enc,params,m,s)
+        lm,ls = self.joint_logp_parts(enc,params,m,s)
+        logp = lm+ls
         if not (torch.isfinite(m).all() & torch.isfinite(s).all() & torch.isfinite(logp).all()):
             raise FloatingPointError("Nonfinite Gaussian service action")
         sampled_at = time.perf_counter()
@@ -67,9 +73,13 @@ class GaussianServiceActor(nn.Module):
             s.sigmoid().cpu().numpy(),obs.candidate_ids.copy(),offsets(obs.candidate_lengths))
         # Reuse ragged storage with two endpoints; the first is a placeholder,
         # excluded from likelihood. The kind explicitly distinguishes Gaussian.
+        motion_only = bool(self.cfg.diffusion.ablation) and not self.cfg.diffusion.ablation.get("score_actions",True)
         chain = DiffusionChain(torch.stack([torch.zeros_like(m),m],1).cpu().numpy(),
-            torch.stack([torch.zeros_like(s),s],1).cpu().numpy(),offsets(obs.candidate_lengths),
+            torch.stack([torch.zeros_like(s),s],1).cpu().numpy(),offsets(np.zeros(obs.groups,np.int64) if motion_only else obs.candidate_lengths),
             logp[:,None].cpu().numpy(),kind="gaussian")
+        if self.cfg.diffusion.ablation:
+            chain.movement_logp=lm[:,None].cpu().numpy()
+            chain.score_logp=ls[:,None].cpu().numpy()
         self.last_sample_timing = dict(encoding_seconds=(events[0].elapsed_time(events[1])/1000 if events else encoded_at-start),denoising_seconds=0.,
             packing_transfer_seconds=time.perf_counter()-sampled_at,inference_seconds=time.perf_counter()-start)
         return action,chain
@@ -79,6 +89,9 @@ class GaussianServiceActor(nn.Module):
             raise ValueError("Gaussian PPO requires original Gaussian latent samples")
         device = next(self.parameters()).device
         enc = self.encode(obs.tensor(device))
-        return self.joint_logp(enc,self.distribution(enc),
+        lm,ls = self.joint_logp_parts(enc,self.distribution(enc),
             torch.as_tensor(chain.movement[:,-1],device=device),
-            torch.as_tensor(chain.scores[:,-1],device=device))[:,None]
+            torch.as_tensor(chain.scores[:,-1],device=device))
+        if self.cfg.diffusion.ablation:
+            self.last_evaluate_parts=(lm[:,None].detach(),ls[:,None].detach())
+        return (lm+ls)[:,None]

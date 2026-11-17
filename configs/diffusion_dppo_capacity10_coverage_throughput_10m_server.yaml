@@ -264,7 +264,7 @@ diffusion:
   value_clip: 0.2
   microbatch_agents: 16384
   actor_update_devices: []
-  teacher_checkpoint: /home/dym/uav_sac/runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt
+  teacher_checkpoint: /mnt/disk2/dym/uav_sac/runs/mappo_coverage_throughput_capacity10_1m_seed0/best.pt
   teacher_step: 671744
   teacher_action_seed: 980001
   teacher_score_scale_db: 10.0
@@ -437,7 +437,7 @@ diffusion:
   selection_noise_seed: 981001
   pretrain_mov_weight: 1.0
   pretrain_score_weight: 1.0
-  pretrained_checkpoint: /home/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/pretrain/best.pt
+  pretrained_checkpoint: /mnt/disk2/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/pretrain/best.pt
   minimum_free_gib: 15.0
   gpu_limit_gib: 20.0
   heartbeat_seconds: 30.0

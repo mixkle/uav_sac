@@ -1,0 +1,26 @@
+{
+  "files": {
+    "src/uav_research/score_rule_diagnostic.py": "af698c667220aceb9b757d13597f6d7a42420590b705022f5abf63f626133319",
+    "src/uav_research/score_rule_experiment.py": "a681caf7a60d2277840519f471c804dc88baefdb77185bc12972857dd27a8f03",
+    "src/uav_research/score_rule_report.py": "b8c15037170e5cece452e9b59133acb3d42c466dc89d718149e573de6c150828",
+    "scripts/diagnose_score_rules.py": "53599b6aa1aab747b7763867983f176e49ff99187423dfe9510521570755ed8c",
+    "scripts/run_score_rule_worker_server.sh": "fbd631a8b259dc1a53605b6cf48481dc10dcae924639e8f1e463289105b1470f",
+    "scripts/finish_score_rule_s1_parallel_server.sh": "cc2baf54617c01c955499e1f8dd7aea814e1aa3a2b72e8a4bf6830751bb67cb8",
+    "scripts/finish_score_rules_server.sh": "b9f774a4986c37ee47b9e7f1df9857fb9b485aad37cd07ba95e0c1a06d53bab9",
+    "scripts/benchmark_score_rule_inference.py": "738ba629f8b463b3b657fca09311fbbb7aa03cd15f9503fbab16f9f88784fa22",
+    "tests/test_score_rules.py": "6cc8cc1d2a1c21af76bb983198979572b2e2cc7155854ba98f5975201d2740f4",
+    "docs/score_rule_s1_s2.md": "3376b712f56db6214e7f7a8f60e704e9cfea9d67fb62eef4c4f26ae698acbcc6",
+    "requirements/score_diagnostics.txt": "c6e733dc953d38ed83b28539d9db23e626cc30d90c85b9f6ea164422b9068b2f"
+  },
+  "model_hashes": {
+    "best": "8768f613bb86dc4a448e7d58edf612c762e94d67f2d5f9219ab77c56a9ceb3ff",
+    "last": "631ed56ef0997d850d9ba92f85ea74cd670baa22861a988c9f445bf2dde3985d"
+  },
+  "python": "3.11.16",
+  "torch": "2.7.1+cu118",
+  "numpy": "2.2.6",
+  "numba": "0.61.2",
+  "data_root": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "status": "passed"
+}

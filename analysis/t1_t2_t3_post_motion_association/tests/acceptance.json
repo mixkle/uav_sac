@@ -1,0 +1,222 @@
+{
+  "passed": true,
+  "reproduction": [
+    {
+      "checkpoint": "best",
+      "protocol": "T1",
+      "action_seed": 880001,
+      "reproduced": "/mnt/disk2/dym/uav_sac/analysis/diffusion_gaussian_ablation_1m/A3/validation/best/880001",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "best",
+      "protocol": "T2",
+      "action_seed": 880001,
+      "reproduced": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/audits/F2b_frozen/sinr/best/880001",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "best",
+      "protocol": "T1",
+      "action_seed": 880002,
+      "reproduced": "/mnt/disk2/dym/uav_sac/analysis/diffusion_gaussian_ablation_1m/A3/validation/best/880002",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "best",
+      "protocol": "T2",
+      "action_seed": 880002,
+      "reproduced": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/audits/F2b_frozen/sinr/best/880002",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "best",
+      "protocol": "T1",
+      "action_seed": 880003,
+      "reproduced": "/mnt/disk2/dym/uav_sac/analysis/diffusion_gaussian_ablation_1m/A3/validation/best/880003",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "best",
+      "protocol": "T2",
+      "action_seed": 880003,
+      "reproduced": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/audits/F2b_frozen/sinr/best/880003",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "last",
+      "protocol": "T1",
+      "action_seed": 880001,
+      "reproduced": "/mnt/disk2/dym/uav_sac/analysis/diffusion_gaussian_ablation_1m/A3/validation/last/880001",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "last",
+      "protocol": "T2",
+      "action_seed": 880001,
+      "reproduced": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/audits/F2b_frozen/sinr/last/880001",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "last",
+      "protocol": "T1",
+      "action_seed": 880002,
+      "reproduced": "/mnt/disk2/dym/uav_sac/analysis/diffusion_gaussian_ablation_1m/A3/validation/last/880002",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "last",
+      "protocol": "T2",
+      "action_seed": 880002,
+      "reproduced": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/audits/F2b_frozen/sinr/last/880002",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "last",
+      "protocol": "T1",
+      "action_seed": 880003,
+      "reproduced": "/mnt/disk2/dym/uav_sac/analysis/diffusion_gaussian_ablation_1m/A3/validation/last/880003",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    },
+    {
+      "checkpoint": "last",
+      "protocol": "T2",
+      "action_seed": 880003,
+      "reproduced": "/mnt/disk2/dym/uav_sac/runs/diffusion_followup_1m/audits/F2b_frozen/sinr/last/880003",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "disconnection_ratio": 0.0,
+        "discovery_fraction": 0.0,
+        "direct_switches": 0.0,
+        "service_interruptions": 0.0,
+        "service_reconnections": 0.0,
+        "service_age_mean": 0.0
+      }
+    }
+  ],
+  "shadow_states": 76800,
+  "telescoping_max_error": {
+    "coverage": 5.551115123125783e-17,
+    "throughput_bps": 5.960464477539063e-08,
+    "reward": 1.1102230246251565e-16,
+    "direct_switches": 0,
+    "service_interruptions": 0
+  },
+  "p1_coverage_identical_to_t2": true,
+  "p1_minimum_throughput_gain_bps": 0.0,
+  "ue_paths_identical": true,
+  "source_files_unchanged": true,
+  "no_optimizers": true
+}

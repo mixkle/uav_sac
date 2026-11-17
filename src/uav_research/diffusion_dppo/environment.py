@@ -31,6 +31,12 @@ def resolve_topk(before, after, scores, capacity):
 
 
 class ServiceEnvironment(UAVEnvironment):
+    def motion_speed_factor(self, hops):
+        if getattr(self.cfg, '_service_ablation', {}):
+            from ..system_ablation.settings import speed_factor
+            return speed_factor(hops, self.cfg)
+        return super().motion_speed_factor(hops)
+
     def reset(self, seed=None):
         self._initializing = True
         self.service_diagnostics = {}
@@ -74,6 +80,19 @@ class ServiceEnvironment(UAVEnvironment):
                     (self.B.min(1)[group] <= self.cfg.num_uavs))
         self.obs = ServiceObservation(self.obs.fixed, users, self.obs.offsets,
                                       ids, feasible)
+        if getattr(self.cfg, '_service_ablation', {}):
+            from ..system_ablation.settings import options
+            if options(self.cfg)['observation_scope'] == 'global':
+                # Relative coordinates of all nodes plus globally reported hops,
+                # service counts/status. Candidate eligibility stays local.
+                scale = np.array([self.cfg.width,self.cfg.height])
+                rows = []
+                for i in range(self.cfg.num_uavs):
+                    u = np.column_stack([(self.uav_xy-self.uav_xy[i])/scale,
+                        self.B.min(1)/(self.cfg.num_uavs+1),self.counts/self.cfg.capacity])
+                    m = np.column_stack([(self.user_xy-self.uav_xy[i])/scale,self.C.any(0)])
+                    rows.append(np.r_[u.ravel(),m.ravel()])
+                self.obs.global_context = np.asarray(rows,np.float32)
         self.info.update(getattr(self, "service_diagnostics", {}))
         # The legacy field also includes proposal/timing losses in this protocol.
         self.info["feasible_unserved_users"] = self.info["capacity_rejected_users"]
@@ -105,6 +124,8 @@ class ServiceEnvironment(UAVEnvironment):
         self.info["zero_coverage_steps"] = zero_steps
 
     def prepare(self, action):
+        if self.t>=self.cfg.horizon:
+            raise RuntimeError('Episode ended; call reset before stepping again')
         if not isinstance(action, ServiceAction):
             raise ValueError("topk_score requires ServiceAction, not a movement-only array")
         o = self.obs
@@ -124,6 +145,11 @@ class ServiceEnvironment(UAVEnvironment):
             scores[i, ids] = action.scores[lo:hi]
             before[i, ids] = True
         previous_owner = self.owner()
+        from ..system_ablation.settings import options
+        if options(self.cfg)['association'] == 'sinr_topk':
+            # Frozen PRE-move local rule, same timing as learned scores.
+            z = (self.Y-self.cfg.sinr_threshold_db)/10.
+            scores = np.exp(-np.logaddexp(0.,-z))
         self._move(action.movement)
         return before, scores, previous_owner
 
@@ -132,6 +158,14 @@ class ServiceEnvironment(UAVEnvironment):
         h, after = self._graph(links, None)
         solver = resolve_topk if self.cfg.backend == "numba" else resolve_topk.py_func
         c, proposals, valid = solver(before, after, scores, self.cfg.capacity)
+        from ..system_ablation.settings import options
+        if options(self.cfg)['association'] == 'centralized_greedy':
+            # Explicit reference: new candidates after movement, global greedy
+            # ordering, unlike the one-round pre-move protocol.
+            associate = kernels.associate if self.cfg.backend == 'numba' else kernels.associate.py_func
+            c, _, _ = associate(np.where(after,links[2],-np.inf),h,
+                                self.cfg.sinr_threshold_db,self.cfg.capacity)
+            proposals, valid = after.copy(),after.copy()
         owner = np.where(c.any(0), c.argmax(0), -1)
         served = owner >= 0
         same = served & (owner == previous_owner)
@@ -168,12 +202,15 @@ class ServiceEnvironment(UAVEnvironment):
         return self.finish(prepared, physical_links(self.cfg, self.uav_xy, self.user_xy))
 
     def snapshot(self):
-        return dict(super().snapshot(), service_version="topk-score-v1", association=self.C.copy(),
+        return dict(super().snapshot(), service_version="topk-score-v1",
+            service_ablation=copy.deepcopy(getattr(self.cfg,'_service_ablation',{})), association=self.C.copy(),
             service_age=self.service_age.copy(), last_owner=self.last_owner.copy(),
             proposals=self.proposals.copy(), last_scores=self.last_scores.copy(),
             service_diagnostics=copy.deepcopy(self.service_diagnostics))
 
     def restore(self, data):
+        if data.get('service_ablation',{}) != getattr(self.cfg,'_service_ablation',{}):
+            raise ValueError('Snapshot system ablation semantics mismatch')
         if data.get("service_version") != "topk-score-v1":
             raise ValueError("Service snapshot requires actual association and protocol version")
         self.C = np.asarray(data["association"]).copy()

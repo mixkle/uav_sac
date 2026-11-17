@@ -11,8 +11,8 @@ esac
 source "$uav_script_dir/dppo_server_env.sh"
 cd "$uav_dppo_root"
 uav_cfg="$uav_dppo_root/configs/diffusion_dppo_capacity10_coverage_throughput_3m_server${uav_suffix}.yaml"
-uav_src="$uav_dppo_root/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/checkpoints/full_001000000"
-uav_out="$uav_dppo_root/runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0"
+uav_src="$UAV_DATA_ROOT/runs/diffusion_dppo_capacity10_coverage_throughput_1m_seed0/checkpoints/full_001000000"
+uav_out="$UAV_DATA_ROOT/runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0"
 # For an interrupted 3M continuation, use its latest complete checkpoint.
 if [[ -d "$uav_out/checkpoints" ]]; then
   uav_latest="$(find "$uav_out/checkpoints" -maxdepth 1 -type d -name 'full_[0-9]*' | sort | tail -n 1)"

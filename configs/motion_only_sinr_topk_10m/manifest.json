@@ -1,0 +1,29 @@
+{
+  "version": "motion-only-sinr-topk-10m-continuation-v1",
+  "runs": {
+    "M1": {
+      "config": "configs/motion_only_sinr_topk_10m/M1.yaml",
+      "sha256": "9ac926de1b3e850390aa70b9bb35533e5914ca31eeae56b7c9821775b891e768",
+      "output": "runs/motion_only_sinr_topk_10m/M1_seed0",
+      "source_output": "runs/motion_only_sinr_topk_1m/M1_seed0",
+      "source_config": "configs/motion_only_sinr_topk_1m/M1.yaml",
+      "source_config_sha256": "d45c884ac253fc104165521823dd19602c457272f5692fb8280328bdf460da3e",
+      "source_steps": 1000000,
+      "default_physical_gpu": 2
+    },
+    "M2": {
+      "config": "configs/motion_only_sinr_topk_10m/M2.yaml",
+      "sha256": "7e1161d80095ca88472b73bf67d500e1cac5ebfeb0da683bd8b7cfbd1372fee3",
+      "output": "runs/motion_only_sinr_topk_10m/M2_seed0",
+      "source_output": "runs/motion_only_sinr_topk_1m/M2_seed0",
+      "source_config": "configs/motion_only_sinr_topk_1m/M2.yaml",
+      "source_config_sha256": "a8cbe02969aca70e69dc7c90415d62d5a2dbfe56bb6c07fbccfb8977851e256e",
+      "source_steps": 1000000,
+      "default_physical_gpu": 3
+    }
+  },
+  "total_steps": 10000000,
+  "additional_steps": 9000000,
+  "resume": "full model/optimizers/normalizers/environments/RNG/best selection; no reinitialization",
+  "source_runs_preserved": true
+}

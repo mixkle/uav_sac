@@ -1,0 +1,66 @@
+{
+  "version": "m2-motion-neighbor-controls-10m-v1",
+  "reference_config": "configs/motion_only_sinr_topk_10m/M2.yaml",
+  "reference_sha256": "7e1161d80095ca88472b73bf67d500e1cac5ebfeb0da683bd8b7cfbd1372fee3",
+  "reference_output": "runs/motion_only_sinr_topk_10m/M2_seed0",
+  "reference_stage1_output": "runs/motion_only_sinr_topk_1m/M2_seed0",
+  "online_steps": 10000000,
+  "stage1_steps": 1000000,
+  "initialization": "random; normal_reference_residual; no BC or transferred weights",
+  "schedule": "train fresh to 1M; full-state continuation to cumulative 10M automatically",
+  "action_seeds": [
+    880001,
+    880002,
+    880003
+  ],
+  "runs": {
+    "M2-NoHop": {
+      "default_physical_gpu": 0,
+      "default_cpu_affinity": "0-5",
+      "output": "runs/m2_motion_neighbor_controls_10m/M2-NoHop_seed0",
+      "stage1_output": "runs/m2_motion_neighbor_controls_1m/M2-NoHop_seed0",
+      "config": "configs/m2_motion_neighbor_controls_10m/M2-NoHop.yaml",
+      "sha256": "2ee842deb4edc35b76452164f6a98e0361c700e28dd5f2211df1569efb548db9",
+      "fixed_observation_dim": 105,
+      "critic_state_dim": 6292,
+      "stage1_config": "configs/m2_motion_neighbor_controls_10m/M2-NoHop_stage1_1m.yaml",
+      "stage1_sha256": "4cebbee90450cf00fbf0142fe0cd08e765668ab0859e2ed6e812c477a3f582ae"
+    },
+    "M2-N5": {
+      "default_physical_gpu": 1,
+      "default_cpu_affinity": "6-11",
+      "output": "runs/m2_motion_neighbor_controls_10m/M2-N5_seed0",
+      "stage1_output": "runs/m2_motion_neighbor_controls_1m/M2-N5_seed0",
+      "config": "configs/m2_motion_neighbor_controls_10m/M2-N5.yaml",
+      "sha256": "e4fe133b497524efff8f4d70075670f8b91b5ca1878c63cfdce61512691f09b7",
+      "fixed_observation_dim": 153,
+      "critic_state_dim": 6292,
+      "stage1_config": "configs/m2_motion_neighbor_controls_10m/M2-N5_stage1_1m.yaml",
+      "stage1_sha256": "af778ebb27f7978aec80703cefb10fe07a7010b97ceddda1566e7b5ece9bb8ba"
+    },
+    "M2-N7": {
+      "default_physical_gpu": 2,
+      "default_cpu_affinity": "12-17",
+      "output": "runs/m2_motion_neighbor_controls_10m/M2-N7_seed0",
+      "stage1_output": "runs/m2_motion_neighbor_controls_1m/M2-N7_seed0",
+      "config": "configs/m2_motion_neighbor_controls_10m/M2-N7.yaml",
+      "sha256": "875207ef506994702749457b4b073f4f2fa8b71fb76a6f1af76c625c88cdd6f2",
+      "fixed_observation_dim": 201,
+      "critic_state_dim": 6292,
+      "stage1_config": "configs/m2_motion_neighbor_controls_10m/M2-N7_stage1_1m.yaml",
+      "stage1_sha256": "ee66846c89079dcdf059e663c43359ee93719366d94e15ab90b325ba444b4694"
+    },
+    "M2-N9": {
+      "default_physical_gpu": 3,
+      "default_cpu_affinity": "18-23",
+      "output": "runs/m2_motion_neighbor_controls_10m/M2-N9_seed0",
+      "stage1_output": "runs/m2_motion_neighbor_controls_1m/M2-N9_seed0",
+      "config": "configs/m2_motion_neighbor_controls_10m/M2-N9.yaml",
+      "sha256": "9646412a9482669a2ad3cd07a6fe175f769d1009d5d228a32929eb07471d3667",
+      "fixed_observation_dim": 249,
+      "critic_state_dim": 6292,
+      "stage1_config": "configs/m2_motion_neighbor_controls_10m/M2-N9_stage1_1m.yaml",
+      "stage1_sha256": "9defc8743e35a2ba20316bcf09766edb5f2ed63cd89e10cd31fd0f30d8818f2b"
+    }
+  }
+}

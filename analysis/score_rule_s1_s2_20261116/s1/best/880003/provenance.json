@@ -1,0 +1,58 @@
+{
+  "checkpoint": "best",
+  "checkpoint_path": "/mnt/disk2/dym/uav_sac/runs/system_ablation_1m/A3_seed0/best.pt",
+  "checkpoint_sha256": "8768f613bb86dc4a448e7d58edf612c762e94d67f2d5f9219ab77c56a9ceb3ff",
+  "actual_online_steps": 251904,
+  "actor_sha256": "6f811d20e127d9a3018441102205162afecdcb690e04894bdb3f3903793ff46d",
+  "optimizer_created": false,
+  "version": 1,
+  "action_seed": 880003,
+  "repeats": 16,
+  "smoke": false,
+  "reference": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best",
+  "fixed_steps": [
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    325,
+    350,
+    375,
+    400
+  ],
+  "rules_hash": "2cf06623d66f82ccdf79ddd61981cb140f76b1102a2081c19e56c6a38ec9ddef",
+  "weights_unchanged": true,
+  "peak_rss_gib": 1.1003189086914062,
+  "elapsed_seconds": 324.014702167362,
+  "replay_regression": [
+    {
+      "protocol": "T1",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 58.626018431037664,
+      "original_source_sha256": "bab980a6751e34a2d9aedea276d9bc1a2629d933def8614d80990ca3fb3a1fba"
+    },
+    {
+      "protocol": "T2",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 0.0,
+      "original_source_sha256": "b31db4c4976cf52f1f20dac9f4710e19f9ecdff387e707f5ff047a1b40e12b39"
+    }
+  ],
+  "score_format": "Ragged per-snapshot NPZ: all final motion, score logits and sigmoid scores; no padding"
+}

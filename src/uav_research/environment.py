@@ -205,8 +205,7 @@ class UAVEnvironment:
             previous, action, e.width, e.height, e.boundary_penalty_margin_m)
         self.pre_action_hops = self.B.min(1).copy()
         ms = e.motion_scaling
-        self.speed_factor = (hop_speed_factor(self.pre_action_hops, e.num_uavs, ms["min_ratio"], ms["hop_growth"])
-                             if ms["enabled"] else np.ones(e.num_uavs))
+        self.speed_factor = self.motion_speed_factor(self.pre_action_hops)
         self.command_displacement = action * e.max_speed * e.dt
         self.effective_displacement = self.command_displacement.astype(np.float64)*self.speed_factor[:, None]
         # Preserve historical floating arithmetic exactly when disabled.
@@ -233,6 +232,11 @@ class UAVEnvironment:
         self.user_speed_mean = float(np.linalg.norm(next_users - self.user_xy, axis=1).mean() / e.dt)
         self.user_xy = next_users
         self.t += 1
+
+    def motion_speed_factor(self, hops):
+        e, ms = self.cfg, self.cfg.motion_scaling
+        return (hop_speed_factor(hops, e.num_uavs, ms['min_ratio'], ms['hop_growth'])
+                if ms['enabled'] else np.ones(e.num_uavs))
 
     def step(self, action):
         self._move(action)

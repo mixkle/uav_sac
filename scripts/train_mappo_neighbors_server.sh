@@ -19,7 +19,7 @@ case "$CUDA_VISIBLE_DEVICES" in
 esac
 uav_cpu_set="${UAV_CPU_AFFINITY:-0-7}"
 uav_config="$uav_dppo_root/configs/mappo_capacity10_neighbors${uav_neighbors}_1m_server.yaml"
-uav_output="$uav_dppo_root/runs/mappo_capacity10_neighbors${uav_neighbors}_1m_seed0"
+uav_output="$UAV_DATA_ROOT/runs/mappo_capacity10_neighbors${uav_neighbors}_1m_seed0"
 taskset -c "$uav_cpu_set" "$uav_dppo_root/.venv-dppo/bin/python" - "$uav_neighbors" "$uav_config" "$uav_output" <<'PY'
 import json
 import os
@@ -36,13 +36,13 @@ expected['run']['device']='cuda:0'
 if cfg.as_dict()!=expected:
     raise SystemExit('Unexpected changes beyond neighbor_slots/device.')
 output=Path(output)
-if output.resolve().parent!=(Path.cwd()/'runs').resolve():
+if output.resolve().parent!=(Path(os.environ['UAV_DATA_ROOT'])/'runs').resolve():
     raise SystemExit('Output must stay in this project runs directory.')
 if output.exists() and (not output.is_dir() or any(output.iterdir())):
     raise SystemExit('Fresh run requires a new/empty directory; refusing to overwrite or resume.')
 if not torch.cuda.is_available() or torch.cuda.device_count()!=1:
     raise SystemExit('Exactly one visible CUDA GPU is required.')
-if shutil.disk_usage('.').free<15*2**30:
+if shutil.disk_usage(os.environ['UAV_DATA_ROOT']).free<15*2**30:
     raise SystemExit('At least 15 GiB free disk is required.')
 print(json.dumps(dict(check='passed',from_scratch=True,resume=None,seed=cfg.run.seed,
     neighbor_slots=cfg.env.neighbor_slots,fixed_observation=cfg.env.fixed_obs_dim,
@@ -55,8 +55,8 @@ PY
 if [[ "${2:-}" == --check ]]; then
   exit 0
 fi
-mkdir -p "$uav_dppo_root/logs"
-uav_log="$uav_dppo_root/logs/mappo_neighbors${uav_neighbors}_1m_$(date +%Y%m%d_%H%M%S).log"
+mkdir -p "$UAV_DATA_ROOT/logs"
+uav_log="$UAV_DATA_ROOT/logs/mappo_neighbors${uav_neighbors}_1m_$(date +%Y%m%d_%H%M%S).log"
 echo "Starting fresh neighbors=$uav_neighbors 1M run. Console log: $uav_log"
 exec taskset -c "$uav_cpu_set" "$uav_dppo_root/.venv-dppo/bin/python" -u -m uav_research train \
   --config "$uav_config" --output "$uav_output" \

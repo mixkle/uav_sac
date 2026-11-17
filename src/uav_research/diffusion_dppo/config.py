@@ -7,6 +7,8 @@ from ..config import Config, EnvConfig, AlgoConfig, RunConfig
 
 @dataclass
 class DiffusionSettings:
+    # Empty preserves historical contracts. Nonempty selects the isolated 1M suite.
+    ablation: dict = field(default_factory=dict)
     version: str = "set-dppo-topk-v1"
     association: str = "topk_score"
     steps: int = 8
@@ -48,8 +50,15 @@ class DppoConfig(Config):
     def validate(self):
         # Reuse all existing physical/config checks without enabling this
         # algorithm in the legacy Gaussian learner or observation interface.
-        Config(self.env, replace(self.algo, name="mappo"), self.run).validate()
+        if not isinstance(self.diffusion.ablation,dict):
+            raise ValueError('ablation settings must be a mapping')
+        legacy_run = replace(self.run, best_metric='task_return') if self.diffusion.ablation else self.run
+        Config(self.env, replace(self.algo, name="mappo"), legacy_run).validate()
         d, e, a = self.diffusion, self.env, self.algo
+        if d.ablation:
+            from ..system_ablation.settings import validate_settings
+            validate_settings(self)
+        e._service_ablation = dict(d.ablation)
         if a.name not in ("diffusion_dppo", "gaussian_service_mappo") or d.version != "set-dppo-topk-v1":
             raise ValueError("Expected diffusion_dppo / set-dppo-topk-v1")
         if a.name == "gaussian_service_mappo" and d.actor_update_devices:
@@ -121,6 +130,8 @@ def baseline_differences(cfg, baseline):
 def contract(cfg):
     """Strict online resume/deployment semantics, excluding runtime/budget paths."""
     d = asdict(cfg.diffusion)
+    if not d['ablation']:
+        d.pop('ablation')
     for key in ("microbatch_agents", "actor_update_devices", "teacher_checkpoint", "pretrained_checkpoint",
                 "minimum_free_gib", "gpu_limit_gib", "heartbeat_seconds"):
         d.pop(key)

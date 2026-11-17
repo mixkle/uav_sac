@@ -1,0 +1,33 @@
+{
+  "checkpoint": "best",
+  "checkpoint_path": "/mnt/disk2/dym/uav_sac/runs/system_ablation_1m/A3_seed0/best.pt",
+  "checkpoint_sha256": "8768f613bb86dc4a448e7d58edf612c762e94d67f2d5f9219ab77c56a9ceb3ff",
+  "actual_online_steps": 251904,
+  "actor_sha256": "6f811d20e127d9a3018441102205162afecdcb690e04894bdb3f3903793ff46d",
+  "optimizer_created": false,
+  "version": 1,
+  "rule": "R0",
+  "action_seed": 890001,
+  "scenes": [
+    740000,
+    740001,
+    740002,
+    740003,
+    740004,
+    740005,
+    740006,
+    740007,
+    740008,
+    740009,
+    740010,
+    740011,
+    740012,
+    740013,
+    740014,
+    740015
+  ],
+  "horizon": 400,
+  "beta": 0.0,
+  "load_weight": 0.0,
+  "split": "calibration"
+}

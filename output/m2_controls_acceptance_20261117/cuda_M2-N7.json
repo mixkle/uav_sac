@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "groups": [
+    {
+      "group": "M2-N7",
+      "device": "cuda:0",
+      "neighbor_slots": 7,
+      "fixed_observation_dim": 201,
+      "context_input": 266,
+      "critic_input": 6292,
+      "actor_parameters": 163266,
+      "critic_parameters": 1677057,
+      "observed_neighbor_mean": 1.7916666666666667,
+      "observed_more_than_three_fraction": 0.12152777777777778,
+      "logp_recompute_abs_max": 0.0,
+      "command_norm_mean": 0.6444180607795715,
+      "executed_speed_factor_mean": 0.5683580323128948,
+      "optimization_updates": 0,
+      "formal_training_started": false
+    }
+  ],
+  "formal_training_started": false
+}

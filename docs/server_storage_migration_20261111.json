@@ -1,0 +1,577 @@
+{
+  "status": "complete",
+  "date": "2026-11-11",
+  "server": "dym@10.16.63.110",
+  "migration": {
+    "status": "complete",
+    "started": "2026-11-11T02:49:05.046092+00:00",
+    "project": "/home/dym/uav_sac",
+    "data": "/mnt/disk2/dym",
+    "operations": [
+      {
+        "source": "/home/dym/uav_sac/runs",
+        "target": "/mnt/disk2/dym/runs",
+        "bytes": 5373058229,
+        "files": 5610,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/analysis",
+        "target": "/mnt/disk2/dym/analysis",
+        "bytes": 3608988872,
+        "files": 1003,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/output",
+        "target": "/mnt/disk2/dym/output",
+        "bytes": 701658612,
+        "files": 164,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/deployment",
+        "target": "/mnt/disk2/dym/deployment",
+        "bytes": 379202403,
+        "files": 159,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/logs",
+        "target": "/mnt/disk2/dym/logs",
+        "bytes": 912439,
+        "files": 15,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_final_delivery_20261110.tar.gz",
+        "target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_final_delivery_20261110.tar.gz",
+        "bytes": 20009003,
+        "files": 1,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_finetuning_final_20261110.tar.gz",
+        "target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_finetuning_final_20261110.tar.gz",
+        "bytes": 380393986,
+        "files": 1,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_frozen_20261110.tar.gz",
+        "target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_frozen_20261110.tar.gz",
+        "bytes": 491228709,
+        "files": 1,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_light_20261110.tar.gz",
+        "target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_light_20261110.tar.gz",
+        "bytes": 12940174,
+        "files": 1,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_noise_20261110.tar.gz",
+        "target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_noise_20261110.tar.gz",
+        "bytes": 158600757,
+        "files": 1,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_upload_20261110.tar.gz",
+        "target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_upload_20261110.tar.gz",
+        "bytes": 22987,
+        "files": 1,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/tail100_supplement_results.tar.gz",
+        "target": "/mnt/disk2/dym/.cache/legacy_artifacts/tail100_supplement_results.tar.gz",
+        "bytes": 1112358,
+        "files": 1,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/tail100_supplement_upload.tar.gz",
+        "target": "/mnt/disk2/dym/.cache/legacy_artifacts/tail100_supplement_upload.tar.gz",
+        "bytes": 63524574,
+        "files": 1,
+        "status": "moved_verified_linked"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/tail100_sources",
+        "target": "/mnt/disk2/dym/.cache/tail100_sources",
+        "bytes": 110525022,
+        "files": 4,
+        "status": "moved_verified_linked"
+      }
+    ],
+    "before_disk": {
+      "system_free": 35472076800,
+      "data_free": 269239083008
+    },
+    "finished": "2026-11-11T02:51:30.966321+00:00",
+    "after_disk": {
+      "system_free": 46794723328,
+      "data_free": 257914720256
+    },
+    "total_bytes": 11302178125,
+    "total_files": 6963
+  },
+  "code_deployment": {
+    "status": "complete",
+    "files": [
+      {
+        "path": "scripts/dppo_server_env.sh",
+        "before": "3b804c83f9cc3b4af269b37ff59ec1786874ad12246dfe97d6a02f4b1261fa3d",
+        "after": "8325720455df6759cf24280ea7a0847667fb8a8cf01bad0aba2baf3a3f1017c7"
+      },
+      {
+        "path": "scripts/launch_hop_scaling_comparison_server.sh",
+        "before": "cc099292f004683b0e33fff596ee08704027edc1e1badf4a1881439811df8e14",
+        "after": "aa74490714cf9e0acd7ddd5470776fd8f2f8659641d6aadc355f1bb95d708413"
+      },
+      {
+        "path": "scripts/prepare_hop_scaling_diffusion_server.sh",
+        "before": "e911344a8e7fe89a4fca45f890b19eaac45c1918158eb327010f70fa00f1a701",
+        "after": "4ca4947f84af2c91c2321ee358f6a68172f7057ef26dc5ce6389173c9004431b"
+      },
+      {
+        "path": "scripts/resume_diffusion_dppo_10m_server.sh",
+        "before": "43e0afdef3391192bc16174513a34a826bc14c2f0cf4735fa6a55dcba42444a7",
+        "after": "718727f5e2c7e2222612a15e64b66476e855b7e9942836c4a1349edd6589471b"
+      },
+      {
+        "path": "scripts/resume_diffusion_dppo_3m_server.sh",
+        "before": "e79c8158d19fc0732b82997edd8a790b49491d12ad177ac07e8fc3563c4fa476",
+        "after": "36d024309d6f7458475d39725d278611f4ef5738bf5880514b8abe40e742ddb2"
+      },
+      {
+        "path": "scripts/resume_diffusion_dppo_5m_server.sh",
+        "before": "6294e448ab8b319210f2710da8e00965753553e0121b00268819a951e02d62d2",
+        "after": "2e17ca017a59d357bfe4f722efba038bfa4226295958dd86372653f1b8613b93"
+      },
+      {
+        "path": "scripts/server_env.sh",
+        "before": null,
+        "after": "2590df4038e2e540d7c5c043a1d2459cd4b05863766b2390b0464558767bfe4c"
+      },
+      {
+        "path": "scripts/train_diffusion_dppo_server.sh",
+        "before": "ccaacc5cee80a2ad1ed7f5652df60390ff242d65373dd600b545162ed6c0e3b9",
+        "after": "dce8b39bff15879f91f08258c223de93f05c8afb07e2f1299354b2dc8365d96e"
+      },
+      {
+        "path": "scripts/train_hop_scaling_group_server.sh",
+        "before": "e44fef651ea282993d582ec9700ba3809fc092bf5645d81c6de78107ca2abc12",
+        "after": "1ad004839d89af664baf6b94a3c18a77c5b5613ef77cad38e4d78693eaea7f0f"
+      },
+      {
+        "path": "scripts/train_mappo_capacity10_10m_server.sh",
+        "before": "280e3c5f2a4b888a897039c9d17b8948d55f004de1c0a7302ae1e24a361e90fa",
+        "after": "36ddc0c26550ae8c8b79c58310f3af795611372924de966be9eb06c615f724af"
+      },
+      {
+        "path": "scripts/train_mappo_neighbors_server.sh",
+        "before": "1d853724814329a04d12c3626c75addeba03edf3a9ad49427fd455c99a4959f6",
+        "after": "194ab6dd9d86723cfcc120c372a159a56a47b087242a3307b477c2391389d00f"
+      },
+      {
+        "path": "scripts/train_mappo_stability_rewards_server.sh",
+        "before": "24b87a64b59de42d92922f7d74ebdb7d21baf265f25341bb1dcb942074f6e15a",
+        "after": "32c19cba78e8288b0e2f95e526261a6eab36fd8be4d3b52de9ec8d9b5ed3c807"
+      },
+      {
+        "path": "src/uav_research/runtime.py",
+        "before": "d0ce4038a82596c2642e12ed6c87dae3e9fbea955f57354d839fb30f8ea6de1f",
+        "after": "8b197256ab5570e8d5e40563b26bc1142dacb28f5c3285f41eddd96ed499f0b2"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_3m_server_dual.yaml",
+        "before": "d02cd09a0493df592084132992ac227bc9699d35c0d67b61a324051d040bb7ec",
+        "after": "aed22da9d9247e7206428f9ab2e9a165e726e74acd0dd91cb4fd5496404fcb55"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_10m_server.yaml",
+        "before": "582f7a30c165dd2a4bd676c6d8fb66c6eb7aac7505df96b100d1ed9b915ff81b",
+        "after": "155757cb658c9acbf3c8628c19bd0adcfa330abfe620c2f2bc3270be982b7dfc"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_3m_server.yaml",
+        "before": "bcf289ca90fbbfc75ce071c384dd05c56e4ff6c66de92d47c6bb7b152e3003e8",
+        "after": "46dcb34ea511133ceb507806a21b8ceaf6844467c47c5474acd47241f09e03dd"
+      },
+      {
+        "path": "configs/diffusion_dppo_hop_scaling_capacity10_10m_server.yaml",
+        "before": "fa3462a06db6eada7ff552b481ceb61d7986c394222fb0276c9c05383b1514da",
+        "after": "b5f47143e7c9434fe03e96f3bff34d2ff6dbbf25d5f7210f11026c7f63f06741"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_5m_server.yaml",
+        "before": "00167cf628e30a426c3d6a24c490582a2a9758a83a43e44f9f08ae66e69131bd",
+        "after": "3c7959f32ce7dd8470f69c47d48bda46b0e92c7fe57e3e12fc94cab774c8c4eb"
+      },
+      {
+        "path": "configs/gaussian_mappo_topk_hop_scaling_capacity10_10m_server.yaml",
+        "before": "d6106815195cbc26226783089f51f486bd52b34be0d84d7884f2d71145cddb3e",
+        "after": "e31be0ebc9a99d151126a4e640221d84e88d1c5814e7fdea6ed86ee54f3924ac"
+      },
+      {
+        "path": "scripts/migrate_server_results.py",
+        "before": "d7c742f36399c9cc698bb76e06e9b686a6e5a160d602b2b56c06eccc8ea751ea",
+        "after": "d7c742f36399c9cc698bb76e06e9b686a6e5a160d602b2b56c06eccc8ea751ea"
+      },
+      {
+        "path": "tests/test_server_storage_paths.py",
+        "before": null,
+        "after": "62bb795d73977ba6b672f23f1ccc8e6b96a00099408e8530d1f8c3c64063c57e"
+      },
+      {
+        "path": "docs/server_storage_20261111.md",
+        "before": null,
+        "after": "d67b50913da26613c68497f2300219be1bc9aa4cedf33231090f912e1d12aa7e"
+      },
+      {
+        "path": "docs/server_execution.md",
+        "before": null,
+        "after": "bb44af84ef86020d737f8a73bce7711eee64da9fc80c5810be0a97c972171368"
+      },
+      {
+        "path": "docs/hop_scaling_joint_service_comparison.md",
+        "before": "204d374e3ec7005bd883169a7cd5c704dfc1a7cbd7a94bbcefa962e6062649a2",
+        "after": "a2a7642617a0663d1ea09cc639d2dbabe9294419241c4d1ae90e8f2632f3c43b"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_1m_server.yaml",
+        "before": "d038a72876785ee0695a76a65ba1991d957697a7ccc8d155f797b6e90d71fd41",
+        "after": "d1a430bd64a654b9cb1652c1d8a1517bf435fef13d97f325c6a504f3dfc93740",
+        "note": "Only paths changed; remote tuning preserved"
+      }
+    ]
+  },
+  "configuration_paths_only_verified": [
+    "diffusion_dppo_capacity10_coverage_throughput_10m_server.yaml",
+    "diffusion_dppo_capacity10_coverage_throughput_1m_server.yaml",
+    "diffusion_dppo_capacity10_coverage_throughput_3m_server.yaml",
+    "diffusion_dppo_capacity10_coverage_throughput_3m_server_dual.yaml",
+    "diffusion_dppo_capacity10_coverage_throughput_5m_server.yaml",
+    "diffusion_dppo_hop_scaling_capacity10_10m_server.yaml",
+    "gaussian_mappo_topk_hop_scaling_capacity10_10m_server.yaml"
+  ],
+  "experiment_contracts_unchanged": true,
+  "local_tests_passed": 11,
+  "server_path_tests_passed": 3,
+  "current_free_bytes": {
+    "system": 46794702848,
+    "data": 257882128384
+  },
+  "initial_verification": {
+    "status": "passed",
+    "default_data_root": "/mnt/disk2/dym",
+    "legacy_links": 5,
+    "model_checks": [
+      {
+        "path": "/mnt/disk2/dym/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/best.pt",
+        "kind": "dppo_model",
+        "env_steps": 7501824
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/last.pt",
+        "kind": "dppo_model",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/best.pt",
+        "kind": "dppo_model",
+        "env_steps": 970752
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/last.pt",
+        "kind": "dppo_model",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/best.pt",
+        "kind": "dppo_model",
+        "env_steps": 9550656
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/last.pt",
+        "kind": "dppo_model",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/mappo_coverage_throughput_capacity10_10m_seed0/best.pt",
+        "kind": "model",
+        "env_steps": 3821568
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/mappo_coverage_throughput_capacity10_10m_seed0/last.pt",
+        "kind": "model",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/checkpoints/full_010000000",
+        "kind": "dppo_full",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/checkpoints/full_010000000",
+        "kind": "dppo_full",
+        "env_steps": 10000000
+      }
+    ],
+    "teacher_and_pretrain_readable": true,
+    "atomic_save_load_passed": true,
+    "formal_training_started": false,
+    "cache_paths": {
+      "TMPDIR": "/mnt/disk2/dym/.cache/tmp",
+      "XDG_CACHE_HOME": "/mnt/disk2/dym/.cache",
+      "NUMBA_CACHE_DIR": "/mnt/disk2/dym/.cache/numba",
+      "PYTHONPYCACHEPREFIX": "/mnt/disk2/dym/.cache/pycache"
+    }
+  },
+  "verification": {
+    "status": "passed",
+    "default_data_root": "/mnt/disk2/dym/uav_sac",
+    "legacy_links": 5,
+    "model_checks": [
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/best.pt",
+        "kind": "dppo_model",
+        "env_steps": 7501824
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/last.pt",
+        "kind": "dppo_model",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/best.pt",
+        "kind": "dppo_model",
+        "env_steps": 970752
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/last.pt",
+        "kind": "dppo_model",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/best.pt",
+        "kind": "dppo_model",
+        "env_steps": 9550656
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/diffusion_dppo_capacity10_coverage_throughput_10m_seed0/last.pt",
+        "kind": "dppo_model",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/mappo_coverage_throughput_capacity10_10m_seed0/best.pt",
+        "kind": "model",
+        "env_steps": 3821568
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/mappo_coverage_throughput_capacity10_10m_seed0/last.pt",
+        "kind": "model",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/checkpoints/full_010000000",
+        "kind": "dppo_full",
+        "env_steps": 10000000
+      },
+      {
+        "path": "/mnt/disk2/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/checkpoints/full_010000000",
+        "kind": "dppo_full",
+        "env_steps": 10000000
+      }
+    ],
+    "teacher_and_pretrain_readable": true,
+    "atomic_save_load_passed": true,
+    "formal_training_started": false,
+    "cache_paths": {
+      "TMPDIR": "/mnt/disk2/dym/uav_sac/.cache/tmp",
+      "XDG_CACHE_HOME": "/mnt/disk2/dym/uav_sac/.cache",
+      "NUMBA_CACHE_DIR": "/mnt/disk2/dym/uav_sac/.cache/numba",
+      "PYTHONPYCACHEPREFIX": "/mnt/disk2/dym/uav_sac/.cache/pycache"
+    }
+  },
+  "current_data_root": "/mnt/disk2/dym/uav_sac",
+  "namespace_correction": {
+    "status": "complete",
+    "previous_data_root": "/mnt/disk2/dym",
+    "data_root": "/mnt/disk2/dym/uav_sac",
+    "same_filesystem_rename": true,
+    "original_files_sha256_verified": 6963,
+    "moved_directories": [
+      "runs",
+      "analysis",
+      "output",
+      "deployment",
+      "logs",
+      ".cache",
+      "migration_20261111"
+    ],
+    "legacy_links": [
+      {
+        "source": "/home/dym/uav_sac/runs",
+        "old_target": "/mnt/disk2/dym/runs",
+        "new_target": "/mnt/disk2/dym/uav_sac/runs"
+      },
+      {
+        "source": "/home/dym/uav_sac/analysis",
+        "old_target": "/mnt/disk2/dym/analysis",
+        "new_target": "/mnt/disk2/dym/uav_sac/analysis"
+      },
+      {
+        "source": "/home/dym/uav_sac/output",
+        "old_target": "/mnt/disk2/dym/output",
+        "new_target": "/mnt/disk2/dym/uav_sac/output"
+      },
+      {
+        "source": "/home/dym/uav_sac/deployment",
+        "old_target": "/mnt/disk2/dym/deployment",
+        "new_target": "/mnt/disk2/dym/uav_sac/deployment"
+      },
+      {
+        "source": "/home/dym/uav_sac/logs",
+        "old_target": "/mnt/disk2/dym/logs",
+        "new_target": "/mnt/disk2/dym/uav_sac/logs"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_final_delivery_20261110.tar.gz",
+        "old_target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_final_delivery_20261110.tar.gz",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/legacy_artifacts/diagnosis_final_delivery_20261110.tar.gz"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_finetuning_final_20261110.tar.gz",
+        "old_target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_finetuning_final_20261110.tar.gz",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/legacy_artifacts/diagnosis_finetuning_final_20261110.tar.gz"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_frozen_20261110.tar.gz",
+        "old_target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_frozen_20261110.tar.gz",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/legacy_artifacts/diagnosis_frozen_20261110.tar.gz"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_light_20261110.tar.gz",
+        "old_target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_light_20261110.tar.gz",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/legacy_artifacts/diagnosis_light_20261110.tar.gz"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_noise_20261110.tar.gz",
+        "old_target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_noise_20261110.tar.gz",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/legacy_artifacts/diagnosis_noise_20261110.tar.gz"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/diagnosis_upload_20261110.tar.gz",
+        "old_target": "/mnt/disk2/dym/.cache/legacy_artifacts/diagnosis_upload_20261110.tar.gz",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/legacy_artifacts/diagnosis_upload_20261110.tar.gz"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/tail100_supplement_results.tar.gz",
+        "old_target": "/mnt/disk2/dym/.cache/legacy_artifacts/tail100_supplement_results.tar.gz",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/legacy_artifacts/tail100_supplement_results.tar.gz"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/tail100_supplement_upload.tar.gz",
+        "old_target": "/mnt/disk2/dym/.cache/legacy_artifacts/tail100_supplement_upload.tar.gz",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/legacy_artifacts/tail100_supplement_upload.tar.gz"
+      },
+      {
+        "source": "/home/dym/uav_sac/.cache/tail100_sources",
+        "old_target": "/mnt/disk2/dym/.cache/tail100_sources",
+        "new_target": "/mnt/disk2/dym/uav_sac/.cache/tail100_sources"
+      }
+    ],
+    "flat_project_aliases_retained": false,
+    "other_project_data_touched": false
+  },
+  "namespace_code_deployment": {
+    "status": "complete",
+    "files": [
+      {
+        "path": "scripts/dppo_server_env.sh",
+        "before": "8325720455df6759cf24280ea7a0847667fb8a8cf01bad0aba2baf3a3f1017c7",
+        "after": "bb7adc61ead324c5cab034975a86d4c16f2410b5968f9a6635834307c1e75891"
+      },
+      {
+        "path": "src/uav_research/runtime.py",
+        "before": "8b197256ab5570e8d5e40563b26bc1142dacb28f5c3285f41eddd96ed499f0b2",
+        "after": "3a7599af3159d072133e03858ac8e1aa156a384973a2f2ea2825be958427f7db"
+      },
+      {
+        "path": "tests/test_server_storage_paths.py",
+        "before": "62bb795d73977ba6b672f23f1ccc8e6b96a00099408e8530d1f8c3c64063c57e",
+        "after": "8950b112271db9f2e0706c200eba3ed8cf6e44f9bce4c1d9a31ec60a028952e8"
+      },
+      {
+        "path": "scripts/migrate_server_results.py",
+        "before": "d7c742f36399c9cc698bb76e06e9b686a6e5a160d602b2b56c06eccc8ea751ea",
+        "after": "03ff73a2a995e9f234f28520aab6cb516d72ec217615b201367aa6ea21c97d2c"
+      },
+      {
+        "path": "docs/server_storage_20261111.md",
+        "before": "d67b50913da26613c68497f2300219be1bc9aa4cedf33231090f912e1d12aa7e",
+        "after": "3149dd06bf306629dc781246d6b1e6000322eed66d5f9eb66bda34826d154ccb"
+      },
+      {
+        "path": "docs/server_execution.md",
+        "before": "bb44af84ef86020d737f8a73bce7711eee64da9fc80c5810be0a97c972171368",
+        "after": "3c1b6a3efc0324aefe386fb82fdfee36520e3ba9ae6381ea8b4c0bcc2bc8416c"
+      },
+      {
+        "path": "docs/hop_scaling_joint_service_comparison.md",
+        "before": "a2a7642617a0663d1ea09cc639d2dbabe9294419241c4d1ae90e8f2632f3c43b",
+        "after": "88c2678db1060a8ba247019d2cc8b877a91e72036d2a47c240a252d848eefb42"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_3m_server_dual.yaml",
+        "before": "aed22da9d9247e7206428f9ab2e9a165e726e74acd0dd91cb4fd5496404fcb55",
+        "after": "6593834d65f24307accd1e6c16fa2d24f1518cb068f1111bdb8d6d993de23da8"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_10m_server.yaml",
+        "before": "155757cb658c9acbf3c8628c19bd0adcfa330abfe620c2f2bc3270be982b7dfc",
+        "after": "3e3d26002d7fcb728367716965625ae8d922bdf5f92ec85f77db6969e232edaa"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_3m_server.yaml",
+        "before": "46dcb34ea511133ceb507806a21b8ceaf6844467c47c5474acd47241f09e03dd",
+        "after": "1488504a0930b3798dbf0698b37187b92b5db8e5a3f23b65767282b482d802fc"
+      },
+      {
+        "path": "configs/diffusion_dppo_hop_scaling_capacity10_10m_server.yaml",
+        "before": "b5f47143e7c9434fe03e96f3bff34d2ff6dbbf25d5f7210f11026c7f63f06741",
+        "after": "627377a72f17b752e708159908a0d281f2693ff9181d7636e97b738510450e2c"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_5m_server.yaml",
+        "before": "3c7959f32ce7dd8470f69c47d48bda46b0e92c7fe57e3e12fc94cab774c8c4eb",
+        "after": "030130ff9cc7e55248361980517a26b955061d20024f4c88c6563d9341772605"
+      },
+      {
+        "path": "configs/gaussian_mappo_topk_hop_scaling_capacity10_10m_server.yaml",
+        "before": "e31be0ebc9a99d151126a4e640221d84e88d1c5814e7fdea6ed86ee54f3924ac",
+        "after": "a5da8eeb054db04c1d3e7c249e69c56d18ec71977c171d86e1689b7436182f2a"
+      },
+      {
+        "path": "configs/diffusion_dppo_capacity10_coverage_throughput_1m_server.yaml",
+        "before": "d1a430bd64a654b9cb1652c1d8a1517bf435fef13d97f325c6a504f3dfc93740",
+        "after": "511b83ce9055bc44f85e4d467429e243d2e3b56ef3c1cbf59f8c54978d2bae1c",
+        "remote_tuning_preserved": true
+      }
+    ]
+  },
+  "namespace_configuration_contracts_verified": [
+    "diffusion_dppo_capacity10_coverage_throughput_5m_server.yaml",
+    "diffusion_dppo_capacity10_coverage_throughput_10m_server.yaml",
+    "diffusion_dppo_hop_scaling_capacity10_10m_server.yaml",
+    "diffusion_dppo_capacity10_coverage_throughput_3m_server.yaml",
+    "diffusion_dppo_capacity10_coverage_throughput_1m_server.yaml",
+    "gaussian_mappo_topk_hop_scaling_capacity10_10m_server.yaml",
+    "diffusion_dppo_capacity10_coverage_throughput_3m_server_dual.yaml"
+  ]
+}

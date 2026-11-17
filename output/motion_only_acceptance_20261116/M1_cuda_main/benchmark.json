@@ -1,0 +1,20 @@
+{
+  "device": "cuda:0",
+  "vector_steps": 128,
+  "environments": 16,
+  "joint_transitions": 2048,
+  "inference_seconds": 0.8801436424255371,
+  "environment_seconds": 6.466287232935429,
+  "results": [
+    {
+      "microbatch_agents": 4096,
+      "update_seconds": 4.413377713412046,
+      "estimated_online_training_seconds_excluding_validation": 5745.266152718337,
+      "peak_rss_mib": 1333.2734375,
+      "sum_process_peak_rss_mib": 1333.2734375,
+      "peak_gpu_mib": 208.46435546875
+    }
+  ],
+  "note": "Rough linear estimate; short minibatches and excluded validation/IO limit accuracy",
+  "actor_parameters": 159172
+}

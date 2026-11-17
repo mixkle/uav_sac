@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "all_uploaded_hashes_match": true,
+  "files": 13,
+  "formal_training_started": false,
+  "main_scene_joint_transitions_per_group": 2048,
+  "cpu_continuous_resume_and_exports": "passed",
+  "cuda_main_ppo_updates": "passed",
+  "server_tests": "28 passed in 42.19s",
+  "peak_gpu_mib": {
+    "M1": 208.46435546875,
+    "M2": 359.6162109375
+  },
+  "peak_rss_mib": {
+    "M1": 1333.2734375,
+    "M2": 1324.1640625
+  }
+}

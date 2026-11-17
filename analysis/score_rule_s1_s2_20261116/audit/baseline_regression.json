@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "model_hashes": {
+    "best": "8768f613bb86dc4a448e7d58edf612c762e94d67f2d5f9219ab77c56a9ceb3ff",
+    "last": "631ed56ef0997d850d9ba92f85ea74cd670baa22861a988c9f445bf2dde3985d"
+  },
+  "baseline_replays": [
+    {
+      "protocol": "T1",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 52.87913001142442,
+      "original_source_sha256": "d87e3c9afa1b2b2e2c7a9c17d199e5ff82495d6a3028656d7a454da8a1041da2"
+    },
+    {
+      "protocol": "T2",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 0.0,
+      "original_source_sha256": "beabe194f2d51e5b362bb2b3fed3e11a7854583c4e92cf8f133d5fd57b60a113"
+    },
+    {
+      "protocol": "T1",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 53.3906755130738,
+      "original_source_sha256": "a0be8c9563dfd8078afc8f2f9be735ec21b7f474b638ef6cdae282e46e55a633"
+    },
+    {
+      "protocol": "T2",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 0.0,
+      "original_source_sha256": "a66c55992c5b76a821e9b72522af786329f01686e13307896b171d46b729756a"
+    },
+    {
+      "protocol": "T1",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 58.626018431037664,
+      "original_source_sha256": "bab980a6751e34a2d9aedea276d9bc1a2629d933def8614d80990ca3fb3a1fba"
+    },
+    {
+      "protocol": "T2",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 0.0,
+      "original_source_sha256": "b31db4c4976cf52f1f20dac9f4710e19f9ecdff387e707f5ff047a1b40e12b39"
+    },
+    {
+      "protocol": "T1",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 52.01172515191138,
+      "original_source_sha256": "63c75b2c8b4224280caf49d1a4a14cfbc683f889c1656fc54efc383ebdefd0f1"
+    },
+    {
+      "protocol": "T2",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 0.0,
+      "original_source_sha256": "f66068d33ff6f42a00828f3cc2ce3beb15a79914a1b32c6116be3a6ea041dc13"
+    },
+    {
+      "protocol": "T1",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 52.35456420853734,
+      "original_source_sha256": "7d97d2a8c37f8a4c5321ba3341431a658784d98af476b9424b1b462abf9362a1"
+    },
+    {
+      "protocol": "T2",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 0.0,
+      "original_source_sha256": "aba6644914a83302ec2f43d19c8f62d6081400bc5a1f360f3718348515062910"
+    },
+    {
+      "protocol": "T1",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 51.41642616316676,
+      "original_source_sha256": "a5d279e9a50a66c91e6973905df3f9e5744a8f9642d1aaa449784605aa10a85b"
+    },
+    {
+      "protocol": "T2",
+      "max_absolute_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "ue_path_sha256": "a0270543bb3eb8464bfb38c4647e612caf0cb1637fcf2b93a8a2f0d8ba61c086",
+      "sampled_seconds": 0.0,
+      "original_source_sha256": "4794b3ce023882acd9e877e1839ac846df0825c39749baa4dd73cb8c0e07c898"
+    }
+  ],
+  "all_six_reference_paths_exact": true,
+  "weights_unchanged": true,
+  "optimizer_created": false,
+  "rule_lock_sha256": "2cf06623d66f82ccdf79ddd61981cb140f76b1102a2081c19e56c6a38ec9ddef",
+  "confirmation_new_scenes": [
+    750000,
+    750001,
+    750002,
+    750003,
+    750004,
+    750005,
+    750006,
+    750007,
+    750008,
+    750009,
+    750010,
+    750011,
+    750012,
+    750013,
+    750014,
+    750015,
+    750016,
+    750017,
+    750018,
+    750019,
+    750020,
+    750021,
+    750022,
+    750023,
+    750024,
+    750025,
+    750026,
+    750027,
+    750028,
+    750029,
+    750030,
+    750031
+  ],
+  "development_new_transitions": 230400,
+  "confirmation_new_transitions": 307200,
+  "calibration_transitions": 12800,
+  "fresh_actor_r0_regression": "audit/fresh_r0_regression.json",
+  "note": "No learner/critic/optimizer instantiated. Physical exogenous UE paths agree across rules."
+}

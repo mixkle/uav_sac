@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-12",
+  "status": "passed",
+  "formal_training_started": false,
+  "independent_required_runs": 18,
+  "optional_runs": [
+    "C4"
+  ],
+  "local_main_scene": {
+    "groups": 19,
+    "transitions_per_group": 32,
+    "ppo_updates_per_group": 1,
+    "num_uavs": 18,
+    "num_users": 150,
+    "local_peak_rss_mib": 529.78125
+  },
+  "server_cuda": {
+    "groups": 19,
+    "transitions_per_group": 32,
+    "ppo_updates_per_group": 1,
+    "peak_rss_mib": 1251.63671875,
+    "peak_pytorch_allocated_mib": 137.07861328125
+  },
+  "server_tests": "..............................................................           [100%]\n62 passed in 134.98s (0:02:14)",
+  "legacy_contracts": "Existing Diffusion/Gaussian Hop10M best still load; no historical weights changed",
+  "caveat": "Probes override BC/actor initialization with random weights and use 1 PPO epoch/minibatch; do not reuse them as formal initializations or extrapolate full-rollout memory/runtime.",
+  "server_code": "/home/dym/uav_sac",
+  "server_data": "/mnt/disk2/dym/uav_sac",
+  "deployment_receipt": "/mnt/disk2/dym/uav_sac/deployment/system_ablation_1m_20261112/deployment.json",
+  "correctness": [
+    "probability recomputation / branch sum / per UAV ratios",
+    "C2/C3 context truncation without service-candidate truncation",
+    "D3 ignored score action, D4/F2a no score coordinates",
+    "same G0 demonstrations and latent labels for A3/A5/F2a",
+    "save-resume matches uninterrupted CPU execution",
+    "frozen evaluation and saved-data report rebuild",
+    "PopArt/time-factor and legacy protocol regression"
+  ],
+  "local_new_tests": 37
+}

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "scripts/motion_only_comparison.py": "cc3c7d299d0b1ef4332da6c1eb3708542240660139eada489eb95f3f69e900eb",
+    "scripts/build_motion_only_10m_configs.py": "4d9e1d48a92e6a4c2b210c8ec2161d0745cb2a5d3cdbf07642575b92d90d5fd3",
+    "scripts/resume_motion_only_10m.py": "890b52be36172889a0c94b7e4f3f50434e36b95978ed05ff106bf60c4c08d502",
+    "scripts/resume_motion_only_10m_server.sh": "f7dc125d4789246bf855aa44ca07464cf1d57c61e4a77c2d0bed6155c5c911e7",
+    "scripts/launch_motion_only_server.sh": "f1c430f77cb364423478b7837b7aced9f46d643ed73b1a084f4ad6e6bcdf2bcb",
+    "scripts/launch_motion_only_10m_server.sh": "2ff6e9afdcb2a91c47fa67058842a65414a82938b5622acc5fe90635704d4928",
+    "tests/test_motion_only_continuation.py": "2411d407ef531a3b9637c46390cb95725bd323d1836310de5593847411e7479b",
+    "docs/motion_only_sinr_topk_10m.md": "5387890d66b1e3a4dd4657983a31487021d7a5a3d53b2b033aec12a9101e9457",
+    "docs/motion_only_sinr_topk_1m.md": "ae9ea0ea42cc882d6f69bb8b4581c30306864eeaf62e2e625e6534e1acd7be54",
+    "docs/system_ablation_1m.md": "7f5f0f69d3ce15fb225453731cfa9914aae61c145ed42aa0bf69d39e6fa8b698",
+    "configs/motion_only_sinr_topk_10m/M2.yaml": "7e1161d80095ca88472b73bf67d500e1cac5ebfeb0da683bd8b7cfbd1372fee3",
+    "configs/motion_only_sinr_topk_10m/M1.yaml": "9ac926de1b3e850390aa70b9bb35533e5914ca31eeae56b7c9821775b891e768",
+    "configs/motion_only_sinr_topk_10m/manifest.json": "b17655df8a6c6d0fd9e1515f8f3c8ae9885f0f402f89cda849a30e43c59dac1d"
+  },
+  "local_tests": {
+    "passed": 16,
+    "seconds": 16.35
+  },
+  "formal_training_started": false
+}

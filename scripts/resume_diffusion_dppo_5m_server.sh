@@ -10,8 +10,8 @@ export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 source "$uav_script_dir/dppo_server_env.sh"
 cd "$uav_dppo_root"
 uav_cfg="$uav_dppo_root/configs/diffusion_dppo_capacity10_coverage_throughput_5m_server.yaml"
-uav_src="$uav_dppo_root/runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0/checkpoints/full_003000000"
-uav_out="$uav_dppo_root/runs/diffusion_dppo_capacity10_coverage_throughput_5m_seed0"
+uav_src="$UAV_DATA_ROOT/runs/diffusion_dppo_capacity10_coverage_throughput_3m_seed0/checkpoints/full_003000000"
+uav_out="$UAV_DATA_ROOT/runs/diffusion_dppo_capacity10_coverage_throughput_5m_seed0"
 # Prevent two instances of this launcher from updating the same output.
 exec 9>"$uav_dppo_root/.cache/dppo-5m.lock"
 if ! flock -n 9; then

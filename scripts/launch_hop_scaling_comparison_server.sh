@@ -30,12 +30,13 @@ PYCPU
 for uav_gpu in "${uav_gpus[@]}";do [[ "$uav_gpu" =~ ^[0-9]+$ ]] && nvidia-smi -i "$uav_gpu" --query-gpu=name --format=csv,noheader;done
 "$uav_dppo_root/.venv-dppo/bin/python" - <<'PY'
 from pathlib import Path
-import shutil,json
+import shutil,json,os
 from uav_research.config import load_config
 from uav_research.diffusion_dppo.storage import load
 from uav_research.diffusion_dppo.config import contract
 from uav_research.topk_diagnostic import file_hash
 root=Path('/home/dym/uav_sac')
+data_root=Path(os.environ['UAV_DATA_ROOT'])
 a=load_config(root/'configs/diffusion_dppo_hop_scaling_capacity10_10m_server.yaml')
 b=load_config(root/'configs/gaussian_mappo_topk_hop_scaling_capacity10_10m_server.yaml')
 assert a.env==b.env and a.run==b.run and a.algo.actor_lr==b.algo.actor_lr==1e-4
@@ -53,18 +54,18 @@ if dataset['teacher']['sha256']!=file_hash(a.diffusion.teacher_checkpoint):raise
 if pretrained['provenance']['dataset_sha256']!=file_hash(dataset_path):raise ValueError('Pretraining data changed')
 load(pretrain_dir/'last.pt',a,{'dppo_pretrain'})
 for name in ('diffusion_dppo_hop_scaling_capacity10_10m','gaussian_mappo_topk_hop_scaling_capacity10_10m'):
- out=root/'runs'/f'{name}_seed0'
+ out=data_root/'runs'/f'{name}_seed0'
  if any((out/f).exists() for f in ('last.pt','best.pt','manifest.json','step0.pt')):raise FileExistsError(f'Use explicit resume: {out}')
 # Two online rollouts, recent checkpoints, logs and evaluation outputs; demos
 # already exist. Reserve 4 GiB for outputs plus 15 GiB untouched free space.
-if shutil.disk_usage(root).free<19*2**30:raise OSError('Need at least 19 GiB free before paired online run')
+if shutil.disk_usage(data_root).free<19*2**30:raise OSError('Need at least 19 GiB free before paired online run')
 print('Paired configurations and new pretrained artifact verified')
 PY
 for uav_session in hop-diffusion hop-gaussian;do
  if tmux -S "$uav_tmux_socket" has-session -t "$uav_session" 2>/dev/null;then echo "Existing tmux session: $uav_session" >&2;exit 1;fi
 done
 [[ "${1:-}" == --check ]] && exit 0
-mkdir -p "$uav_dppo_root/runs/hop_scaling_launch_logs"
+mkdir -p "$UAV_DATA_ROOT/runs/hop_scaling_launch_logs"
 uav_started=()
 trap 'for s in "${uav_started[@]}";do tmux -S "$uav_tmux_socket" send-keys -t "$s" C-c 2>/dev/null || true;done' ERR
 for uav_index in 0 1;do
@@ -72,9 +73,9 @@ for uav_index in 0 1;do
  printf -v uav_command 'cd %q && CUDA_VISIBLE_DEVICES=%q UAV_CPU_AFFINITY=%q bash %q %q > %q 2>&1' \
    "$uav_dppo_root" "${uav_gpus[$uav_index]}" "${uav_cpus[$uav_index]}" \
    "$uav_script_dir/train_hop_scaling_group_server.sh" "$uav_group" \
-   "$uav_dppo_root/runs/hop_scaling_launch_logs/${uav_group}.log"
+   "$UAV_DATA_ROOT/runs/hop_scaling_launch_logs/${uav_group}.log"
  tmux -S "$uav_tmux_socket" new-session -d -s "hop-$uav_group" "$uav_command"
  uav_started+=("hop-$uav_group")
 done
 trap - ERR
-printf 'Started hop-diffusion and hop-gaussian. Logs: %s/runs/hop_scaling_launch_logs/\n' "$uav_dppo_root"
+printf 'Started hop-diffusion and hop-gaussian. Logs: %s/runs/hop_scaling_launch_logs/\n' "$UAV_DATA_ROOT"

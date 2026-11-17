@@ -16,7 +16,7 @@
 
 ## 先准备扩散示范与预训练
 
-服务器 `/home/dym/uav_sac`，依赖 `.venv-dppo`。缓存、临时文件、数据均在 `/home/dym`。准备默认GPU0、CPU0–11：
+服务器代码 `/home/dym/uav_sac`，依赖 `.venv-dppo`。自2026-11-11起，数据、结果、缓存及临时文件默认保存在 `/mnt/disk2/dym/uav_sac`；旧结果路径保留软链接。[迁移说明](server_storage_20261111.md)。准备默认GPU0、CPU0–11：
 
 ```bash
 cd /home/dym/uav_sac
@@ -45,10 +45,10 @@ UAV_HOP_GPUS=1,3 UAV_HOP_CPUSETS='0-11|12-23' bash scripts/launch_hop_scaling_co
 ```
 
 在线数据分别为：
-- `runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/`
-- `runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/`
+- `/mnt/disk2/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/`
+- `/mnt/disk2/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/`
 
-日志：`runs/hop_scaling_launch_logs/{diffusion,gaussian}.log`。查看 `tail -f`；也可 `tmux -S /home/dym/uav_sac/.cache/tmux.sock attach -t hop-diffusion`。完整检查点每10分钟及结束时保存，保留最近两份；另保留step0/best/last。开启前同时检查空间余量、预训练契约、输出目录、GPU及tmux会话。
+日志：`/mnt/disk2/dym/uav_sac/runs/hop_scaling_launch_logs/{diffusion,gaussian}.log`。查看 `tail -f`；也可 `tmux -S /home/dym/uav_sac/.cache/tmux.sock attach -t hop-diffusion`。完整检查点每10分钟及结束时保存，保留最近两份；另保留step0/best/last。开启前同时检查空间余量、预训练契约、输出目录、GPU及tmux会话。
 
 ## 恢复
 
@@ -56,11 +56,11 @@ UAV_HOP_GPUS=1,3 UAV_HOP_CPUSETS='0-11|12-23' bash scripts/launch_hop_scaling_co
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 UAV_CPU_AFFINITY=0-11 \
-UAV_RESUME_CHECKPOINT=/home/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/checkpoints/full_XXXXXXXXX \
+UAV_RESUME_CHECKPOINT=/mnt/disk2/dym/uav_sac/runs/diffusion_dppo_hop_scaling_capacity10_10m_seed0/checkpoints/full_XXXXXXXXX \
 bash scripts/train_hop_scaling_group_server.sh diffusion
 
 CUDA_VISIBLE_DEVICES=2 UAV_CPU_AFFINITY=12-23 \
-UAV_RESUME_CHECKPOINT=/home/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/checkpoints/full_XXXXXXXXX \
+UAV_RESUME_CHECKPOINT=/mnt/disk2/dym/uav_sac/runs/gaussian_mappo_topk_hop_scaling_capacity10_10m_seed0/checkpoints/full_XXXXXXXXX \
 bash scripts/train_hop_scaling_group_server.sh gaussian
 ```
 

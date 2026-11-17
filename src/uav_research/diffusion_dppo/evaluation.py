@@ -39,7 +39,11 @@ def action_moments(actor, obs, cfg, generator, repeats=64, positions=None, retur
     from ..environment import reflect
     ms = cfg.env.motion_scaling
     hops = np.rint(obs.fixed[..., 3]*(cfg.env.num_uavs+1)).astype(np.int64)
-    scale = hop_speed_factor(hops,cfg.env.num_uavs,ms["min_ratio"],ms["hop_growth"]) if ms["enabled"] else np.ones(hops.shape)
+    if cfg.diffusion.ablation:
+        from ..system_ablation.settings import speed_factor
+        scale = speed_factor(hops,cfg.env)
+    else:
+        scale = hop_speed_factor(hops,cfg.env.num_uavs,ms["min_ratio"],ms["hop_growth"]) if ms["enabled"] else np.ones(hops.shape)
     if positions is None:positions=obs.fixed[..., :2]*np.array([cfg.env.width,cfg.env.height])
     # Dedicated generator; these diagnostic samples never consume execution RNG.
     for _ in range(repeats):

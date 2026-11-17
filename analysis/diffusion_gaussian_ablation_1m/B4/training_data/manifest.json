@@ -1,0 +1,15 @@
+{
+  "env_steps": 1000000,
+  "updates": 489,
+  "optimizer_steps": 19560,
+  "best_score": 0.7967104166666668,
+  "best_step": 700416,
+  "elapsed_seconds": 6935.877172682434,
+  "full_checkpoint": "/mnt/disk2/dym/uav_sac/runs/system_ablation_1m/B4_seed0/checkpoints/full_001000000",
+  "status": "complete",
+  "evaluation_seconds": 886.1377845499665,
+  "io_seconds": 80.13419312424958,
+  "peak_rss_mib": 1507.0234375,
+  "sum_process_peak_rss_mib": 1507.0234375,
+  "peak_gpu_mib": 396.63623046875
+}

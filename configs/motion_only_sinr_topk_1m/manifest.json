@@ -1,0 +1,27 @@
+{
+  "version": "motion-only-sinr-topk-1m-v1",
+  "runs": {
+    "M1": {
+      "config": "configs/motion_only_sinr_topk_1m/M1.yaml",
+      "sha256": "d45c884ac253fc104165521823dd19602c457272f5692fb8280328bdf460da3e",
+      "output": "runs/motion_only_sinr_topk_1m/M1_seed0",
+      "default_physical_gpu": 2
+    },
+    "M2": {
+      "config": "configs/motion_only_sinr_topk_1m/M2.yaml",
+      "sha256": "a8cbe02969aca70e69dc7c90415d62d5a2dbfe56bb6c07fbccfb8977851e256e",
+      "output": "runs/motion_only_sinr_topk_1m/M2_seed0",
+      "default_physical_gpu": 3
+    }
+  },
+  "source": "configs/system_ablation_1m/D4.yaml",
+  "online_steps": 1000000,
+  "initialization": "random; no teacher, demonstration, BC or old optimizer",
+  "diffusion_initialization": "normal-reference epsilon residual with zero output projection; no pretrained weights",
+  "association": "PRE SINR -> local Top10 -> one motion -> POST gate -> UE selection; no refill",
+  "action_seeds": [
+    880001,
+    880002,
+    880003
+  ]
+}

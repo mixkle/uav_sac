@@ -1,25 +1,45 @@
 #!/usr/bin/env bash
-# Source this inside the server project. Every explicit write stays in /home/dym.
+# Source this inside the server project. Code stays in /home/dym; data uses disk2.
 set -euo pipefail
 uav_dppo_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)"
 case "$uav_dppo_root" in
   /home/dym/*) ;;
   *) echo "Server runtime must be installed below /home/dym" >&2; return 1 2>/dev/null || exit 1 ;;
 esac
-export UAV_DATA_ROOT="$uav_dppo_root"
-export TMPDIR="$uav_dppo_root/.cache/tmp"
+if ! mountpoint -q /mnt/disk2; then
+  echo '/mnt/disk2 is not mounted; refusing to save artifacts on the system disk.' >&2
+  return 1 2>/dev/null || exit 1
+fi
+if [[ "${UAV_DATA_ROOT:-}" == "$uav_dppo_root" || "${UAV_DATA_ROOT:-}" == /mnt/disk2/dym ]]; then
+  # Existing tmux shells may still carry the pre-migration default.
+  export UAV_DATA_ROOT=/mnt/disk2/dym/uav_sac
+else
+  export UAV_DATA_ROOT="${UAV_DATA_ROOT:-/mnt/disk2/dym/uav_sac}"
+fi
+case "$UAV_DATA_ROOT" in
+  /mnt/disk2/dym/uav_sac|/mnt/disk2/dym/uav_sac/*) ;;
+  *) echo 'Server UAV_DATA_ROOT must be below /mnt/disk2/dym/uav_sac' >&2; return 1 2>/dev/null || exit 1 ;;
+esac
+uav_data_resolved="$(realpath -m -- "$UAV_DATA_ROOT")"
+case "$uav_data_resolved" in
+  /mnt/disk2/dym/uav_sac|/mnt/disk2/dym/uav_sac/*) ;;
+  *) echo 'Resolved data directory escapes /mnt/disk2/dym/uav_sac' >&2; return 1 2>/dev/null || exit 1 ;;
+esac
+export UAV_DATA_ROOT="$uav_data_resolved"
+mkdir -p "$UAV_DATA_ROOT"
+export TMPDIR="$UAV_DATA_ROOT/.cache/tmp"
 export TMP="$TMPDIR"
 export TEMP="$TMPDIR"
-export XDG_CACHE_HOME="$uav_dppo_root/.cache"
-export UV_CACHE_DIR="$uav_dppo_root/.cache/uv"
+export XDG_CACHE_HOME="$UAV_DATA_ROOT/.cache"
+export UV_CACHE_DIR="$UAV_DATA_ROOT/.cache/uv"
 export UV_PYTHON_INSTALL_DIR="$uav_dppo_root/.python"
-export PIP_CACHE_DIR="$uav_dppo_root/.cache/pip"
-export NUMBA_CACHE_DIR="$uav_dppo_root/.cache/numba"
-export MPLCONFIGDIR="$uav_dppo_root/.cache/matplotlib"
-export TORCH_HOME="$uav_dppo_root/.cache/torch"
-export CUDA_CACHE_PATH="$uav_dppo_root/.cache/cuda"
-export TRITON_CACHE_DIR="$uav_dppo_root/.cache/triton"
-export PYTHONPYCACHEPREFIX="$uav_dppo_root/.cache/pycache"
+export PIP_CACHE_DIR="$UAV_DATA_ROOT/.cache/pip"
+export NUMBA_CACHE_DIR="$UAV_DATA_ROOT/.cache/numba"
+export MPLCONFIGDIR="$UAV_DATA_ROOT/.cache/matplotlib"
+export TORCH_HOME="$UAV_DATA_ROOT/.cache/torch"
+export CUDA_CACHE_PATH="$UAV_DATA_ROOT/.cache/cuda"
+export TRITON_CACHE_DIR="$UAV_DATA_ROOT/.cache/triton"
+export PYTHONPYCACHEPREFIX="$UAV_DATA_ROOT/.cache/pycache"
 export PYTHONUSERBASE="$uav_dppo_root/.local"
 export PYTHONNOUSERSITE=1
 export OPENBLAS_NUM_THREADS=1

@@ -1,0 +1,53 @@
+evaluation_id,group,label,metric,metric_name,reason
+S-B-03,B,Baseline N6 / 1M / LAST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-03,B,Baseline N6 / 1M / LAST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-03,B,Baseline N6 / 1M / LAST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-04,B,Baseline N7 / 1M / LAST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-04,B,Baseline N7 / 1M / LAST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-04,B,Baseline N7 / 1M / LAST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-05,B,Baseline N8 / 1M / LAST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-05,B,Baseline N8 / 1M / LAST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-05,B,Baseline N8 / 1M / LAST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-06,B,Baseline N3 / 10M / LAST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-06,B,Baseline N3 / 10M / LAST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-B-06,B,Baseline N3 / 10M / LAST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-12,A,SAC / 1M / BEST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-12,A,SAC / 1M / BEST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-12,A,SAC / 1M / BEST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-13,A,SAC / 1M / LAST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-13,A,SAC / 1M / LAST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-13,A,SAC / 1M / LAST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-14,A,SAC / 1M CPU / BEST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-14,A,SAC / 1M CPU / BEST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-14,A,SAC / 1M CPU / BEST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-15,A,SAC / 1M CPU（三动作种子） / BEST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-15,A,SAC / 1M CPU（三动作种子） / BEST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-15,A,SAC / 1M CPU（三动作种子） / BEST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-16,A,SAC / 1M CPU / LAST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-16,A,SAC / 1M CPU / LAST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-16,A,SAC / 1M CPU / LAST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-17,A,SAC / 1M CPU（三动作种子） / LAST,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-17,A,SAC / 1M CPU（三动作种子） / LAST,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-A-17,A,SAC / 1M CPU（三动作种子） / LAST,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-E-03,E,DPPO 1M best：事后SINR评分 / SHADOW,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-E-03,E,DPPO 1M best：事后SINR评分 / SHADOW,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-E-03,E,DPPO 1M best：事后SINR评分 / SHADOW,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-E-04,E,DPPO 1M last：事后SINR评分 / SHADOW,tail100_connected_pct,后100联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-E-04,E,DPPO 1M last：事后SINR评分 / SHADOW,tail50_connected_pct,后50联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-E-04,E,DPPO 1M last：事后SINR评分 / SHADOW,final_connected_pct,终态联网UAV %,缺少逐步UAV断联比例，不能用用户覆盖率推算
+S-E-11,E,topk_capacity10_shared_best_diagnostic / O1 known maximum,tail100_throughput_mbps,后100吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-11,E,topk_capacity10_shared_best_diagnostic / O1 known maximum,tail50_throughput_mbps,后50吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-11,E,topk_capacity10_shared_best_diagnostic / O1 known maximum,final_throughput_mbps,终态吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-11,E,topk_capacity10_shared_best_diagnostic / O1 known maximum,episode_return,场景平均回合回报,缺少该评估方案的逐步实际奖励序列
+S-E-12,E,topk_capacity10_shared_best_diagnostic / O2 full maximum,tail100_throughput_mbps,后100吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-12,E,topk_capacity10_shared_best_diagnostic / O2 full maximum,tail50_throughput_mbps,后50吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-12,E,topk_capacity10_shared_best_diagnostic / O2 full maximum,final_throughput_mbps,终态吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-12,E,topk_capacity10_shared_best_diagnostic / O2 full maximum,episode_return,场景平均回合回报,缺少该评估方案的逐步实际奖励序列
+S-E-19,E,topk_capacity10_coverage_throughput_best_diagnostic / O1 known maximum,tail100_throughput_mbps,后100吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-19,E,topk_capacity10_coverage_throughput_best_diagnostic / O1 known maximum,tail50_throughput_mbps,后50吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-19,E,topk_capacity10_coverage_throughput_best_diagnostic / O1 known maximum,final_throughput_mbps,终态吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-19,E,topk_capacity10_coverage_throughput_best_diagnostic / O1 known maximum,episode_return,场景平均回合回报,缺少该评估方案的逐步实际奖励序列
+S-E-20,E,topk_capacity10_coverage_throughput_best_diagnostic / O2 full maximum,tail100_throughput_mbps,后100吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-20,E,topk_capacity10_coverage_throughput_best_diagnostic / O2 full maximum,tail50_throughput_mbps,后50吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-20,E,topk_capacity10_coverage_throughput_best_diagnostic / O2 full maximum,final_throughput_mbps,终态吞吐 Mbps,没有定义/记录此关联的吞吐序列；最大人数匹配不等于最优吞吐
+S-E-20,E,topk_capacity10_coverage_throughput_best_diagnostic / O2 full maximum,episode_return,场景平均回合回报,缺少该评估方案的逐步实际奖励序列

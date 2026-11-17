@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "tests": 62,
+  "seconds": 45.79,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 .venv/bin/python -m pytest tests/test_motion_only_comparison.py tests/test_system_ablation.py tests/test_score_rules.py tests/test_association_timing.py -q --disable-warnings --maxfail=1",
+  "production_code_changed": false,
+  "formal_training_started": false
+}

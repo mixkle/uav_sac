@@ -19,6 +19,7 @@ class ServiceObservation:
     offsets: np.ndarray
     ue_ids: np.ndarray
     service_mask: np.ndarray
+    global_context: np.ndarray | None = None
 
     def __post_init__(self):
         n = int(np.prod(self.fixed.shape[:-1]))
@@ -31,6 +32,10 @@ class ServiceObservation:
         if (self.offsets.dtype.kind not in "iu" or self.ue_ids.dtype.kind not in "iu"
                 or self.service_mask.dtype != np.bool_):
             raise ValueError("Offsets/UE IDs must be integers; service mask must be boolean")
+        if self.global_context is not None and (self.global_context.ndim < 2 or
+                self.global_context.shape[:-1] != self.fixed.shape[:-1] or
+                not np.isfinite(self.global_context).all()):
+            raise ValueError('Oracle context must align with every UAV group')
 
     @property
     def groups(self):
@@ -47,7 +52,8 @@ class ServiceObservation:
 
     def copy(self):
         return ServiceObservation(*(x.copy() for x in (self.fixed, self.users,
-                    self.offsets, self.ue_ids, self.service_mask)))
+                    self.offsets, self.ue_ids, self.service_mask)),
+                    None if self.global_context is None else self.global_context.copy())
 
     def take(self, indices):
         """Select flattened UAV samples, preserving duplicates and empty groups."""
@@ -56,7 +62,8 @@ class ServiceObservation:
         rows = np.concatenate(rows) if rows else np.empty(0, np.int64)
         return ServiceObservation(self.fixed.reshape(self.groups, -1)[indices].copy(),
             self.users[rows].copy(), offsets(np.diff(self.offsets)[indices]),
-            self.ue_ids[rows].copy(), self.service_mask[rows].copy())
+            self.ue_ids[rows].copy(), self.service_mask[rows].copy(),
+            None if self.global_context is None else self.global_context.reshape(self.groups,-1)[indices].copy())
 
     def legacy(self):
         return RawObservation(self.fixed.copy(), self.users[:, [0, 1, 2, 4]].copy(),
@@ -72,7 +79,8 @@ class ServiceObservation:
         return TensorServiceObservation(
             tensor(self.fixed.reshape(self.groups, -1)), tensor(self.users),
             tensor(np.diff(self.offsets)), tensor(np.flatnonzero(self.service_mask)),
-            tensor(self.candidate_lengths))
+            tensor(self.candidate_lengths), tensor(self.ue_ids),
+            None if self.global_context is None else tensor(self.global_context.reshape(self.groups,-1)))
 
 
 @dataclass
@@ -82,17 +90,22 @@ class TensorServiceObservation:
     lengths: torch.Tensor
     candidate_indices: torch.Tensor
     candidate_lengths: torch.Tensor
+    ue_ids: torch.Tensor | None = None
+    global_context: torch.Tensor | None = None
 
 
 def stack(items):
     items = list(items)
     if not items:
         raise ValueError("Cannot stack empty service observations")
+    if any((x.global_context is None) != (items[0].global_context is None) for x in items):
+        raise ValueError('Cannot mix local and oracle observations')
     return ServiceObservation(np.stack([x.fixed for x in items]),
         np.concatenate([x.users for x in items]),
         offsets(np.concatenate([np.diff(x.offsets) for x in items])),
         np.concatenate([x.ue_ids for x in items]),
-        np.concatenate([x.service_mask for x in items]))
+        np.concatenate([x.service_mask for x in items]),
+        None if items[0].global_context is None else np.stack([x.global_context for x in items]))
 
 
 @dataclass
@@ -118,6 +131,8 @@ class DiffusionChain:
     candidate_offsets: np.ndarray
     logp: np.ndarray      # [N,L], each is a coordinate SUM
     kind: str = "diffusion"
+    movement_logp: np.ndarray | None = None
+    score_logp: np.ndarray | None = None
 
     def take(self, indices):
         indices = np.asarray(indices, dtype=np.int64).reshape(-1)
@@ -125,14 +140,18 @@ class DiffusionChain:
                 for i in indices]
         rows = np.concatenate(rows) if rows else np.empty(0, np.int64)
         return DiffusionChain(self.movement[indices], self.scores[rows],
-            offsets(np.diff(self.candidate_offsets)[indices]), self.logp[indices], self.kind)
+            offsets(np.diff(self.candidate_offsets)[indices]), self.logp[indices], self.kind,
+            None if self.movement_logp is None else self.movement_logp[indices],
+            None if self.score_logp is None else self.score_logp[indices])
 
 
 def stack_chains(chains):
     return DiffusionChain(np.concatenate([x.movement for x in chains]),
         np.concatenate([x.scores for x in chains]),
         offsets(np.concatenate([np.diff(x.candidate_offsets) for x in chains])),
-        np.concatenate([x.logp for x in chains]), chains[0].kind)
+        np.concatenate([x.logp for x in chains]), chains[0].kind,
+        None if chains[0].movement_logp is None else np.concatenate([x.movement_logp for x in chains]),
+        None if chains[0].score_logp is None else np.concatenate([x.score_logp for x in chains]))
 
 
 def chain_diagnostics(chain, u):
@@ -142,11 +161,13 @@ def chain_diagnostics(chain, u):
         end = begin+u
         scores = chain.scores[chain.candidate_offsets[begin]:chain.candidate_offsets[end], -1]
         x = chain.movement[begin:end, -1]
+        branches = dict(movement_logp_mean=float(chain.movement_logp[begin:end].mean()),
+            score_logp_mean=float(chain.score_logp[begin:end].mean())) if chain.movement_logp is not None else {}
         rows.append(dict(movement_latent_norm_mean=float(np.linalg.norm(x, axis=-1).mean()),
             movement_latent_std=float(x.std()),
             score_latent_mean=float(scores.mean()) if len(scores) else 0.,
             score_latent_std=float(scores.std()) if len(scores) else 0.,
             score_saturation_fraction=float((np.abs(scores) > 10).mean()) if len(scores) else 0.,
             **{(f"denoise_{chain.logp.shape[1]-k}_logp" if chain.kind == "diffusion" else "gaussian_joint_logp"): float(chain.logp[begin:end, k].mean())
-               for k in range(chain.logp.shape[1])}))
+               for k in range(chain.logp.shape[1])}, **branches))
     return rows

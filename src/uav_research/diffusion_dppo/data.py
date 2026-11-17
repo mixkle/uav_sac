@@ -21,6 +21,21 @@ from .storage import artifact, load, ensure_budget, save_arrays, Progress, confi
 
 def teacher_policy(cfg, device):
     path = Path(cfg.diffusion.teacher_checkpoint)
+    if cfg.diffusion.ablation:
+        from .learner import DiffusionLearner
+        from .config import from_dict
+        data=load(path,kinds={'dppo_model'})
+        source_cfg=from_dict(data['config'])
+        from ..system_ablation.settings import options
+        if options(source_cfg)['run_id']!='G0' or source_cfg.algo.name!='gaussian_service_mappo':
+            raise ValueError('A3/A5 demonstrations require the newly trained G0 best')
+        if source_cfg.env != cfg.env:
+            raise ValueError('Teacher and demonstration physical settings differ')
+        learner=DiffusionLearner(source_cfg,device)
+        learner.load_state_dict(data['learner'])
+        learner.actor.eval().requires_grad_(False)
+        return learner.actor,dict(path=str(path),step=data['env_steps'],sha256=file_hash(path),
+            config=source_cfg.as_dict(),scores='actual sampled Gaussian score latents')
     data = load_checkpoint(path)
     teacher_cfg = config_from_dict(data["config"])
     if data["env_steps"] != cfg.diffusion.teacher_step:
@@ -39,6 +54,10 @@ def teacher_policy(cfg, device):
 
 
 def teacher_action(actor, obs, cfg, previous_command=None):
+    if cfg.diffusion.ablation:
+        with torch.no_grad():
+            action,chain=actor.sample(obs)
+        return action,chain.movement[:,-1].copy(),chain.scores[:,-1].copy()
     with torch.no_grad():
         device = next(actor.parameters()).device
         legacy = obs.legacy()
@@ -131,7 +150,18 @@ class DemoDataset:
     def __init__(self, root, split, cfg):
         self.root, self.split = Path(root), split
         meta = json.loads((self.root/"dataset.json").read_text())
-        if meta["contract"] != contract(cfg) or not meta["complete"]:
+        compatible = meta['contract'] == contract(cfg)
+        if cfg.diffusion.ablation and not compatible:
+            from .config import from_dict
+            from ..system_ablation.settings import options
+            source_cfg=from_dict(__import__('yaml').safe_load((self.root/'config.yaml').read_text()))
+            allowed = options(cfg)['run_id'] in ('A3','A5','F2a','F2c')
+            compatible = (allowed and source_cfg.env == cfg.env and
+                meta['contract'] == contract(source_cfg) and
+                source_cfg.diffusion.fit_seeds == cfg.diffusion.fit_seeds and
+                source_cfg.diffusion.selection_seeds == cfg.diffusion.selection_seeds and
+                options(source_cfg)['run_id']=='A3')
+        if not compatible or not meta["complete"]:
             raise ValueError("Incomplete or mismatched demonstration dataset")
         seeds = meta["fit_seeds"] if split == "fit" else meta["selection_seeds"]
         self.paths = [self.root/split/f"scene_{s}" for s in seeds]
@@ -208,7 +238,8 @@ def pretrain(cfg, demonstrations, output, resume=None, max_batches=None):
     output.mkdir(parents=True, exist_ok=True)
     fit, selection = DemoDataset(demonstrations, "fit", cfg), DemoDataset(demonstrations, "selection", cfg)
     seed_all(cfg.diffusion.pretrain_seed)
-    actor = DiffusionActor(cfg).to(device)
+    from .policy import make_service_actor
+    actor = make_service_actor(cfg).to(device)
     optimizer = torch.optim.Adam(actor.parameters(), lr=cfg.diffusion.pretrain_lr, eps=1e-5)
     order_rng = np.random.default_rng([cfg.diffusion.pretrain_seed, 401])
     provenance = {"dataset_sha256": file_hash(Path(demonstrations)/"dataset.json"),
@@ -232,7 +263,8 @@ def pretrain(cfg, demonstrations, output, resume=None, max_batches=None):
     save_config(cfg, output/"config.yaml")
     progress = Progress(cfg.diffusion.heartbeat_seconds)
     start, last_save = time.perf_counter(), time.monotonic()
-    fields = ["epoch", "batches", "fit_movement_mse", "fit_score_mse", "selection_movement_mse", "selection_score_mse", "selection_loss", "elapsed_seconds"]
+    criterion = 'nll' if cfg.algo.name == 'gaussian_service_mappo' else 'mse'
+    fields = ["epoch", "batches", f"fit_movement_{criterion}", f"fit_score_{criterion}", f"selection_movement_{criterion}", f"selection_score_{criterion}", "selection_loss", "elapsed_seconds"]
     logger = CSVLogger(output/"history.csv", fields)
 
     def checkpoint():
@@ -285,9 +317,9 @@ def pretrain(cfg, demonstrations, output, resume=None, max_batches=None):
             selected_loss = float(cfg.diffusion.pretrain_mov_weight*sm+cfg.diffusion.pretrain_score_weight*ss)
             epoch += 1
             cursor, order = 0, None
-            logger.write(dict(epoch=epoch, batches=batches, fit_movement_mse=partial_sum[0]/partial_count,
-                fit_score_mse=partial_sum[1]/partial_count, selection_movement_mse=sm,
-                selection_score_mse=ss, selection_loss=selected_loss,
+            logger.write(dict(epoch=epoch, batches=batches, **{f'fit_movement_{criterion}':partial_sum[0]/partial_count,
+                f'fit_score_{criterion}':partial_sum[1]/partial_count, f'selection_movement_{criterion}':sm,
+                f'selection_score_{criterion}':ss}, selection_loss=selected_loss,
                 elapsed_seconds=elapsed_before+time.perf_counter()-start))
             partial_sum, partial_count = np.zeros(2), 0
             if not np.isfinite(selected_loss):
@@ -306,6 +338,11 @@ def pretrain(cfg, demonstrations, output, resume=None, max_batches=None):
         result = dict(status="complete", epoch=epoch, batches=batches, best_selection_loss=float(best),
                       execution_check=check["summary"], provenance=provenance,
                       elapsed_seconds=elapsed_before+time.perf_counter()-start, **memory_stats(device))
+        if cfg.diffusion.ablation:
+            from ..system_ablation.bc_diagnostics import diagnose
+            with isolated_rng():
+                result['bc_diagnostics']=diagnose(actor,selection,cfg)
+            result['objective']='latent_joint_nll' if criterion=='nll' else 'branch_mean_denoising_mse'
         atomic_json(output/"summary.json", result)
         return result
     except BaseException as exc:

@@ -1,0 +1,96 @@
+{
+  "new_metric_tests_passed": 9,
+  "all_20_formal_runs_have_best_and_last": true,
+  "frozen_evaluations": [
+    {
+      "run": "mappo_capacity10_neighbors7_1m_seed0",
+      "checkpoint": "last",
+      "device": "cuda:0",
+      "action_seed": 880001,
+      "source_unchanged": true
+    },
+    {
+      "run": "mappo_capacity10_neighbors6_1m_seed0",
+      "checkpoint": "last",
+      "device": "cuda:0",
+      "action_seed": 880001,
+      "source_unchanged": true
+    },
+    {
+      "run": "mappo_capacity10_neighbors8_1m_seed0",
+      "checkpoint": "last",
+      "device": "cuda:0",
+      "action_seed": 880001,
+      "source_unchanged": true
+    },
+    {
+      "run": "sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "checkpoint": "last",
+      "device": "cpu",
+      "action_seed": 880003,
+      "source_unchanged": true
+    },
+    {
+      "run": "sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "checkpoint": "best",
+      "device": "cpu",
+      "action_seed": 880002,
+      "source_unchanged": true
+    },
+    {
+      "run": "sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "checkpoint": "best",
+      "device": "cuda:0",
+      "action_seed": 880001,
+      "source_unchanged": true
+    },
+    {
+      "run": "sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "checkpoint": "last",
+      "device": "cpu",
+      "action_seed": 880001,
+      "source_unchanged": true
+    },
+    {
+      "run": "sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "checkpoint": "best",
+      "device": "cpu",
+      "action_seed": 880001,
+      "source_unchanged": true
+    },
+    {
+      "run": "sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "checkpoint": "best",
+      "device": "cpu",
+      "action_seed": 880003,
+      "source_unchanged": true
+    },
+    {
+      "run": "sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "checkpoint": "last",
+      "device": "cuda:0",
+      "action_seed": 880001,
+      "source_unchanged": true
+    },
+    {
+      "run": "sac_coverage_time_factor_relative_central_history_server_1m_seed0",
+      "checkpoint": "last",
+      "device": "cpu",
+      "action_seed": 880002,
+      "source_unchanged": true
+    },
+    {
+      "run": "mappo_coverage_throughput_capacity10_10m_seed0",
+      "checkpoint": "last",
+      "device": "cuda:0",
+      "action_seed": 880001,
+      "source_unchanged": true
+    }
+  ],
+  "old_data_arrays_unchanged": 189,
+  "existing_summary_crosscheck": {
+    "matching_fields": 230,
+    "all_within_rounding_tolerance": true
+  },
+  "all_source_code_and_configuration_hashes_match": true
+}

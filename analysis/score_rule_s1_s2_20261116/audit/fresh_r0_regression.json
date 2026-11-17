@@ -1,0 +1,225 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "checkpoint": "best",
+      "actor_seed": 880001,
+      "steps": 12800,
+      "max_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "blocks": [
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b0_t000.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b0_t000.npz",
+          "old_sha256": "b783bbf3f13911e39822684994f01681f23b9efcc7d1183660c2d0dd2bbd4c08",
+          "new_sha256": "41d3aebc6ab12b81574506c931ab98c22ec49fcb4681f9dd628e4a6b4142fa0e"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b0_t050.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b0_t050.npz",
+          "old_sha256": "21aa02ad9c5b86d44ad02401ec4718b715c195dc3391f7a800264a61c0e5263a",
+          "new_sha256": "c76f1907ab704d952054b641130246e8e58c2cf8a60886b31f451663cb9e55ec"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b0_t100.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b0_t100.npz",
+          "old_sha256": "118ff68f77c06e3c82b7273f127e7d12387639bd9a4f59b2e97949460163e1cd",
+          "new_sha256": "4ac5d4ad3e7e87f4396a08c4a4b2881dd76849f49dbb84dda1d9c95a1e84b917"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b0_t150.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b0_t150.npz",
+          "old_sha256": "28a8e39ec26367273ea6c19c20a3ac02513fde2f5149645ab149746ca34673e9",
+          "new_sha256": "5c6395bf60f6af7932cae96e341863fdcee8b546ede5748de37d4d878a09056a"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b0_t200.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b0_t200.npz",
+          "old_sha256": "10b7c3368a456658bf882a7bd90e9425f2b3400711b4571ae78f427337593f14",
+          "new_sha256": "3fbef1fc5c11f2165deaebcbc380ab5da3036959b786e7f5ee8decd8696ee7a6"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b0_t250.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b0_t250.npz",
+          "old_sha256": "81d97ed9d582a0e090ef4db3c1101da6db4fdd6e8353cd94253d73b12445a53a",
+          "new_sha256": "c9fb34938355c3f43bdc076531110c292e5a7531bb1e3a3304e5e300e150470f"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b0_t300.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b0_t300.npz",
+          "old_sha256": "3bc0cb7be2472f8fa1a1eb384fbac0abf9f3a9d85aa98bf1bc23cb5861e88057",
+          "new_sha256": "61ab65cb694be166716e6e7d3908ce8dd1b81e88aafefbf02cf0f53c87764926"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b0_t350.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b0_t350.npz",
+          "old_sha256": "5f7990502923e5c92cbdd0e471c03fa821ef0e5e39986b5d1a357f1a9312d3c0",
+          "new_sha256": "05732bbc700d69b69370cf692724573f919feb5f210ca3df20960739c323570f"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b16_t000.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b16_t000.npz",
+          "old_sha256": "dbe4a3674e84cae77addd1ebd55283a250dd1b3eb12d3d1fb16e5e5e212aba59",
+          "new_sha256": "8ddb9eccbe65c3cbef7aa32ed8a1decd17ebe201aabd8a599a80b94bfec4a1ac"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b16_t050.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b16_t050.npz",
+          "old_sha256": "21aad3b548ed3b9a6ae11c5897a7be47d756506ae08e31b66087df48afce8e6d",
+          "new_sha256": "cc23ba1980f6b5a310d450625a7619d7c810fd6cfbe8da66a3ef5f374ccc930a"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b16_t100.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b16_t100.npz",
+          "old_sha256": "0ef8c72990498c5367bdc1605906db1b0d642102a62dd71736795f04badb72c5",
+          "new_sha256": "8455b6f7fb48becb5a93f3260ddf69bcfc5e6b761341c65f503e1d3e8b559983"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b16_t150.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b16_t150.npz",
+          "old_sha256": "eff07503a0c43854b1d17597556662928dee2f8ede1db83235ce53712ca26b03",
+          "new_sha256": "015b5bf74a7a932334df9320c79fdf26c49b7061debd69f731cd8ac596c6c061"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b16_t200.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b16_t200.npz",
+          "old_sha256": "6ba3e399b1100592e7c17b1e9eedf594d1ef09982fabe0db5c07c137d4a4873e",
+          "new_sha256": "f3f0434613e6ba08675d678412cb344be4c1bdcfd5840e961e33393f035e48dd"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b16_t250.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b16_t250.npz",
+          "old_sha256": "039b43f7201b1cddf9b00697049e8f45231e6cde50a642a2dc00ccbcdf64b312",
+          "new_sha256": "bc7d0fa10ecfd5015b5b49f779da6d1491d0e7f70afe08be79b335efccb90239"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b16_t300.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b16_t300.npz",
+          "old_sha256": "116000c0ab68c4daf768f5aa9417db84eab47a5bfe6f8363883270270bad4508",
+          "new_sha256": "8f4b6c433d3a9b397681063ac08ebc60dfa6e3ece47dbb527fe2668e42379a54"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/best/T2/880001/closed_loop/b16_t350.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/best/R0/880001/closed_loop/b16_t350.npz",
+          "old_sha256": "225f732e8acbe28fb588b5ec500d98b480d744543b441347ee1968beac01d9df",
+          "new_sha256": "e57b980aa1d9901567275155b606d2418eefb6df71d52d443f93475a0a856310"
+        }
+      ]
+    },
+    {
+      "checkpoint": "last",
+      "actor_seed": 880001,
+      "steps": 12800,
+      "max_errors": {
+        "coverage": 0.0,
+        "throughput_bps": 0.0,
+        "reward": 0.0,
+        "service_interruptions": 0.0,
+        "direct_switches": 0.0
+      },
+      "blocks": [
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b0_t000.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b0_t000.npz",
+          "old_sha256": "277f7d7d70f5ef222373cd6323f0a3e63c4e82fad1cfa84a70501e8f5fa25908",
+          "new_sha256": "8d3ebd8ace96cc964042cbd25b2c2173956c2bf97d863512a5a855e0afb92068"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b0_t050.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b0_t050.npz",
+          "old_sha256": "40826dfa47912e9bb651f9f18133265934e5f687e97ae9eea7ec2bfd2652086b",
+          "new_sha256": "a6eccddf8155c506c658bd7b3a7cea9310184e5957d307c40a2323085d90f92e"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b0_t100.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b0_t100.npz",
+          "old_sha256": "3990b3a1947f0d7c4ca2433de6a5f0ae3c16705b91a9c8e8f5ec8ef6c24237e3",
+          "new_sha256": "a88bec582fa7e2f04ae44efb66e6f3919d8505af29711f284301f5587fa76689"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b0_t150.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b0_t150.npz",
+          "old_sha256": "24fe0ee023f58309b011165890e9ab35d0de0075222c86d09c8ba3d9e4ccbca4",
+          "new_sha256": "2794e1b83f25a8a377d2a70fac45b4ddb928b72b598a85dc2173bcd8ce790f28"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b0_t200.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b0_t200.npz",
+          "old_sha256": "592ed97091538a546545ba87ccb0f5a5e26d16efc031685c37b3f98a12cd7444",
+          "new_sha256": "827b7ef317d52992eb94013d929334f64c215e7a0060cb1f4968a3ef9e1f1f37"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b0_t250.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b0_t250.npz",
+          "old_sha256": "73043a8bca59cb27ebca1a0ff18b0c8c4d7954e7b3881964eddfb2b41f443f4a",
+          "new_sha256": "0fcc167d24a5ea21b09ef7983eeb24d9a149065579c5d14f5a7efb81fafa74e3"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b0_t300.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b0_t300.npz",
+          "old_sha256": "2ff8b4156115a74609e8fbf928f7b5a7824b7f2bc8d44abea9b26d946d03a77d",
+          "new_sha256": "eaf5f5c0d54b3fe9780bd16b583dfa43048830dceb0c21a2aaa12bd663c4dda1"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b0_t350.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b0_t350.npz",
+          "old_sha256": "05ecdfcfc3a78b838068055e15f042e29c6edf21fe1b253ef849d02c7a25ea00",
+          "new_sha256": "3736072f7c519ab08c28dff847f1e8c0d957fa64bd7489e167fa73a7b67a6760"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b16_t000.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b16_t000.npz",
+          "old_sha256": "b03fd028ca6e599d5d496862f36a5aee9478e3001c8e67d5fbf0a788a63af205",
+          "new_sha256": "bf08c4dbc864c5c8d28c25236f8a4a039f7782c2dbe8bd46a4f7b587d84d36e7"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b16_t050.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b16_t050.npz",
+          "old_sha256": "3aabcb1a2d1ab05acb357835130ad27c336d3259247534229e45de5482a57dcb",
+          "new_sha256": "1888a3db324997282bae8ed056b0095ea45adaa93f0ed1b67008a07c3d2904da"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b16_t100.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b16_t100.npz",
+          "old_sha256": "0cd1c11293a520c056fdc5f3a903ec4de5f3ff66251af647a5bd681c07fd06da",
+          "new_sha256": "7b16da54dd1cdbea1fcc6512402dd8e647752505809ebeb19da943154d978c4c"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b16_t150.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b16_t150.npz",
+          "old_sha256": "c029501df4e50f1e0b766d034da629b18e03d217c22e5572d3987503b852d73f",
+          "new_sha256": "8ec6d744abc8873d344b32acdf59df05706690cd3c51375147991581e579bc16"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b16_t200.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b16_t200.npz",
+          "old_sha256": "f1228bbbd7460a4dd9f60ff1b568e9d42f6fe6ddaa0c54ad5194593161d77212",
+          "new_sha256": "1af8aa90199108d9f04dd2e95b6e88e47dfb3d0a72b87c1fa619fc8f8f64f3c4"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b16_t250.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b16_t250.npz",
+          "old_sha256": "8f6cbb7d86d13a872b1900271bb2b913aa11e0442b2259df8ffd300f5681918d",
+          "new_sha256": "c4c0d6426d0b4e21dc83727078ac620f2920eb50e90ad1f3623746798c5f88c7"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b16_t300.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b16_t300.npz",
+          "old_sha256": "c96f9007fe1316c6830bf2bb4b82d8458c0475293113862d64cdce3c449454e3",
+          "new_sha256": "ed1b83f175c0f92207490b1af0351d264bbffe9a731efd3e5110d291dab75bd5"
+        },
+        {
+          "old": "/mnt/disk2/dym/uav_sac/analysis/t1_t2_t3_post_motion_association/rollout/last/T2/880001/closed_loop/b16_t350.npz",
+          "new": "/mnt/disk2/dym/uav_sac/analysis/score_rule_s1_s2_20261116/s2/rollout/development/last/R0/880001/closed_loop/b16_t350.npz",
+          "old_sha256": "96bbc4008d19daaf21cecfb46e8631f7849fab5558605069859c463739c2b7bb",
+          "new_sha256": "a857a36f922fae78922526644e437db4d9f0a8b2ffa090f6276240c6b10130c5"
+        }
+      ]
+    }
+  ]
+}
